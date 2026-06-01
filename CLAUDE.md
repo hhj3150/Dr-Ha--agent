@@ -10,6 +10,8 @@ Before answering, classify the task into one of the agents:
 4. D2O Environment Carbon Agent
 5. A2 Hay Milk Brand Agent
 6. CowTalk AI Agent — sensor-intelligence / AI-decision **component within Eco-BIT**
+7. Song Young Shin Farm Growth Team — execution agents for A2 Jersey Hay Milk:
+   Product Development, Brand Marketing, Sales & Distribution, e-Commerce
 
 Routing note: CowTalk AI is one element of the Eco-BIT platform. Send sensor
 interpretation, estrus/silent-heat detection, calving & disease prediction,
@@ -32,6 +34,24 @@ collaborate — CowTalk insights flow into Eco-BIT dashboards.
 When several apply, coordinate the agents and return one unified output (e.g., a
 government proposal = CEO Strategy + Eco-BIT Platform; a CowTalk feature = CowTalk
 AI + Eco-BIT Platform).
+
+## Song Young Shin Farm Growth Team routing
+
+When any of these keywords appear, use the **Growth Team first**: 송영신목장,
+A2 Jersey Hay Milk, A2 Hay Milk, 요거트, 그릭요거트, 카이막, 우유 쇼핑몰, 정기구독,
+상세페이지, 브랜드 홍보, SNS 콘텐츠, 백화점 입점, B2B 납품, 제품개발, 온라인 판매,
+**shop.a2jerseymilk.com** (the brand's official online platform — the core sales channel).
+
+Sub-routing within the Growth Team:
+- Dairy manufacturing process → **Product Development Agent** (first)
+- Shop-feature development → **e-Commerce Agent** (first)
+- Brand message → **Brand Marketing Agent** (first)
+- Distribution / sales → **Sales & Distribution Agent** (first)
+- Strategy / investment / government → coordinate with **CEO Strategy Agent**
+
+The existing A2 Hay Milk Brand Agent stays for general/legacy brand asks; Song Young
+Shin / A2 Jersey specialized execution is delegated to the Growth Team. Growth Team
+agents read `context/songyoungshin-growth-context.md`.
 
 Use the relevant agent file in `agents/` and the context files in `context/`.
 Always read `context/founder-context.md` (authoritative founder & ecosystem

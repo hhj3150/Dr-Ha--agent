@@ -11,6 +11,14 @@ This kit is designed for building practical Claude Code / Codex agents for Dr. H
 5. `a2-haymilk-brand-agent.md` - Song Young Shin Farm, A2 Jersey Hay Milk, dairy products, cafe, tourism, packaging, sales
 6. `cowtalk-ai-agent.md` - CowTalk AI, the sensor-intelligence / AI-decision **component within Eco-BIT** (rumen-sensor interpretation, estrus/calving/disease prediction, reproduction AI, alert generation, PRDs)
 
+### Song Young Shin Farm Growth Team (A2 Jersey Hay Milk execution)
+7. `songyoungshin-product-development-agent.md` - dairy product development, line-up, manufacturing process, cost/price/margin
+8. `songyoungshin-brand-marketing-agent.md` - brand story, A2 Hay Milk message, package & detail-page copy, SNS/blog/YouTube content
+9. `songyoungshin-sales-distribution-agent.md` - online sales, subscription, B2B (cafe/bakery/hotel/department store), first-1,000-customer
+10. `songyoungshin-ecommerce-agent.md` - shop.a2jerseymilk.com IA, PDP, checkout/membership/subscription, CRM, SEO, CRO
+
+Growth Team shared context: `context/songyoungshin-growth-context.md` (core channel: shop.a2jerseymilk.com).
+
 ## How to use in Claude Code
 
 Copy an agent file into Claude Code as the system/developer instruction for that agent, or create separate subagents if your Claude Code setup supports them.

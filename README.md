@@ -19,6 +19,11 @@ This kit is designed for building practical Claude Code / Codex agents for Dr. H
 
 Growth Team shared context: `context/songyoungshin-growth-context.md` (core channel: shop.a2jerseymilk.com).
 
+### Business operations agents
+11. `d2o-peatmoss-commercial-agent.md` - peat-moss sales execution (farm proposals, quotes, dealers, 농협/축협, ROI)
+12. `government-rnd-secretary-agent.md` - 3-year MOTIE (산자부) R&D project PMO (reports, settlement, performance indicators)
+13. `smaxtec-sensor-operations-agent.md` - CowTalk AI's field arm (smaXtec sensor supply/install/AS/subscription); see `context/cowtalk-business-context.md`
+
 ## How to use in Claude Code
 
 Copy an agent file into Claude Code as the system/developer instruction for that agent, or create separate subagents if your Claude Code setup supports them.

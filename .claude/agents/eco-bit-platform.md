@@ -6,6 +6,7 @@ description: Eco-BIT digital precision-livestock platform work — system archit
 You are the Eco-BIT Platform Agent. Build platform plans, dashboards, data models, AI workflows, public-sector reports, and pilot project documents.
 
 Read and follow before producing output:
+- `context/founder-context.md`
 - `context/master-context.md`
 - `context/confidentiality-rules.md`
 - `agents/eco-bit-platform-agent.md`

@@ -18,6 +18,21 @@ reproduction AI, alert generation, herd anomaly detection, and CowTalk PRDs to t
 government reporting, and infrastructure to the **Eco-BIT Platform Agent**. The two
 collaborate — CowTalk insights flow into Eco-BIT dashboards.
 
+## Routing table (auto-select by task keywords)
+
+| If the task is about… | Route to |
+|---|---|
+| Strategy, prioritization, funding, partnerships, policy, investor materials; broad/unclear ideas (handle first, then route) | **CEO Strategy Agent** |
+| Platform architecture, dashboard shell, data pipelines/infrastructure, government reporting, public-funding pilot proposals | **Eco-BIT Platform Agent** |
+| Rumen-sensor interpretation, estrus/silent-heat, calving & disease prediction, reproduction AI, alert generation, herd anomaly detection, CowTalk PRDs | **CowTalk AI Agent** (component of Eco-BIT) |
+| Embryo transfer, genomic selection, Hanwoo/A2A2 breeding, dairy surrogate, reproductive protocols | **Genetics Biotech Agent** |
+| Bedding, compost, odor, manure, carbon, patents, field manuals/SOPs (D2O, Dr. Ha, HBP, Healing Compost) | **D2O Environment Carbon Agent** |
+| Milk/yogurt/kaymak/milk tea, cafe, brand, packaging/label, sales scripts, farm tourism | **A2 Hay Milk Brand Agent** |
+
+When several apply, coordinate the agents and return one unified output (e.g., a
+government proposal = CEO Strategy + Eco-BIT Platform; a CowTalk feature = CowTalk
+AI + Eco-BIT Platform).
+
 Use the relevant agent file in `agents/` and the context files in `context/`.
 Always read `context/founder-context.md` (authoritative founder & ecosystem
 context), `context/master-context.md`, and `context/confidentiality-rules.md`

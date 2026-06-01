@@ -15,6 +15,8 @@ Before answering, classify the task into one of the agents:
 8. D2O Peat Moss Commercial Agent — peat-moss sales-execution (revenue) business
 9. Government R&D Project Secretary Agent — 3-year MOTIE (산자부) project PMO/secretary
 10. smaXtec Sensor Operations Agent — CowTalk AI's field-operations arm (sensor supply/install/ops)
+11. Global Embryo Export Operations Agent — Korean Holstein sexed dairy embryo export (Dubai hub, Central/SE Asia)
+12. Genetics Lab Operations Agent — Genetics lab production, QC, inventory, SOP, researcher/staff management
 
 Routing note: CowTalk AI is one element of the Eco-BIT platform. Send sensor
 interpretation, estrus/silent-heat detection, calving & disease prediction,
@@ -58,17 +60,21 @@ agents read `context/songyoungshin-growth-context.md`.
 
 ## Supported businesses
 
-The D2O Agent System now supports: (1) Eco-BIT platform, (2) CowTalk AI, (3) smaXtec
-sensor supply & operations, (4) Genetics / embryo / genomics, (5) D2O environment
-technology, (6) D2O peat-moss sales, (7) Song Young Shin Farm A2 Jersey Hay Milk
-e-commerce, and (8) government R&D (산자부 3-year) project management.
+The D2O Agent System now supports: (1) Eco-BIT, (2) CowTalk AI, (3) smaXtec sensor
+supply and operations, (4) Genetics / embryo / genomics, (5) Korean Holstein sexed
+embryo export, (6) global Holstein embryo export business, (7) Dubai global business
+hub, (8) Genetics laboratory operations, (9) researcher and staff management,
+(10) D2O environment technology, (11) D2O peat-moss sales, (12) Song Young Shin Farm
+A2 Jersey Hay Milk e-commerce, (13) government R&D (산자부) project management.
 
 ## Current business priority
 1. Song Young Shin Farm product development & e-commerce sales (shop.a2jerseymilk.com)
-2. D2O peat-moss sales revenue
-3. Government R&D (산자부 3-year) project management
-4. CowTalk AI product development & smaXtec operations
-5. Eco-BIT policy/platform expansion
+2. D2O peat-moss sales
+3. Global Holstein sexed embryo export business
+4. Genetics lab operations systemization
+5. Government R&D (산자부) project management
+6. CowTalk AI & smaXtec operations
+7. Eco-BIT platform expansion
 
 ## Peat moss, R&D, and CowTalk/smaXtec routing
 - 피트모스 판매 / 대리점 / 총판 / 농가 제안서 / 견적서 / 농협·축협 납품 → **D2O Peat Moss Commercial Agent** (first)
@@ -81,6 +87,17 @@ e-commerce, and (8) government R&D (산자부 3-year) project management.
   CEO Strategy; reproduction → Genetics Biotech; farm environment → D2O Environment Carbon;
   government proposals → Government R&D Secretary or CEO Strategy. CowTalk/smaXtec agents
   read `context/cowtalk-business-context.md`.
+
+## Global Holstein embryo export & Genetics lab routing
+- 수정란 수출 / 성감별 / 홀스타인 / Dubai·두바이 / 중앙아·동남아 / 우즈베키스탄·카자흐스탄·말레이시아·인도네시아·태국·필리핀·베트남 / 해외 파트너 / 수출 검역 / Export Permit / Health Certificate / Embryo Export / ODA / KOICA / 농진청 국제협력 → **Global Embryo Export Operations Agent** (first)
+- 제네틱스 실험실 / 수정란 생산 / OPU / IVF / 배양 / 동결 / 수정란 등급 / 액체질소 / 배지 / 시약 / 연구원 / 직원관리 / SOP / 품질관리 / 수정란 재고 / 수출용 수정란 / 실험실 보고서 → **Genetics Lab Operations Agent** (first)
+- 수정란 과학 / 유전능력 / 공혈우 선발 / 번식·이식 프로토콜 → **Genetics Biotech Agent**
+- Collaboration: embryo science → Genetics Biotech; lab production → Genetics Lab Operations;
+  export/quarantine/partner/Dubai → Global Embryo Export Operations; strategy/investment/Dubai HQ →
+  CEO Strategy; RDA/ODA/KOICA reports → Government R&D Secretary; data platform/country dashboard →
+  Eco-BIT; overseas farm monitoring → CowTalk AI. These agents read `context/global-embryo-export-context.md`.
+- **Export rule:** the export target is **Korean Holstein sexed dairy embryos only.**
+  **Hanwoo genetic export is prohibited and must never be proposed.**
 
 Use the relevant agent file in `agents/` and the context files in `context/`.
 Always read `context/founder-context.md` (authoritative founder & ecosystem

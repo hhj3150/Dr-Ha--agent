@@ -24,6 +24,12 @@ Growth Team shared context: `context/songyoungshin-growth-context.md` (core chan
 12. `government-rnd-secretary-agent.md` - 3-year MOTIE (산자부) R&D project PMO (reports, settlement, performance indicators)
 13. `smaxtec-sensor-operations-agent.md` - CowTalk AI's field arm (smaXtec sensor supply/install/AS/subscription); see `context/cowtalk-business-context.md`
 
+### Global Holstein embryo export & Genetics lab
+14. `global-embryo-export-operations-agent.md` - Korean Holstein sexed dairy embryo export (Dubai hub, Central/SE Asia, quarantine/documents, partners, logistics, performance tracking)
+15. `genetics-lab-operations-agent.md` - Genetics lab production (OPU/IVF/freezing), QC, embryo inventory, SOP, researcher/staff management
+
+Export business context: `context/global-embryo-export-context.md`. Export target = Korean Holstein sexed dairy embryos only; Hanwoo genetic export is prohibited.
+
 ## How to use in Claude Code
 
 Copy an agent file into Claude Code as the system/developer instruction for that agent, or create separate subagents if your Claude Code setup supports them.

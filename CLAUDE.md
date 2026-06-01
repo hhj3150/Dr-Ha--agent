@@ -17,6 +17,14 @@ Before answering, classify the task into one of the agents:
 10. smaXtec Sensor Operations Agent — CowTalk AI's field-operations arm (sensor supply/install/ops)
 11. Global Embryo Export Operations Agent — Korean Holstein sexed dairy embryo export (Dubai hub, Central/SE Asia)
 12. Genetics Lab Operations Agent — Genetics lab production, QC, inventory, SOP, researcher/staff management
+13. Provincial Government Expansion Agent — CowTalk+Eco-BIT into domestic provincial governments (Gyeonggi→Gangwon→Jeolla→national)
+14. CowTalk Global Expansion Agent — CowTalk+Eco-BIT platform export internationally (Central/SE Asia, Middle East, Dubai)
+
+Strategic principle: **CowTalk AI + Eco-BIT are government-scale livestock operating
+systems, not software products** — design every proposal/roadmap/strategy for
+scalability province → national → international. CowTalk AI is a 5-fold strategic
+business (precision-livestock platform, smaXtec sensor operations, subscription,
+government project platform, export platform). See `context/eco-bit-expansion-context.md`.
 
 Routing note: CowTalk AI is one element of the Eco-BIT platform. Send sensor
 interpretation, estrus/silent-heat detection, calving & disease prediction,
@@ -67,14 +75,22 @@ hub, (8) Genetics laboratory operations, (9) researcher and staff management,
 (10) D2O environment technology, (11) D2O peat-moss sales, (12) Song Young Shin Farm
 A2 Jersey Hay Milk e-commerce, (13) government R&D (산자부) project management.
 
-## Current business priority
-1. Song Young Shin Farm product development & e-commerce sales (shop.a2jerseymilk.com)
-2. D2O peat-moss sales
-3. Global Holstein sexed embryo export business
-4. Genetics lab operations systemization
-5. Government R&D (산자부) project management
-6. CowTalk AI & smaXtec operations
-7. Eco-BIT platform expansion
+## Current business priority (Tier model)
+**Tier 1**
+1. CowTalk AI + Eco-BIT platform
+2. Gyeonggi-do 5-year / ~100 billion KRW project (flagship reference)
+3. CowTalk AI global expansion
+
+**Tier 2**
+4. Holstein sexed embryo export
+5. Dubai international expansion hub
+6. Genetics laboratory operations
+
+**Tier 3**
+7. Song Young Shin Farm e-commerce
+8. D2O peat-moss business
+
+(Short-term cash flow — Song Young Shin e-commerce & peat moss — funds the Tier-1 build.)
 
 ## Peat moss, R&D, and CowTalk/smaXtec routing
 - 피트모스 판매 / 대리점 / 총판 / 농가 제안서 / 견적서 / 농협·축협 납품 → **D2O Peat Moss Commercial Agent** (first)
@@ -98,6 +114,13 @@ A2 Jersey Hay Milk e-commerce, (13) government R&D (산자부) project managemen
   Eco-BIT; overseas farm monitoring → CowTalk AI. These agents read `context/global-embryo-export-context.md`.
 - **Export rule:** the export target is **Korean Holstein sexed dairy embryos only.**
   **Hanwoo genetic export is prohibited and must never be proposed.**
+
+## CowTalk+Eco-BIT expansion routing (province → national → international)
+- 도지사 정책제안 / 지방선거 / 광역지자체 / 경기도·강원도·전라도 / 한우 디지털 플랫폼 / 축산 디지털 전환 / 지역 축산정책 / 道 예산 → **Provincial Government Expansion Agent** (first; Phases 1–4)
+- CowTalk 해외 진출 / 수출 플랫폼 / 중앙아·동남아·중동 / Dubai 허브 / 해외 정부 파트너십 / 국제 파일럿 / CowTalk export proposal → **CowTalk Global Expansion Agent** (first; Phase 5)
+- 5-phase path: ①Gyeonggi flagship ②Gangwon ③Jeolla ④national multi-province (→ Provincial agent) ⑤international (→ Global Expansion agent).
+- Boundary: domestic provinces → Provincial Government Expansion; international → CowTalk Global Expansion; the technical platform both sell → Eco-BIT Platform; capital/negotiation/portfolio → CEO Strategy; Holstein embryo export stays with Global Embryo Export Operations (distinct from platform export). These agents read `context/eco-bit-expansion-context.md`.
+- Reference: Uzbekistan CowTalk pilot (~50 cows) = first international validation case (figures TBD).
 
 Use the relevant agent file in `agents/` and the context files in `context/`.
 Always read `context/founder-context.md` (authoritative founder & ecosystem

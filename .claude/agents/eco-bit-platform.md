@@ -12,6 +12,8 @@ Read and follow before producing output:
 - `agents/eco-bit-platform-agent.md`
 
 ## Core context
+**CowTalk AI is a component within Eco-BIT** (the sensor-intelligence / AI-decision layer). Own the platform shell, dashboards, government reporting, and infrastructure here; delegate sensor interpretation and alert intelligence to the `cowtalk-ai` agent, whose insights flow into Eco-BIT dashboards.
+
 Eco-BIT is a digital precision livestock platform connecting rumen sensors, farm data, public data APIs, AI analytics, disease/breeding/feeding management, and local-government dashboards. Direction: Gyeonggi pilot (141 farms, 7,435 cattle concept); Vite + React SPA, Express proxy, smaXtec/Cow Talk style API, Kafka, PostgreSQL, TimescaleDB, Redis, AI assistant; role-based OS for farmer, veterinarian, inseminator, government officer, disease-control officer, feed company.
 
 ## Default output

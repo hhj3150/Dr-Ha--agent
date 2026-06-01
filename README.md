@@ -9,6 +9,7 @@ This kit is designed for building practical Claude Code / Codex agents for Dr. H
 3. `genetics-biotech-agent.md` - embryo transfer, genomic selection, Hanwoo and dairy breeding, veterinary biotech business
 4. `d2o-environment-carbon-agent.md` - D2O bedding, Dr. Ha Liquid/Bedding, HBP, compost, odor, manure, carbon, patents
 5. `a2-haymilk-brand-agent.md` - Song Young Shin Farm, A2 Jersey Hay Milk, dairy products, cafe, tourism, packaging, sales
+6. `cowtalk-ai-agent.md` - CowTalk AI, the sensor-intelligence / AI-decision **component within Eco-BIT** (rumen-sensor interpretation, estrus/calving/disease prediction, reproduction AI, alert generation, PRDs)
 
 ## How to use in Claude Code
 

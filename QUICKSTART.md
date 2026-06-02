@@ -9,7 +9,7 @@
 2. **에이전트 지정** — 이름을 앞에 붙인다.
    `cowtalk-global-expansion 로: 카자흐스탄 정부 도입 제안서 써줘`
 3. **섞인 업무는 통으로** — 여러 에이전트가 자동 조합되어 하나의 결과물로 나옴.
-   `경기도 5년 1,000억 공모 제안서` → provincial-government-expansion + eco-bit-platform + ceo-strategy
+   `경기도 5년 102.3억 AI 축산행정 플랫폼 제안서` → provincial-government-expansion + eco-bit-platform + ceo-strategy
 
 ## 2. 17개 에이전트 빠른 지도
 | 사업 | 에이전트 | 한 줄 |
@@ -33,13 +33,13 @@
 | A2 일반 | `a2-haymilk-brand` | 레거시 브랜드·카페·관광 |
 
 ## 3. 우선순위 (Tier)
-- **Tier 1:** ①CowTalk+Eco-BIT ②경기도 5년/1,000억 ③CowTalk 해외 확장
+- **Tier 1:** ①CowTalk+Eco-BIT ②경기도 5년/102.3억 AI 축산행정 플랫폼 ③CowTalk 해외 확장
 - **Tier 2:** ④홀스타인 수정란 수출 ⑤Dubai 허브 ⑥실험실 운영
 - **Tier 3:** ⑦송영신 쇼핑몰 ⑧피트모스 (단기 현금흐름 → Tier 1 자금)
 
 ## 4. 자주 쓰는 시작 명령
 - `내 사업 전체 우선순위화하고 이번 분기 30/90일 액션플랜` → ceo-strategy
-- `경기도 5년 1,000억 사업 개념서 v1` → provincial-government-expansion
+- `경기도 5년 102.3억 AI 축산행정 플랫폼 개념서 v1` → provincial-government-expansion
 - `우즈벡 CowTalk 50두 파일럿을 제1호 국제 실증 레퍼런스로 문서화` → cowtalk-global-expansion
 - `shop.a2jerseymilk.com 오픈 전 체크리스트` → songyoungshin-ecommerce
 - `피트모스 낙농가 제안서 + ROI` → d2o-peatmoss-commercial

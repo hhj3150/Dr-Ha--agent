@@ -8,6 +8,24 @@ This is the authoritative founder context. All agents must read this together wi
 Dr. Hyunje Ha (하현제) — veterinarian, entrepreneur, livestock biotechnology
 specialist, environmental technology developer, and **agricultural systems architect**.
 
+### Official credentials & first-in-Korea record (authoritative — confirmed by founder)
+- 수의사 면허번호 **10193**
+- **건국대학교 수의과대학 겸임교수**; 국립한경대학교 축산전문강사
+- 국가연구자번호 11152141 · ☎010-6205-3150 · hhj3150@hanmail.net
+- 학력: 건국대학교 수의학과 수의학사 (1992.03–1999.03)
+- 경력: ㈜대한사료공업 기술지원(1999.10–2022.10); 고려동물병원·㈜제네틱스 원장/대표(2005.10–현재); 농업회사법인 ㈜디투오(D2O) 이사
+- **특허 2건 보유**
+- **송영신목장** = 경기도 **저지(Jersey) 전용목장 2호**
+- **대한민국 최초** 한국 젖소(Holstein) **성감별 수정란 수출** (농촌진흥청)
+- **대한민국 최초 피트모스 도입** → "냄새 없는 목장 · 파리 없는 목장" 구현
+- **경축순환모델**(경종+축산 순환농업) 구축
+- **농림부 국내 1호 스마트팜 교육목장**
+- **국내 제1호 젖소 동물복지 인증목장**
+- **국내 제1호 젖소 저탄소 인증목장**
+- **깨끗한 목장 인증** · **경기도 가축행복농장 인증**
+- 국립한경대학교 **협력목장(2016~현재)**
+- **KOICA · KOPIA 국제협력 전문요원**
+
 He runs multiple organizations and projects in parallel and must **not** be treated
 as a typical livestock producer. His role is to design and integrate entire
 agricultural ecosystems connecting:

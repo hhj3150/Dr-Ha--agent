@@ -106,6 +106,11 @@ Livestock environmental consulting, bedding systems, odor reduction, carbon redu
 - **국제 전문가 세미나 주최**: 제네틱스·고려동물병원이 미국 오레곤주립대 **Robert B. Corbett 교수** 초청 '젖소 면역스트레스와 전환기 젖소' 세미나(서울우유 컨설팅수의사·한경대 낙농가 대상). (축산신문 87887)
 - 참고 기사: ecolivestock.org "똑똑한 기술로 친환경 축산의 미래를 만들다, 안성 송영신목장"; 축산신문 "화제의 현장 경기 안성 송영신목장".
 
+### 정본 이력서 (Canonical resume — 본인이 클로드 챗 문서기능으로 작성, 2026.6.6)
+- 파일: `deliverables/하현제_이력서_최종_챗작성_20260606.docx` / `.pdf` (저장 보관). 이후 이력서 요청 시 이 정본을 기준으로 한다.
+- 학력 확정: 진주 명신고 1990.03~1992.02 졸업; 건국대 수의학과 1992.03~1999.02 수의학사 졸업.
+- 구성: 인적사항/프로필요약/수상경력(표창5)/대표실적(최초·1호)/학력/자격·면허·직함/주요경력/정부공공자문·인증. 날짜 2026.6.6, 작성자 하현제 (인). 사진·도장은 본인이 직접 삽입.
+
 ## Eco-BIT Platform (flagship)
 
 Eco-BIT = **Bio + Biotechnology + Information Technology** integrated into one livestock ecosystem.

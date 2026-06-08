@@ -173,16 +173,8 @@ def build_korean(path):
     add_heading(doc, "제5조 (국가 허가 처리시설 생산 수정란의 인정) ★")
     add_body(doc, "5.1 본 IVF 수정란은 대한민국의 「축산법」에 따라 관할 행정관청으로부터 「가축인공수정 관련 정액·수정란 처리업(정액등처리업) 허가」를 받은 시설에서, 시설 책임수의사의 감독 하에 생산·처리·동결·보관되었다. 본 허가는 대한민국 정부의 허가체계 하에서 부여된 국가 허가에 해당한다.")
     add_body(doc, "5.2 이러한 국가 허가 보유 시설은 제4조의 IETS·WOAH 위생기준에 부합하는 채취·세척·처리·보관 체계를 갖춘 것으로 인정되므로, 싱가포르는 해당 허가를 보유한 시설에서 본 위생요건을 충족하여 생산된 홀스타인 IVF 수정란의 수입을 허용한다.")
-    add_body(doc, "5.3 본 수정란을 생산한 허가 처리시설의 정보는 다음과 같다.")
-    add_sign_table(doc, [
-        ("허가 처리시설명 (Licensed facility)", ""),
-        ("허가번호 (Licence No.)", ""),
-        ("허가 종류 (Type of licence)", "가축인공수정 관련 정액·수정란 처리업 (정액등처리업) / Processing of semen and embryos for artificial insemination"),
-        ("허가관청 (Competent authority)", "경기도 / 안성 (Gyeonggi Province / Anseong, Republic of Korea)"),
-        ("허가일자 (Date of licence)", ""),
-        ("소재지 (Address)", ""),
-    ])
-    add_note(doc, "(허가번호·허가일자·정확한 관청명은 허가증 원본을 기준으로 기재. 시설 등록·인정 절차는 양국 합의로 확정.)")
+    add_body(doc, "5.3 본 수정란을 생산한 시설의 「정액등처리업 허가서」 사본을 본 위생요건서의 부속서류로 첨부하며, 이로써 해당 시설의 국가 허가 보유 사실을 증명한다.")
+    add_note(doc, "(첨부: 정액등처리업 허가서 사본 / Attachment: copy of the licence for processing of semen and embryos.)")
 
     add_heading(doc, "제6조 (보관·식별·봉인)")
     add_body(doc, "6.1 수정란은 멸균 스트로(straw)에 충전되어 액체질소(또는 그 증기) 중에 동결·보관되었다.")
@@ -191,7 +183,7 @@ def build_korean(path):
     add_body(doc, "6.4 수송 컨테이너(cryotank)는 충전 후 정부수의관 책임 하에 봉인되며, 봉인번호는 수정란 목록에 기재되고 수입국 검역관만 개봉한다.")
 
     add_heading(doc, "제7조 (수출 증명)")
-    add_body(doc, "7.1 첨부서류: 상업송장, 포장명세서, 원산지증명서, 동물검역증명서, 수정란 목록(공란우/부/스트로 ID·봉인번호).")
+    add_body(doc, "7.1 첨부서류: 상업송장, 포장명세서, 원산지증명서, 동물검역증명서, 수정란 목록(공란우/부/스트로 ID·봉인번호), 정액등처리업 허가서 사본.")
     add_body(doc, "7.2 위생요건 충족은 정부수의관이 증명하며, 최종 수입 허용은 싱가포르 식품청(SFA) 검역 결정에 따른다.")
 
     add_heading(doc, "증명문 (Attestation)")
@@ -265,16 +257,8 @@ def build_english(path):
     add_heading(doc, "Article 5 — Recognition of embryos produced at a nationally licensed facility *")
     add_body(doc, "5.1 The IVF embryos were produced, processed, frozen and stored at a facility holding a licence for the processing of semen and embryos for artificial insemination, granted by the competent authority under the Livestock Industry Act of the Republic of Korea, under the supervision of the facility's responsible veterinarian. This licence constitutes a national licence granted under the licensing system of the Government of the Republic of Korea.")
     add_body(doc, "5.2 A facility holding such a national licence is recognised as operating a collection, washing, processing and storage system compliant with the IETS/WOAH sanitary standards of Article 4. Accordingly, Singapore permits the importation of Holstein IVF embryos produced in compliance with these requirements at such a licensed facility.")
-    add_body(doc, "5.3 The particulars of the licensed processing facility that produced these embryos are as follows.")
-    add_sign_table(doc, [
-        ("Licensed facility", ""),
-        ("Licence No.", ""),
-        ("Type of licence", "Processing of semen and embryos for artificial insemination"),
-        ("Competent authority", "Gyeonggi Province / Anseong, Republic of Korea"),
-        ("Date of licence", ""),
-        ("Address", ""),
-    ])
-    add_note(doc, "(Licence number, date and exact authority name to be entered per the original licence certificate; facility registration/recognition procedure to be finalised by bilateral agreement.)")
+    add_body(doc, "5.3 A copy of the licence for the processing of semen and embryos for artificial insemination, held by the facility that produced these embryos, is attached to these Veterinary Health Requirements as a supporting document, thereby evidencing the facility's possession of the national licence.")
+    add_note(doc, "(Attachment: copy of the licence for the processing of semen and embryos for artificial insemination.)")
 
     add_heading(doc, "Article 6 — Storage, identification and sealing")
     add_body(doc, "6.1 Embryos were loaded into sterile straws and frozen and stored in liquid nitrogen (or its vapour).")
@@ -283,7 +267,7 @@ def build_english(path):
     add_body(doc, "6.4 The export cryotank was sealed under the responsibility of the Official Veterinarian after loading; the seal number is recorded in the accompanying embryo list and the seal is to be broken only by the importing quarantine officer.")
 
     add_heading(doc, "Article 7 — Export certification")
-    add_body(doc, "7.1 The consignment is accompanied by: Commercial Invoice, Packing List, Certificate of Origin, Veterinary Health Certificate, and Embryo List (with donor/sire/straw IDs and seal number).")
+    add_body(doc, "7.1 The consignment is accompanied by: Commercial Invoice, Packing List, Certificate of Origin, Veterinary Health Certificate, Embryo List (with donor/sire/straw IDs and seal number), and a copy of the licence for the processing of semen and embryos.")
     add_body(doc, "7.2 Compliance is certified by the Official Veterinarian of the exporting country; final import clearance is subject to the decision of the Singapore Food Agency (SFA).")
 
     add_heading(doc, "Attestation")

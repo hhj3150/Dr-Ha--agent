@@ -19,6 +19,10 @@ Apply these rules before generating any external-facing document.
 4. Unverified scientific claims
    - Mark as hypothesis, pilot target, or R&D claim unless proven by field data.
 
+5. SmaXtec 판매구조 내부정보 (see `smaxtec-sales-structure-context.md`)
+   - 대외 노출 금지: 공급 원가(두당 7,700원), 마진(4,300원), 회사 지분구조(리얼팜 대표/최대주주), 코리아제네틱스 수입 단가, 회사 간 내부 사유.
+   - 대외 사용 가능: 판매가(설치 500만원/목장, 두당 월 12,000원), 4년 유지·무상교체, 국내 독점 공급·API 보유 사실.
+
 ## External document default
 
 Use claims like:

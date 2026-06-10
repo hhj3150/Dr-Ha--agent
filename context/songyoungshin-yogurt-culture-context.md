@@ -2,7 +2,12 @@
 
 > Song Young Shin Farm Growth Team (Product Development Agent) 전용 참조 파일.
 > 제품: **A2 저지 플레인요거트** (A2 Jersey Plain Yogurt) — 송영신목장 저지 A2 원유 사용.
-> 공급사: **Danisco (IFF, 구 DuPont Nutrition & Biosciences)**, YO-MIX® 시리즈.
+> 공급사/브랜드: **Danisco** YO-MIX® 시리즈.
+>   - **회사 국적: 덴마크** (Danisco는 덴마크 코펜하겐 본사 기업, 1989년 덴마크에서 설립).
+>   - **소유 이력:** 2011년 미국 DuPont이 Danisco 인수 → DuPont Nutrition & Biosciences →
+>     2021년 미국 **IFF (International Flavors & Fragrances)**와 합병. 현재 YO-MIX® 브랜드는 **IFF** 소속.
+>   - **제품 생산지(원산지): 프랑스 (France)** — 라벨 "Country of origin" 기준.
+>   - ⚠️ 세 층위 구분: 브랜드 뿌리=덴마크 / 현 소유사=IFF(미국) / 이 로트 생산지=프랑스.
 > 기록일: 2026-06-10. 회장님 제공 라벨 실물 기준.
 
 ---

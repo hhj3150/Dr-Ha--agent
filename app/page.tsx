@@ -504,6 +504,9 @@ function Chat() {
             <div className="sub">D2O · 17개 전문 에이전트 자동 배정</div>
           </div>
           <div className="spacer" />
+          <a className="intel-link" href="/intel" title="일일 인텔리전스 리포트">
+            📊 인텔
+          </a>
           <select
             className="agent-select"
             value={agentKey}

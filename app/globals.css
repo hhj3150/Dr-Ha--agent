@@ -203,6 +203,20 @@ body {
   font-size: 13px;
   max-width: 200px;
 }
+.intel-link {
+  background: var(--panel-2);
+  color: var(--accent-2);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 8px 11px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.intel-link:hover {
+  background: var(--panel);
+}
 
 /* ── Messages ─────────────────────────── */
 .messages {

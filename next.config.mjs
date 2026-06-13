@@ -8,6 +8,7 @@ const nextConfig = {
   experimental: {
     outputFileTracingIncludes: {
       "/api/chat": ["./CLAUDE.md", "./agents/**/*", "./context/**/*"],
+      "/api/intel/generate": ["./context/**/*"],
     },
   },
 };

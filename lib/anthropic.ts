@@ -11,7 +11,8 @@ export function getClient(): Anthropic {
     );
   }
   if (!client) {
-    client = new Anthropic({ apiKey });
+    // maxRetries: 429/일시적 오류에 대해 SDK가 backoff 재시도(Retry-After 존중)
+    client = new Anthropic({ apiKey, maxRetries: 4 });
   }
   return client;
 }

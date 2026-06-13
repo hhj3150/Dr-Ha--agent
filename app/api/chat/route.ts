@@ -120,9 +120,19 @@ export async function POST(req: NextRequest) {
         await messageStream.finalMessage();
         controller.close();
       } catch (err) {
-        const msg =
+        const status = (err as any)?.status;
+        let msg =
           err instanceof Error ? err.message : "답변 생성 중 오류가 발생했습니다.";
-        controller.enqueue(encoder.encode(`\n\n⚠️ 오류: ${msg}`));
+        if (status === 429) {
+          msg =
+            "API 사용량 한도에 걸렸습니다(429). 잠시 후(약 1분) 다시 시도해 주세요. " +
+            "자주 발생하면 Anthropic 콘솔에서 크레딧을 충전해 등급(Tier)을 올리거나 분당 한도를 확인하세요.";
+        } else if (status === 401) {
+          msg = "API 키 인증 오류(401). Netlify의 ANTHROPIC_API_KEY 를 확인해 주세요.";
+        } else if (status === 400 && /credit|balance/i.test(msg)) {
+          msg = "크레딧 잔액 부족입니다. Anthropic 콘솔의 Billing에서 충전해 주세요.";
+        }
+        controller.enqueue(encoder.encode(`\n\n⚠️ ${msg}`));
         controller.close();
       }
     },

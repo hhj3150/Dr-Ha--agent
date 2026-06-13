@@ -305,6 +305,10 @@ body {
   color: var(--text);
   border-color: var(--accent);
 }
+.msg-actions .cal {
+  color: var(--accent-2);
+  border-color: var(--accent);
+}
 
 /* Markdown content */
 .bubble h1,

@@ -43,6 +43,71 @@ function newConversation(): Conversation {
   return { id: uid(), title: "새 대화", messages: [], createdAt: now, updatedAt: now };
 }
 
+const ICS_RE = /```ics-event\s*([\s\S]*?)```/g;
+
+interface IcsEvent {
+  title: string;
+  start: string;
+  end?: string;
+  location?: string;
+  description?: string;
+}
+
+/** 답변 본문에서 ics-event 블록을 추출 */
+function parseIcsEvents(content: string): IcsEvent[] {
+  const out: IcsEvent[] = [];
+  const re = new RegExp(ICS_RE);
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(content))) {
+    try {
+      const ev = JSON.parse(m[1].trim());
+      if (ev && ev.title && ev.start) out.push(ev);
+    } catch {
+      /* 형식 불일치 무시 */
+    }
+  }
+  return out;
+}
+
+/** 렌더링 시 ics-event 블록은 화면에서 숨김 */
+function stripIcs(content: string): string {
+  return content.replace(new RegExp(ICS_RE), "").trim();
+}
+
+function downloadIcs(ev: IcsEvent) {
+  const esc = (s: string) =>
+    String(s).replace(/([,;\\])/g, "\\$1").replace(/\n/g, "\\n");
+  const toUtc = (s: string) => {
+    // 한국시간(타임존 미표기) 가정 → UTC 변환
+    const d = new Date(/[zZ]|[+-]\d{2}:?\d{2}$/.test(s) ? s : s + "+09:00");
+    return d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+  };
+  const ics = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//하실장 비서실//KO",
+    "BEGIN:VEVENT",
+    `UID:${Date.now()}@hasiljang`,
+    `DTSTAMP:${toUtc(new Date().toISOString())}`,
+    `DTSTART:${toUtc(ev.start)}`,
+    `DTEND:${toUtc(ev.end || ev.start)}`,
+    `SUMMARY:${esc(ev.title)}`,
+    ev.location ? `LOCATION:${esc(ev.location)}` : "",
+    ev.description ? `DESCRIPTION:${esc(ev.description)}` : "",
+    "END:VEVENT",
+    "END:VCALENDAR",
+  ]
+    .filter(Boolean)
+    .join("\r\n");
+  const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `${ev.title.replace(/[\\/:*?"<>|]/g, "")}.ics`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
 /* ───────────────────────── 인증 게이트 ───────────────────────── */
 export default function Page() {
   const [authed, setAuthed] = useState(false);
@@ -472,32 +537,43 @@ function Chat() {
               </div>
             </div>
           ) : (
-            messages.map((m, i) => (
-              <div key={i} className={`msg ${m.role}`}>
-                {m.role === "assistant" && m.agentLabel && (
-                  <span className="agent-tag">{m.agentLabel}</span>
-                )}
-                <div className="bubble">
-                  {m.role === "assistant" ? (
-                    m.content ? (
-                      <ReactMarkdown remarkPlugins={[remarkGfm]}>{m.content}</ReactMarkdown>
+            messages.map((m, i) => {
+              const events =
+                m.role === "assistant" && m.content ? parseIcsEvents(m.content) : [];
+              const display =
+                m.role === "assistant" && events.length ? stripIcs(m.content) : m.content;
+              return (
+                <div key={i} className={`msg ${m.role}`}>
+                  {m.role === "assistant" && m.agentLabel && (
+                    <span className="agent-tag">{m.agentLabel}</span>
+                  )}
+                  <div className="bubble">
+                    {m.role === "assistant" ? (
+                      m.content ? (
+                        <ReactMarkdown remarkPlugins={[remarkGfm]}>{display}</ReactMarkdown>
+                      ) : (
+                        <span className="typing">작성 중…</span>
+                      )
                     ) : (
-                      <span className="typing">작성 중…</span>
-                    )
-                  ) : (
-                    m.content
+                      m.content
+                    )}
+                  </div>
+                  {m.role === "assistant" && m.content && !busy && (
+                    <div className="msg-actions">
+                      <button onClick={() => navigator.clipboard.writeText(display)}>복사</button>
+                      <button onClick={() => download(display, m.agentLabel)}>
+                        문서 다운로드 (.md)
+                      </button>
+                      {events.map((ev, k) => (
+                        <button key={k} className="cal" onClick={() => downloadIcs(ev)}>
+                          📅 캘린더에 추가: {ev.title}
+                        </button>
+                      ))}
+                    </div>
                   )}
                 </div>
-                {m.role === "assistant" && m.content && !busy && (
-                  <div className="msg-actions">
-                    <button onClick={() => navigator.clipboard.writeText(m.content)}>복사</button>
-                    <button onClick={() => download(m.content, m.agentLabel)}>
-                      문서 다운로드 (.md)
-                    </button>
-                  </div>
-                )}
-              </div>
-            ))
+              );
+            })
           )}
         </div>
 

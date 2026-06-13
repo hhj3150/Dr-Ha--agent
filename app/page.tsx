@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -9,6 +9,14 @@ interface Msg {
   content: string;
   agentLabel?: string;
   agentKey?: string;
+}
+
+interface Conversation {
+  id: string;
+  title: string;
+  messages: Msg[];
+  createdAt: number;
+  updatedAt: number;
 }
 
 interface AgentInfo {
@@ -24,17 +32,26 @@ const EXAMPLES = [
   "산자부 이번 달 진도보고서 + 성과지표 정리해줘",
 ];
 
+const STORE_KEY = "ha_conversations_v1";
+
+function uid() {
+  return Math.random().toString(36).slice(2) + Date.now().toString(36);
+}
+
+function newConversation(): Conversation {
+  const now = Date.now();
+  return { id: uid(), title: "새 대화", messages: [], createdAt: now, updatedAt: now };
+}
+
+/* ───────────────────────── 인증 게이트 ───────────────────────── */
 export default function Page() {
   const [authed, setAuthed] = useState(false);
   const [needAuth, setNeedAuth] = useState(false);
   const [checking, setChecking] = useState(true);
 
-  // 시작 시 비밀번호 필요 여부 확인 (저장된 비번으로 자동 통과 시도)
   useEffect(() => {
     const saved =
-      typeof window !== "undefined"
-        ? window.localStorage.getItem("ha_pw") || ""
-        : "";
+      typeof window !== "undefined" ? window.localStorage.getItem("ha_pw") || "" : "";
     fetch("/api/chat", {
       method: "POST",
       headers: { "content-type": "application/json", "x-app-password": saved },
@@ -57,11 +74,7 @@ export default function Page() {
       </div>
     );
   }
-
-  if (needAuth && !authed) {
-    return <Gate onPass={() => setAuthed(true)} />;
-  }
-
+  if (needAuth && !authed) return <Gate onPass={() => setAuthed(true)} />;
   return <Chat />;
 }
 
@@ -110,21 +123,94 @@ function Gate({ onPass }: { onPass: () => void }) {
   );
 }
 
+/* ───────────────────────── 메인 채팅 ───────────────────────── */
 function Chat() {
-  const [messages, setMessages] = useState<Msg[]>([]);
+  const [conversations, setConversations] = useState<Conversation[]>([]);
+  const [currentId, setCurrentId] = useState<string>("");
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
   const [agents, setAgents] = useState<AgentInfo[]>([]);
-  const [agentKey, setAgentKey] = useState<string>(""); // "" = 자동 배정
+  const [agentKey, setAgentKey] = useState<string>("");
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [listening, setListening] = useState(false);
+  const [voiceOK, setVoiceOK] = useState(false);
+
   const scrollRef = useRef<HTMLDivElement>(null);
   const taRef = useRef<HTMLTextAreaElement>(null);
+  const recognitionRef = useRef<any>(null);
+  const loaded = useRef(false);
 
+  /* 저장된 대화 불러오기 (최초 1회) */
+  useEffect(() => {
+    try {
+      const raw = window.localStorage.getItem(STORE_KEY);
+      const saved: Conversation[] = raw ? JSON.parse(raw) : [];
+      if (saved.length > 0) {
+        setConversations(saved);
+        setCurrentId(saved[0].id);
+      } else {
+        const c = newConversation();
+        setConversations([c]);
+        setCurrentId(c.id);
+      }
+    } catch {
+      const c = newConversation();
+      setConversations([c]);
+      setCurrentId(c.id);
+    }
+    loaded.current = true;
+  }, []);
+
+  /* 대화 변경 시 자동 저장 */
+  useEffect(() => {
+    if (!loaded.current) return;
+    try {
+      window.localStorage.setItem(STORE_KEY, JSON.stringify(conversations));
+    } catch {
+      /* 저장 용량 초과 등은 무시 */
+    }
+  }, [conversations]);
+
+  /* 에이전트 목록 */
   useEffect(() => {
     fetch("/api/agents")
       .then((r) => r.json())
       .then((d) => setAgents(d.agents || []))
       .catch(() => {});
   }, []);
+
+  /* 음성 인식 준비 (브라우저 지원 시) */
+  useEffect(() => {
+    const SR =
+      (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (!SR) return;
+    const rec = new SR();
+    rec.lang = "ko-KR";
+    rec.continuous = false;
+    rec.interimResults = true;
+    rec.onresult = (e: any) => {
+      let transcript = "";
+      for (let i = 0; i < e.results.length; i++) {
+        transcript += e.results[i][0].transcript;
+      }
+      setInput(transcript);
+    };
+    rec.onend = () => setListening(false);
+    rec.onerror = () => setListening(false);
+    recognitionRef.current = rec;
+    setVoiceOK(true);
+    return () => {
+      try {
+        rec.stop();
+      } catch {}
+    };
+  }, []);
+
+  const current = useMemo(
+    () => conversations.find((c) => c.id === currentId),
+    [conversations, currentId]
+  );
+  const messages = current?.messages ?? [];
 
   useEffect(() => {
     scrollRef.current?.scrollTo({
@@ -133,75 +219,116 @@ function Chat() {
     });
   }, [messages]);
 
+  const patchCurrent = useCallback(
+    (updater: (c: Conversation) => Conversation) => {
+      setConversations((prev) =>
+        prev.map((c) => (c.id === currentId ? updater(c) : c))
+      );
+    },
+    [currentId]
+  );
+
+  function startNew() {
+    const c = newConversation();
+    setConversations((prev) => [c, ...prev]);
+    setCurrentId(c.id);
+    setSidebarOpen(false);
+    setInput("");
+  }
+
+  function selectConversation(id: string) {
+    setCurrentId(id);
+    setSidebarOpen(false);
+  }
+
+  function deleteConversation(id: string, e: React.MouseEvent) {
+    e.stopPropagation();
+    setConversations((prev) => {
+      const next = prev.filter((c) => c.id !== id);
+      if (next.length === 0) {
+        const c = newConversation();
+        setCurrentId(c.id);
+        return [c];
+      }
+      if (id === currentId) setCurrentId(next[0].id);
+      return next;
+    });
+  }
+
+  function toggleVoice() {
+    const rec = recognitionRef.current;
+    if (!rec) return;
+    if (listening) {
+      rec.stop();
+      setListening(false);
+    } else {
+      try {
+        rec.start();
+        setListening(true);
+      } catch {
+        setListening(false);
+      }
+    }
+  }
+
   async function send(text?: string) {
     const content = (text ?? input).trim();
-    if (!content || busy) return;
+    if (!content || busy || !currentId) return;
+    if (listening) toggleVoice();
 
-    const pw =
-      typeof window !== "undefined"
-        ? window.localStorage.getItem("ha_pw") || ""
-        : "";
+    const pw = window.localStorage.getItem("ha_pw") || "";
+    const baseMsgs: Msg[] = [...messages, { role: "user", content }];
 
-    const nextMsgs: Msg[] = [...messages, { role: "user", content }];
-    setMessages(nextMsgs);
+    // 사용자 메시지 + 답변 자리표시자 추가, 첫 메시지면 제목 설정
+    patchCurrent((c) => ({
+      ...c,
+      title: c.messages.length === 0 ? content.slice(0, 24) : c.title,
+      messages: [...baseMsgs, { role: "assistant", content: "" }],
+      updatedAt: Date.now(),
+    }));
     setInput("");
     setBusy(true);
-
-    // 답변 자리표시자
-    setMessages((m) => [...m, { role: "assistant", content: "" }]);
 
     try {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "content-type": "application/json", "x-app-password": pw },
         body: JSON.stringify({
-          messages: nextMsgs.map((m) => ({ role: m.role, content: m.content })),
+          messages: baseMsgs.map((m) => ({ role: m.role, content: m.content })),
           agentKey: agentKey || null,
         }),
       });
 
       const label = decodeURIComponent(res.headers.get("x-agent-label") || "");
       const key = res.headers.get("x-agent-key") || "";
-
       if (!res.body) throw new Error("응답 본문이 없습니다.");
 
       const reader = res.body.getReader();
       const decoder = new TextDecoder();
       let acc = "";
-      // 라벨 먼저 반영
-      setMessages((m) => {
-        const copy = [...m];
-        copy[copy.length - 1] = {
-          role: "assistant",
-          content: "",
-          agentLabel: label,
-          agentKey: key,
-        };
-        return copy;
+
+      patchCurrent((c) => {
+        const copy = [...c.messages];
+        copy[copy.length - 1] = { role: "assistant", content: "", agentLabel: label, agentKey: key };
+        return { ...c, messages: copy };
       });
 
       while (true) {
         const { done, value } = await reader.read();
         if (done) break;
         acc += decoder.decode(value, { stream: true });
-        setMessages((m) => {
-          const copy = [...m];
-          copy[copy.length - 1] = {
-            ...copy[copy.length - 1],
-            content: acc,
-          };
-          return copy;
+        patchCurrent((c) => {
+          const copy = [...c.messages];
+          copy[copy.length - 1] = { ...copy[copy.length - 1], content: acc };
+          return { ...c, messages: copy, updatedAt: Date.now() };
         });
       }
     } catch (e) {
       const msg = e instanceof Error ? e.message : "오류가 발생했습니다.";
-      setMessages((m) => {
-        const copy = [...m];
-        copy[copy.length - 1] = {
-          role: "assistant",
-          content: `⚠️ 오류: ${msg}`,
-        };
-        return copy;
+      patchCurrent((c) => {
+        const copy = [...c.messages];
+        copy[copy.length - 1] = { role: "assistant", content: `⚠️ 오류: ${msg}` };
+        return { ...c, messages: copy };
       });
     } finally {
       setBusy(false);
@@ -223,97 +350,139 @@ function Chat() {
   }
 
   return (
-    <div className="app">
-      <header className="header">
-        <div className="logo">河</div>
-        <div>
-          <h1>하실장 비서실</h1>
-          <div className="sub">D2O · 17개 전문 에이전트 자동 배정</div>
-        </div>
-        <div className="spacer" />
-        <select
-          className="agent-select"
-          value={agentKey}
-          onChange={(e) => setAgentKey(e.target.value)}
-          title="에이전트 직접 지정 (기본: 자동 배정)"
-        >
-          <option value="">🤖 자동 배정</option>
-          {agents.map((a) => (
-            <option key={a.key} value={a.key}>
-              {a.label}
-            </option>
-          ))}
-        </select>
-      </header>
-
-      <div className="messages" ref={scrollRef}>
-        {messages.length === 0 ? (
-          <div className="empty">
-            <h2>회장님, 무엇부터 챙겨드릴까요?</h2>
-            <p>
-              평소 말로 지시하시면 가장 알맞은 에이전트가 자동 배정되어
-              <br />
-              바로 쓸 수 있는 실행 문서를 만들어드립니다.
-            </p>
-            <div className="examples">
-              {EXAMPLES.map((ex) => (
-                <button key={ex} onClick={() => send(ex)}>
-                  {ex}
-                </button>
-              ))}
+    <div className="layout">
+      {/* 사이드바 */}
+      <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
+        <button className="new-chat" onClick={startNew}>
+          ＋ 새 대화
+        </button>
+        <div className="conv-list">
+          {conversations.map((c) => (
+            <div
+              key={c.id}
+              className={`conv-item ${c.id === currentId ? "active" : ""}`}
+              onClick={() => selectConversation(c.id)}
+            >
+              <span className="conv-title">{c.title || "새 대화"}</span>
+              <button
+                className="conv-del"
+                title="삭제"
+                onClick={(e) => deleteConversation(c.id, e)}
+              >
+                ×
+              </button>
             </div>
+          ))}
+        </div>
+        <div className="sidebar-foot">대화는 이 기기에 자동 저장됩니다.</div>
+      </aside>
+      {sidebarOpen && <div className="backdrop" onClick={() => setSidebarOpen(false)} />}
+
+      {/* 본문 */}
+      <div className="app">
+        <header className="header">
+          <button className="hamburger" onClick={() => setSidebarOpen((v) => !v)} title="대화 목록">
+            ☰
+          </button>
+          <div className="logo">河</div>
+          <div>
+            <h1>하실장 비서실</h1>
+            <div className="sub">D2O · 17개 전문 에이전트 자동 배정</div>
           </div>
-        ) : (
-          messages.map((m, i) => (
-            <div key={i} className={`msg ${m.role}`}>
-              {m.role === "assistant" && m.agentLabel && (
-                <span className="agent-tag">{m.agentLabel}</span>
-              )}
-              <div className="bubble">
-                {m.role === "assistant" ? (
-                  m.content ? (
-                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                      {m.content}
-                    </ReactMarkdown>
+          <div className="spacer" />
+          <select
+            className="agent-select"
+            value={agentKey}
+            onChange={(e) => setAgentKey(e.target.value)}
+            title="에이전트 직접 지정 (기본: 자동 배정)"
+          >
+            <option value="">🤖 자동 배정</option>
+            {agents.map((a) => (
+              <option key={a.key} value={a.key}>
+                {a.label}
+              </option>
+            ))}
+          </select>
+        </header>
+
+        <div className="messages" ref={scrollRef}>
+          {messages.length === 0 ? (
+            <div className="empty">
+              <h2>회장님, 무엇부터 챙겨드릴까요?</h2>
+              <p>
+                평소 말로 지시하시면 가장 알맞은 에이전트가 자동 배정되어
+                <br />
+                바로 쓸 수 있는 실행 문서를 만들어드립니다.
+              </p>
+              <div className="examples">
+                {EXAMPLES.map((ex) => (
+                  <button key={ex} onClick={() => send(ex)}>
+                    {ex}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ) : (
+            messages.map((m, i) => (
+              <div key={i} className={`msg ${m.role}`}>
+                {m.role === "assistant" && m.agentLabel && (
+                  <span className="agent-tag">{m.agentLabel}</span>
+                )}
+                <div className="bubble">
+                  {m.role === "assistant" ? (
+                    m.content ? (
+                      <ReactMarkdown remarkPlugins={[remarkGfm]}>{m.content}</ReactMarkdown>
+                    ) : (
+                      <span className="typing">작성 중…</span>
+                    )
                   ) : (
-                    <span className="typing">작성 중…</span>
-                  )
-                ) : (
-                  m.content
+                    m.content
+                  )}
+                </div>
+                {m.role === "assistant" && m.content && !busy && (
+                  <div className="msg-actions">
+                    <button onClick={() => navigator.clipboard.writeText(m.content)}>복사</button>
+                    <button onClick={() => download(m.content, m.agentLabel)}>
+                      문서 다운로드 (.md)
+                    </button>
+                  </div>
                 )}
               </div>
-              {m.role === "assistant" && m.content && !busy && (
-                <div className="msg-actions">
-                  <button onClick={() => navigator.clipboard.writeText(m.content)}>
-                    복사
-                  </button>
-                  <button onClick={() => download(m.content, m.agentLabel)}>
-                    문서 다운로드 (.md)
-                  </button>
-                </div>
-              )}
-            </div>
-          ))
-        )}
-      </div>
+            ))
+          )}
+        </div>
 
-      <div className="composer">
-        <textarea
-          ref={taRef}
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" && !e.shiftKey) {
-              e.preventDefault();
-              send();
+        <div className="composer">
+          {voiceOK && (
+            <button
+              className={`mic ${listening ? "on" : ""}`}
+              onClick={toggleVoice}
+              title="음성으로 지시"
+            >
+              {listening ? "■" : "🎤"}
+            </button>
+          )}
+          <textarea
+            ref={taRef}
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault();
+                send();
+              }
+            }}
+            placeholder={
+              listening
+                ? "듣고 있습니다… 말씀하세요."
+                : "지시사항을 입력하세요. (Enter 전송 · Shift+Enter 줄바꿈)"
             }
-          }}
-          placeholder="지시사항을 입력하세요. (Enter 전송 · Shift+Enter 줄바꿈)"
-          rows={1}
-        />
-        <button className="send" onClick={() => send()} disabled={busy}>
-          {busy ? "…" : "전송"}
-        </button>
+            rows={1}
+          />
+          <button className="send" onClick={() => send()} disabled={busy}>
+            {busy ? "…" : "전송"}
+          </button>
+        </div>
       </div>
     </div>
   );

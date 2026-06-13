@@ -41,21 +41,35 @@ API 키는 https://console.anthropic.com → API Keys 에서 발급합니다.
 
 ---
 
-## 3. 인터넷에 올려서 폰으로도 쓰기 (배포 — Vercel 추천)
+## 3. 인터넷에 올려서 폰으로도 쓰기 (배포)
 
-가장 쉬운 방법입니다. 무료 등급으로 시작 가능.
+> `agents/`·`context/` markdown을 함수 번들에 포함시키는 설정(`next.config.mjs`의
+> `outputFileTracingIncludes` + `netlify.toml`의 `included_files`)이 이미 들어 있어,
+> Netlify/Vercel 어디에 올려도 답변이 정상 동작합니다.
+
+### 3-A. Netlify로 배포 (회장님 추천 — GitHub+Netlify 보유)
 
 1. 이 저장소를 GitHub에 push (이미 되어 있음).
-2. https://vercel.com 가입 → **Add New → Project** → 이 저장소 선택.
-3. **Environment Variables** 에 다음을 입력:
+2. https://app.netlify.com 로그인 → **Add new site → Import an existing project**.
+3. **GitHub** 선택 → 이 저장소(`Dr-Ha--agent`) 선택.
+4. 빌드 설정은 자동 감지됩니다(저장소의 `netlify.toml` 사용). 그대로 두면 됩니다.
+   - Build command: `npm run build`
+   - Next.js 플러그인(`@netlify/plugin-nextjs`)이 자동 적용됩니다.
+5. **Site configuration → Environment variables** 에 입력:
    - `ANTHROPIC_API_KEY` = 발급받은 키 (필수)
-   - `APP_PASSWORD` = 원하는 접속 비밀번호 (회장님 외 접근 차단 — **강력 권장**)
-   - `ANSWER_MODEL` / `ROUTER_MODEL` = (선택, 비우면 기본값)
-4. **Deploy** 클릭 → 1~2분 뒤 `https://여러분주소.vercel.app` 발급.
-5. 폰 브라우저로 그 주소 접속 → 홈 화면에 추가하면 앱처럼 쓸 수 있습니다.
+   - `APP_PASSWORD` = 접속 비밀번호 (회장님 외 차단 — **강력 권장**)
+   - `ANSWER_MODEL` / `ROUTER_MODEL` = (선택)
+6. **Deploy** → 1~2분 뒤 `https://여러분사이트.netlify.app` 발급.
+7. 폰 브라우저로 접속 → "홈 화면에 추가"하면 앱처럼 쓸 수 있습니다.
 
-> 참고: `/api/chat` 은 `agents/`·`context/` 파일을 런타임에 읽으므로, 저장소 전체가
-> 함께 배포되어야 합니다(Vercel은 기본적으로 저장소 전체를 올리므로 그대로 OK).
+> 환경변수를 나중에 바꿨다면 **Deploys → Trigger deploy → Clear cache and deploy site**
+> 로 재배포해야 반영됩니다.
+
+### 3-B. Vercel로 배포 (대안)
+
+1. https://vercel.com → **Add New → Project** → 이 저장소 선택.
+2. **Environment Variables** 에 위 3-A의 5번과 동일하게 입력.
+3. **Deploy** → `https://여러분주소.vercel.app` 발급.
 
 ---
 

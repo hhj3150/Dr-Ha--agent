@@ -1,0 +1,13 @@
+# Netlify 배포 설정 — 하실장 비서실 웹 앱
+# Netlify가 Next.js를 자동 감지해 공식 런타임(@netlify/plugin-nextjs)을 적용합니다.
+
+[build]
+  command = "npm run build"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# /api/chat 함수가 agents/·context/ markdown을 런타임에 읽으므로,
+# 해당 파일들을 함수 번들에 포함시킵니다.
+[functions]
+  included_files = ["CLAUDE.md", "agents/**", "context/**"]

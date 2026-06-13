@@ -4,6 +4,10 @@
 [build]
   command = "npm run build"
 
+[build.environment]
+  # Next.js 14.2 는 Node 18.17+ 필요. 첫 빌드 안정성을 위해 고정.
+  NODE_VERSION = "20"
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 

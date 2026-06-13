@@ -11,11 +11,11 @@
 1. **claude.ai** 로그인 → 왼쪽 **Projects(프로젝트)** → **New project(새 프로젝트)**.
 2. 이름: `하실장 비서실`.
 3. **Instructions(지침)** 칸에 → `hasiljang-claude-project.md` **전체를 복사해 붙여넣기**.
-4. **Project knowledge(프로젝트 지식)** 에 다음 파일들을 업로드(드래그):
-   - `context/` 폴더의 모든 `.md` (assistant_context, founder-context, master-context,
-     confidentiality-rules, 각 사업 context, gyeonggi/eco-bit/global-embryo 등)
-   - `agents/` 폴더의 모든 `.md` (17개 에이전트 상세)
-   → 이러면 하실장이 회장님의 전 사업 디테일을 "기억"한 상태로 답합니다.
+4. **Project knowledge(프로젝트 지식)** 에 **단 2개 파일만** 업로드(드래그):
+   - `project-knowledge/hasiljang-knowledge-context.md` (회장님 프로필·기밀규칙·사업별 컨텍스트 11개 묶음)
+   - `project-knowledge/hasiljang-knowledge-agents.md` (17개 에이전트 상세 묶음)
+   → 이 두 파일에 회장님의 전 사업 디테일이 다 들어 있어, 하실장이 "기억"한 상태로 답합니다.
+   > (원본 개별 파일로 올리고 싶으면 `context/`·`agents/` 의 `.md` 들을 그대로 올려도 됩니다.)
 5. 저장. 이제 그 프로젝트 안에서 대화하면 = **하실장**.
 
 ## B. 확장(커넥터/스킬) 켜기 — "클로드 전 기능 결합"

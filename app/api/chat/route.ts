@@ -12,6 +12,34 @@ interface ChatMessage {
   content: string;
 }
 
+interface Attachment {
+  name: string;
+  mediaType: string; // "application/pdf" | "image/png" | "image/jpeg" | ...
+  data: string; // base64 (no data: prefix)
+}
+
+const ALLOWED_IMAGE = ["image/png", "image/jpeg", "image/gif", "image/webp"];
+
+/** 마지막 사용자 메시지를 텍스트 + 첨부(문서/이미지) 블록으로 구성 */
+function buildUserContent(text: string, attachments: Attachment[]): any {
+  const blocks: any[] = [];
+  if (text) blocks.push({ type: "text", text });
+  for (const a of attachments) {
+    if (a.mediaType === "application/pdf") {
+      blocks.push({
+        type: "document",
+        source: { type: "base64", media_type: "application/pdf", data: a.data },
+      });
+    } else if (ALLOWED_IMAGE.includes(a.mediaType)) {
+      blocks.push({
+        type: "image",
+        source: { type: "base64", media_type: a.mediaType, data: a.data },
+      });
+    }
+  }
+  return blocks.length > 0 ? blocks : text;
+}
+
 function checkAuth(req: NextRequest): boolean {
   const required = process.env.APP_PASSWORD;
   if (!required) return true; // 비밀번호 미설정 시 잠금 없음
@@ -27,7 +55,11 @@ export async function POST(req: NextRequest) {
     });
   }
 
-  let body: { messages?: ChatMessage[]; agentKey?: string | null };
+  let body: {
+    messages?: ChatMessage[];
+    agentKey?: string | null;
+    attachments?: Attachment[];
+  };
   try {
     body = await req.json();
   } catch {
@@ -49,6 +81,10 @@ export async function POST(req: NextRequest) {
     });
   }
 
+  const attachments = (body.attachments ?? []).filter(
+    (a) => a && a.data && a.mediaType
+  );
+
   // 1) 에이전트 결정 (수동 지정 우선, 없으면 자동 라우팅)
   const override = resolveOverride(body.agentKey);
   const agentKey = override ?? (await routeToAgent(lastUser.content));
@@ -68,10 +104,13 @@ export async function POST(req: NextRequest) {
           model: ANSWER_MODEL,
           max_tokens: 8000,
           system,
-          messages: messages.map((m) => ({
-            role: m.role,
-            content: m.content,
-          })),
+          messages: messages.map((m, i) => {
+            // 마지막 사용자 메시지에만 첨부(문서/이미지)를 실어 보낸다
+            if (i === messages.length - 1 && m.role === "user" && attachments.length > 0) {
+              return { role: "user" as const, content: buildUserContent(m.content, attachments) };
+            }
+            return { role: m.role, content: m.content };
+          }),
         });
 
         messageStream.on("text", (text) => {

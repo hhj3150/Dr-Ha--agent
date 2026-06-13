@@ -134,11 +134,17 @@ function Chat() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [listening, setListening] = useState(false);
   const [voiceOK, setVoiceOK] = useState(false);
+  const [attachments, setAttachments] = useState<
+    { name: string; mediaType: string; data: string }[]
+  >([]);
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const taRef = useRef<HTMLTextAreaElement>(null);
   const recognitionRef = useRef<any>(null);
+  const fileRef = useRef<HTMLInputElement>(null);
   const loaded = useRef(false);
+
+  const MAX_FILE = 4.5 * 1024 * 1024; // 4.5MB/파일
 
   /* 저장된 대화 불러오기 (최초 1회) */
   useEffect(() => {
@@ -255,6 +261,43 @@ function Chat() {
     });
   }
 
+  function fileToBase64(file: File): Promise<string> {
+    return new Promise((resolve, reject) => {
+      const r = new FileReader();
+      r.onload = () => resolve(String(r.result).split(",")[1] || "");
+      r.onerror = reject;
+      r.readAsDataURL(file);
+    });
+  }
+
+  async function handleFiles(files: FileList | null) {
+    if (!files) return;
+    const allowed = [
+      "application/pdf",
+      "image/png",
+      "image/jpeg",
+      "image/gif",
+      "image/webp",
+    ];
+    for (const file of Array.from(files)) {
+      if (!allowed.includes(file.type)) {
+        alert(`지원하지 않는 형식입니다: ${file.name}\n(PDF·PNG·JPG·GIF·WEBP만 가능)`);
+        continue;
+      }
+      if (file.size > MAX_FILE) {
+        alert(`파일이 너무 큽니다(4.5MB 초과): ${file.name}`);
+        continue;
+      }
+      const data = await fileToBase64(file);
+      setAttachments((prev) => [...prev, { name: file.name, mediaType: file.type, data }]);
+    }
+    if (fileRef.current) fileRef.current.value = "";
+  }
+
+  function removeAttachment(idx: number) {
+    setAttachments((prev) => prev.filter((_, i) => i !== idx));
+  }
+
   function toggleVoice() {
     const rec = recognitionRef.current;
     if (!rec) return;
@@ -273,20 +316,25 @@ function Chat() {
 
   async function send(text?: string) {
     const content = (text ?? input).trim();
-    if (!content || busy || !currentId) return;
+    const atts = attachments;
+    if ((!content && atts.length === 0) || busy || !currentId) return;
     if (listening) toggleVoice();
 
     const pw = window.localStorage.getItem("ha_pw") || "";
-    const baseMsgs: Msg[] = [...messages, { role: "user", content }];
+    const userText = content || "첨부한 파일을 검토하고 핵심을 정리해줘.";
+    const note = atts.length ? `\n\n📎 첨부: ${atts.map((a) => a.name).join(", ")}` : "";
+    const displayContent = userText + note;
+    const baseMsgs: Msg[] = [...messages, { role: "user", content: displayContent }];
 
     // 사용자 메시지 + 답변 자리표시자 추가, 첫 메시지면 제목 설정
     patchCurrent((c) => ({
       ...c,
-      title: c.messages.length === 0 ? content.slice(0, 24) : c.title,
+      title: c.messages.length === 0 ? displayContent.slice(0, 24) : c.title,
       messages: [...baseMsgs, { role: "assistant", content: "" }],
       updatedAt: Date.now(),
     }));
     setInput("");
+    setAttachments([]);
     setBusy(true);
 
     try {
@@ -296,6 +344,7 @@ function Chat() {
         body: JSON.stringify({
           messages: baseMsgs.map((m) => ({ role: m.role, content: m.content })),
           agentKey: agentKey || null,
+          attachments: atts,
         }),
       });
 
@@ -452,7 +501,34 @@ function Chat() {
           )}
         </div>
 
+        {attachments.length > 0 && (
+          <div className="attach-strip">
+            {attachments.map((a, i) => (
+              <span className="chip" key={i}>
+                {a.mediaType === "application/pdf" ? "📄" : "🖼️"} {a.name}
+                <button onClick={() => removeAttachment(i)} title="제거">
+                  ×
+                </button>
+              </span>
+            ))}
+          </div>
+        )}
         <div className="composer">
+          <input
+            ref={fileRef}
+            type="file"
+            accept="application/pdf,image/png,image/jpeg,image/gif,image/webp"
+            multiple
+            style={{ display: "none" }}
+            onChange={(e) => handleFiles(e.target.files)}
+          />
+          <button
+            className="attach"
+            onClick={() => fileRef.current?.click()}
+            title="문서·이미지 첨부 (PDF·이미지)"
+          >
+            📎
+          </button>
           {voiceOK && (
             <button
               className={`mic ${listening ? "on" : ""}`}

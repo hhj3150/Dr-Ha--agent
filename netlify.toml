@@ -3,6 +3,9 @@
 
 [build]
   command = "npm run build"
+  # Next.js 빌드 출력 폴더. base(/)와 달라야 @netlify/plugin-nextjs 가 동작한다.
+  # (publish 미설정 시 Netlify가 루트로 잡아 "publish == base" 오류 발생)
+  publish = ".next"
 
 [build.environment]
   # Next.js 14.2 는 Node 18.17+ 필요. 첫 빌드 안정성을 위해 고정.

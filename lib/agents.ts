@@ -42,6 +42,7 @@ export interface AgentDef {
 
 /** 모든 에이전트가 항상 함께 읽는 기반 컨텍스트 (CLAUDE.md 규칙) */
 const BASE_CONTEXT = [
+  "assistant_context.md", // 영구 개인 기억 (Owner Profile & Companion Mandate)
   "founder-context.md",
   "master-context.md",
   "confidentiality-rules.md",

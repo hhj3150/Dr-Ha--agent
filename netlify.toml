@@ -1,0 +1,20 @@
+# Netlify 배포 설정 — 하실장 비서실 웹 앱
+# Netlify가 Next.js를 자동 감지해 공식 런타임(@netlify/plugin-nextjs)을 적용합니다.
+
+[build]
+  command = "npm run build"
+  # Next.js 빌드 출력 폴더. base(/)와 달라야 @netlify/plugin-nextjs 가 동작한다.
+  # (publish 미설정 시 Netlify가 루트로 잡아 "publish == base" 오류 발생)
+  publish = ".next"
+
+[build.environment]
+  # Next.js 14.2 는 Node 18.17+ 필요. 첫 빌드 안정성을 위해 고정.
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# /api/chat 함수가 agents/·context/ markdown을 런타임에 읽으므로,
+# 해당 파일들을 함수 번들에 포함시킵니다.
+[functions]
+  included_files = ["CLAUDE.md", "agents/**", "context/**"]

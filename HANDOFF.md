@@ -12,19 +12,18 @@
 
 ## 2. 진행 중 핵심 작업 (경기도 AI 축산행정 플랫폼 = T1 최우선)
 - 사업: 경기도 발주, Antiller 정책연구(최종보고 V1.1.0), **5개년 189.2억**. 센서 **파일럿 750두(2~3시군) + 본확산 6,750두(31시군) = 7,500두**, RCT, 36개월.
-- ⚠️ 산출물 gyeonggi-01~04는 구(舊) 102.3억·7,750두 모델 기반 → V1.1.0(189.2억, 750+6,750두, 6대과제 재구성)으로 **재작업 대기**.
 - **우리 2대 축**: ① 국내 SmaXtec 위내센서 **독점 공급**(하현제) ② **CowTalk AI 탑재**(분석·의사결정). → "센서도 우리, 두뇌도 우리."
-- 산출물 4종 완료(`deliverables/`):
-  - `gyeonggi-01-positioning-memo.md` (참여 포지셔닝)
-  - `gyeonggi-02-pilot-implementation-proposal.md` (7,750두 실증 제안)
-  - `gyeonggi-03-smaxtec-partnership-supply-model.md` (공급·단가, v2)
-  - `gyeonggi-04-budget-mapping.md` (102.3억 6대과제, 타깃 ≈59.3억)
+- 산출물 4종 V1.1.0 재작업 완료(`deliverables/`, 2026-06-20):
+  - `gyeonggi-01-positioning-memo.md` (참여 포지셔닝, v2)
+  - `gyeonggi-02-pilot-implementation-proposal.md` (750→6,750두 실증 제안, v2)
+  - `gyeonggi-03-smaxtec-partnership-supply-model.md` (공급·단가 7,500두, v3)
+  - `gyeonggi-04-budget-mapping.md` (189.2억 6대과제, 타깃 ≈100.6억, v2)
 
 ## 3. SmaXtec 판매구조·단가 (내부 기밀 — `context/smaxtec-sales-structure-context.md`)
 - 체인: SmaXtec → 코리아제네틱스(수입·대표 장익준) → 하현제(국내 독점 영업, 2025~) → 목장. 기존거래 리얼팜 유지. (리얼팜: 대표 장익준/최대주주 하현제)
 - 국내 판매·API **독점 = 하현제 보유**(기확보).
 - 단가: 설치 **500만/목장**(리얼팜 설치 시 용역비 250만 → 설치마진 250만) · 구독 **두당월 12,000원**(원가 7,700, 마진 4,300) · 4년·무상교체.
-- 경기도 7,750두 예시(48개월): 매출 ≈52.4억, **마진 ≈19.9억**.
+- 경기도 7,500두 예시(48개월·V1.1.0): 매출 ≈50.7억, **마진 ≈19.2억**.
 - CowTalk = 하현제 별개 사업. CowTalk AI = SmaXtec 센서데이터 + 공공데이터 + AI.
 - ⚠️ 대외 노출 금지: 원가·마진·지분·용역비. 대외 가능: 판매가·4년·무상교체·국내 독점.
 

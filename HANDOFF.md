@@ -18,6 +18,8 @@
   - `gyeonggi-02-pilot-implementation-proposal.md` (750→6,750두 실증 제안, v2)
   - `gyeonggi-03-smaxtec-partnership-supply-model.md` (공급·단가 7,500두, v3)
   - `gyeonggi-04-budget-mapping.md` (189.2억 6대과제, 타깃 ≈100.6억, v2)
+  - `gyeonggi-05-partner-loi-and-supply-agreement.md` (SmaXtec LOI + 코리아제네틱스 단가합의 팩)
+  - `gyeonggi-06-integrated-execution-proposal.md` (경기도/주관 제출용 통합 수행제안서)
 
 ## 3. SmaXtec 판매구조·단가 (내부 기밀 — `context/smaxtec-sales-structure-context.md`)
 - 체인: SmaXtec → 코리아제네틱스(수입·대표 장익준) → 하현제(국내 독점 영업, 2025~) → 목장. 기존거래 리얼팜 유지. (리얼팜: 대표 장익준/최대주주 하현제)

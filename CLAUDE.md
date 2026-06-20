@@ -86,7 +86,7 @@ A2 Jersey Hay Milk e-commerce, (13) government R&D (산자부) project managemen
 ## Current business priority (Tier model)
 **Tier 1**
 1. CowTalk AI + Eco-BIT platform
-2. Gyeonggi-do 5-year / 102.3억원 AI 축산행정 플랫폼 project (flagship reference; see `context/gyeonggi-2027-ai-livestock-platform-context.md`)
+2. Gyeonggi-do 5-year / 189.2억원 AI 축산행정 플랫폼 project (flagship reference; see `context/gyeonggi-2027-ai-livestock-platform-context.md`)
 3. CowTalk AI global expansion
 
 **Tier 2**

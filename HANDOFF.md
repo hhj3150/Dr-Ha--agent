@@ -1,23 +1,25 @@
 # HANDOFF — 하실장 인수인계 (현재 상태)
 
 > 재개 방법: 새 세션에서 `hhj3150/dr-ha--agent` 열고 **"하실장, 이어서 일하자"** → 이 파일부터 읽으면 됨.
-> 최종 갱신: 2026-06-03 · 작업 브랜치: `claude/exciting-shannon-HYd3a` (main 병합됨, 이후 작업은 브랜치에 누적)
+> 최종 갱신: 2026-06-21 · 작업 브랜치: `claude/tender-ramanujan-qmiq2r`
 
 ## 0. 나는 누구
 **하실장** — Dr. 하현제(회장님)의 D2O Agent System 비서실장. 17개 에이전트 지휘 + SSOT 관리 + 세션 연결.
 
 ## 1. 시스템 현황
-- 에이전트 17 · 워크플로우 29 · 템플릿 40 · 컨텍스트 10 · deliverables 4.
-- 우선순위(Tier): T1 ①CowTalk+Eco-BIT ②경기도 5년/102.3억 ③CowTalk 해외 / T2 ④홀스타인 수정란수출 ⑤Dubai ⑥실험실 / T3 ⑦송영신 쇼핑몰 ⑧피트모스.
+- 에이전트 17 · 워크플로우 29 · 템플릿 40 · 컨텍스트 10 · deliverables 5.
+- 우선순위(Tier): T1 ①CowTalk+Eco-BIT ②경기도 5년/189.2억 ③CowTalk 해외 / T2 ④홀스타인 수정란수출 ⑤Dubai ⑥실험실 / T3 ⑦송영신 쇼핑몰 ⑧피트모스.
 
 ## 2. 진행 중 핵심 작업 (경기도 AI 축산행정 플랫폼 = T1 최우선)
-- 사업: 경기도 발주, Antller 정책연구, **5개년 102.3억**. 낙농 ICT 시범 **7,750두(31시군×5농장×50두), RCT, 36개월**.
+- 사업: 경기도 발주, Antller 정책연구(최종보고 **V1.1.0**), **5개년 189.2억**(1차년 집중 102.9억). 낙농 ICT 시범 — 파일럿 750두→확산 6,750두(RCT 설계 7,750두), 36개월.
+  > 🔴 예산 정정: 과거 "102.3억"은 1차년(102.9억) 오인 → 폐기. 정식 총규모 **189.2억**.
 - **우리 2대 축**: ① 국내 SmaXtec 위내센서 **독점 공급**(하현제) ② **CowTalk AI 탑재**(분석·의사결정). → "센서도 우리, 두뇌도 우리."
-- 산출물 4종 완료(`deliverables/`):
+- 산출물 5종 완료(`deliverables/`):
   - `gyeonggi-01-positioning-memo.md` (참여 포지셔닝)
   - `gyeonggi-02-pilot-implementation-proposal.md` (7,750두 실증 제안)
   - `gyeonggi-03-smaxtec-partnership-supply-model.md` (공급·단가, v2)
-  - `gyeonggi-04-budget-mapping.md` (102.3억 6대과제, 타깃 ≈59.3억)
+  - `gyeonggi-04-budget-mapping.md` (189.2억 6대과제, 타깃 ≈100.6억)
+  - `gyeonggi-05-transition-committee-farm-visit-deck.md` (인수위 목장방문 발표 대본+슬라이드)
 
 ## 3. SmaXtec 판매구조·단가 (내부 기밀 — `context/smaxtec-sales-structure-context.md`)
 - 체인: SmaXtec → 코리아제네틱스(수입·대표 장익준) → 하현제(국내 독점 영업, 2025~) → 목장. 기존거래 리얼팜 유지. (리얼팜: 대표 장익준/최대주주 하현제)

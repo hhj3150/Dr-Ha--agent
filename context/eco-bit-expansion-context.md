@@ -34,7 +34,7 @@ case**. Uzbekistan is therefore both a **genetics-export reference market** and 
 result, numbers to be finalized.)
 
 ## 5-phase expansion path
-- **Phase 1 — Gyeonggi-do flagship:** 5-year, ~100 billion KRW scale; flagship reference project; founder expected to play a leading role. Serves dairy & Hanwoo farms, local governments, veterinary authorities, disease-control orgs, carbon-reduction programs.
+- **Phase 1 — Gyeonggi-do flagship:** 5-year, **189.2억원** AI 축산행정 플랫폼 (정책연구: Antller Inc. 최종보고 V1.1.0 / 발주 경기도); flagship reference project; founder plays a leading role. Starts with a 낙농 ICT 시범사업 (파일럿 2~3시군 750두 → 확산 31시군 6,750두; RCT 설계 헤드 7,750두), then 한우·양돈 확산. SmaXtec 반추위 센서가 보고서에 명시 → 우리 CowTalk/smaXtec 직결. Serves dairy & Hanwoo farms, local governments, veterinary authorities, disease-control orgs, carbon-reduction programs. (상세: `gyeonggi-2027-ai-livestock-platform-context.md`. 과거 "102.3억"은 1차년 102.9억 오인, "1,000억"은 오기.)
 - **Phase 2 — Gangwon-do:** Hanwoo, mountain-region farms, digital livestock management, disease prevention, carbon reduction.
 - **Phase 3 — Jeolla region:** Hanwoo, dairy, livestock clusters, regional competitiveness.
 - **Phase 4 — National multi-province platform.**

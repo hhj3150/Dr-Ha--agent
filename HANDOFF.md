@@ -23,12 +23,12 @@
 
 ## 2-B. 상비 근거자료 (회장님이 요구하면 언제든 즉시 제공)
 - **수정란 수출 국제규정 근거자료 (범용·국가무관)** — 모든 해외 수출 심사 제출용.
-  - PDF: `deliverables/embryo-export-international-regulatory-basis.pdf` (1p, 한/영)
+  - Word: `deliverables/embryo-export-international-regulatory-basis.docx` (1p, 한/영, 편집가능·맑은고딕)
   - 상세 레퍼런스: `deliverables/kazakhstan-embryo-export-woah-reference.md`
   - 핵심: WTO SPS 협정(제3조·부속서A) → WOAH(구 OIE) 육상동물위생규약 **제4.8장(체내)·4.9장(체외)·4.10장(미세조작)** + 질병별 수입권고 조문. IETS Cat.1.
   - 결론: 규약대로 제조 + 수입국 질병요건 충족 + 양자 수출검역증명서 발급 → 국제교역 문제없음.
   - ⚠️ 인용 전 woah.org 현행판 장번호 재확인. CITES는 가축 비적용.
-  - PDF 재생성 스크립트: `/tmp/make_pdf.py` (필요시 deliverables로 이동 보관).
+  - 재생성 스크립트: `deliverables/embryo-export-international-regulatory-basis.docx.py` · 발행주체는 Genetics Co.,Ltd.(AI 작성표시 없음).
 
 ## 3. SmaXtec 판매구조·단가 (내부 기밀 — `context/smaxtec-sales-structure-context.md`)
 - 체인: SmaXtec → 코리아제네틱스(수입·대표 장익준) → 하현제(국내 독점 영업, 2025~) → 목장. 기존거래 리얼팜 유지. (리얼팜: 대표 장익준/최대주주 하현제)

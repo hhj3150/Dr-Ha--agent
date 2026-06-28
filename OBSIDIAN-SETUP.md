@@ -57,48 +57,62 @@
 - Claude 데스크톱 앱
 - Node.js 설치 (https://nodejs.org → LTS 버전)
 
-### 1단계 — 옵시디언에 Local REST API 설치
+> ✅ 실제로 검증된 방법입니다(2026-06-28, macOS + 옵시디언 1.12.7 기준).
+> 핵심: **별도 MCP 패키지(`obsidian-mcp-server` 등)를 쓰지 말 것.** 최신
+> "Local REST API **with MCP**" 플러그인(4.x)에는 **MCP 서버가 내장**돼 있어,
+> `mcp-remote`로 플러그인에 직접 붙는 게 정답입니다. 별도 패키지는 충돌만 일으킵니다.
+
+### 1단계 — 옵시디언에 "Local REST API with MCP" 설치
 1. 옵시디언 → 설정(⚙️) → **커뮤니티 플러그인** → "제한 모드(Restricted mode)" 끄기.
-2. **둘러보기(Browse)** → `Local REST API` 검색 → 설치 → 활성화.
-3. 플러그인 설정에 들어가면 **API Key**(긴 문자열)가 보입니다. → **복사해 둡니다.**
-4. 같은 화면에서 주소를 확인: 기본 `https://127.0.0.1:27124` (HTTPS).
+2. **둘러보기(Browse)** → `Local REST API` 검색 → **"Local REST API with MCP"**(만든이 Adam Coddington) 설치 → 활성화.
+3. 플러그인 설정에 들어가 **API Key**(긴 문자열)를 **복사**해 둡니다.
+4. 주소 확인: 기본 `https://127.0.0.1:27124` (자체 서명 HTTPS).
 
-### 2단계 — Claude 데스크톱에 MCP 서버 등록
-Claude 데스크톱 설정 파일 `claude_desktop_config.json`을 엽니다.
-- macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
-- Windows: `%APPDATA%\Claude\claude_desktop_config.json`
+### 진단(권장) — 옵시디언 쪽이 살아있는지 30초 확인
+- 사파리 주소창에 `https://127.0.0.1:27124/` 입력 → 보안 경고는 "계속 진행".
+- `{"status":"OK", ... "Local REST API with MCP" ...}` 가 보이면 옵시디언 쪽 정상.
+  (`"authenticated": false`는 정상 — 그냥 키를 안 넣고 들어갔을 뿐입니다.)
 
-아래처럼 `mcpServers`에 옵시디언 서버를 추가합니다(API Key는 1단계에서 복사한 값):
+### 2단계 — Claude 데스크톱에 등록 (mcp-remote로 플러그인에 직접 연결)
+Claude 데스크톱 → Settings → Developer → **Edit Config** →
+파일 내용을 **전부 지우고** 아래로 교체. `여기에_키` 자리에 1단계 API Key를
+(`Bearer ` 뒤 한 칸 띄우고) 넣습니다.
 
 ```json
 {
   "mcpServers": {
     "obsidian": {
       "command": "npx",
-      "args": ["-y", "obsidian-mcp-server"],
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://127.0.0.1:27124/mcp",
+        "--header",
+        "Authorization: Bearer 여기에_키"
+      ],
       "env": {
-        "OBSIDIAN_API_KEY": "여기에_복사한_API_KEY",
-        "OBSIDIAN_BASE_URL": "https://127.0.0.1:27124",
-        "OBSIDIAN_VERIFY_SSL": "false"
+        "NODE_TLS_REJECT_UNAUTHORIZED": "0"
       }
     }
   }
 }
 ```
 
-> 참고: 옵시디언 MCP 서버 패키지는 여러 종류가 있습니다(예: `obsidian-mcp-server`,
-> `mcp-obsidian`). 환경변수 이름이 패키지마다 다를 수 있으니, 설치할 패키지의
-> README에 적힌 변수명을 그대로 쓰세요. 위 예시는 가장 일반적인 형태입니다.
+- `NODE_TLS_REJECT_UNAUTHORIZED: "0"` — 자체 서명 인증서를 허용(로컬이라 안전).
+- MCP 주소(`/mcp`)가 안 맞으면, 옵시디언 Local REST API 설정 화면을 아래로
+  스크롤하면 **MCP 섹션**에 정확한 주소/예시가 있으니 그 값을 쓰세요.
 
 ### 3단계 — 확인
-1. Claude 데스크톱을 **완전히 종료 후 재시작**.
-2. 입력창의 도구(🔌/망치) 아이콘에 `obsidian`이 보이면 연결 성공.
-3. 이제 "오늘 날짜로 회의록 노트 만들어 줘", "deliverables 폴더 최근 메모 읽어줘"
-   처럼 말하면 하실장이 옵시디언 볼트를 직접 읽고 씁니다.
+1. Claude 데스크톱을 **완전 종료(Cmd+Q) 후 재시작** (옵시디언은 켜둔 채).
+2. 첫 실행 때 `npx`가 `mcp-remote`를 받느라 10~20초 걸릴 수 있음 — 기다리세요.
+3. "옵시디언 deliverables 폴더에 '연동 테스트' 노트 만들어줘" → 옵시디언에
+   노트가 뜨면 **성공**. 이제 하실장이 볼트를 직접 읽고 씁니다.
 
 ### 문제 해결
-- 연결 안 됨 → 옵시디언이 **켜져 있어야** 합니다(REST API는 옵시디언이 떠 있을 때만 동작).
-- SSL 오류 → `OBSIDIAN_VERIFY_SSL`을 `false`로(자체 서명 인증서라 정상).
+- 도구는 떴는데 읽기·쓰기 전부 실패 → 십중팔구 **별도 패키지(`obsidian-mcp-server`)를
+  쓴 경우**. 위 `mcp-remote` 방식으로 교체하면 해결됨.
+- 연결 안 됨 → 옵시디언이 **켜져 있어야** 함(플러그인은 앱이 떠 있을 때만 동작).
+- SSL/인증서 오류 → `NODE_TLS_REJECT_UNAUTHORIZED`가 `"0"`인지 확인.
 - 그래도 안 되면 → 방법 ①+②만으로도 양방향 동기화는 충분합니다.
 
 ---

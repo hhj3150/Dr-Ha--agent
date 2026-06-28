@@ -49,12 +49,57 @@
 
 ## 방법 ③ 옵시디언 MCP로 하실장이 직접 제어 (고급 옵션)
 
-하실장(Claude 데스크톱/Code)이 옵시디언 볼트를 **직접 읽고 쓰게** 만드는 방식.
+하실장(Claude 데스크톱)이 옵시디언 볼트를 **직접 읽고 쓰게** 만드는 방식.
 방법 ①+②로 충분하므로, 자동화를 더 원하실 때만 진행하세요.
 
-1. 옵시디언 → 커뮤니티 플러그인 → **`Local REST API`** 설치·활성화 → API 키 발급.
-2. **Obsidian MCP 서버**를 Claude에 등록(MCP 설정에 서버 추가, 발급한 API 키 입력).
-3. 이후 "오늘 메모 노트에 회의록 추가해줘"처럼 말하면 하실장이 옵시디언에 직접 기록합니다.
+### 준비물
+- 옵시디언 (방법 ①로 볼트 열어둔 상태)
+- Claude 데스크톱 앱
+- Node.js 설치 (https://nodejs.org → LTS 버전)
+
+### 1단계 — 옵시디언에 Local REST API 설치
+1. 옵시디언 → 설정(⚙️) → **커뮤니티 플러그인** → "제한 모드(Restricted mode)" 끄기.
+2. **둘러보기(Browse)** → `Local REST API` 검색 → 설치 → 활성화.
+3. 플러그인 설정에 들어가면 **API Key**(긴 문자열)가 보입니다. → **복사해 둡니다.**
+4. 같은 화면에서 주소를 확인: 기본 `https://127.0.0.1:27124` (HTTPS).
+
+### 2단계 — Claude 데스크톱에 MCP 서버 등록
+Claude 데스크톱 설정 파일 `claude_desktop_config.json`을 엽니다.
+- macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
+- Windows: `%APPDATA%\Claude\claude_desktop_config.json`
+
+아래처럼 `mcpServers`에 옵시디언 서버를 추가합니다(API Key는 1단계에서 복사한 값):
+
+```json
+{
+  "mcpServers": {
+    "obsidian": {
+      "command": "npx",
+      "args": ["-y", "obsidian-mcp-server"],
+      "env": {
+        "OBSIDIAN_API_KEY": "여기에_복사한_API_KEY",
+        "OBSIDIAN_BASE_URL": "https://127.0.0.1:27124",
+        "OBSIDIAN_VERIFY_SSL": "false"
+      }
+    }
+  }
+}
+```
+
+> 참고: 옵시디언 MCP 서버 패키지는 여러 종류가 있습니다(예: `obsidian-mcp-server`,
+> `mcp-obsidian`). 환경변수 이름이 패키지마다 다를 수 있으니, 설치할 패키지의
+> README에 적힌 변수명을 그대로 쓰세요. 위 예시는 가장 일반적인 형태입니다.
+
+### 3단계 — 확인
+1. Claude 데스크톱을 **완전히 종료 후 재시작**.
+2. 입력창의 도구(🔌/망치) 아이콘에 `obsidian`이 보이면 연결 성공.
+3. 이제 "오늘 날짜로 회의록 노트 만들어 줘", "deliverables 폴더 최근 메모 읽어줘"
+   처럼 말하면 하실장이 옵시디언 볼트를 직접 읽고 씁니다.
+
+### 문제 해결
+- 연결 안 됨 → 옵시디언이 **켜져 있어야** 합니다(REST API는 옵시디언이 떠 있을 때만 동작).
+- SSL 오류 → `OBSIDIAN_VERIFY_SSL`을 `false`로(자체 서명 인증서라 정상).
+- 그래도 안 되면 → 방법 ①+②만으로도 양방향 동기화는 충분합니다.
 
 ---
 

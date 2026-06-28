@@ -11,10 +11,14 @@
             "id": "8de873c47e1a641e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "deliverables/gyeonggi-02-pilot-implementation-proposal.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "gyeonggi-02-pilot-implementation-proposal"
             }
           }
         ]
@@ -108,6 +112,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "deliverables/gyeonggi-02-pilot-implementation-proposal.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -164,6 +169,7 @@
   },
   "active": "8de873c47e1a641e",
   "lastOpenFiles": [
+    "deliverables/gyeonggi-01-positioning-memo.md",
     "동기화 테스트.md"
   ]
 }

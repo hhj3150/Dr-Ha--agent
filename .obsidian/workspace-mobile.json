@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e1e468fc7fc9142d",
+        "id": "09f04b02054174d9",
         "type": "tabs",
         "children": [
           {
-            "id": "d3137886afe15150",
+            "id": "8de873c47e1a641e",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -158,9 +158,12 @@
       "daily-notes:오늘의 일일 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "bases:새 베이스 생성하기": false
+      "bases:새 베이스 생성하기": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d3137886afe15150",
-  "lastOpenFiles": []
+  "active": "8de873c47e1a641e",
+  "lastOpenFiles": [
+    "동기화 테스트.md"
+  ]
 }

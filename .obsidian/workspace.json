@@ -8,35 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d2c9c8aef5b704e9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "동기화 테스트.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "동기화 테스트"
-            }
-          },
-          {
             "id": "c9c8b19fef32b13d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "회장님 대시보드.md",
+                "file": "2026-06-29.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "회장님 대시보드"
+              "title": "2026-06-29"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -201,10 +186,14 @@
   },
   "active": "c9c8b19fef32b13d",
   "lastOpenFiles": [
+    "2026-06-29.md",
+    "workflows/peatmoss-sales-playbook.md",
+    "agents/eco-bit-platform-agent.md",
+    "동기화 테스트.md",
+    "무제.md",
     "무제 1.md",
     "회장님 대시보드.md",
-    "동기화 테스트.md",
-    "무제",
-    "무제.md"
+    "agents/ceo-strategy-agent.md",
+    "무제"
   ]
 }

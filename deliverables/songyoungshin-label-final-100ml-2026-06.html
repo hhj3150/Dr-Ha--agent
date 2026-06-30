@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family:'Nanum'; src:local('NanumGothic'); font-weight:400; }
+  @font-face { font-family:'Nanum'; src:local('NanumGothic Bold'); font-weight:700; }
+  @page { size: A4; margin: 14mm 14mm 12mm 14mm; }
+  * { box-sizing: border-box; }
+  body { font-family:'Nanum','NanumGothic',sans-serif; color:#111; font-size:10.5px; line-height:1.5; margin:0; }
+  .page { page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+
+  .dochdr { display:flex; justify-content:space-between; align-items:flex-end;
+            border-bottom:2px solid #111; padding-bottom:4px; margin-bottom:10px; }
+  .dochdr .t { font-size:13px; font-weight:700; }
+  .dochdr .s { font-size:9px; color:#555; text-align:right; }
+
+  .ptitle { font-size:16px; font-weight:700; margin:2px 0 10px; }
+  .ptitle .badge { font-size:10px; font-weight:700; background:#111; color:#fff;
+                   padding:2px 7px; border-radius:3px; margin-left:6px; vertical-align:middle; }
+
+  .cols { display:flex; gap:14px; align-items:flex-start; }
+  .col-l { flex:1.15; }
+  .col-r { flex:0.95; }
+
+  table.info { width:100%; border-collapse:collapse; }
+  table.info th, table.info td { border:1px solid #888; padding:5px 7px; vertical-align:top; text-align:left; }
+  table.info th { background:#f1f1f1; width:78px; font-weight:700; white-space:nowrap; }
+  .fill { color:#b00; }
+
+  /* nutrition box */
+  .nb { border:2.5px solid #111; padding:8px 10px; }
+  .nb .title { text-align:center; font-size:20px; font-weight:700; letter-spacing:8px; margin:0 0 4px; }
+  .nb .head { display:flex; justify-content:space-between; border-bottom:1px solid #111; padding-bottom:4px; }
+  .nb .head .l { font-weight:700; font-size:11px; }
+  .nb .head .r { font-weight:700; font-size:9.5px; text-align:right; line-height:1.25; }
+  table.nut { width:100%; border-collapse:collapse; font-size:10.5px; }
+  table.nut td { padding:2.5px 0; border-bottom:1px solid #ccc; }
+  table.nut td.v { text-align:right; white-space:nowrap; padding-left:6px; }
+  table.nut td.p { text-align:right; white-space:nowrap; width:42px; }
+  table.nut tr.kcal td { border-bottom:2px solid #111; font-weight:700; }
+  table.nut tr.major td.n { font-weight:700; }
+  table.nut td.indent { padding-left:18px; }
+  table.nut tr.last td { border-bottom:none; }
+  .nb .foot { font-size:8px; color:#555; margin-top:5px; line-height:1.35; }
+
+  .notes { margin-top:12px; border:1px solid #888; padding:8px 10px; font-size:9px; }
+  .notes h4 { margin:0 0 4px; font-size:10px; }
+  .notes ul { margin:0; padding-left:15px; }
+  .notes li { margin:1.5px 0; }
+  .warn { border:1.5px solid #b00; background:#fff5f5; }
+  .warn h4 { color:#b00; }
+  .legend { font-size:8.5px; color:#777; margin-top:6px; }
+</style>
+</head>
+<body>
+
+<!-- ===================== PAGE 1 : 헤이밀크 ===================== -->
+<div class="page">
+  <div class="dochdr">
+    <div class="t">송영신목장 A2저지 — 라벨 표시사항 최종본 (인쇄소 전달용)</div>
+    <div class="s">표기 기준: 100 mL 당<br>농업회사법인 주식회사 디투오 · 2026-06-30</div>
+  </div>
+
+  <div class="ptitle">① A2저지 헤이밀크 <span class="badge">우유 · 유지방 4.5%</span></div>
+
+  <div class="cols">
+    <div class="col-l">
+      <table class="info">
+        <tr><th>제품명</th><td>송영신목장 A2저지 헤이밀크</td></tr>
+        <tr><th>식품유형</th><td>우유류 &gt; 우유 (살균제품)</td></tr>
+        <tr><th>원재료명</th><td>원유(국산, 저지종) 100%</td></tr>
+        <tr><th>내용량</th><td><span class="fill">[ ___ mL ( ___ kcal ) ]</span> ※ 포장 용량 기입</td></tr>
+        <tr><th>유지방분</th><td>4.5% 이상 <span class="fill">(자가품질검사 기준 — 표준화 보장 전제)</span></td></tr>
+        <tr><th>보관방법</th><td>냉장(0~10℃) 보관, 개봉 후 빨리 드십시오</td></tr>
+        <tr><th>소비기한</th><td><span class="fill">[ 제조일로부터 ___일 / 년월일 ]</span></td></tr>
+        <tr><th>포장재질</th><td><span class="fill">[ 폴리에틸렌 등 기입 ]</span></td></tr>
+        <tr><th>품목보고<br>번호</th><td><span class="fill">[ 정정 품목제조보고 후 부여 ]</span></td></tr>
+        <tr><th>영업소</th><td>농업회사법인 주식회사 디투오 / 송영신목장<br><span class="fill">[ 소재지·전화 기입 ]</span></td></tr>
+        <tr><th>주의사항</th><td>· 부정·불량식품 신고 1399<br>· 직사광선을 피하고 냉장 보관하십시오</td></tr>
+      </table>
+    </div>
+
+    <div class="col-r">
+      <div class="nb">
+        <div class="title">영양성분</div>
+        <div class="head">
+          <div class="l">영양정보<br>100 mL 당 함량</div>
+          <div class="r">1일 영양성분<br>기준치에 대한 비율</div>
+        </div>
+        <table class="nut">
+          <tr class="kcal"><td class="n">열량</td><td class="v">78.5 kcal</td><td class="p"></td></tr>
+          <tr class="major"><td class="n">나트륨</td><td class="v">39.34 mg</td><td class="p">2 %</td></tr>
+          <tr class="major"><td class="n">탄수화물</td><td class="v">6.09 g</td><td class="p">2 %</td></tr>
+          <tr><td class="n indent">식이섬유</td><td class="v">0.19 g</td><td class="p">1 %</td></tr>
+          <tr><td class="n indent">당류</td><td class="v">5.88 g</td><td class="p">6 %</td></tr>
+          <tr class="major"><td class="n">지방</td><td class="v">4.5 g</td><td class="p">8 %</td></tr>
+          <tr><td class="n indent">포화지방</td><td class="v">2.03 g</td><td class="p">14 %</td></tr>
+          <tr><td class="n indent">트랜스지방</td><td class="v">0 g</td><td class="p"></td></tr>
+          <tr class="major"><td class="n">콜레스테롤</td><td class="v">13.47 mg</td><td class="p">4 %</td></tr>
+          <tr class="major"><td class="n">단백질</td><td class="v">3.50 g</td><td class="p">6 %</td></tr>
+          <tr><td class="n">비타민D</td><td class="v">0 µg</td><td class="p">0 %</td></tr>
+          <tr><td class="n">칼슘</td><td class="v">104.94 mg</td><td class="p">15 %</td></tr>
+          <tr><td class="n">철분</td><td class="v">0.04 mg</td><td class="p">0 %</td></tr>
+          <tr class="last"><td class="n">칼륨</td><td class="v">141.70 mg</td><td class="p">4 %</td></tr>
+        </table>
+        <div class="foot">1일 영양성분 기준치에 대한 비율(%)은 2,000 kcal 기준이므로 개인의 필요 열량에 따라 다를 수 있습니다.</div>
+      </div>
+      <div class="legend">근거: 제일분석센타 26-06-BR0114 / 유지방 4.5% 기준 재산정(열량·지방·포화지방·콜레스테롤 보정)</div>
+    </div>
+  </div>
+
+  <div class="notes warn">
+    <h4>⚠ 표시 단위 — 인쇄 전 반드시 확인</h4>
+    <ul>
+      <li><b>100 mL 단독 표기는 750 mL·900 mL 등 "나눠 마시는 대용량" 포장일 때만 적합</b>합니다.</li>
+      <li>제품이 <b>180 mL 단일 병(한 번에 음용)</b>이면 식약처 기준상 <b>"총 내용량(180 mL) 당"</b> 표시가 원칙이며, 100 mL는 보조 병기로만 사용해야 합니다 → 이 경우 별도 180 mL 버전 필요.</li>
+    </ul>
+  </div>
+
+  <div class="notes">
+    <h4>제작 메모</h4>
+    <ul>
+      <li>본 영양성분 값은 100 g 당 시험성적서(26-06-BR0114)를 100 mL 당으로 표기한 것입니다. 정밀 표기가 필요하면 분석기관에 <b>100 mL 당 성적서</b> 재발급을 권장합니다(우유 비중 ≈ 1.03).</li>
+      <li>유지방 4.5% 규격은 <b>생산 표준화로 4.5% 이상 보장</b>을 전제로 합니다(시험 샘플 4.12% → 자가품질검사 대비 표준화 필수).</li>
+      <li><span class="fill">빨간색 [ ]</span> 항목은 회장님/공장 확정값 기입란입니다.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== PAGE 2 : 플레인요거트 ===================== -->
+<div class="page">
+  <div class="dochdr">
+    <div class="t">송영신목장 A2저지 — 라벨 표시사항 최종본 (인쇄소 전달용)</div>
+    <div class="s">표기 기준: 100 mL 당<br>농업회사법인 주식회사 디투오 · 2026-06-30</div>
+  </div>
+
+  <div class="ptitle">② A2저지 플레인요거트 <span class="badge">발효유류</span></div>
+
+  <div class="cols">
+    <div class="col-l">
+      <table class="info">
+        <tr><th>제품명</th><td>송영신목장 A2저지 플레인요거트</td></tr>
+        <tr><th>식품유형</th><td>발효유류 (발효유 / 농후발효유) <span class="fill">※ 무지유고형분·유산균수로 확정</span></td></tr>
+        <tr><th>원재료명</th><td>원유(국산, 저지종) <span class="fill">[ ___% ]</span>, 유산균 <span class="fill">[ 균종 기입 ]</span></td></tr>
+        <tr><th>내용량</th><td><span class="fill">[ ___ g (또는 mL) ]</span> ※ 포장 용량 기입</td></tr>
+        <tr><th>유산균수</th><td><span class="fill">[ ___ CFU/mL — 시험 후 기입 (발효유류 필수) ]</span></td></tr>
+        <tr><th>보관방법</th><td>냉장(0~10℃) 보관</td></tr>
+        <tr><th>소비기한</th><td><span class="fill">[ 제조일로부터 ___일 / 년월일 ]</span></td></tr>
+        <tr><th>포장재질</th><td><span class="fill">[ 기입 ]</span></td></tr>
+        <tr><th>품목보고<br>번호</th><td><span class="fill">[ 정정 품목제조보고 후 부여 ]</span></td></tr>
+        <tr><th>영업소</th><td>농업회사법인 주식회사 디투오 / 송영신목장<br><span class="fill">[ 소재지·전화 기입 ]</span></td></tr>
+        <tr><th>주의사항</th><td>· 부정·불량식품 신고 1399<br>· 개봉 후 냉장 보관, 빨리 드십시오</td></tr>
+      </table>
+    </div>
+
+    <div class="col-r">
+      <div class="nb">
+        <div class="title">영양성분</div>
+        <div class="head">
+          <div class="l">영양정보<br>100 mL 당 함량</div>
+          <div class="r">1일 영양성분<br>기준치에 대한 비율</div>
+        </div>
+        <table class="nut">
+          <tr class="kcal"><td class="n">열량</td><td class="v">65.68 kcal</td><td class="p"></td></tr>
+          <tr class="major"><td class="n">나트륨</td><td class="v">36.36 mg</td><td class="p">2 %</td></tr>
+          <tr class="major"><td class="n">탄수화물</td><td class="v">3.95 g</td><td class="p">1 %</td></tr>
+          <tr><td class="n indent">식이섬유</td><td class="v">0.79 g</td><td class="p">3 %</td></tr>
+          <tr><td class="n indent">당류</td><td class="v">3.54 g</td><td class="p">4 %</td></tr>
+          <tr class="major"><td class="n">지방</td><td class="v">4.34 g</td><td class="p">8 %</td></tr>
+          <tr><td class="n indent">포화지방</td><td class="v">2.85 g</td><td class="p">19 %</td></tr>
+          <tr><td class="n indent">트랜스지방</td><td class="v">0 g</td><td class="p"></td></tr>
+          <tr class="major"><td class="n">콜레스테롤</td><td class="v">10.94 mg</td><td class="p">4 %</td></tr>
+          <tr class="major"><td class="n">단백질</td><td class="v">3.10 g</td><td class="p">6 %</td></tr>
+          <tr><td class="n">비타민D</td><td class="v">0 µg</td><td class="p">0 %</td></tr>
+          <tr><td class="n">칼슘</td><td class="v">108.68 mg</td><td class="p">16 %</td></tr>
+          <tr><td class="n">철분</td><td class="v">0.03 mg</td><td class="p">0 %</td></tr>
+          <tr class="last"><td class="n">칼륨</td><td class="v">143.24 mg</td><td class="p">4 %</td></tr>
+        </table>
+        <div class="foot">1일 영양성분 기준치에 대한 비율(%)은 2,000 kcal 기준이므로 개인의 필요 열량에 따라 다를 수 있습니다.</div>
+      </div>
+      <div class="legend">근거: 제일분석센타 26-06-BR0115 / 측정값 그대로 표기</div>
+    </div>
+  </div>
+
+  <div class="notes">
+    <h4>제작 메모</h4>
+    <ul>
+      <li>요거트는 통상 <b>100 g 당</b>으로 표기하나, 회장님 지시에 따라 <b>100 mL 당</b>으로 표기했습니다. 시험성적서(26-06-BR0115)는 100 g 당 기준이며, 정밀 표기 시 100 mL 당 성적서 재발급 또는 100 g 당 표기 권장.</li>
+      <li><b>식품유형 확정 필요</b>: 무지유고형분이 8% 이상이면 <b>농후발효유</b>, 미만이면 <b>발효유</b>. 분석상 경계값이므로 확정 후 표기.</li>
+      <li><b>유산균수 시험 필수</b>: 발효유류는 유산균수 표시가 의무입니다(현재 데이터 없음).</li>
+      <li><span class="fill">빨간색 [ ]</span> 항목은 확정값 기입란입니다.</li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

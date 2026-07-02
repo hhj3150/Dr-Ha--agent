@@ -34,6 +34,24 @@ Known product data — A2 Jersey Hay Milk per 100 mL: 92.64 kcal, carbohydrate 5
 sugars 4.75 g, fat 6.0 g, trans fat 0.16 g, saturated fat 4.4 g, cholesterol 21.7 mg,
 protein 4.59 g, sodium 41.8 mg. Production: plate heat exchanger; homogenization →
 pasteurization (75 °C / 20 s, APV homogenizer) → cooling → filling → packaging.
+NOTE: This is the EARLIER (winter/richer-batch) figure. See the newer official test below.
+
+Official lab report — 수원여자대학교 (접수 A3-260624-064, 검사 2026-06-24, 발급 2026-07-01;
+비KOLAS·비ISO17025 일반검사). Per 100 mL:
+- A2 Jersey Hay Milk (헤이밀크): 67.37 kcal, sodium 33.26 mg, carbohydrate 3.70 g,
+  sugars 3.29 g, fat 4.41 g, trans fat 0.10 g, saturated fat 3.00 g, cholesterol 16.97 mg,
+  protein 3.22 g, dietary fiber 0, vitamin D not detected, iron 0.07 mg, potassium 125.75 mg,
+  calcium 113.14 mg.
+- A2 Jersey Plain Yogurt (플레인요거트): 59.76 kcal, sodium 38.08 mg, carbohydrate 3.59 g,
+  sugars 1.82 g, fat 3.60 g, trans fat 0.08 g, saturated fat 2.51 g, cholesterol 12.95 mg,
+  protein 3.25 g, dietary fiber 0, vitamin D not detected, iron 0.01 mg, potassium 132.38 mg,
+  calcium 108.85 mg.
+Selling points from this test: 칼슘 1일기준치 16% (우유·요거트 모두), plain yogurt 당류 1.82 g
+(무가당 스토리), 나트륨 낮음(2%). Caution: this June(여름) test shows fat/protein ~26–30% lower
+than the earlier figure — driver is likely seasonal/lot 유성분 변동. Label MUST use current
+representative values (Korean labeling tolerance), NOT the older high figure. Recommend a 2–3
+batch confirmatory re-test before printing labels. 비고3: cannot cite the lab/report in
+ads/PR without the center's written consent.
 
 ## Brand philosophy
 Soil to Soul — Healthy Soil → Healthy Grass → Healthy Cow → Healthy Milk → Healthy

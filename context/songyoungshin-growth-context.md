@@ -48,10 +48,16 @@ Official lab report — 수원여자대학교 (접수 A3-260624-064, 검사 2026
   calcium 108.85 mg.
 Selling points from this test: 칼슘 1일기준치 16% (우유·요거트 모두), plain yogurt 당류 1.82 g
 (무가당 스토리), 나트륨 낮음(2%). Caution: this June(여름) test shows fat/protein ~26–30% lower
-than the earlier figure — driver is likely seasonal/lot 유성분 변동. Label MUST use current
-representative values (Korean labeling tolerance), NOT the older high figure. Recommend a 2–3
-batch confirmatory re-test before printing labels. 비고3: cannot cite the lab/report in
-ads/PR without the center's written consent.
+than the earlier figure — driver is likely seasonal/lot 유성분 변동. 비고3: cannot cite the
+lab/report in ads/PR without the center's written consent.
+
+LABEL DECISION (founder, 2026-07): Labels are built on this new test, with MILK FAT set to
+4.5 g/100 mL (보정; measured 4.41) and MILK PROTEIN set to 3.5 g/100 mL (보정; measured 3.22).
+Because the lab's 열량 is computed as fat×9 + carb×4 + protein×4, milk energy is recomputed to
+69.3 kcal/100 mL to stay internally consistent (180 mL = 125 kcal, 750 mL = 520 kcal). All
+other milk values and ALL yogurt values stay at measured. Both adjustments are compliant:
+fat measured 4.41 = 98% of label 4.5 (< 120%); protein measured 3.22 = 92% of label 3.5
+(≥ 80%). See context/songyoungshin-label-compliance-2026-07.md for the final label table.
 
 ## Brand philosophy
 Soil to Soul — Healthy Soil → Healthy Grass → Healthy Cow → Healthy Milk → Healthy

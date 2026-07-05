@@ -23,7 +23,7 @@ SLIDES.append(slide(f'''
    <h1>저지(Jersey) 전용목장<br>운영 사례</h1>
    <div class="covsub">프리미엄·저탄소·순환낙농 6차산업 모델 — 송영신목장</div>
    <div class="covline"></div>
-   <div class="covmeta">발표 : 하현제 &nbsp;|&nbsp; Genetics · 한국동물병원 · D2O · 송영신목장<br>
+   <div class="covmeta">발표 : 하현제 &nbsp;|&nbsp; Genetics · 고려동물병원 · D2O · 송영신목장<br>
    국립축산과학원 발표 · 2026년 8월 26일</div>
  </div>''',"cover"))
 
@@ -82,7 +82,7 @@ SLIDES.append(slide(head("Farm Profile · 목장 개요","낙농 + 유가공 + 6
    <div>{bullets([
     "위치 : 경기도 안성시 미양면 (농장소재지 역전길 14-42)",
     "구조 : <b>저지 낙농 → 자가 유가공(HACCP) → 브랜드·직판</b> 수직통합",
-    "연계 : Genetics·한국동물병원의 <b>수정란·번식 18년 역량</b> 결합",
+    "연계 : Genetics·고려동물병원의 <b>수정란·번식 18년 역량</b> 결합",
     "브랜드 : <b>A2 저지 헤이밀크</b> · 온라인몰 shop.a2jerseymilk.com",
    ])}</div>
    <div class="cards">

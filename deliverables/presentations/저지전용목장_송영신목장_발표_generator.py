@@ -82,7 +82,7 @@ SLIDES.append(slide(head("Farm Profile · 목장 개요","낙농 + 유가공 + 6
    <div>{bullets([
     "위치 : 경기도 안성시 미양면 (농장소재지 역전길 14-42)",
     "구조 : <b>저지 낙농 → 자가 유가공(HACCP) → 브랜드·직판</b> 수직통합",
-    "연계 : Genetics·고려동물병원의 <b>수정란·번식 18년 역량</b> 결합",
+    "연계 : Genetics·고려동물병원의 <b>번식·유전 관리 역량</b> 결합",
     "브랜드 : <b>A2 저지 헤이밀크</b> · 온라인몰 shop.a2jerseymilk.com",
    ])}</div>
    <div class="cards">
@@ -134,7 +134,7 @@ SLIDES.append(slide(head("Genetics & Feeding · 유전·사양","순종 저지 �
  <div class="two">
    <div class="callout"><div class="cot">유전·번식</div>{bullets([
      "<b>A2A2 유전자 선발</b> 및 순종 저지 개량",
-     "유전체·수정란 기술(Genetics 18년, 연 ~3,000건 이식)",
+     "유전체·수정란 기술을 활용한 저지 개량",
      "저지 유전기반 확대를 위한 번식 관리",
    ])}</div>
    <div class="callout gold"><div class="cot">사양·사료</div>{bullets([
@@ -143,7 +143,7 @@ SLIDES.append(slide(head("Genetics & Feeding · 유전·사양","순종 저지 �
      "반추 건강·유성분 안정 관리",
    ])}</div>
  </div>
- <div class="note">※ 이식 건수·수태율 등은 Genetics 전체 실적 기준. 목장별 성과는 사양·환경에 따라 변동.</div>'''+foot(12)))
+ <div class="note">※ 순종 저지 유전기반 유지·개량에 유전체·번식 기술을 접목(현장 적용).</div>'''+foot(12)))
 
 # 13 원유품질
 SLIDES.append(slide(head("Milk Quality · 원유 품질","저지 원유의 프리미엄 성분 (공인 분석 기준)")+f'''

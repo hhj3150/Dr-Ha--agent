@@ -1,0 +1,268 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>송영신목장 A2저지 우유·요거트 인쇄용 라벨</title>
+<style>
+  :root{
+    --ink:#1c1a17; --ink-soft:#57514a; --line:#2a2724;
+    --paper:#ffffff; --paper-warm:#faf7f1; --card:#ffffff;
+    --gold:#9a7017; --gold-soft:#f2e7cf; --welfare:#2f6f4e; --carbon:#2b6ea3;
+    --hair:#d9d2c6; --rule:#1c1a17;
+    --shadow:0 1px 3px rgba(30,25,15,.08),0 8px 30px rgba(30,25,15,.06);
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --ink:#ece7de; --ink-soft:#a89f92; --paper:#17150f; --paper-warm:#1d1a13;
+      --card:#201c15; --hair:#3a352b; --gold:#d9ad4e; --gold-soft:#2c2413;
+      --welfare:#57b487; --carbon:#5ea6d8; --line:#ece7de; --rule:#ece7de;
+      --shadow:0 1px 3px rgba(0,0,0,.4),0 10px 34px rgba(0,0,0,.5);}
+  }
+  :root[data-theme="dark"]{ --ink:#ece7de; --ink-soft:#a89f92; --paper:#17150f; --paper-warm:#1d1a13;
+    --card:#201c15; --hair:#3a352b; --gold:#d9ad4e; --gold-soft:#2c2413;
+    --welfare:#57b487; --carbon:#5ea6d8; --line:#ece7de; --rule:#ece7de;
+    --shadow:0 1px 3px rgba(0,0,0,.4),0 10px 34px rgba(0,0,0,.5);}
+  :root[data-theme="light"]{ --ink:#1c1a17; --ink-soft:#57514a; --paper:#ffffff; --paper-warm:#faf7f1;
+    --card:#ffffff; --hair:#d9d2c6; --gold:#9a7017; --gold-soft:#f2e7cf;
+    --welfare:#2f6f4e; --carbon:#2b6ea3; --line:#2a2724; --rule:#1c1a17;
+    --shadow:0 1px 3px rgba(30,25,15,.08),0 8px 30px rgba(30,25,15,.06);}
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--paper-warm);color:var(--ink);
+    font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;
+    line-height:1.5;font-size:15px;}
+  .wrap{max-width:1080px;margin:0 auto;padding:32px 20px 80px}
+
+  header.top{margin:8px 0 26px}
+  .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  h1{font-size:clamp(22px,4vw,30px);margin:.3em 0 .15em;letter-spacing:-.01em;text-wrap:balance}
+  .sub{color:var(--ink-soft);font-size:14px;max-width:60ch}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:14px;font-size:12.5px;color:var(--ink-soft)}
+  .legend b{color:var(--ink)}
+  .tag{display:inline-flex;align-items:center;gap:6px;padding:3px 9px;border:1px solid var(--hair);
+    border-radius:999px;font-size:12px}
+  .dot{width:8px;height:8px;border-radius:50%}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:24px}
+
+  .label{background:var(--card);border:1px solid var(--hair);border-radius:14px;overflow:hidden;
+    box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .lhead{padding:16px 18px 14px;border-bottom:2px solid var(--rule);position:relative}
+  .lhead .brand{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .lhead .pname{font-size:21px;font-weight:800;letter-spacing:-.01em;margin:2px 0 3px}
+  .lhead .vol{font-size:14px;color:var(--ink-soft);font-weight:600}
+  .lhead .ftype{position:absolute;top:16px;right:18px;font-size:11.5px;color:var(--ink-soft);
+    border:1px solid var(--hair);border-radius:6px;padding:3px 8px}
+
+  .lbody{display:grid;grid-template-columns:1.05fr .95fr;gap:0}
+  @media(max-width:520px){.lbody{grid-template-columns:1fr}}
+
+  /* 영양정보 box */
+  .nut{border-right:1px solid var(--hair);padding:14px 14px 12px}
+  @media(max-width:520px){.nut{border-right:none;border-bottom:1px solid var(--hair)}}
+  .nut h3{font-size:19px;margin:0;font-weight:800;letter-spacing:-.01em;border-bottom:8px solid var(--rule);padding-bottom:4px}
+  .nut .tot{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-soft);margin-top:5px}
+  .nut .tot b{color:var(--ink)}
+  .nrow{display:flex;justify-content:space-between;align-items:baseline;padding:4px 0;
+    border-top:1px solid var(--hair);font-size:13.5px;font-variant-numeric:tabular-nums}
+  .nrow.kcal{border-top:3px solid var(--rule);border-bottom:3px solid var(--rule);
+    font-size:16px;font-weight:800;padding:6px 0;margin-top:2px}
+  .nrow .nm{font-weight:600}
+  .nrow .nm.ind{padding-left:14px;font-weight:400;color:var(--ink-soft)}
+  .nrow .amt{margin-left:auto;padding-right:14px}
+  .nrow .dv{min-width:42px;text-align:right;font-weight:700}
+  .dvhead{display:flex;justify-content:flex-end;font-size:10.5px;color:var(--ink-soft);
+    line-height:1.15;text-align:right;padding:3px 0}
+  .nfoot{font-size:10px;color:var(--ink-soft);border-top:3px solid var(--rule);padding-top:5px;margin-top:2px}
+
+  /* 표시사항 */
+  .info{padding:13px 15px 15px;font-size:12px}
+  .info h4{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);
+    margin:0 0 8px;font-weight:700}
+  dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:5px 10px}
+  dt{color:var(--ink-soft);white-space:nowrap;font-weight:600}
+  dd{margin:0}
+  dd.strong{font-weight:800}
+  .origin dd{font-weight:800;font-size:13px}
+  .certs{margin-top:11px;display:flex;flex-direction:column;gap:8px}
+  .cert{border:1px solid var(--hair);border-radius:9px;padding:8px 10px;font-size:11px;line-height:1.4}
+  .cert .ct{font-weight:800;display:flex;align-items:center;gap:6px;margin-bottom:3px}
+  .cert .ct .dot{width:8px;height:8px}
+  .origin-note{margin-top:10px;font-size:11.5px;font-weight:700;color:var(--ink);
+    background:var(--gold-soft);border-radius:8px;padding:7px 9px}
+  .misc{margin-top:10px;font-size:10.5px;color:var(--ink-soft);line-height:1.5;
+    border-top:1px dashed var(--hair);padding-top:8px}
+  .chk{color:#b0561b;font-weight:700}
+  @media (prefers-color-scheme:dark){.chk{color:#e0975a}}
+
+  .note-card{grid-column:1/-1;background:var(--card);border:1px solid var(--hair);border-radius:14px;
+    padding:18px 20px;box-shadow:var(--shadow)}
+  .note-card h2{font-size:16px;margin:0 0 10px}
+  .claims{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px 18px;font-size:12.5px}
+  .claim{display:flex;gap:8px;align-items:flex-start}
+  .claim .st{font-size:15px;line-height:1.2}
+  .claim b{font-weight:700}
+  .todo{grid-column:1/-1;font-size:12.5px;color:var(--ink-soft);line-height:1.7}
+  .todo b{color:var(--ink)}
+
+  .printbtn{position:fixed;right:18px;bottom:18px;background:var(--gold);color:#fff;border:none;
+    border-radius:999px;padding:11px 18px;font-size:14px;font-weight:700;cursor:pointer;
+    box-shadow:var(--shadow);z-index:9}
+  .printbtn:focus-visible{outline:3px solid var(--carbon);outline-offset:2px}
+
+  @media print{
+    :root{--paper-warm:#fff;--card:#fff;--ink:#000;--ink-soft:#333;--hair:#999;--rule:#000;--gold:#000}
+    body{background:#fff;font-size:11px}
+    .wrap{max-width:none;padding:0}
+    .printbtn,header.top .legend,.kicker{display:none}
+    header.top{margin-bottom:10px}
+    .grid{gap:10px}
+    .label{break-inside:avoid;box-shadow:none;border:1px solid #000}
+    .note-card,.todo{break-inside:avoid}
+    @page{margin:12mm}
+  }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="kicker">D2O · 송영신목장 · 인쇄용 라벨 시안</div>
+    <h1>A2 저지 헤이밀크 · 플레인요거트 — 표시사항 라벨</h1>
+    <p class="sub">신규 성적서(수원여자대학교, 2026-06-24) 기준 · 우유는 보정값(유지방 4.5·유단백 3.5)·요거트는 분석치 · 갤러리아 품질관리팀 검정 수정사항 전량 반영. 규격 4종: 우유 750/180 mL, 요거트 500/180 mL.</p>
+    <div class="legend">
+      <span class="tag"><span class="dot" style="background:var(--welfare)"></span>동물복지축산농장 인증</span>
+      <span class="tag"><span class="dot" style="background:var(--carbon)"></span>저탄소 축산물 인증</span>
+      <span style="color:var(--welfare);font-weight:700">✅ 전 항목 확정 — 4종 인쇄 확정 가능</span>
+    </div>
+  </header>
+
+  <div class="grid" id="grid"></div>
+</div>
+
+<button class="printbtn" onclick="window.print()">🖨 인쇄 / PDF 저장</button>
+
+<script>
+const foot = '1일 영양성분 기준치에 대한 비율(%)은 2,000 kcal 기준이므로 개인의 필요 열량에 따라 다를 수 있습니다.';
+
+// 우유=보정(유지방4.5·유단백3.5), 요거트=분석치
+// 750/500 mL = 100 mL당 기준 / 180 mL = 총 내용량(180 mL)당 기준
+const milkN100 = {basis:'100 mL당',kcal:'69.3',ca:'113 mg(16 %)',k:'126 mg',rows:[
+  ['나트륨','33 mg','2 %'],['탄수화물','3.7 g','1 %'],['당류','3.3 g','3 %',1],
+  ['지방','4.5 g','8 %'],['트랜스지방','0 g','',1],['포화지방','3.0 g','20 %',1],
+  ['콜레스테롤','17 mg','6 %'],['단백질','3.5 g','6 %']]};
+const milkN180 = {basis:'총 내용량당',kcal:'125',ca:'204 mg(29 %)',k:'226 mg',rows:[
+  ['나트륨','60 mg','3 %'],['탄수화물','6.7 g','2 %'],['당류','5.9 g','6 %',1],
+  ['지방','8.1 g','15 %'],['트랜스지방','0 g','',1],['포화지방','5.4 g','36 %',1],
+  ['콜레스테롤','31 mg','10 %'],['단백질','6.3 g','11 %']]};
+const yogN100 = {basis:'100 mL당',kcal:'59.8',ca:'109 mg(16 %)',k:'132 mg',rows:[
+  ['나트륨','38 mg','2 %'],['탄수화물','3.6 g','1 %'],['당류','1.8 g','2 %',1],
+  ['지방','3.6 g','7 %'],['트랜스지방','0 g','',1],['포화지방','2.5 g','17 %',1],
+  ['콜레스테롤','13 mg','4 %'],['단백질','3.3 g','6 %']]};
+const yogN180 = {basis:'총 내용량당',kcal:'108',ca:'196 mg(28 %)',k:'238 mg',rows:[
+  ['나트륨','69 mg','3 %'],['탄수화물','6.5 g','2 %'],['당류','3.3 g','3 %',1],
+  ['지방','6.5 g','12 %'],['트랜스지방','0 g','',1],['포화지방','4.5 g','30 %',1],
+  ['콜레스테롤','23 mg','8 %'],['단백질','5.9 g','11 %']]};
+
+const CK = '<span class="chk">[확인]</span>';
+
+const milkInfo = (vol,kcal)=>`
+  <h4>제품 표시사항</h4>
+  <dl>
+    <dt>제품명</dt><dd class="strong">A2 저지 헤이밀크</dd>
+    <dt>식품유형</dt><dd>우유류 (살균)</dd>
+    <dt>내용량</dt><dd>${vol} (${kcal} kcal)</dd>
+    <dt>원재료명</dt><dd>원유 100 % (국산)</dd>
+    <dt>살균</dt><dd>75 ℃ 20초 살균제품</dd>
+    <dt>보관방법</dt><dd>냉장 0~10 ℃ 보관</dd>
+    <dt>유통기한</dt><dd>라벨 표기일까지 (병 미표기)</dd>
+    <dt>제조원</dt><dd>농업회사법인㈜디투오 / 경기 안성시 미양면 미양로 466</dd>
+    <dt>품목보고번호</dt><dd>20260375181</dd>
+    <dt>포장재질</dt><dd>용기 PET · 뚜껑 PP(폴리프로필렌) · 라벨 PS</dd>
+    <dt>소비자상담</dt><dd>031-674-3150</dd>
+    <dt>반품·교환</dt><dd>구입처 및 본사</dd>
+  </dl>
+  <div class="origin origin-note">원산지: 국산(원유) · 우유 함유(알레르기) · 부정불량식품신고 1399 · 분리배출 표시</div>`;
+
+const yogInfo = (vol,kcal)=>`
+  <h4>제품 표시사항</h4>
+  <dl>
+    <dt>제품명</dt><dd class="strong">A2 저지 플레인요거트</dd>
+    <dt>식품유형</dt><dd>발효유(살균)</dd>
+    <dt>내용량</dt><dd>${vol} (${kcal} kcal)</dd>
+    <dt>원재료명</dt><dd>원유 99.997 % (국산), 유산균 0.003 %</dd>
+    <dt>무지유고형분</dt><dd>8.4 %</dd>
+    <dt>살균표시</dt><dd>살균제품 · 살균온도 85~90 ℃, 25~30분</dd>
+    <dt>보관방법</dt><dd>냉장 0~10 ℃ 보관</dd>
+    <dt>소비기한</dt><dd>라벨 표기일까지 (병 미표기)</dd>
+    <dt>제조원</dt><dd>농업회사법인㈜디투오 / 경기 안성시 미양면 미양로 466</dd>
+    <dt>품목보고번호</dt><dd>20260375182</dd>
+    <dt>포장재질</dt><dd>용기 PET · 뚜껑 PP(폴리프로필렌) · 라벨 PS</dd>
+    <dt>소비자상담</dt><dd>031-674-3150</dd>
+    <dt>반품·교환</dt><dd>구입처 및 본사</dd>
+  </dl>
+  <div class="origin origin-note">원산지: 국산(원유) · 우유 함유(알레르기) · 부정불량식품신고 1399 · 분리배출 표시</div>`;
+
+const certs = `
+  <div class="certs">
+    <div class="cert">
+      <div class="ct"><span class="dot" style="background:var(--welfare)"></span>동물복지축산농장 인증</div>
+      농장명: 송영신목장(1농장) · 인증번호: 제 동물복지-10-30-6-1호 · 가축의 종류: 젖소 · 소재지: 경기도 안성시 미양면 역전길 14-42
+    </div>
+    <div class="cert">
+      <div class="ct"><span class="dot" style="background:var(--carbon)"></span>저탄소 축산물 인증</div>
+      인증기관: 축산물품질평가원 · 인증번호: 제2024-2-068호 · 축종(품종): 젖소(저지) · 생산지: 경기 안성시 · 생산자(브랜드): 송영신목장 · 전화: 031-674-3150 · 주소(포장작업장): 제조원 소재지와 동일(중복 생략)
+    </div>
+  </div>
+  <div class="misc"><b>원유 표기:</b> “국내 1호 젖소 동물복지 인증목장, 젖소 저탄소 인증목장의 원유 사용” · <b>식약처</b> 표기 정정 반영 · 제품명 띄어쓰기 = 품목제조보고서와 동일 · 숫자·단위 사이 띄어쓰기 적용</div>`;
+
+function nutBox(n,vol){
+  let html = `<div class="nut"><h3>영양정보</h3>
+    <div class="tot"><span>총 내용량 <b>${vol}</b></span><span><b>${n.basis}</b></span></div>
+    <div class="nrow kcal"><span class="nm">열량</span><span class="amt">${n.kcal} kcal</span></div>
+    <div class="dvhead">1일 영양성분<br>기준치에 대한 비율</div>`;
+  for(const r of n.rows){
+    const ind = r[3]?' ind':'';
+    html += `<div class="nrow"><span class="nm${ind}">${r[0]}</span><span class="amt">${r[1]}</span><span class="dv">${r[2]||''}</span></div>`;
+  }
+  html += `<div class="nfoot">${foot}<br>칼슘 ${n.ca} · 칼륨 ${n.k} 별도 강조 가능</div></div>`;
+  return html;
+}
+
+const labels = [
+  {brand:'Song Young Shin Farm · A2 Jersey', name:'A2 저지 헤이밀크', vol:'750 mL', ftype:'우유류(살균)', n:milkN100, info:milkInfo('750 mL','520')},
+  {brand:'Song Young Shin Farm · A2 Jersey', name:'A2 저지 헤이밀크', vol:'180 mL', ftype:'우유류(살균)', n:milkN180, info:milkInfo('180 mL','125')},
+  {brand:'Song Young Shin Farm · A2 Jersey', name:'A2 저지 플레인요거트', vol:'500 mL', ftype:'발효유(살균)', n:yogN100, info:yogInfo('500 mL','299')},
+  {brand:'Song Young Shin Farm · A2 Jersey', name:'A2 저지 플레인요거트', vol:'180 mL', ftype:'발효유(살균)', n:yogN180, info:yogInfo('180 mL','108')},
+];
+
+let out='';
+for(const L of labels){
+  out += `<section class="label">
+    <div class="lhead"><div class="brand">${L.brand}</div>
+      <div class="pname">${L.name}</div><div class="vol">내용량 ${L.vol}</div>
+      <div class="ftype">${L.ftype}</div></div>
+    <div class="lbody">
+      ${nutBox(L.n,L.vol)}
+      <div class="info">${L.info}${certs}</div>
+    </div>
+  </section>`;
+}
+
+// 전면 카피 실증 상태
+out += `<div class="note-card">
+  <h2>전면(前面) 마케팅 카피 — 실증(實證) 확인 후 게재 <span style="font-weight:400;font-size:12px;color:var(--ink-soft)">(「식품 표시·광고법」)</span></h2>
+  <div class="claims">
+    <div class="claim"><span class="st">🟢</span><div><b>100% A2A2 저지 전용목장</b> — A2A2 유전자 검사성적서 첨부 시 게재</div></div>
+    <div class="claim"><span class="st">🟢</span><div><b>저지 단일품종</b> — 단일품종 사육·집유 근거 확인 후 게재</div></div>
+    <div class="claim"><span class="st">🟡</span><div><b>‘황금빛’</b> — 실제 제품 색과 부합 시 게재</div></div>
+    <div class="claim"><span class="st">🔴</span><div><b>‘물보다 가벼운 목넘김’</b> — 관능·점도 등 증빙 없으면 삭제 권장</div></div>
+    <div class="claim"><span class="st">🔴</span><div><b>‘영국 왕실이 사랑한 저지소’</b> — 출처 불명확, 순화·삭제 권장</div></div>
+    <div class="claim"><span class="st">🟡</span><div><b>‘0.1% 한정 생산’</b> — 산출 근거 확보 시 게재</div></div>
+  </div>
+</div>`;
+
+// 인쇄 전 확정 필요 목록
+out += `<div class="todo"><b>✅ 전 항목 확정 완료 — 4종(우유 750·180 mL, 요거트 500·180 mL) 모두 인쇄 확정 가능.</b>
+  <br>요거트: 식품유형 발효유(살균) · 원재료 원유 99.997%+유산균 0.003% · 무지유고형분 8.4% · 살균온도 85~90 ℃ 25~30분(발효 후 가열처리 아님, 생균 유지) · 특정 균주 미표기로 함유균수 표기 불요.
+  품목보고번호 우유 20260375181·요거트 20260375182 · 포장재질 용기 PET·뚜껑 PP·라벨 PP · 소비자상담 031-674-3150 · 포장작업장 미표기(제조원과 동일) · 기한 “라벨 표기일까지”, 병 미표기.
+  <br><b>주의:</b> 성적서는 비KOLAS·비ISO17025 일반검사이며, 센터 서면동의 없이 광고에 검사기관/성적서 인용 불가.
+  트랜스지방 실측(우유 0.10·요거트 0.08 g)은 0.2 g 미만이라 규정상 ‘0 g’ 표기. 전면 마케팅 카피는 위 실증 상태표 참고.</div>`;
+
+document.getElementById('grid').innerHTML = out;
+</script>

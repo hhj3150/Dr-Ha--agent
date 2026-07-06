@@ -23,7 +23,7 @@ SLIDES.append(slide(f'''
    <h1>저지(Jersey) 전용목장<br>운영 사례</h1>
    <div class="covsub">다름의 인정(Tolérance) · 낙농의 다양성 · 소비자 선택권 — 송영신목장</div>
    <div class="covline"></div>
-   <div class="covmeta">발표 : 하현제 &nbsp;|&nbsp; Genetics · 고려동물병원 · D2O · 송영신목장<br>
+   <div class="covmeta">발표 : <b style="color:#fff">고려동물병원 원장 하현제</b> &nbsp;|&nbsp; Genetics · D2O · 송영신목장<br>
    국립축산과학원 발표 · 2026년 8월 26일</div>
  </div>''',"cover"))
 
@@ -237,7 +237,7 @@ SLIDES.append(slide(f'''
    <div class="covsub">다름의 인정(똘레랑스)에서 시작된 낙농의 다양성, 그리고 소비자의 선택권</div>
    <div class="covline"></div>
    <div class="covmeta">송영신목장 · A2 저지 헤이밀크 &nbsp;|&nbsp; shop.a2jerseymilk.com<br>
-   발표 : 하현제 &nbsp;|&nbsp; Q &amp; A</div>
+   발표 : 고려동물병원 원장 하현제 &nbsp;|&nbsp; Q &amp; A</div>
  </div>''',"cover"))
 
 CSS='''

@@ -21,7 +21,7 @@ SLIDES.append(slide(f'''
  <div class="cov">
    <div class="covtag">JERSEY DAIRY · SOIL TO SOUL</div>
    <h1>저지(Jersey) 전용목장<br>운영 사례</h1>
-   <div class="covsub">프리미엄·저탄소·순환낙농 6차산업 모델 — 송영신목장</div>
+   <div class="covsub">다름의 인정(Tolérance) · 낙농의 다양성 · 소비자 선택권 — 송영신목장</div>
    <div class="covline"></div>
    <div class="covmeta">발표 : 하현제 &nbsp;|&nbsp; Genetics · 고려동물병원 · D2O · 송영신목장<br>
    국립축산과학원 발표 · 2026년 8월 26일</div>
@@ -30,46 +30,47 @@ SLIDES.append(slide(f'''
 # 2 목차
 SLIDES.append(slide(head("Contents","발표 순서")+f'''
  <div class="toc">
-   <div class="tc"><span class="tn">01</span><div><b>왜 지금 저지인가</b><br>낙농 환경 변화와 저지의 전략적 가치</div></div>
+   <div class="tc"><span class="tn">01</span><div><b>왜 ‘다양성’인가</b><br>똘레랑스 — 다름의 인정</div></div>
    <div class="tc"><span class="tn">02</span><div><b>송영신목장 개요</b><br>규모·인증·통합 운영 구조</div></div>
-   <div class="tc"><span class="tn">03</span><div><b>저지 전용목장 전환 전략</b><br>차별화·부가가치 내재화</div></div>
+   <div class="tc"><span class="tn">03</span><div><b>다름을 통한 시장 형성</b><br>단일품종에서 다양성으로</div></div>
    <div class="tc"><span class="tn">04</span><div><b>운영 시스템</b><br>유전·사양·환경·동물복지</div></div>
-   <div class="tc"><span class="tn">05</span><div><b>원유 품질과 6차산업</b><br>가공·브랜드·유통</div></div>
+   <div class="tc"><span class="tn">05</span><div><b>다른 우유, 다른 제품</b><br>품질과 6차산업</div></div>
    <div class="tc"><span class="tn">06</span><div><b>성과와 과제</b></div></div>
-   <div class="tc"><span class="tn">07</span><div><b>정책 제언·확장 모델</b></div></div>
+   <div class="tc"><span class="tn">07</span><div><b>정책 제언 — 낙농 다양성 생태계</b></div></div>
  </div>'''+foot(2)))
 
 # 3 섹션
-SLIDES.append(slide('<div class="sec"><div class="secn">01</div><h2>왜 지금 저지인가</h2><div class="secl"></div><p>낙농 환경 변화와 저지 품종의 전략적 가치</p></div>',"section"))
+SLIDES.append(slide('<div class="sec"><div class="secn">01</div><h2>왜 ‘다양성’인가</h2><div class="secl"></div><p>똘레랑스(Tolérance) — 다름의 인정</p></div>',"section"))
 
-# 4 배경
-SLIDES.append(slide(head("Why Jersey · 배경","홀스타인 편중 시장, 프리미엄으로의 전환")+bullets([
- "국내 낙농은 <b>홀스타인 단일 품종에 편중</b> → 원유 생산 포화·가격 압박·차별화 한계",
- "소비 트렌드는 <b>프리미엄·기능성·A2·건강·가치소비</b>로 이동",
- "저지(Jersey)는 <b>유고형분(유지방·유단백)이 높고 A2A2 비율이 높은</b> 대표적 고품질 유용종",
- "체구가 작아 <b>사료효율·단위 유량당 온실가스 저감 잠재력</b>(연구·실증 필요)",
- "→ <b>국산 프리미엄 낙농의 차별화 돌파구</b>로서 저지 전용목장 모델 주목",
-])+foot(4)))
+# 4 철학(근본)
+SLIDES.append(slide(head("Philosophy · 근본","저지 전환의 출발점은 ‘우열’이 아니라 ‘다름’입니다")+f'''
+ <div class="quote2">“저지는 홀스타인보다 <b>더 좋은 소</b>가 아닙니다.<br>홀스타인과 <b>다른 소</b>입니다.”</div>
+ {bullets([
+   "나의 근본은 프랑스의 문화 <b>똘레랑스(Tolérance) — 다름의 인정</b>",
+   "대한민국 낙농은 <b>홀스타인 단일품종</b> 중심 → 시장에 ‘다름’이 없다",
+   "다름을 통해 <b>다양성의 시장</b>을 형성하고 <b>소비자의 선택권</b>을 넓히는 것",
+   "저지 전용목장은 경쟁이 아니라 <b>공존과 선택의 다양성</b>을 위한 시도",
+ ])}'''+foot(4)))
 
 # 5 품종특성 표
-SLIDES.append(slide(head("Breed Traits · 품종 특성","저지 원유 : 가공 적성이 높은 고형분 우유")+f'''
+SLIDES.append(slide(head("Difference, not Ranking · 다름","저지는 ‘더 좋은 소’가 아니라 ‘다른 소’")+f'''
  <div class="two">
    <div>
-     <table class="cmp"><tr><th>항목</th><th>홀스타인(일반)</th><th>저지(일반)</th></tr>
+     <table class="cmp"><tr><th>특성</th><th>홀스타인</th><th>저지</th></tr>
      <tr><td>유지방</td><td>3.6~3.8 %</td><td class="hi">4.6~5.3 %</td></tr>
      <tr><td>유단백</td><td>3.1~3.3 %</td><td class="hi">3.7~3.9 %</td></tr>
-     <tr><td>무지유고형분</td><td>보통</td><td class="hi">높음</td></tr>
-     <tr><td>칼슘 등 미네랄</td><td>보통</td><td class="hi">풍부</td></tr>
-     <tr><td>A2(β-카제인) 비율</td><td>낮음~중</td><td class="hi">높음</td></tr>
-     <tr><td>체구/사료요구량</td><td>큼</td><td class="hi">작음(효율↑)</td></tr>
+     <tr><td>무지유고형분</td><td>보통</td><td class="hi">상대적 높음</td></tr>
+     <tr><td>우유 풍미·바디감</td><td>담백·대중적</td><td class="hi">진함·개성</td></tr>
+     <tr><td>A2(β-카제인) 비율</td><td>낮음~중</td><td class="hi">상대적 높음</td></tr>
+     <tr><td>체구·산유량</td><td>큼·다량</td><td class="hi">작음·소량</td></tr>
      </table>
-     <div class="note">※ 일반적 품종 특성 범위(문헌). 실제값은 사양·계절·비유단계에 따라 변동.</div>
+     <div class="note">※ 우열 비교가 아니라 품종별 <b>특성의 차이</b>. 실제값은 사양·계절·비유단계에 따라 변동.</div>
    </div>
    <div class="callout">
-     <div class="cot">가공 적성</div>
-     고형분이 높아 <b>치즈·요거트·버터·카이막 수율</b>이 우수 →
-     동일 원유로 <b>더 많은·더 진한 제품</b> 생산 = 부가가치↑
-     <div class="cotb">A2 · 고칼슘 · 진한 풍미 → <b>프리미엄 소비자 소구</b></div>
+     <div class="cot">다른 특성 = 다른 선택</div>
+     성분·풍미가 <b>다르기에</b> 홀스타인 우유와 <b>다른 제품·다른 경험</b>을 제공 →
+     소비자에게 <b>새로운 선택지</b>를 더한다.
+     <div class="cotb">홀스타인과 저지가 <b>공존</b>하는 다양한 낙농 시장</div>
    </div>
  </div>'''+foot(5)))
 
@@ -94,21 +95,21 @@ SLIDES.append(slide(head("Farm Profile · 목장 개요","낙농 + 유가공 + 6
  </div>'''+foot(7)))
 
 # 8 섹션3
-SLIDES.append(slide('<div class="sec"><div class="secn">03</div><h2>저지 전용목장 전환 전략</h2><div class="secl"></div><p>차별화 · 부가가치 내재화</p></div>',"section"))
+SLIDES.append(slide('<div class="sec"><div class="secn">03</div><h2>다름을 통한 시장 형성</h2><div class="secl"></div><p>단일품종에서 다양성으로 · 소비자 선택권</p></div>',"section"))
 
-# 9 전환전략
-SLIDES.append(slide(head("Strategy · 전환 전략","범용 원유 판매에서 프리미엄 브랜드 낙농으로")+f'''
+# 9 시장 형성
+SLIDES.append(slide(head("Market Formation · 시장 형성","단일품종 시장에서 ‘다양성의 시장’으로")+f'''
  <div class="flow3">
-   <div class="fb"><div class="fbn">전환 전</div>홀스타인 원유<br>도매 납품<br><span class="fbs">가격 수용자</span></div>
+   <div class="fb"><div class="fbn">기존 시장</div>홀스타인 단일<br>획일적 공급<br><span class="fbs">다름·선택 없음</span></div>
    <div class="far">➜</div>
-   <div class="fb hi"><div class="fbn">전환</div>저지 <b>전용목장</b><br>동물복지·저탄소<br><span class="fbs">품종·인증 차별화</span></div>
+   <div class="fb hi"><div class="fbn">다름의 도입</div>저지 <b>전용목장</b><br>동물복지·저탄소<br><span class="fbs">새로운 선택지</span></div>
    <div class="far">➜</div>
-   <div class="fb gold"><div class="fbn">전환 후</div>자가 가공·브랜드<br>A2 저지 헤이밀크<br><span class="fbs">가격 결정자</span></div>
+   <div class="fb gold"><div class="fbn">다양성의 시장</div>A2 저지 헤이밀크<br>자가 가공·브랜드<br><span class="fbs">소비자 선택권 확대</span></div>
  </div>
  {bullets([
-   "핵심 : 원유를 팔지 않고 <b>제품·브랜드로 부가가치를 목장 안에 내재화</b>",
-   "포지셔닝 : “<b>국내 1호 젖소 동물복지·저탄소 인증목장의 원유</b>”라는 신뢰 자산",
-   "채널 : 자사몰 + 프리미엄 유통(백화점) 동시 전개",
+   "핵심 : 홀스타인과 <b>경쟁</b>이 아니라, 시장에 <b>없던 선택지</b>를 더하는 것",
+   "<b>다름의 인정(똘레랑스)</b> → 다양성의 시장 → <b>소비자 선택의 다양성</b>",
+   "자가 가공·브랜드로 <b>다른 가치를 스스로 완성</b>(수직통합) — “국내 1호 동물복지·저탄소 인증목장의 원유”",
  ])}'''+foot(9)))
 
 # 10 섹션4
@@ -146,7 +147,7 @@ SLIDES.append(slide(head("Genetics & Feeding · 유전·사양","순종 저지 �
  <div class="note">※ 순종 저지 유전기반 유지·개량에 유전체·번식 기술을 접목(현장 적용).</div>'''+foot(12)))
 
 # 13 원유품질
-SLIDES.append(slide(head("Milk Quality · 원유 품질","저지 원유의 프리미엄 성분 (공인 분석 기준)")+f'''
+SLIDES.append(slide(head("Milk Quality · 원유 품질","저지 원유의 특성 — 다른 우유 (공인 분석 기준)")+f'''
  <div class="two">
    <table class="cmp"><tr><th>영양성분 (우유 100 mL당)</th><th>함량</th><th>1일기준치</th></tr>
    <tr><td>열량</td><td>69.3 kcal</td><td>—</td></tr>
@@ -187,7 +188,7 @@ SLIDES.append(slide('<div class="sec"><div class="secn">05</div><h2>성과와 �
 SLIDES.append(slide(head("SWOT · 강점과 과제","")+f'''
  <div class="two">
    <div class="callout"><div class="cot">강점 (Strength)</div>{bullets([
-     "고형분·A2·고칼슘 → <b>가공 수율·프리미엄</b> 동시 확보",
+     "고형분·A2·고칼슘 → <b>다른 특성의 우유·제품</b>으로 선택지 확대",
      "동물복지+저탄소+HACCP <b>3중 인증 신뢰</b>",
      "수직통합으로 <b>부가가치 내재화</b>",
      "순환농업으로 <b>환경·ESG 스토리</b>",
@@ -202,15 +203,15 @@ SLIDES.append(slide(head("SWOT · 강점과 과제","")+f'''
  <div class="note">※ 경영 성과 수치는 목장별 편차가 커 본 발표에서는 정성적 시사점 중심으로 제시(구체 수치는 추정·파일럿 기준).</div>'''+foot(16)))
 
 # 17 섹션6 정책
-SLIDES.append(slide('<div class="sec"><div class="secn">06</div><h2>정책 제언 · 확장 모델</h2><div class="secl"></div><p>저지 전용목장의 확산을 위한 제언</p></div>',"section"))
+SLIDES.append(slide('<div class="sec"><div class="secn">06</div><h2>정책 제언 · 확장 모델</h2><div class="secl"></div><p>낙농 ‘다양성 생태계’를 위한 제언</p></div>',"section"))
 
 # 18 정책제언
-SLIDES.append(slide(head("Policy · 정책 제언","저지 전용목장 육성을 위한 제언")+bullets([
- "① <b>국산 저지 유전자원·전용목장 육성 기반</b> 조성(유전체·수정란 지원, 시범목장)",
- "② <b>저탄소·동물복지 인증과 프리미엄 낙농</b>을 연계한 인센티브·판로 지원",
- "③ <b>6차산업(가공·브랜드·관광)</b>과 결합한 저지 낙농 표준 운영모델 보급",
- "④ <b>정밀축산(CowTalk·Eco-BIT) 데이터</b> 결합으로 유성분·번식·탄소 관리 고도화",
- "⑤ 축산과학원·지자체·현장 <b>공동 실증</b>으로 확산 근거 축적",
+SLIDES.append(slide(head("Policy · 정책 제언","낙농 ‘다양성 생태계’를 위한 제언")+bullets([
+ "① <b>품종 다양성 기반 조성</b> — 국산 저지 등 유전자원·전용목장 육성(우열이 아닌 선택지 확대)",
+ "② <b>소비자 선택권 확대</b> — 다양한 유제품·인증(동물복지·저탄소) 연계 인센티브·판로 지원",
+ "③ <b>6차산업(가공·브랜드·관광)</b>과 결합한 다양성 낙농 표준 운영모델 보급",
+ "④ <b>정밀축산(CowTalk·Eco-BIT) 데이터</b>로 품종별 사양·유성분·탄소 관리 고도화",
+ "⑤ 축산과학원·지자체·현장 <b>공동 실증</b>으로 다양성 생태계의 근거 축적",
 ])+foot(18)))
 
 # 19 확장모델
@@ -233,7 +234,7 @@ SLIDES.append(slide(f'''
  <div class="cov end">
    <div class="covtag">THANK YOU</div>
    <h1>감사합니다</h1>
-   <div class="covsub">저지 전용목장 = 프리미엄 · 저탄소 · 순환 · 6차산업의 결합 모델</div>
+   <div class="covsub">다름의 인정(똘레랑스)에서 시작된 낙농의 다양성, 그리고 소비자의 선택권</div>
    <div class="covline"></div>
    <div class="covmeta">송영신목장 · A2 저지 헤이밀크 &nbsp;|&nbsp; shop.a2jerseymilk.com<br>
    발표 : 하현제 &nbsp;|&nbsp; Q &amp; A</div>
@@ -319,6 +320,9 @@ table.cmp td.hi{color:#0b5a3f;font-weight:800;background:#eef5ee;}
 .prods{display:flex;gap:14px;margin:30px 56px 6px;}
 .pr{flex:1;background:#06432f;color:#fff;border-radius:12px;padding:26px 12px;text-align:center;font-size:19px;font-weight:700;line-height:1.3;}
 .pr:nth-child(2){background:#0b5a3f;} .pr:nth-child(4){background:#0b5a3f;}
+.quote2{margin:30px 56px 6px;padding:24px 30px;border-left:8px solid #c79a4c;background:#fff;
+ font-size:30px;line-height:1.4;color:#06432f;font-weight:800;letter-spacing:-.01em;border-radius:0 12px 12px 0;}
+.quote2 b{color:#c79a4c;}
 '''
 HTML='<!doctype html><html><head><meta charset="utf-8"><style>'+CSS+'</style></head><body>'+"".join(SLIDES)+'</body></html>'
 hp=os.path.join(OUT,"저지전용목장_송영신목장_발표.html")

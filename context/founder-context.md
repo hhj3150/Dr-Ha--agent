@@ -19,17 +19,27 @@ implementation** level simultaneously.
 
 ## Organizations
 
-### Genetics Co., Ltd.
+### Founder career timeline (authoritative — confirmed by founder)
+- 1992.03–1999.02 — 건국대학교 수의과대학 수의학(학사)
+- **1999 — 수의사 면허 취득 (veterinary career start; ~27 years as of 2026)**
+- 2005–present — 고려동물병원 (Korea Animal Hospital) 개원·원장 (Dr. Ha's primary affiliation / 소속)
+- 2009–present — (주)제네틱스 (Genetics Co., Ltd.) 설립·대표이사
+- 2011–present — 송영신목장 (Song Young Shin Farm) 대표 — 저지(Jersey)종 전용목장, A2 저지 헤이밀크(A2 Jersey Hay Milk)
+- 2021–present — 디투오(주) (D2O Co., Ltd.) 설립·대표
+- Awards: **2016.12.30 농림축산식품부장관 표창 (제99209호)**, **2021.11.11 국무총리 표창 (제214912호)** — 송영신목장 대표 하현제
+- Contact: 010-6205-3150 / hhj3150@hanmail.net / 경기도 안성시 공도읍 공도로 150 스위첸 116-1604 / 생년월일 1973.10.25 / 한자 성함 河賢齊 (물 하·어질 현·건널 제, 삼수변 없는 齊)
+
+### Genetics Co., Ltd. (설립 2009)
 Embryo production, embryo transfer, genomic analysis, dairy cattle breeding, Hanwoo breeding.
-- ~18 years embryo-transfer experience
 - ~3,000 embryo transfers / year
 - ~4,000 embryos sold / year
 - ~60% average conception rate
 - Key projects: Hanwoo embryo programs, dairy recipient-cow programs, genomic selection systems, A2 breeding programs.
+- (Note: do NOT cite a fixed "years of experience" figure; use the career timeline above.)
 
-### Korea Animal Hospital
+### 고려동물병원 (Korea Animal Hospital, 원장 하현제, 개원 2005)
 Embryo transfer, reproduction management, recipient-cow management, calf health programs, herd consulting.
-- Personnel: Dr. Hyunje Ha, Dr. Kwangtaek Lim, Dr. Donghwan Shin, Dr. Mincheol Kim.
+- Personnel: Dr. Hyunje Ha (원장), Dr. Kwangtaek Lim, Dr. Donghwan Shin, Dr. Mincheol Kim.
 
 ### D2O Co., Ltd.
 Livestock environmental consulting, bedding systems, odor reduction, carbon reduction, compost technology.

@@ -129,6 +129,7 @@ A2 Jersey Hay Milk e-commerce, (13) government R&D (산자부) project managemen
 - 5-phase path: ①Gyeonggi flagship ②Gangwon ③Jeolla ④national multi-province (→ Provincial agent) ⑤international (→ Global Expansion agent).
 - Boundary: domestic provinces → Provincial Government Expansion; international → CowTalk Global Expansion; the technical platform both sell → Eco-BIT Platform; capital/negotiation/portfolio → CEO Strategy; Holstein embryo export stays with Global Embryo Export Operations (distinct from platform export). These agents read `context/eco-bit-expansion-context.md`.
 - Reference: Uzbekistan CowTalk pilot (~50 cows) = first international validation case (figures TBD).
+- **Standard model:** all province/country proposals use the **CowTalk-Core Model** — CowTalk AI is the core (national livestock data hub); genetics, environment (Eco-BIT), sensors, finance are modules on top; swap only the finance/partner/localization layer for domestic vs international. See `context/cowtalk-core-model-context.md`; first case `deliverables/uzbekistan-01-cowtalk-core-proposal.md`.
 
 Use the relevant agent file in `agents/` and the context files in `context/`.
 Always read `context/founder-context.md` (authoritative founder & ecosystem

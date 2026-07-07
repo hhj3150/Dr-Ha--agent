@@ -18,16 +18,20 @@
   #stage{width:1280px; height:720px; position:relative; transform-origin:center center;
     background:var(--bg); overflow:hidden; box-shadow:0 30px 120px rgba(0,0,0,.6)}
   .slide{position:absolute; inset:0; opacity:0; visibility:hidden;
-    transition:opacity .45s ease; display:flex}
+    transition:opacity .45s ease; display:flex;
+    background:linear-gradient(135deg,#0b120f 0%,#12211a 55%,#0d1712 100%)}
   .slide.active{opacity:1; visibility:visible}
   .slide.active .rise{animation:rise .6s .05s both cubic-bezier(.2,.7,.2,1)}
   @keyframes rise{from{opacity:0; transform:translateY(22px)}to{opacity:1; transform:none}}
 
-  img.bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+  img.bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; background:#0b120f}
   .scrim{position:absolute; inset:0}
-  .scrim.bottom{background:linear-gradient(180deg,rgba(4,8,7,.05) 0%,rgba(4,8,7,.15) 42%,rgba(4,8,7,.88) 100%)}
-  .scrim.left{background:linear-gradient(90deg,rgba(4,8,7,.92) 0%,rgba(4,8,7,.72) 38%,rgba(4,8,7,.12) 72%,transparent 100%)}
-  .scrim.dark{background:linear-gradient(180deg,rgba(4,8,7,.55),rgba(4,8,7,.75))}
+  .scrim.bottom{background:linear-gradient(180deg,rgba(4,8,7,.15) 0%,rgba(4,8,7,.45) 40%,rgba(4,8,7,.82) 72%,rgba(4,8,7,.95) 100%)}
+  .scrim.left{background:linear-gradient(90deg,rgba(4,8,7,.96) 0%,rgba(4,8,7,.86) 40%,rgba(4,8,7,.45) 68%,rgba(4,8,7,.12) 100%)}
+  .scrim.dark{background:linear-gradient(180deg,rgba(4,8,7,.6),rgba(4,8,7,.8))}
+  /* 가독성: 사진 위 텍스트에 그림자 */
+  .cover h1,.cover .sub,.cover .meta,.full h2,.full .kicker,.full p,.full .note,.full .capbox p,.full ul.pts li{
+    text-shadow:0 2px 14px rgba(0,0,0,.9), 0 1px 3px rgba(0,0,0,.9)}
 
   .pad{position:relative; z-index:2; width:100%; height:100%; padding:60px 76px 88px; display:flex; flex-direction:column}
   .kicker{font-size:16px; letter-spacing:.14em; color:var(--green); font-weight:800; text-transform:uppercase; display:flex; align-items:center; gap:10px}
@@ -137,7 +141,7 @@
 </style>
 
 <style>
-  html,body{overflow:visible;height:auto;background:#fff}
+  html,body{overflow:visible;height:auto;background:#0b120f}
   #bar,#hud,#hint{display:none!important}
   #viewport{position:static;display:block}
   #stage{width:auto;height:auto;transform:none!important;box-shadow:none;background:transparent}

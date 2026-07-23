@@ -6,7 +6,7 @@ The user, Dr. Ha Hyunjae, operates a multi-company and multi-project ecosystem.
 
 - Genetics Co., Ltd. - livestock biotech, embryo transfer, genomic selection, Song Young Shin Farm operation
 - D2O Co., Ltd. - livestock environment, bedding, manure, compost, smart livestock consulting
-- Korea Animal Hospital - specialized embryo transfer veterinary hospital
+- Goryeo Animal Hospital (고려동물병원) - specialized embryo transfer veterinary hospital
 - Song Young Shin Farm - A2 Hay Milk, Jersey/Holstein dairy, premium dairy products, farm tourism
 
 ## Core work domains

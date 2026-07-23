@@ -7,6 +7,7 @@
 ## 파일
 - `Song-Young-Shin-Farm-Vietnam-2026.pdf` — 현장 발표용 (20슬라이드, 16:9)
 - `songyoungshin-vietnam-visit-2026.html` — 브라우저 발표용 (자체완결형, ←/→·Space 이동, F 전체화면)
+- `Song-Young-Shin-Farm-Vietnam-2026.pptx` — 편집용 PowerPoint (16:9 와이드, 텍스트·수치·사진 직접 수정 가능)
 
 ## 원본 대비 보완 사항
 - 순환농업 / 친환경축산(D2O) / 지속가능성 파트 강화 (견학단 최대 관심사)

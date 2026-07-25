@@ -502,3 +502,55 @@
     else if(e.key==='f'||e.key==='F'){if(!document.fullscreenElement)document.documentElement.requestFullscreen();else document.exitFullscreen()}
   });
 </script>
+<style id="motion-css">
+  @media (prefers-reduced-motion: no-preference){
+    .mo [data-mo]{opacity:0;transform:translateY(20px) scale(.995);
+      transition:opacity .62s cubic-bezier(.2,.7,.2,1),transform .62s cubic-bezier(.2,.7,.2,1);
+      transition-delay:var(--d,0s);will-change:opacity,transform}
+    .mo .slide.play [data-mo]{opacity:1;transform:none}
+    .mo .kb{animation:kbpan 20s ease-in-out infinite alternate}
+    .mo .kb2{animation:kbpan2 16s ease-in-out infinite alternate}
+    @keyframes kbpan{from{transform:scale(1.04) translate(0,0)}to{transform:scale(1.13) translate(-1.6%,-1.2%)}}
+    @keyframes kbpan2{from{transform:scale(1.02)}to{transform:scale(1.09) translate(1%,-1%)}}
+  }
+  @media print{
+    .mo [data-mo]{opacity:1!important;transform:none!important}
+    .kb,.kb2{animation:none!important}
+  }
+</style>
+<script id="motion-js">
+(function(){
+  var reduce = !window.matchMedia || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce) return;                       // respect reduced-motion → no changes, all visible
+  document.documentElement.classList.add('mo');
+  var slides = [].slice.call(document.querySelectorAll('.slide'));
+  slides.forEach(function(sl){
+    var pad = sl.querySelector('.pad') || sl;
+    // Ken Burns on photographs
+    [].slice.call(sl.children).forEach(function(c){
+      if(c.tagName==='IMG') c.classList.add('kb');
+    });
+    [].slice.call(sl.querySelectorAll('.imgframe img')).forEach(function(im){ im.classList.add('kb2'); });
+    // Collect entrance targets: direct children of .pad, expanding one level for flex/grid groups
+    var targets=[];
+    [].slice.call(pad.children).forEach(function(c){
+      if(c.classList.contains('foot')||c.classList.contains('pgnum')) return;
+      var d=getComputedStyle(c).display, n=c.children.length;
+      if((d==='flex'||d==='grid') && n>1 && n<=8){
+        [].slice.call(c.children).forEach(function(g){ targets.push(g); });
+      } else { targets.push(c); }
+    });
+    targets.forEach(function(t,i){ t.setAttribute('data-mo',''); t.style.setProperty('--d',(Math.min(i,9)*0.075).toFixed(3)+'s'); });
+  });
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting) e.target.querySelector('.slide') && e.target.querySelector('.slide').classList.add('play');
+      else { var s=e.target.querySelector('.slide'); if(s) s.classList.remove('play'); }   // reset → replays on re-entry
+    });
+  },{threshold:.45});
+  [].slice.call(document.querySelectorAll('.stage')).forEach(function(st){ io.observe(st); });
+  // play the first slide immediately
+  var first=document.querySelector('.slide'); if(first) first.classList.add('play');
+})();
+</script>
+

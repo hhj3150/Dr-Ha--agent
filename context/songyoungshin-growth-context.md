@@ -27,6 +27,24 @@ the core sales channel** in every strategy.
 5. Raise average order value (객단가).
 6. Improve repurchase rate (재구매율).
 
+## Farm profile (as of 2026-07)
+
+**Breed: Jersey only.** Song Young Shin Farm runs a single-breed Jersey herd — it has no
+Holstein cattle. Never describe the herd as "저지·홀스타인" or assume Holstein recipients
+are on-farm.
+
+| Item | Value |
+|---|---|
+| Total head | 70 |
+| Lactating | 35 |
+| Dry + close-up heifers | 10 |
+| Calves + growing stock | 25 |
+| Barn area | 2,000 ㎡ |
+| Compost yard | 450 ㎡ |
+| Processing plant capacity | 500 L/hour |
+
+Per-head daily yield and milk-component test records are not on file — do not invent them.
+
 ## Product family
 A2 Jersey Hay Milk, A2 Hay Milk, A2 Yogurt, Greek Yogurt, Kaymak, Ice Cream, Milk Tea.
 

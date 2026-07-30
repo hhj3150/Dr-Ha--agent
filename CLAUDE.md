@@ -83,6 +83,19 @@ hub, (8) Genetics laboratory operations, (9) researcher and staff management,
 (10) D2O environment technology, (11) D2O peat-moss sales, (12) Song Young Shin Farm
 A2 Jersey Hay Milk e-commerce, (13) government R&D (산자부) project management.
 
+## Organization names (use these exact forms)
+
+Never transliterate an English organization name back into Korean — use the form below.
+
+| Korean (authoritative) | English |
+|---|---|
+| 고려동물병원 | Korea Animal Hospital |
+| ㈜제네틱스 | Genetics Co., Ltd. |
+| ㈜디투오 (D2O) | D2O Co., Ltd. |
+| 송영신목장 | Song Young Shin Farm |
+
+**고려동물병원** is Dr. Ha's veterinary hospital. Writing 코리아동물병원 is wrong.
+
 ## Current business priority (Tier model)
 **Tier 1**
 1. CowTalk AI + Eco-BIT platform

@@ -152,7 +152,7 @@ function arrow(s, x, y) {
   T(s, "오늘 말씀드릴 것");
   const items = [
     ["01", "목장 개요", "왜 이 사례가 기술보급에 의미가 있는가"],
-    ["02", "왜 저지종인가", "품종 선택의 의사결정과 현장에서 겪은 어려움"],
+    ["02", "왜 저지종인가", "품종 선택의 의사결정, 수정란 기술과 홀스타인 수정란 수출"],
     ["03", "친환경 사양관리", "피트모스 베딩(HBP) · 로봇소똥구리(산자부 과제) · 순환농업"],
     ["04", "스마트 사양관리", "위내센서 · CowTalk AI · 데이터 기반 번식/질병 관리"],
     ["05", "유가공과 판매", "A2 저지 건초우유 제품화, 소규모 유가공 실무"],
@@ -437,6 +437,56 @@ sectionSlide("02", "왜 저지종인가", "WHY JERSEY — BREED DECISION",
   card(s, { x: 0.62, y: 5.72, w: 12.10, h: 1.15, fill: MOSSL });
   plain(s, "기술보급 시사점 — 특정 형질(A2A2·고유지방)을 목표로 한 '설계형 증식'은 개별 농가가 혼자 하기 어렵습니다.\n지역 단위 수정란 공급 + 이식 지원이 붙으면, 농가는 자본 없이도 축군의 방향을 바꿀 수 있습니다.", { x: 0.95, y: 5.72, w: 11.5, h: 1.15, fontSize: 13, bold: true, color: GREEND, valign: "middle", ls: 20 });
   s.addNotes("Genetics 실적 수치는 실제 값. 이 장은 뒤의 시범사업 제안 1번(저지·A2A2 실증)의 근거가 된다.");
+}
+
+/* 14-1. 홀스타인 성감별 수정란 수출 */
+{
+  const s = S();
+  kick(s, "02 왜 저지종인가 · 확장");
+  T(s, "같은 기술이 이미 밖으로 나가고 있습니다", { fontSize: 30 });
+  plain(s, "앞에서 말씀드린 수정란이식 기술은 국내 축군 개량에만 쓰이는 것이 아닙니다.\n한국 홀스타인 성감별(암) 체외수정란이 지금 해외로 나가고 있습니다.", { x: 0.62, y: 1.24, w: 12.1, h: 0.72, fontSize: 13.5, color: MUTED, ls: 20 });
+
+  const c1 = 0.62, c2 = 4.72, c3 = 8.82, cw = 3.88;
+  card(s, { x: c1, y: 2.02, w: cw, h: 3.85, fill: TINT2, shadow: true });
+  s.addShape(pres.ShapeType.roundRect, { x: c1, y: 2.02, w: cw, h: 0.66, fill: { color: GREEN }, line: { type: "none" }, rectRadius: 0.10 });
+  s.addText("무엇을 수출하는가", { x: c1 + 0.20, y: 2.02, w: cw - 0.40, h: 0.66, fontSize: 14.5, bold: true, color: W, fontFace: HEAD, margin: 0, valign: "middle" });
+  plain(s, "한국 홀스타인 성감별(암) 체외수정란", { x: c1 + 0.24, y: 2.82, w: cw - 0.48, h: 0.42, fontSize: 13, bold: true, color: GREEND, ls: 18 });
+  plain(s, "수정란만 파는 방식이 아니라 패키지로 나갑니다.", { x: c1 + 0.24, y: 3.26, w: cw - 0.48, h: 0.32, fontSize: 12, color: MUTED });
+  body(s, [
+    "수정란 공급",
+    "현지 이식 시술 · 기술 이전",
+    "현지 수의사 교육",
+    "수란우 선발 · 관리 컨설팅",
+    "이식 성적 데이터 후속관리"
+  ], { x: c1 + 0.24, y: 3.64, w: cw - 0.48, h: 1.80, fontSize: 12 });
+
+  card(s, { x: c2, y: 2.02, w: cw, h: 3.85, fill: TINT2, shadow: true });
+  s.addShape(pres.ShapeType.roundRect, { x: c2, y: 2.02, w: cw, h: 0.66, fill: { color: FAWN }, line: { type: "none" }, rectRadius: 0.10 });
+  s.addText("어디로 나가는가", { x: c2 + 0.20, y: 2.02, w: cw - 0.40, h: 0.66, fontSize: 14.5, bold: true, color: W, fontFace: HEAD, margin: 0, valign: "middle" });
+  plain(s, "중앙아시아", { x: c2 + 0.24, y: 2.80, w: cw - 0.48, h: 0.26, fontSize: 12.5, bold: true, color: GREEND });
+  plain(s, "우즈베키스탄 · 카자흐스탄 등", { x: c2 + 0.24, y: 3.06, w: cw - 0.48, h: 0.26, fontSize: 11.5, color: BODY });
+  plain(s, "동남아시아", { x: c2 + 0.24, y: 3.42, w: cw - 0.48, h: 0.26, fontSize: 12.5, bold: true, color: GREEND });
+  plain(s, "말레이시아 · 인도네시아 · 태국\n필리핀 · 베트남", { x: c2 + 0.24, y: 3.68, w: cw - 0.48, h: 0.52, fontSize: 11.5, color: BODY, ls: 17 });
+  plain(s, "두바이", { x: c2 + 0.24, y: 4.24, w: cw - 0.48, h: 0.26, fontSize: 12.5, bold: true, color: GREEND });
+  plain(s, "글로벌 허브 (기획 단계)", { x: c2 + 0.24, y: 4.50, w: cw - 0.48, h: 0.26, fontSize: 11.5, color: BODY });
+  card(s, { x: c2 + 0.20, y: 4.86, w: cw - 0.40, h: 0.88, fill: MOSSL, r: 0.08 });
+  plain(s, "레퍼런스 — 우즈베키스탄", { x: c2 + 0.36, y: 4.96, w: cw - 0.72, h: 0.26, fontSize: 12, bold: true, color: GREEND });
+  plain(s, "농촌진흥청과 함께 약 3년간 성과 확인\n(세부 성적 수치는 정리 중)", { x: c2 + 0.36, y: 5.22, w: cw - 0.72, h: 0.48, fontSize: 10.5, color: BODY, ls: 15 });
+
+  card(s, { x: c3, y: 2.02, w: cw, h: 3.85, fill: TINT2, shadow: true });
+  s.addShape(pres.ShapeType.roundRect, { x: c3, y: 2.02, w: cw, h: 0.66, fill: { color: INK }, line: { type: "none" }, rectRadius: 0.10 });
+  s.addText("농진청 · 농업기술진흥원에 요청", { x: c3 + 0.20, y: 2.02, w: cw - 0.40, h: 0.66, fontSize: 14, bold: true, color: W, fontFace: HEAD, margin: 0, valign: "middle" });
+  body(s, [
+    "수입국 검역·수출 위생조건 협의 — 정부 간 사안입니다",
+    "ODA · KOICA · 국제협력 사업과의 연계",
+    "해외 이식 성적의 객관적 검증과 기록",
+    "농업기술진흥원 기술사업화·수출지원 프로그램 연계",
+    "국가 단위 'K-낙농 유전자원' 브랜딩"
+  ], { x: c3 + 0.24, y: 2.82, w: cw - 0.48, h: 2.60, fontSize: 12 });
+
+  card(s, { x: 0.62, y: 6.05, w: 12.10, h: 0.92, fill: INK });
+  s.addText("낙농 유전자원은 수입만 하는 것이 아닙니다 — 한국 홀스타인은 이미 수출되고 있고, 국가기관이 함께 가면 산업이 됩니다", { x: 0.90, y: 6.05, w: 11.5, h: 0.92, fontSize: 14.5, bold: true, color: MOSSL, fontFace: HEAD, margin: 0, valign: "middle" });
+  s.addNotes("오늘 청중은 농촌진흥청 소속이다. 우즈베키스탄 성과가 이미 농진청과 함께 만든 것이라는 점을 반드시 짚는다 — 새로 부탁하는 것이 아니라 이미 같이 해온 일의 확장이라는 프레임. 성적 수치는 정리 중이라고 정직하게 말하고, 확정 수치를 요구받으면 후속 제출을 약속한다. 한우 유전자원 수출은 언급하지 않는다.");
 }
 
 /* =========================================================
@@ -1412,7 +1462,7 @@ sectionSlide("06", "낙농산업 방향과 시범사업 제안", "OUTLOOK & PROP
     "시범사업 과제 편입 및 R&D–보급 병행 추진 검토",
     "결과의 매뉴얼화 및 보급 채널 연계",
     "필요한 경우 관련 기준·표시 제도 검토",
-    "타 기관·타 지역 실증과의 데이터 연계",
+    "농진청 국제협력·농업기술진흥원 수출지원 연계 검토",
     "지도직 대상 현장 교육의 장으로 활용",
     "농가 대상 공개 성과 발표의 기회"
   ], { x: 7.10, y: 2.20, w: 5.35, h: 3.35, fontSize: 13 });

@@ -27,7 +27,7 @@ Embryo production, embryo transfer, genomic analysis, dairy cattle breeding, Han
 - ~60% average conception rate
 - Key projects: Hanwoo embryo programs, dairy recipient-cow programs, genomic selection systems, A2 breeding programs.
 
-### Korea Animal Hospital
+### 고려동물병원 (Korea Animal Hospital)
 Embryo transfer, reproduction management, recipient-cow management, calf health programs, herd consulting.
 - Personnel: Dr. Hyunje Ha, Dr. Kwangtaek Lim, Dr. Donghwan Shin, Dr. Mincheol Kim.
 

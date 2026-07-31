@@ -27,13 +27,35 @@ the core sales channel** in every strategy.
 5. Raise average order value (객단가).
 6. Improve repurchase rate (재구매율).
 
+## Farm profile (as of 2026-07)
+
+**Breed: Jersey only.** Song Young Shin Farm runs a single-breed Jersey herd — it has no
+Holstein cattle. Never describe the herd as "저지·홀스타인" or assume Holstein recipients
+are on-farm.
+
+| Item | Value |
+|---|---|
+| Total head | 70 |
+| Lactating | 35 |
+| Dry + close-up heifers | 10 |
+| Calves + growing stock | 25 |
+| Barn area | 2,000 ㎡ |
+| Compost yard | 450 ㎡ |
+| Processing plant capacity | 500 L/hour |
+
+Per-head daily yield and milk-component test records are not on file — do not invent them.
+
 ## Product family
 A2 Jersey Hay Milk, A2 Hay Milk, A2 Yogurt, Greek Yogurt, Kaymak, Ice Cream, Milk Tea.
 
-Known product data — A2 Jersey Hay Milk per 100 mL: 92.64 kcal, carbohydrate 5.07 g,
-sugars 4.75 g, fat 6.0 g, trans fat 0.16 g, saturated fat 4.4 g, cholesterol 21.7 mg,
-protein 4.59 g, sodium 41.8 mg. Production: plate heat exchanger; homogenization →
-pasteurization (75 °C / 20 s, APV homogenizer) → cooling → filling → packaging.
+Nutrition — A2 Jersey Hay Milk, from the product label (750 mL pack), **per 100 mL**:
+75 kcal, fat 4.5 g, trans fat 0 g, saturated fat 3.0 g, cholesterol 15 mg,
+carbohydrate 4.8 g, sugars 4.8 g, protein 3.8 g, sodium 40 mg.
+These label values supersede an earlier set (92.64 kcal / fat 6.0 g / protein 4.59 g);
+use the label values above unless the founder confirms the earlier set belongs to a
+different SKU. Do not mix the two.
+Production: plate heat exchanger; homogenization → pasteurization (75 °C / 20 s,
+APV homogenizer) → cooling → filling → packaging.
 
 ## Brand philosophy
 Soil to Soul — Healthy Soil → Healthy Grass → Healthy Cow → Healthy Milk → Healthy

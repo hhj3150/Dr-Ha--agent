@@ -141,32 +141,229 @@ function arrow(s, x, y) {
   kick(s, "CONTENTS");
   T(s, "말씀드릴 순서");
   const items = [
-    ["01", "무너지는 번식 기반", "가임암소 −10만, 번식농가가 왜 그만두는가"],
-    ["02", "한우는 데이터가 없다", "낙농과의 결정적 차이, 그리고 DX가 실패한 이유"],
-    ["03", "CowTalk AX 구조", "6개 엔진 · 개방형 플랫폼 · 수의사 승인 게이트"],
-    ["04", "이미 작동 중입니다", "199농가 · 10,886두 · 13년 축적과 검증 이력"],
-    ["05", "왜 전남인가", "출하 2위 산지 · 고흥 ICT 단지 · 국가 정책 정합성"],
-    ["06", "어떻게 시작하나", "4단계 로드맵 · 시범사업 설계(안) · 예산 구조(안)"],
-    ["07", "요청사항", "선결 과제와 실무자께서 지금 하실 수 있는 일"]
+    ["01", "축산업의 위치", "인류 식량체계에서 축산 — 필수 산업, 최대 환경 부담"],
+    ["02", "글로벌 AX 현황", "정밀축산 시장·주요 기업·국가 단위 플랫폼 사례"],
+    ["03", "대한민국 축산의 현실", "24조 산업, 그러나 두당 순손실 — 번식 기반 붕괴"],
+    ["04", "한우는 데이터가 없다", "낙농과의 결정적 차이, DX가 실패한 이유"],
+    ["05", "CowTalk의 위치", "구조 · 실적 · 글로벌 대비 강점과 한계"],
+    ["06", "왜 전남인가", "출하 2위 산지 · 고흥 ICT 단지 · 정책 정합성"],
+    ["07", "사업 타당성", "5축 검증 · 경제성 · 반대 논거 · 미시행 비용"],
+    ["08", "어떻게 시작하나", "로드맵 · 시범사업 설계(안) · 예산 구조(안)"],
+    ["09", "요청사항", "선결 과제와 실무자께서 하실 수 있는 일"]
   ];
   items.forEach((it, i) => {
-    const y = 1.42 + i * 0.76;
-    card(s, { x: 0.62, y: y, w: 12.10, h: 0.66, fill: i === 6 ? MOSSL : TINT2 });
-    badge(s, 0.84, y + 0.11, it[0], { fill: i === 6 ? FAWN : GREEN, fs: 12, d: 0.44 });
-    s.addText(it[1], { x: 1.48, y: y, w: 3.7, h: 0.66, fontSize: 14.5, bold: true, color: GREEND, fontFace: HEAD, margin: 0, valign: "middle" });
-    s.addText(it[2], { x: 5.20, y: y, w: 7.3, h: 0.66, fontSize: 12, color: MUTED, fontFace: FONT, margin: 0, valign: "middle" });
+    const y = 1.38 + i * 0.60;
+    card(s, { x: 0.62, y: y, w: 12.10, h: 0.52, fill: i === 8 ? MOSSL : TINT2 });
+    badge(s, 0.80, y + 0.05, it[0], { fill: i === 8 ? FAWN : GREEN, fs: 11, d: 0.42 });
+    s.addText(it[1], { x: 1.40, y: y, w: 3.7, h: 0.52, fontSize: 13.5, bold: true, color: GREEND, fontFace: HEAD, margin: 0, valign: "middle" });
+    s.addText(it[2], { x: 5.15, y: y, w: 7.35, h: 0.52, fontSize: 11.5, color: MUTED, fontFace: FONT, margin: 0, valign: "middle" });
   });
-  foot(s, "발표 25분 · 질의응답 별도");
-  s.addNotes("01~05는 빠르게, 06(시작 방법)과 07(요청)에 시간의 절반을 쓴다.");
+  foot(s, "25분 발표 시 01·02는 요약, 07~09에 시간의 절반을 배분");
+  s.addNotes("01·02는 배경이므로 빠르게. 03~05로 문제와 해법을 잇고, 07(타당성)과 08~09(실행·요청)에 시간을 쓴다.");
 }
 
 /* ===== SECTION 01 ===== */
-sectionSlide("01", "무너지는 번식 기반", "THE BREEDING BASE IS COLLAPSING", "5분. 문제 정의. 숫자로 시한을 못 박는다.");
+/* ===== SECTION 01 [NEW] ===== */
+sectionSlide("01", "축산업의 위치", "LIVESTOCK IN THE HUMAN FOOD SYSTEM", "3분. 배경. 25분 발표에서는 압축해 말한다.");
+
+{
+  const s = S();
+  kick(s, "01 축산업의 위치");
+  T(s, "축산은 농업의 절반이고, 인류 단백질의 중심입니다");
+  const st = [
+    { n: "40%", l: "세계 농업 GDP 중\n축산이 차지하는 비중" },
+    { n: "+16.6%", l: "향후 10년 축산물 생산 증가 전망\n육류 · 유제품 · 계란" },
+    { n: "+7%", l: "같은 기간 사육두수 증가 전망\n소 · 양 · 돼지 · 가금" }
+  ];
+  st.forEach((c, i) => {
+    statCard(s, { x: 0.62 + i * 4.10, y: 1.45, w: 3.88, h: 1.95, num: c.n, label: c.l, numColor: GREEND, numSize: 32, fill: TINT });
+  });
+  card(s, { x: 0.62, y: 3.62, w: 12.10, h: 1.55, fill: INK });
+  plain(s, "이 두 숫자의 간격이 오늘 제안의 출발점입니다", { x: 0.95, y: 3.80, w: 11.4, h: 0.34, fontSize: 14.5, bold: true, color: FAWNL });
+  plain(s, "두수는 7% 느는데 생산은 16.6% 늘어납니다. 차이 9.6%p는 '더 많이 기르는 것'이 아니라\n'같은 소에서 더 많이 얻는 것' — 즉 생산성 향상으로 채워야 하는 몫입니다.", { x: 0.95, y: 4.22, w: 11.4, h: 0.80, fontSize: 13.5, color: W, ls: 21 });
+  card(s, { x: 0.62, y: 5.32, w: 12.10, h: 1.10, fill: MOSSL });
+  s.addText("세계 축산의 성장분 대부분이 '생산성'에서 나옵니다 — 그 생산성을 만드는 도구가 데이터와 AI입니다", { x: 0.90, y: 5.32, w: 11.5, h: 1.10, fontSize: 14.5, bold: true, color: GREEND, fontFace: HEAD, margin: 0, valign: "middle" });
+  foot(s, "출처: FAO · OECD-FAO Agricultural Outlook 2025–2034 (2025. 7)");
+  s.addNotes("배경 슬라이드. 길게 말하지 않는다. 핵심은 '세계도 두수가 아니라 생산성으로 간다'는 한 문장.");
+}
+
+{
+  const s = S(true);
+  kick(s, "01 축산업의 위치", MOSS);
+  T(s, "그러나 축산은 동시에 최대 환경 부담원입니다", { color: W });
+  const st = [
+    { n: "14.5%", l: "세계 온실가스 배출 중\n축산 부문 비중" },
+    { n: "32%", l: "인위적 메탄 배출 중\n축산 유래 비중" },
+    { n: "62%", l: "축산 배출 중 소(육우·낙농)\n연 3.8 GtCO2e" },
+    { n: "39%", l: "축산 배출 중\n장내발효(반추) 비중" }
+  ];
+  st.forEach((c, i) => {
+    const x = 0.62 + i * 3.10;
+    card(s, { x: x, y: 1.45, w: 2.88, h: 1.85, fill: INK2 });
+    s.addText(c.n, { x: x, y: 1.68, w: 2.88, h: 0.75, align: "center", valign: "middle", fontSize: 30, bold: true, color: FAWNL, fontFace: HEAD, margin: 0 });
+    s.addText(c.l, { x: x + 0.16, y: 2.48, w: 2.56, h: 0.75, align: "center", fontSize: 11.5, color: W, fontFace: FONT, margin: 0, lineSpacing: 16 });
+  });
+  card(s, { x: 0.62, y: 3.52, w: 5.95, h: 2.40, fill: INK2 });
+  plain(s, "그래서 나오는 두 가지 주장", { x: 0.95, y: 3.70, w: 5.3, h: 0.34, fontSize: 14.5, bold: true, color: MOSSL });
+  body(s, [
+    "① 축산을 줄여야 한다 — 네덜란드는 국가가 재정을 투입해 감축 중",
+    "② 축산을 더 정밀하게 해야 한다 — 두당 배출을 낮추는 길",
+    "①만으로는 늘어나는 세계 단백질 수요를 감당할 수 없습니다"
+  ], { x: 0.95, y: 4.14, w: 5.35, h: 1.65, fontSize: 12, color: W });
+  card(s, { x: 6.77, y: 3.52, w: 5.95, h: 2.40, fill: FAWN });
+  plain(s, "두당 배출을 낮추는 실행 경로", { x: 7.10, y: 3.70, w: 5.3, h: 0.34, fontSize: 14.5, bold: true, color: W });
+  body(s, [
+    "사육기간 단축 — 같은 고기를 더 짧게 길러 배출을 줄입니다",
+    "번식 효율 개선 — 공태 단축이 곧 사육일수 단축입니다",
+    "질병 손실 감소 — 폐사·도태는 배출만 남기고 생산은 없습니다",
+    "이 셋은 모두 개체 단위 데이터 없이는 실행되지 않습니다"
+  ], { x: 7.10, y: 4.14, w: 5.35, h: 1.65, fontSize: 12, color: W });
+  card(s, { x: 0.62, y: 6.10, w: 12.10, h: 0.80, fill: INK2 });
+  s.addText("축산을 없앨 수 없다면 남는 답은 '정밀하게 하는 것' 하나뿐입니다 — 이것이 AX의 명분입니다", { x: 0.90, y: 6.10, w: 11.5, h: 0.80, fontSize: 15, bold: true, color: W, fontFace: HEAD, margin: 0, valign: "middle" });
+  foot(s, "출처: FAO 축산 배출 통계 · FAO 장내메탄 저감 프로그램 자료");
+  s.addNotes("환경 논리를 회피하지 않고 정면으로 다룬다. 정책결정권자에게 '왜 축산에 예산을 쓰는가'의 답을 준다 — 배출 감축의 실행 수단이라는 답.");
+}
+
+/* ===== SECTION 02 [NEW] ===== */
+sectionSlide("02", "글로벌 AX 현황", "GLOBAL LANDSCAPE — PRECISION LIVESTOCK & NATIONAL PLATFORMS", "4분. 한국이 어디쯤 서 있는지 냉정하게 보여준다.");
+
+{
+  const s = S();
+  kick(s, "02 글로벌 AX 현황");
+  T(s, "정밀축산은 이미 산업이 되었습니다");
+  const st = [
+    { n: "79.4억$", l: "2025년 세계 정밀축산 시장 규모", sz: 27 },
+    { n: "121.3억$", l: "2030년 전망", sz: 27 },
+    { n: "8.8%", l: "연평균 성장률 (2025~2030)", sz: 30 },
+    { n: "아시아·태평양", l: "가장 빠르게 성장하는 권역", sz: 17 }
+  ];
+  st.forEach((c, i) => {
+    statCard(s, { x: 0.62 + i * 3.10, y: 1.45, w: 2.88, h: 1.75, num: c.n, label: c.l, numColor: FAWN, numSize: c.sz, fill: TINT });
+  });
+  card(s, { x: 0.62, y: 3.38, w: 5.95, h: 2.45, fill: TINT2, line: "E0E6DB" });
+  plain(s, "주요 글로벌 사업자", { x: 0.95, y: 3.56, w: 5.3, h: 0.34, fontSize: 14.5, bold: true, color: GREEND });
+  plain(s, "· Allflex Livestock Intelligence (MSD Animal Health)\n· Nedap · DeLaval · GEA · Lely · CowManager\n· Afimilk (이스라엘) · Connecterra (네덜란드)\n· smaXtec (오스트리아) · Halter (뉴질랜드)", { x: 0.95, y: 3.98, w: 5.35, h: 1.65, fontSize: 11.5, color: BODY, ls: 19 });
+  card(s, { x: 6.77, y: 3.38, w: 5.95, h: 2.45, fill: MOSSL });
+  plain(s, "자본시장이 이미 검증했습니다", { x: 7.10, y: 3.56, w: 5.3, h: 0.34, fontSize: 14.5, bold: true, color: GREEND });
+  body(s, [
+    "Halter(뉴질랜드) — 2025년 1억 달러 투자 유치, 기업가치 10억 달러 진입",
+    "Nofence(노르웨이) — 3,500만 달러 유치, 미국·유럽 확장",
+    "차세대 웨어러블 — 배터리 5년·다중지표 측정으로 세대 교체 진행 중"
+  ], { x: 7.10, y: 3.98, w: 5.35, h: 1.70, fontSize: 11.5 });
+  card(s, { x: 0.62, y: 5.98, w: 12.10, h: 0.85, fill: INK });
+  s.addText("이 분야는 '될까 안 될까'를 논하는 단계를 지났습니다 — 누가 먼저 국가 단위로 묶느냐의 단계입니다", { x: 0.90, y: 5.98, w: 11.5, h: 0.85, fontSize: 14.5, bold: true, color: MOSSL, fontFace: HEAD, margin: 0, valign: "middle" });
+  foot(s, "출처: MarketsandMarkets, Precision Livestock Farming Market (2025) · 업계 투자 공시");
+  s.addNotes("기술 위험이 낮다는 것을 자본시장 근거로 보여준다. '검증 안 된 기술에 예산을 쓰는가'라는 우려에 대한 답.");
+}
+
+{
+  const s = S();
+  kick(s, "02 글로벌 AX 현황");
+  T(s, "앞선 나라들은 이미 '국가 단위 데이터'로 갔습니다");
+  const c = [
+    { t: "아일랜드 — ICBF", y: "1998 ~", d: "국가 단위 소 육종 데이터베이스(비영리).\n농가 10만 곳 이상, 약 700만 두 데이터.\n세계 최대 육우 유전체 DB, 낙농은 세계 2위.\n\n원칙: 한 번만 입력하고 모두가 쓴다\n(single point of entry, no duplication).", cc: GREEN },
+    { t: "뉴질랜드 — NAIT", y: "2012 ~", d: "국가 가축 개체식별·추적을 법으로 의무화.\n전자 태그 부착과 국가 DB 등록이\n사육자의 법적 의무.\n\n방역과 이력 추적의 국가 기반이 되었고\n적색육 수출 신뢰도의 근거가 됩니다.", cc: FAWN },
+    { t: "EU — 국가등록부 · IACS", y: "진행 중", d: "가축 개체식별을 규정으로 의무화하고\n국가 가축등록부를 통합관리체계(IACS)에\n연결.\n\nCAP 보조금 체계와 정밀축산 인센티브를\n연동하는 방향으로 진행 중입니다.", cc: MOSS }
+  ];
+  c.forEach((x0, i) => {
+    const x = 0.62 + i * 4.10;
+    card(s, { x: x, y: 1.45, w: 3.88, h: 3.75, fill: TINT2, shadow: true });
+    s.addShape(pres.ShapeType.roundRect, { x: x, y: 1.45, w: 3.88, h: 0.86, fill: { color: x0.cc }, line: { type: "none" }, rectRadius: 0.10 });
+    s.addText(x0.y, { x: x + 0.22, y: 1.53, w: 3.44, h: 0.26, fontSize: 10.5, color: i === 2 ? BODY : MOSSL, fontFace: FONT, margin: 0 });
+    s.addText(x0.t, { x: x + 0.22, y: 1.80, w: 3.44, h: 0.42, fontSize: 14.5, bold: true, color: i === 2 ? BODY : W, fontFace: HEAD, margin: 0 });
+    s.addText(x0.d, { x: x + 0.24, y: 2.46, w: 3.40, h: 2.55, fontSize: 11.5, color: BODY, fontFace: FONT, margin: 0, lineSpacing: 17 });
+  });
+  card(s, { x: 0.62, y: 5.38, w: 12.10, h: 1.45, fill: MOSSL });
+  plain(s, "공통점 — 셋 다 '장비 보급'이 아니라 '국가 데이터 인프라'로 접근했습니다", { x: 0.95, y: 5.56, w: 11.4, h: 0.34, fontSize: 14.5, bold: true, color: GREEND });
+  plain(s, "장비는 농가가 쓰고, 데이터는 국가가 모읍니다. 그 데이터가 육종·방역·보조금·수출 증명의 공통 기반이 됩니다.\n한국은 장비 보급 예산은 있지만, 그 데이터를 행정이 모으는 구조가 아직 없습니다.", { x: 0.95, y: 5.96, w: 11.4, h: 0.72, fontSize: 12.5, color: BODY, ls: 19 });
+  foot(s, "출처: ICBF 공개 자료 · 뉴질랜드 NAIT Act(2012) · EU 가축 식별 규정 및 IACS 관련 자료");
+  s.addNotes("명분의 핵심 장. '우리만 하는 실험'이 아니라 '앞선 나라들이 이미 간 길'이라는 안전감을 준다.");
+}
+
+{
+  const s = S(true);
+  kick(s, "02 글로벌 AX 현황", MOSS);
+  T(s, "냉정하게 — 한국은 지금 어디에 있습니까", { color: W });
+  const rows = [
+    ["단계", "내용", "한국의 현재"],
+    ["1 개체식별", "이력제·전자태그로 개체를 특정", "완료 — 소 이력제 전국 시행"],
+    ["2 장비 보급 (DX)", "센서·환경제어 장비를 농가에 지원", "진행 중 — 보급 속도가 느립니다"],
+    ["3 데이터 통합", "장비·공공·행정 데이터를 한 곳으로", "미비 — 장비사별 사일로 상태"],
+    ["4 판단 (AX)", "AI가 조치를 제시하고 전문가가 승인", "부재 — 광역·국가 단위 사례 없음"],
+    ["5 정책 연동", "육종·방역·보조금·탄소 산정에 활용", "부재"]
+  ];
+  const tr = rows.map((r, ri) => r.map((cc, ci) => ({
+    text: cc,
+    options: {
+      bold: ri === 0 || ci === 0,
+      color: ri === 0 ? W : (ci === 2 ? (ri <= 2 ? MOSSL : FAWNL) : W),
+      fill: { color: ri === 0 ? GREEND : INK2 },
+      fontSize: 12, align: "left", valign: "middle", fontFace: FONT
+    }
+  })));
+  s.addTable(tr, { x: 0.62, y: 1.50, w: 12.10, colW: [2.90, 4.90, 4.30], rowH: 0.56, border: { type: "solid", color: "2E4A38", pt: 1 } });
+  card(s, { x: 0.62, y: 5.00, w: 12.10, h: 1.85, fill: INK2 });
+  plain(s, "참고 — 2026년 축산 ICT 패키지 보급 규모", { x: 0.95, y: 5.18, w: 11.4, h: 0.34, fontSize: 14, bold: true, color: FAWNL });
+  plain(s, "정부 주도형 21개 모델 + 지역 맞춤형 2개 모델, 총 81개 농가 보급(전년 대비 +5.2%).\n전국 한우 농가 규모를 생각하면 이 속도로는 산업 전체의 데이터가 모이기까지 수십 년이 걸립니다.\n장비 보급 속도를 올리는 것보다, 이미 보급된 장비의 데이터를 묶는 편이 훨씬 빠르고 저렴합니다.", { x: 0.95, y: 5.58, w: 11.4, h: 1.10, fontSize: 12.5, color: W, ls: 20 });
+  foot(s, "출처: 축산신문(2026) 축산분야 ICT 융복합확산사업 보급 현황 · 농식품부 제1차 스마트농업 육성 기본계획(2025~2029)");
+  s.addNotes("가장 냉정한 장. 뒤처졌다는 사실을 인정하되, 그래서 '보급'이 아니라 '통합'으로 가야 한다는 전략 전환으로 연결한다.");
+}
+
+sectionSlide("03", "대한민국 축산의 현실", "KOREA — SCALE WITHOUT MARGIN", "6분. 규모는 커졌으나 수익은 사라진 구조, 그리고 번식기반 붕괴.");
+
+{
+  const s = S();
+  kick(s, "03 대한민국 축산");
+  T(s, "한국 축산은 커졌습니다 — 농업의 40.9%입니다");
+  const st = [
+    { n: "24.2조원", l: "축산업 생산액 (2023)\n농업 생산액의 40.9%", sz: 27 },
+    { n: "약 3배", l: "2000년 8.1조원 대비\n23년간 성장", sz: 30 },
+    { n: "363만두", l: "한우 사육두수 (2026. 4)\n전년 대비 −3.2%", sz: 27 },
+    { n: "약 50%", l: "전체 한우 농장 중\n번식농장 비중", sz: 27 }
+  ];
+  st.forEach((c, i) => {
+    statCard(s, { x: 0.62 + i * 3.10, y: 1.45, w: 2.88, h: 1.85, num: c.n, label: c.l, numColor: GREEND, numSize: c.sz, fill: TINT });
+  });
+  card(s, { x: 0.62, y: 3.55, w: 12.10, h: 1.45, fill: MOSSL });
+  plain(s, "숫자만 보면 성공한 산업입니다", { x: 0.95, y: 3.72, w: 11.4, h: 0.34, fontSize: 14.5, bold: true, color: GREEND });
+  plain(s, "23년 만에 생산액이 3배가 되었고, 이제 농업 생산액의 40%를 넘습니다.\n식량안보·지역경제·고용에서 축산이 차지하는 비중은 계속 커져 왔습니다.", { x: 0.95, y: 4.12, w: 11.4, h: 0.72, fontSize: 13, color: BODY, ls: 20 });
+  card(s, { x: 0.62, y: 5.20, w: 12.10, h: 1.20, fill: INK });
+  s.addText("그런데 다음 장의 숫자를 보시면, 이 성장이 무엇을 남겼는지 다시 생각하게 됩니다", { x: 0.90, y: 5.20, w: 11.5, h: 1.20, fontSize: 15, bold: true, color: FAWNL, fontFace: HEAD, margin: 0, valign: "middle" });
+  foot(s, "출처: 통계청 농림어업조사 · 농식품부 · 축산물이력제 데이터(2026. 4) · 한국농촌경제연구원 관련 보도");
+  s.addNotes("먼저 산업의 규모와 중요성을 인정한다. 그래야 다음 장의 반전이 작동한다.");
+}
+
+{
+  const s = S(true);
+  kick(s, "03 대한민국 축산", MOSS);
+  T(s, "그런데 한우는 지금 기르면 기를수록 손해입니다", { color: W });
+  const st = [
+    { n: "−86.1만원", l: "한우 번식우\n마리당 순손실" },
+    { n: "−99.9만원", l: "한우 비육우\n마리당 순손실" }
+  ];
+  st.forEach((c, i) => {
+    const x = 0.62 + i * 6.28;
+    card(s, { x: x, y: 1.50, w: 5.98, h: 1.95, fill: i === 0 ? FAWN : INK2 });
+    s.addText(c.n, { x: x, y: 1.72, w: 5.98, h: 0.85, align: "center", valign: "middle", fontSize: 40, bold: true, color: i === 0 ? W : FAWNL, fontFace: HEAD, margin: 0 });
+    s.addText(c.l, { x: x + 0.24, y: 2.62, w: 5.50, h: 0.70, align: "center", fontSize: 13, color: W, fontFace: FONT, margin: 0, lineSpacing: 19 });
+  });
+  card(s, { x: 0.62, y: 3.68, w: 12.10, h: 1.75, fill: INK2 });
+  plain(s, "이 숫자가 뜻하는 것", { x: 0.95, y: 3.86, w: 11.4, h: 0.34, fontSize: 14.5, bold: true, color: FAWNL });
+  body(s, [
+    "생산액이 늘어도 농가에 남는 돈은 없습니다 — 사료비·인건비·금융비용이 증가분을 흡수했습니다",
+    "손실 구조에서는 재투자가 일어나지 않습니다. 시설도 후계도 멈춥니다",
+    "번식우 손실이 더 오래 누적되면 가임암소가 먼저 사라집니다 — 지금 벌어지고 있는 일입니다"
+  ], { x: 0.95, y: 4.28, w: 11.4, h: 1.05, fontSize: 12.5, color: W });
+  card(s, { x: 0.62, y: 5.62, w: 12.10, h: 1.28, fill: FAWN });
+  s.addText("보조금으로 손실을 메우는 방식은 지속되지 않습니다 — 두당 원가와 손실 요인을 줄이는 것 외에 길이 없습니다", { x: 0.90, y: 5.62, w: 11.5, h: 1.28, fontSize: 15, bold: true, color: W, fontFace: HEAD, margin: 0, valign: "middle" });
+  foot(s, "출처: 통계청 2025년 축산물생산비조사 (순손실 = 총수입 − 생산비, 자가노동비 등 포함 기준)");
+  s.addNotes("정책결정권자에게 가장 강력한 숫자. '왜 예산을 쓰는가'가 아니라 '지금 쓰는 예산이 왜 효과가 없는가'의 답이 된다. 보조금 vs 원가절감의 프레임 전환.");
+}
 
 /* 5. 번식 기반 붕괴 */
 {
   const s = S();
-  kick(s, "01 무너지는 번식 기반");
+  kick(s, "03 대한민국 축산");
   T(s, "무너지는 것은 사육두수가 아니라 번식 기반입니다");
   const st = [
     { n: "−3,689", l: "한우 사육 농장\n1년 새 감소 (−4.8%)" },
@@ -189,7 +386,7 @@ sectionSlide("01", "무너지는 번식 기반", "THE BREEDING BASE IS COLLAPSIN
 /* 6. 왜 그만두는가 */
 {
   const s = S();
-  kick(s, "01 무너지는 번식 기반");
+  kick(s, "03 대한민국 축산");
   T(s, "번식농가가 그만두는 이유는 돈이 아니라 노동입니다");
   card(s, { x: 0.62, y: 1.45, w: 5.95, h: 3.55, fill: TINT2, line: "E0E6DB" });
   plain(s, "고령 번식농가가 감당하지 못하는 것", { x: 0.95, y: 1.64, w: 5.3, h: 0.36, fontSize: 15, bold: true, color: MUTED });
@@ -214,12 +411,12 @@ sectionSlide("01", "무너지는 번식 기반", "THE BREEDING BASE IS COLLAPSIN
 }
 
 /* ===== SECTION 02 ===== */
-sectionSlide("02", "한우는 데이터가 없다", "HANWOO IS DATA-BLIND — AND WHY DX UNDERDELIVERED", "4분. 왜 지금까지 안 됐는지 설명. 실무자가 가진 '스마트축산 해봤는데'라는 회의를 정면으로 다룬다.");
+sectionSlide("04", "한우는 데이터가 없다", "HANWOO IS DATA-BLIND — AND WHY DX UNDERDELIVERED", "4분. 왜 지금까지 안 됐는지. 실무자의 '스마트축산 해봤는데'라는 회의를 정면으로 다룬다.");
 
 /* 8. 데이터 부재 */
 {
   const s = S();
-  kick(s, "02 한우는 데이터가 없다");
+  kick(s, "04 한우는 데이터가 없다");
   T(s, "한우는 낙농과 달리 매일의 데이터가 없습니다");
   const rows = [
     ["구분", "낙농 (젖소)", "한우"],
@@ -247,7 +444,7 @@ sectionSlide("02", "한우는 데이터가 없다", "HANWOO IS DATA-BLIND — AN
 /* 9. DX vs AX */
 {
   const s = S(true);
-  kick(s, "02 한우는 데이터가 없다", MOSS);
+  kick(s, "04 한우는 데이터가 없다", MOSS);
   T(s, "센서는 이상을 알려줄 뿐, 조치를 정해주지 않습니다", { color: W });
   plain(s, "스마트축산이 기대만큼 성과를 내지 못한 이유입니다. 문제는 장비가 아니라 그 다음 단계가 비어 있었다는 것입니다.", { x: 0.62, y: 1.26, w: 12.1, h: 0.36, fontSize: 13, color: MOSSL });
   const rows = [
@@ -275,12 +472,12 @@ sectionSlide("02", "한우는 데이터가 없다", "HANWOO IS DATA-BLIND — AN
 }
 
 /* ===== SECTION 03 ===== */
-sectionSlide("03", "CowTalk AX 구조", "OPEN PLATFORM ARCHITECTURE — 6 ENGINES", "3분. 기술 설명은 짧게. 실무자는 구조보다 책임 소재와 종속 여부를 본다.");
+sectionSlide("05", "CowTalk의 위치", "COWTALK — ARCHITECTURE, TRACTION, LIMITS", "5분. 기술 설명은 짧게. 강점과 한계를 함께 제시한다.");
 
 /* 11. 6 엔진 */
 {
   const s = S();
-  kick(s, "03 CowTalk AX 구조");
+  kick(s, "05 CowTalk AX");
   T(s, "번식과 비육, 두 개의 엔진");
   const inp = [
     { t: "개체 데이터", d: "반추위 센서 · 활동량\n체온 · 사료 급이" },
@@ -320,12 +517,12 @@ sectionSlide("03", "CowTalk AX 구조", "OPEN PLATFORM ARCHITECTURE — 6 ENGINE
 }
 
 /* ===== SECTION 04 ===== */
-sectionSlide("04", "이미 작동 중입니다", "ALREADY OPERATING", "3분. 여기서 신뢰가 결정된다. 구상이 아니라 실측치라는 점을 반복한다.");
+
 
 /* 13. 실적 */
 {
   const s = S(true);
-  kick(s, "04 이미 작동 중입니다", MOSS);
+  kick(s, "05 CowTalk AX", MOSS);
   T(s, "구상이 아닙니다. 이미 작동하고 있습니다.", { color: W });
   const st = [
     { n: "199", l: "연동 농가" },
@@ -355,13 +552,94 @@ sectionSlide("04", "이미 작동 중입니다", "ALREADY OPERATING", "3분. 여
   s.addNotes("73만 건이라는 숫자를 천천히 말한다. 파일럿이 아니라 운영 중인 시스템이라는 것이 이 제안의 가장 큰 차별점.");
 }
 
+/* ===== CowTalk 위치 · 과제 · 미래 [NEW] ===== */
+{
+  const s = S();
+  kick(s, "05 CowTalk AX");
+  T(s, "냉정하게 — 글로벌 경쟁자 대비 CowTalk의 위치");
+  card(s, { x: 0.62, y: 1.45, w: 5.95, h: 3.05, fill: MOSSL });
+  plain(s, "우리가 앞선 것", { x: 0.95, y: 1.62, w: 5.3, h: 0.34, fontSize: 15, bold: true, color: GREEND });
+  body(s, [
+    "한우 특화 — 글로벌 사업자는 대부분 낙농 중심입니다. 한우 번식·비육 데이터는 국내에서만 쌓입니다",
+    "반추위(체내) 센서 — 목걸이·발목형과 달리 체내 지표를 직접 측정합니다",
+    "13년 현장 데이터 — 국내 사양·기후·품종 조건에서 축적된 데이터",
+    "수의 임상 결합 — 센서 회사가 아니라 수의사가 운영하는 구조"
+  ], { x: 0.95, y: 2.06, w: 5.35, h: 2.30, fontSize: 11.5 });
+  card(s, { x: 6.77, y: 1.45, w: 5.95, h: 3.05, fill: TINT2, line: "E0E6DB" });
+  plain(s, "우리가 뒤진 것 — 인정해야 할 부분", { x: 7.10, y: 1.62, w: 5.3, h: 0.34, fontSize: 15, bold: true, color: FAWN });
+  body(s, [
+    "자본 규모 — Halter는 단일 라운드로 1억 달러를 조달했습니다. 우리는 그 규모가 아닙니다",
+    "데이터 양 — ICBF는 700만 두, 우리는 1만 두 수준입니다",
+    "글로벌 유통망 — Allflex·Nedap은 수십 개국 판매망을 가집니다",
+    "표준·인증 — 국제 상호운용 표준 참여 실적이 아직 없습니다"
+  ], { x: 7.10, y: 2.06, w: 5.35, h: 2.30, fontSize: 11.5 });
+  card(s, { x: 0.62, y: 4.72, w: 12.10, h: 1.45, fill: INK });
+  plain(s, "그래서 우리가 이길 수 있는 자리는 좁고 분명합니다", { x: 0.95, y: 4.90, w: 11.4, h: 0.34, fontSize: 14.5, bold: true, color: FAWNL });
+  plain(s, "글로벌 낙농 시장에서 Allflex와 정면으로 싸우는 것이 아닙니다.\n'한우'라는, 글로벌 사업자가 데이터를 가질 수 없는 영역에서 국가 단위 표준을 먼저 만드는 것입니다.", { x: 0.95, y: 5.30, w: 11.4, h: 0.72, fontSize: 13, color: W, ls: 20 });
+  card(s, { x: 0.62, y: 6.32, w: 12.10, h: 0.58, fill: FAWN });
+  s.addText("한우 데이터는 한국에서만 만들어집니다 — 이것이 우리에게 남은 유일하고 확실한 해자입니다", { x: 0.90, y: 6.32, w: 11.5, h: 0.58, fontSize: 14, bold: true, color: W, fontFace: HEAD, margin: 0, valign: "middle" });
+  s.addNotes("자화자찬을 피한다. 약점을 먼저 말하는 것이 정책결정권자에게는 오히려 신뢰의 근거가 된다. 그리고 '좁고 확실한 승부처'를 제시한다.");
+}
+
+{
+  const s = S();
+  kick(s, "05 CowTalk AX");
+  T(s, "CowTalk이 안고 있는 과제 — 숨기지 않겠습니다");
+  const p = [
+    { t: "데이터 규모의 한계", d: "1만 두 수준의 데이터로는 예측 정확도에 한계가 있습니다.\n특히 비육·도체 예측은 라벨 데이터가 절대적으로 부족합니다.", a: "국가 단위 실증으로 데이터 규모를 늘리는 것 외에 방법이 없습니다. 이것이 이 제안의 실질적 이유이기도 합니다." },
+    { t: "수익 모델의 취약성", d: "구독 매출은 농가 부담에 의존합니다.\n손실 구조의 농가가 월 구독료를 계속 낼 수 있는가는 검증되지 않았습니다.", a: "지자체 사업으로 초기 도입 부담을 낮추고, 효과가 소득으로 확인된 뒤 농가 부담으로 전환하는 단계 설계가 필요합니다." },
+    { t: "인력과 조직 규모", d: "글로벌 경쟁사 대비 개발·운영 인력이 적습니다.\n전남 전역 확산 시 현장 대응 인력 확보가 병목입니다.", a: "시군 단위 설치·AS 인력을 지역에서 육성하는 구조로 설계합니다. 지역 일자리 효과와도 연결됩니다." },
+    { t: "국제 표준 대응", d: "해외 확장 시 데이터 상호운용·인증 요구를 충족해야 합니다.\n현재는 준비 단계입니다.", a: "국가 실증 레퍼런스가 있으면 표준 논의 참여 자격이 생깁니다. 수출은 그 다음 단계입니다." }
+  ];
+  p.forEach((c, i) => {
+    const y = 1.42 + i * 1.32;
+    card(s, { x: 0.62, y: y, w: 12.10, h: 1.18, fill: i % 2 === 0 ? TINT : TINT2 });
+    badge(s, 0.90, y + 0.35, String(i + 1), { fill: i % 2 === 0 ? GREEN : FAWN, d: 0.48, fs: 14 });
+    s.addText(c.t, { x: 1.56, y: y + 0.06, w: 4.20, h: 0.40, fontSize: 13.5, bold: true, color: GREEND, fontFace: HEAD, margin: 0, valign: "middle" });
+    s.addText(c.d, { x: 1.56, y: y + 0.46, w: 4.35, h: 0.66, fontSize: 11, color: MUTED, fontFace: FONT, margin: 0, lineSpacing: 16 });
+    s.addText(c.a, { x: 6.15, y: y, w: 6.30, h: 1.18, fontSize: 11.5, color: BODY, fontFace: FONT, margin: 0, valign: "middle", lineSpacing: 17 });
+  });
+  card(s, { x: 0.62, y: 6.80, w: 12.10, h: 0.001, fill: W });
+  s.addNotes("과제를 먼저 드러내되 각각에 대응책을 붙인다. 특히 1번은 '그래서 이 사업이 필요하다'는 논리로 되돌아온다.");
+}
+
+{
+  const s = S(true);
+  kick(s, "05 CowTalk AX", MOSS);
+  T(s, "CowTalk의 경로 — 지역에서 국가로, 국가에서 수출로", { color: W });
+  const st = [
+    { t: "지금", y: "2026", d: "199농가 · 1만 두\n민간 구독 서비스", c: INK2 },
+    { t: "광역 실증", y: "2026~2028", d: "전남 한우 AX 실증\n한우 데이터 표준 확보", c: GREEN },
+    { t: "국가 표준", y: "2029~", d: "한우 AX 국가 표준 모델\n타 시도 확산 · 정책 연동", c: FAWN },
+    { t: "수출", y: "2030~", d: "중앙아·동남아 축산 디지털 전환\n국가 레퍼런스 기반 수출", c: "8A5A22" }
+  ];
+  st.forEach((c, i) => {
+    const x = 0.62 + i * 3.10;
+    card(s, { x: x, y: 1.60, w: 2.88, h: 2.35, fill: c.c });
+    s.addText(c.y, { x: x + 0.18, y: 1.74, w: 2.52, h: 0.28, fontSize: 10.5, color: i === 0 ? MOSSL : W, fontFace: FONT, margin: 0 });
+    s.addText(c.t, { x: x + 0.18, y: 2.04, w: 2.52, h: 0.42, fontSize: 16, bold: true, color: W, fontFace: HEAD, margin: 0 });
+    s.addText(c.d, { x: x + 0.18, y: 2.62, w: 2.52, h: 1.15, fontSize: 11.5, color: W, fontFace: FONT, margin: 0, lineSpacing: 17 });
+    if (i < 3) arrow(s, x + 2.94, 2.68);
+  });
+  card(s, { x: 0.62, y: 4.25, w: 12.10, h: 1.85, fill: INK2 });
+  plain(s, "이 경로에서 전남의 위치", { x: 0.95, y: 4.43, w: 11.4, h: 0.34, fontSize: 14.5, bold: true, color: FAWNL });
+  body(s, [
+    "2단계(광역 실증)가 없으면 3·4단계는 열리지 않습니다 — 국가 표준도 수출도 레퍼런스에서 시작합니다",
+    "전남이 이 단계를 맡으면, 이후 만들어지는 한우 AX 표준의 원본 데이터가 전남에서 나옵니다",
+    "수출 단계에서도 '전남 모델'이라는 이름이 남습니다 — 이미 우즈베키스탄 정부 시연 경험이 있습니다"
+  ], { x: 0.95, y: 4.85, w: 11.4, h: 1.10, fontSize: 12.5, color: W });
+  card(s, { x: 0.62, y: 6.28, w: 12.10, h: 0.62, fill: FAWN });
+  s.addText("한 기업의 성장 계획이 아니라, 한우 산업이 데이터를 갖게 되는 경로입니다", { x: 0.90, y: 6.28, w: 11.5, h: 0.62, fontSize: 14, bold: true, color: W, fontFace: HEAD, margin: 0, valign: "middle" });
+  s.addNotes("우리 회사 성장 이야기로 들리지 않게 주의. '전남이 얻는 것'을 중심에 두고 말한다.");
+}
+
 /* ===== SECTION 05 ===== */
-sectionSlide("05", "왜 전남인가", "WHY JEONNAM FIRST", "4분. 전남이 선택되어야 하는 이유와 국가 정책 정합성.");
+sectionSlide("06", "왜 전남인가", "WHY JEONNAM FIRST", "4분. 전남이 선택되어야 하는 이유와 국가 정책 정합성.");
 
 /* 15. 왜 전남 */
 {
   const s = S();
-  kick(s, "05 왜 전남인가");
+  kick(s, "06 왜 전남인가");
   T(s, "전남은 실증에 가장 적합한 산지입니다");
   const st = [
     { n: "15.4%", l: "전국 한우 출하 비중\n경북 다음 2위" },
@@ -394,7 +672,7 @@ sectionSlide("05", "왜 전남인가", "WHY JEONNAM FIRST", "4분. 전남이 선
 /* 16. 정책 정합성 */
 {
   const s = S();
-  kick(s, "05 왜 전남인가");
+  kick(s, "06 왜 전남인가");
   T(s, "사육기간 단축은 국가 정책입니다 — 실행 수단이 없을 뿐입니다");
   const rows = [
     ["사육기간", "두당 온실가스 배출", "두당 사육비", "비고"],
@@ -422,13 +700,113 @@ sectionSlide("05", "왜 전남인가", "WHY JEONNAM FIRST", "4분. 전남이 선
   s.addNotes("실무자에게 가장 실용적인 장. 상급기관 정책과 우리 제안이 일치한다는 것 = 기안 명분. '정책은 있는데 도구가 없다'가 핵심 문장.");
 }
 
+/* ===== SECTION 07 사업 타당성 [NEW] ===== */
+sectionSlide("07", "사업 타당성", "FEASIBILITY — POLICY · TECHNOLOGY · ECONOMICS · RISK", "6분. 정책결정권자 관점의 검증. 반대 논거까지 정면으로 다룬다.");
+
+{
+  const s = S();
+  kick(s, "07 사업 타당성");
+  T(s, "다섯 축으로 검증했습니다");
+  const ax = [
+    { t: "정책 타당성", v: "높음", d: "축산 온실가스 감축 로드맵, 저탄소 축산물 인증, 데이터기반행정법,\n스마트농업 육성 기본계획과 모두 정합합니다. 새 명분을 만들 필요가 없습니다.", c: GREEN },
+    { t: "기술 타당성", v: "높음", d: "세계 시장 121억 달러(2030) 규모로 성숙한 기술군이며,\n국내에서도 199농가·73만 건 판단으로 이미 가동 중입니다. 기술 위험은 낮습니다.", c: GREEN },
+    { t: "경제 타당성", v: "조건부", d: "번식 손실 회피액이 투입을 상회할 것으로 추정되나\n한우 데이터로 검증된 바 없습니다. 그 검증이 이 사업의 목적입니다.", c: FAWN },
+    { t: "사회 타당성", v: "높음", d: "고령 번식농가의 노동 부담 경감, 지역 설치·AS 일자리,\n방역 공공가치. 수혜자가 가장 취약한 계층입니다.", c: GREEN },
+    { t: "시급성", v: "매우 높음", d: "가임암소는 한 번 사라지면 회복에 최소 3~4년이 걸립니다.\n기초선 데이터도 사업 착수 전에 확보해야 합니다.", c: "8A5A22" }
+  ];
+  ax.forEach((c, i) => {
+    const y = 1.42 + i * 1.06;
+    card(s, { x: 0.62, y: y, w: 12.10, h: 0.94, fill: i % 2 === 0 ? TINT : TINT2 });
+    s.addShape(pres.ShapeType.roundRect, { x: 0.62, y: y, w: 2.30, h: 0.94, fill: { color: c.c }, line: { type: "none" }, rectRadius: 0.10 });
+    s.addText(c.t, { x: 0.80, y: y, w: 1.95, h: 0.94, fontSize: 13.5, bold: true, color: W, fontFace: HEAD, margin: 0, valign: "middle" });
+    s.addText(c.v, { x: 3.05, y: y, w: 1.25, h: 0.94, align: "center", fontSize: 13.5, bold: true, color: c.c === FAWN ? FAWN : GREEND, fontFace: HEAD, margin: 0, valign: "middle" });
+    s.addText(c.d, { x: 4.45, y: y, w: 8.05, h: 0.94, fontSize: 11.5, color: BODY, fontFace: FONT, margin: 0, valign: "middle", lineSpacing: 16 });
+  });
+  card(s, { x: 0.62, y: 6.75, w: 12.10, h: 0.001, fill: W });
+  foot(s, "※ 경제 타당성을 '조건부'로 표기한 것은 의도적입니다 — 한우 데이터로 검증되지 않은 것을 검증되었다고 말하지 않습니다.");
+  s.addNotes("다섯 축 중 하나를 일부러 '조건부'로 뒀다. 전부 '높음'인 제안은 신뢰를 잃는다. 그리고 그 조건부 항목이 곧 이 사업의 목적이라는 논리로 되돌린다.");
+}
+
+{
+  const s = S();
+  kick(s, "07 사업 타당성");
+  T(s, "경제성 — 무엇을 얼마나 회수해야 하는가");
+  plain(s, "1년차 투입 16.3억원, 대상 3,300두 기준. 두당 연간 약 49만원이 투입됩니다.\n이 금액이 회수되려면 두당 연 49만원 이상의 손실을 줄이면 됩니다.", { x: 0.62, y: 1.24, w: 12.1, h: 0.70, fontSize: 13, color: MUTED, ls: 19 });
+  const rows = [
+    ["회수 항목", "산정 논리", "비고"],
+    ["공태일수 단축", "발정 1회 미발견 = 공태 21일 연장.\n조기 발견으로 연간 공태일수를 줄입니다.", "번식농가 손실의 최대 항목"],
+    ["폐사 · 도태 회피", "질병 조기 발견으로 회피되는 폐사 1두는\n송아지·비육우 가액 전체를 지킵니다.", "1두 회피로도 다수 두 투입분 상쇄"],
+    ["수정 비용 절감", "수정 횟수 감소 — 정액·수정료·재발정 대기", "직접 비용 절감"],
+    ["관찰 노동 절감", "야간 관찰·분만 대기 시간의 대체", "고령 농가에서 체감 효과 최대"],
+    ["사육기간 단축", "개체별 출하 예측으로 26개월 이하 실행", "Phase 3에서 검증 — 1년차 제외"]
+  ];
+  const tr = rows.map((r, ri) => r.map((cc, ci) => ({
+    text: cc,
+    options: {
+      bold: ri === 0 || ci === 0,
+      color: ri === 0 ? W : BODY,
+      fill: { color: ri === 0 ? GREEN : (ri % 2 === 0 ? TINT2 : W) },
+      fontSize: 11.5, align: "left", valign: "middle", fontFace: FONT
+    }
+  })));
+  s.addTable(tr, { x: 0.62, y: 2.05, w: 12.10, colW: [2.60, 6.20, 3.30], rowH: 0.66, border: { type: "solid", color: "DDE4D8", pt: 1 } });
+  card(s, { x: 0.62, y: 5.65, w: 12.10, h: 1.25, fill: INK });
+  plain(s, "정직하게 — 여기서 금액을 단정하지 않는 이유", { x: 0.95, y: 5.82, w: 11.4, h: 0.32, fontSize: 13.5, bold: true, color: FAWNL });
+  plain(s, "낙농 데이터로 산출된 회수액을 한우에 그대로 옮기면 과대 추정이 됩니다. 한우는 산차 간격·출하 주기가 다릅니다.\n두당 회수액의 확정은 이 시범사업의 산출물이지, 전제가 아닙니다. 그것이 비교군 설계를 두는 이유입니다.", { x: 0.95, y: 6.18, w: 11.4, h: 0.62, fontSize: 12, color: W, ls: 18 });
+  s.addNotes("여기서 부풀린 B/C를 제시하면 실무자가 바로 알아본다. 오히려 '확정하지 않는다'는 태도가 신뢰를 만든다. 회수 항목의 구조만 명확히 보여준다.");
+}
+
+{
+  const s = S(true);
+  kick(s, "07 사업 타당성", MOSS);
+  T(s, "반대 논거 — 나올 수 있는 질문을 먼저 꺼냅니다", { color: W });
+  const q = [
+    { q: "\"스마트축산에 이미 예산을 썼는데 성과가 없었다\"", a: "맞습니다. 장비만 보급하고 판단 계층이 없었기 때문입니다. 이 제안은 신규 장비 보급이 아니라 기존 장비의 데이터를 묶는 사업입니다." },
+    { q: "\"특정 업체를 밀어주는 것 아닌가\"", a: "개방형 표준 API로 설계하고, 데이터 소유권 약정을 시범단계에서 표준화합니다. 감리를 독립 편성하고 결과를 공개합니다." },
+    { q: "\"고령 농가가 못 쓸 것이다\"", a: "가장 큰 위험입니다. 그래서 앱 사용을 전제하지 않고 문자·전화 알림과 수의사 대행 서비스로 설계합니다. 그래도 이탈률은 KPI로 관리해야 합니다." },
+    { q: "\"효과가 안 나오면 어떻게 하나\"", a: "1년차 규모를 3,300두로 제한한 이유입니다. 비교군 대조로 효과가 확인되지 않으면 2년차를 중단하는 것이 정상 설계입니다." },
+    { q: "\"도비 부담이 부담스럽다\"", a: "국비 매칭과 기존 스마트축산 사업 연계를 전제로 설계할 수 있습니다. 다년도 분할도 가능합니다." }
+  ];
+  q.forEach((c, i) => {
+    const y = 1.42 + i * 1.06;
+    card(s, { x: 0.62, y: y, w: 12.10, h: 0.94, fill: INK2 });
+    s.addText(c.q, { x: 0.92, y: y, w: 4.55, h: 0.94, fontSize: 12, bold: true, color: FAWNL, fontFace: HEAD, margin: 0, valign: "middle", lineSpacing: 16 });
+    s.addText(c.a, { x: 5.70, y: y, w: 6.80, h: 0.94, fontSize: 11.5, color: W, fontFace: FONT, margin: 0, valign: "middle", lineSpacing: 16 });
+  });
+  card(s, { x: 0.62, y: 6.75, w: 12.10, h: 0.001, fill: INK });
+  s.addNotes("실무자가 상급자에게 보고할 때 받을 질문들이다. 미리 답을 손에 쥐여주는 것이 이 장의 목적. 4번(효과 없으면 중단)이 특히 중요 — 출구 전략이 있는 사업은 승인받기 쉽다.");
+}
+
+{
+  const s = S();
+  kick(s, "07 사업 타당성");
+  T(s, "하지 않았을 때의 비용");
+  const p = [
+    { t: "번식 기반은 계속 줄어듭니다", d: "가임암소 감소는 3~4년 뒤 송아지 공급 부족으로 나타납니다.\n그 시점에는 전남 비육농가가 도내에서 입식할 송아지를 구하지 못합니다.", c: FAWN },
+    { t: "데이터 공백은 소급되지 않습니다", d: "올해 놓친 개체 데이터는 내년에 만들 수 없습니다.\n비교의 기준선이 없으면 어떤 정책 효과도 증명할 수 없습니다.", c: GREEN },
+    { t: "한우 표준을 다른 지역이 가져갑니다", d: "낙농 표준은 이미 경기도가 만들고 있습니다.\n한우 표준을 먼저 만든 지역이 이후 국가 사업의 기준이 됩니다.", c: MOSS },
+    { t: "저탄소·수출 요건에 대응할 수 없습니다", d: "저탄소 인증도, 향후 수출 시 요구될 이력 증명도\n개체 단위 사육 데이터를 전제로 합니다. 없으면 자격 자체가 없습니다.", c: "8A5A22" }
+  ];
+  p.forEach((c, i) => {
+    const x = 0.62 + (i % 2) * 6.28;
+    const y = 1.45 + Math.floor(i / 2) * 2.30;
+    card(s, { x: x, y: y, w: 5.98, h: 2.10, fill: TINT2, shadow: true });
+    s.addShape(pres.ShapeType.roundRect, { x: x, y: y, w: 5.98, h: 0.72, fill: { color: c.c }, line: { type: "none" }, rectRadius: 0.10 });
+    s.addText(c.t, { x: x + 0.22, y: y, w: 5.54, h: 0.72, fontSize: 14.5, bold: true, color: i === 2 ? BODY : W, fontFace: HEAD, margin: 0, valign: "middle" });
+    s.addText(c.d, { x: x + 0.26, y: y + 0.88, w: 5.46, h: 1.05, fontSize: 12, color: BODY, fontFace: FONT, margin: 0, lineSpacing: 18 });
+  });
+  card(s, { x: 0.62, y: 6.15, w: 12.10, h: 0.80, fill: INK });
+  s.addText("이 사업의 비용은 16.3억원이지만, 하지 않는 비용은 금액으로 청구되지 않을 뿐 더 큽니다", { x: 0.90, y: 6.15, w: 11.5, h: 0.80, fontSize: 15, bold: true, color: MOSSL, fontFace: HEAD, margin: 0, valign: "middle" });
+  s.addNotes("정책결정에서 가장 설득력 있는 논거는 '안 했을 때의 비용'이다. 특히 2번(데이터는 소급 불가)이 시급성의 논리적 근거.");
+}
+
 /* ===== SECTION 06 ===== */
-sectionSlide("06", "어떻게 시작하나", "ROADMAP · PILOT DESIGN · BUDGET", "8분. 오늘 발표의 본론. 실무자가 기안에 쓸 수 있는 형태로 전달한다.");
+sectionSlide("08", "어떻게 시작하나", "ROADMAP · PILOT DESIGN · BUDGET", "8분. 실무자가 기안에 쓸 수 있는 형태로 전달한다.");
 
 /* 18. 4단계 로드맵 */
 {
   const s = S();
-  kick(s, "06 어떻게 시작하나");
+  kick(s, "08 어떻게 시작하나");
   T(s, "4단계 로드맵 — 가장 시급한 곳부터");
   const ph = [
     { n: "PHASE 1", t: "번식농가 우선 실증", d: "고령 번식농가 대상 발정·분만 AI 우선 적용.\n가장 시급하고 ROI가 즉시 확인되는 지점입니다.", c: FAWN },
@@ -453,7 +831,7 @@ sectionSlide("06", "어떻게 시작하나", "ROADMAP · PILOT DESIGN · BUDGET"
 /* 19. 시범사업 설계(안) */
 {
   const s = S();
-  kick(s, "06 어떻게 시작하나");
+  kick(s, "08 어떻게 시작하나");
   T(s, "Phase 1 시범사업 설계 (안)");
   const st = [
     { n: "22개", l: "전 시·군 참여\n지역 편중 배제" },
@@ -485,7 +863,7 @@ sectionSlide("06", "어떻게 시작하나", "ROADMAP · PILOT DESIGN · BUDGET"
 /* 20. 예산 구조(안) */
 {
   const s = S();
-  kick(s, "06 어떻게 시작하나");
+  kick(s, "08 어떻게 시작하나");
   T(s, "1년차 예산 구조 (안)");
   const rows = [
     ["항목", "산정 근거", "금액(억원)"],
@@ -519,7 +897,7 @@ sectionSlide("06", "어떻게 시작하나", "ROADMAP · PILOT DESIGN · BUDGET"
 /* 21. 추진 체계 */
 {
   const s = S(true);
-  kick(s, "06 어떻게 시작하나", MOSS);
+  kick(s, "08 어떻게 시작하나", MOSS);
   T(s, "추진 체계 — 누가 무엇을 맡는가", { color: W });
   const org = [
     { t: "전라남도", r: "총괄", d: "사업 총괄 · 예산 편성\n성과 관리 · 확산 결정", c: FAWN },
@@ -545,7 +923,7 @@ sectionSlide("06", "어떻게 시작하나", "ROADMAP · PILOT DESIGN · BUDGET"
 /* 22. KPI */
 {
   const s = S();
-  kick(s, "06 어떻게 시작하나");
+  kick(s, "08 어떻게 시작하나");
   T(s, "무엇으로 성공을 판단할 것인가");
   const g = [
     { t: "번식 성과", c: GREEN, l: ["발정 발견율", "수태율 · 수정 횟수", "공태일수 · 분만간격", "분만사고 발생률"] },
@@ -568,12 +946,12 @@ sectionSlide("06", "어떻게 시작하나", "ROADMAP · PILOT DESIGN · BUDGET"
 }
 
 /* ===== SECTION 07 ===== */
-sectionSlide("07", "요청사항", "PRECONDITIONS & THE ASK", "5분. 정직한 리스크 고지 후 요청. 여기서 끝낸다.");
+sectionSlide("09", "요청사항", "PRECONDITIONS & THE ASK", "5분. 정직한 리스크 고지 후 요청. 여기서 끝낸다.");
 
 /* 24. 선결 과제 */
 {
   const s = S();
-  kick(s, "07 요청사항");
+  kick(s, "09 요청사항");
   T(s, "정직하게 — 먼저 풀어야 할 네 가지");
   const p = [
     { t: "데이터 소유권 법제 미비", d: "농가 · 플랫폼사 · 도 사이의 데이터 귀속 기준이 없습니다.", a: "→ 시범사업 단계에서 3자 데이터 이용 약정을 표준안으로 만들어 둡니다. 이것 자체가 성과물입니다." },
@@ -596,7 +974,7 @@ sectionSlide("07", "요청사항", "PRECONDITIONS & THE ASK", "5분. 정직한 �
 /* 25. The Ask */
 {
   const s = S(true);
-  kick(s, "07 요청사항", MOSS);
+  kick(s, "09 요청사항", MOSS);
   T(s, "전라남도를 한우 AX 국가 실증 거점으로", { color: W });
   card(s, { x: 0.62, y: 1.48, w: 5.95, h: 3.85, fill: INK2 });
   plain(s, "저희가 제공하는 것", { x: 0.95, y: 1.66, w: 5.3, h: 0.38, fontSize: 16, bold: true, color: MOSSL });
@@ -626,7 +1004,7 @@ sectionSlide("07", "요청사항", "PRECONDITIONS & THE ASK", "5분. 정직한 �
 /* 26. 다음 30일 */
 {
   const s = S();
-  kick(s, "07 요청사항");
+  kick(s, "09 요청사항");
   T(s, "다음 30일 — 지금 하실 수 있는 일");
   const w = [
     { n: "1주", t: "내부 검토", d: "축산과 내 검토 · 고흥 ICT 단지 담당 부서와 사전 협의\n필요 시 저희가 실무 설명 자료를 추가 제공합니다" },

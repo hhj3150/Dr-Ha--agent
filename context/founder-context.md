@@ -24,17 +24,29 @@ Confirmed by the founder — reuse these verbatim; do not guess or re-derive.
 | 항목 | 내용 |
 |---|---|
 | 성명 | 하현제 / HA HYUN JAE |
+| **생년월일** | **1973년 10월 25일** |
+| **자택 주소** | **경기도 안성시 공도읍 공도로 150 스위첸아파트 116동 1604호** |
 | 휴대전화 | 010-6205-3150 |
 | 이메일 | hhj3150@hanmail.net |
 | 국가연구자번호 | 11152141 |
 | 학력 | **건국대학교 수의과대학** — 1992 입학 / 1999 졸업, 수의학사 (DVM) |
 | 대학원 | **없음 — 석사·박사 학위 없음.** Never list a master's or doctorate. |
+| **수의사 면허** | **제 10193호, 1999년 2월 취득** (농림축산식품부) |
 | 수정란 생산(IVP) 개시 | **2009년** |
 | 수정란이식(ET) 경력 | 약 18년 |
 | 주요 경력 | 1999.10–2022.10 ㈜대한사료공업(기술지원) / 2005.10–현재 고려동물병원·㈜제네틱스 원장·대표 |
+| **논문** | **없음** — do not list any paper. |
+| 특허 | 목록 미제공 (founder will supply; leave blank until then) |
 
-Still unconfirmed — ask the founder, never invent: 생년월일, 자택 주소,
-수의사 면허번호 및 취득연도, 보유 특허·논문 목록.
+**Use this table directly for every CV, 이력서, 인적사항 양식, government form,
+and proposal participant sheet. Do NOT ask the founder for these fields again.**
+Only 특허 목록 remains outstanding.
+
+D2O 소재지 (법인 주소, 자택과 구분): 경기도 안성시 보개면 양협길 29-67 (우 17508),
+Tel 031-674-4432.
+
+Handling: 생년월일·자택 주소·면허번호는 실제 개인정보이므로, 제출 서식이
+요구하는 경우에만 기재하고 불필요한 문서에는 노출하지 않는다.
 
 > Note: "Dr." is used in this file as a professional courtesy title for a
 > veterinarian (DVM), **not** as a claim of a doctoral degree.

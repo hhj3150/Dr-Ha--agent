@@ -602,6 +602,51 @@ sectionSlide("03", "친환경 스마트 사양관리 ①", "ENVIRONMENT — HUMU
   s.addNotes("D2O의 역할이 '실증과 확산'이라는 점을 분명히 한다 — 국립축산과학원 입장에서는 실증·보급 파트너로 바로 이어붙일 수 있는 지점이다. 양산·판가는 GMW/충남대 소관이므로 사업화 수치는 언급하지 않는다.");
 }
 
+/* 18-3. R&D–보급 병행 제안 */
+{
+  const s = S();
+  kick(s, "03 친환경 사양관리 · 제안");
+  T(s, "개발이 끝난 뒤가 아니라, 개발하는 동안 같이 보급합시다", { fontSize: 29 });
+  plain(s, "보통은 R&D 3년이 끝난 다음에 보급사업이 시작됩니다. 그 사이에 2~3년 공백이 생기고, 그동안 개발은 현장 피드백 없이 완성됩니다.\n완성된 뒤에야 농가가 '이건 우리 축사에 안 맞는다'고 말하는 일이 반복됩니다.", { x: 0.62, y: 1.24, w: 12.1, h: 0.72, fontSize: 13, color: MUTED, ls: 19 });
+
+  const YX = [2.72, 6.08, 9.44], YW = 3.24;
+  const years = ["2026 · 1년차", "2027 · 2년차", "2028 · 3년차"];
+  years.forEach((y, i) => {
+    s.addText(y, { x: YX[i], y: 2.02, w: YW, h: 0.34, align: "center", fontSize: 12.5, bold: true, color: MUTED, fontFace: HEAD, margin: 0 });
+  });
+
+  card(s, { x: 0.62, y: 2.44, w: 1.95, h: 1.30, fill: INK });
+  s.addText("국가 R&D\n(진행 중)", { x: 0.62, y: 2.44, w: 1.95, h: 1.30, align: "center", valign: "middle", fontSize: 13, bold: true, color: W, fontFace: HEAD, margin: 0, lineSpacing: 19 });
+  const rd = [
+    "핵심기술 확보\n1차 시제품 설계\n실증지 확보",
+    "1차 시제품 제작\n현장 실증\n성능 개선",
+    "2차 시제품 · 실증\n신뢰성 검증\n양산 체계 구축"
+  ];
+  rd.forEach((d, i) => {
+    card(s, { x: YX[i], y: 2.44, w: YW, h: 1.30, fill: GREEN });
+    s.addText(d, { x: YX[i] + 0.16, y: 2.44, w: YW - 0.32, h: 1.30, align: "center", valign: "middle", fontSize: 12, color: W, fontFace: FONT, margin: 0, lineSpacing: 18 });
+  });
+
+  card(s, { x: 0.62, y: 3.92, w: 1.95, h: 1.45, fill: FAWN });
+  s.addText("기술보급\n(제안)", { x: 0.62, y: 3.92, w: 1.95, h: 1.45, align: "center", valign: "middle", fontSize: 13, bold: true, color: W, fontFace: HEAD, margin: 0, lineSpacing: 19 });
+  const ext = [
+    "실증지를 현장 교육장으로\n동시 개방\n지도직 참관 · 교육과정 설계",
+    "시범농가 2~3호로 선행 보급\n사용성 피드백을 개발에 반영\n관리 SOP 초안 현장 검증",
+    "지역 보급사업 설계 확정\n매뉴얼 · 교육과정 완성\n양산 시점에 즉시 보급 착수"
+  ];
+  ext.forEach((d, i) => {
+    card(s, { x: YX[i], y: 3.92, w: YW, h: 1.45, fill: MOSSL });
+    s.addText(d, { x: YX[i] + 0.16, y: 3.92, w: YW - 0.32, h: 1.45, align: "center", valign: "middle", fontSize: 12, color: BODY, fontFace: FONT, margin: 0, lineSpacing: 18 });
+  });
+
+  card(s, { x: 0.62, y: 5.58, w: 12.10, h: 1.30, fill: TINT2, line: "D8E0D2" });
+  plain(s, "과제가 얻는 것", { x: 0.95, y: 5.74, w: 5.4, h: 0.32, fontSize: 13.5, bold: true, color: GREEND });
+  plain(s, "· 실제 농가 사용 데이터와 요구사항을 개발 중에 반영\n· 실증 레퍼런스 확대 — 사업화 단계에서 그대로 근거가 됩니다", { x: 0.95, y: 6.10, w: 5.5, h: 0.66, fontSize: 12, color: BODY, ls: 18 });
+  plain(s, "보급사업이 얻는 것", { x: 6.85, y: 5.74, w: 5.4, h: 0.32, fontSize: 13.5, bold: true, color: FAWN });
+  plain(s, "· 개발이 끝나기 전에 기술을 먼저 확보하고 준비할 수 있습니다\n· 예산 편성과 교육과정 준비 시간을 3년 앞당길 수 있습니다", { x: 6.85, y: 6.10, w: 5.6, h: 0.66, fontSize: 12, color: BODY, ls: 18 });
+  s.addNotes("오늘 발표에서 실제로 얻어내야 할 요청. R&D와 보급을 순차가 아니라 병행으로 돌리자는 제안. 담당자 입장에서는 '완성품을 기다리지 않고 3년 먼저 준비할 수 있다'는 점이 실익. 저희 과제에서 D2O 역할이 확산·교육이므로 접점이 이미 있다는 점을 덧붙인다.");
+}
+
 /* 19. 기대효과 */
 {
   const s = S();
@@ -1364,7 +1409,7 @@ sectionSlide("06", "낙농산업 방향과 시범사업 제안", "OUTLOOK & PROP
   body(s, [
     "공인된 측정과 분석 (악취·퇴비·유질·성적)",
     "실증 설계 자문 — 대조구·표본수·기간 설계",
-    "시범사업 과제로의 편입 검토",
+    "시범사업 과제 편입 및 R&D–보급 병행 추진 검토",
     "결과의 매뉴얼화 및 보급 채널 연계",
     "필요한 경우 관련 기준·표시 제도 검토",
     "타 기관·타 지역 실증과의 데이터 연계",

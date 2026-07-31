@@ -143,6 +143,11 @@ Never transliterate an English organization name back into Korean — use the fo
 - Boundary: domestic provinces → Provincial Government Expansion; international → CowTalk Global Expansion; the technical platform both sell → Eco-BIT Platform; capital/negotiation/portfolio → CEO Strategy; Holstein embryo export stays with Global Embryo Export Operations (distinct from platform export). These agents read `context/eco-bit-expansion-context.md`.
 - Reference: Uzbekistan CowTalk pilot (~50 cows) = first international validation case (figures TBD).
 
+For any Korean dairy market diagnosis, industry outlook, tariff/import pressure,
+self-sufficiency, cheese-market opportunity, or dairy survival-strategy content,
+read `context/korea-dairy-industry-context.md` (sourced from Dr. Ha's 홍성낙협
+lecture, 2026-07-14) — do not re-derive these figures from memory.
+
 Use the relevant agent file in `agents/` and the context files in `context/`.
 Always read `context/founder-context.md` (authoritative founder & ecosystem
 context), `context/master-context.md`, and `context/confidentiality-rules.md`

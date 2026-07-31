@@ -381,9 +381,9 @@ sectionSlide("02", "왜 저지종인가", "WHY JERSEY — BREED DECISION",
     s.addText(st.d, { x: x + 0.14, y: 3.40, w: 1.96, h: 0.90, align: "center", fontSize: 11.5, color: BODY, fontFace: FONT, margin: 0, lineSpacing: 17 });
     if (i < 4) arrow(s, x + 2.30, 3.18);
   });
-  card(s, { x: 0.62, y: 4.72, w: 12.10, h: 1.45, fill: TINT2, line: "D8E0D2" });
+  card(s, { x: 0.62, y: 4.72, w: 12.10, h: 1.68, fill: TINT2, line: "D8E0D2" });
   plain(s, "표현 원칙 — 과장하지 않는 것이 결국 브랜드를 지킵니다", { x: 0.95, y: 4.92, w: 11.4, h: 0.36, fontSize: 14, bold: true, color: FAWN });
-  plain(s, "A2 우유의 소화 관련 효과는 아직 연구가 진행 중인 영역입니다. 저희는 질병 예방·치료 효과를 주장하지 않고,\n'A2A2 개체의 원유만 사용한다'는 검증 가능한 사실만 표시합니다. 검사 성적서로 언제든 확인 가능한 범위 안에서만 말합니다.", { x: 0.95, y: 5.32, w: 11.4, h: 0.70, fontSize: 12.5, color: BODY, ls: 19 });
+  plain(s, "A2 우유의 소화 관련 효과는 아직 연구가 진행 중인 영역입니다. 저희는 질병 예방·치료 효과를 주장하지 않습니다.\n'소화가 편하다고 느껴 찾는 소비자들의 선택' — 딱 여기까지만 말하고, 'A2A2 개체의 원유만 사용한다'는 검증 가능한 사실을 표시합니다.\n검사 성적서로 언제든 확인 가능한 범위 안에서만 말하는 것이 오히려 신뢰를 얻는 지점입니다.", { x: 0.95, y: 5.30, w: 11.4, h: 0.95, fontSize: 12, color: BODY, ls: 18 });
   s.addNotes("연구기관 앞에서 A2를 건강기능성으로 과장하면 즉시 신뢰를 잃는다. '검증 가능한 사실만 표시한다'는 원칙을 먼저 밝히는 것이 오히려 설득력이 있다.");
 }
 
@@ -1026,8 +1026,11 @@ sectionSlide("05", "유가공과 판매", "PROCESSING & DIRECT SALES",
     s.addText(p.t, { x: x + 0.20, y: y, w: 3.48, h: 0.62, fontSize: 14.5, bold: true, color: W, fontFace: HEAD, margin: 0, valign: "middle" });
     s.addText(p.d, { x: x + 0.24, y: y + 0.78, w: 3.40, h: 1.10, fontSize: 12.5, color: BODY, fontFace: FONT, margin: 0, lineSpacing: 19 });
   });
-  card(s, { x: 0.62, y: 6.15, w: 12.10, h: 0.72, fill: INK });
-  s.addText("품목을 늘린 이유는 매출이 아니라 '원유를 남기지 않기 위해서'입니다 — 잉여 원유가 제품이 됩니다", { x: 0.90, y: 6.15, w: 11.5, h: 0.72, fontSize: 14.5, bold: true, color: MOSSL, fontFace: HEAD, margin: 0, valign: "middle" });
+  card(s, { x: 0.62, y: 6.02, w: 12.10, h: 0.90, fill: INK });
+  s.addText([
+    { text: "품목을 늘린 이유는 매출이 아니라 '원유를 남기지 않기 위해서'입니다 — 잉여 원유가 제품이 됩니다", options: { color: MOSSL, breakLine: true } },
+    { text: "다음 단계는 저지 A2 자연치즈입니다 — 국내 자연치즈 자급률 2%, 19만 톤 시장이 비어 있습니다", options: { color: FAWNL } }
+  ], { x: 0.90, y: 6.02, w: 11.5, h: 0.90, fontSize: 13.5, bold: true, fontFace: HEAD, margin: 0, valign: "middle", lineSpacing: 21 });
   s.addNotes("라인업 확장의 진짜 이유는 원유 수급 변동 흡수. 우유가 안 팔린 날 요거트로 돌린다. 이 운영 논리가 소규모 유가공의 핵심 노하우다.");
 }
 
@@ -1183,102 +1186,159 @@ sectionSlide("05", "유가공과 판매", "PROCESSING & DIRECT SALES",
 sectionSlide("06", "낙농산업 방향과 시범사업 제안", "OUTLOOK & PROPOSED PILOT PROJECTS",
   "20분. 오늘 세미나의 목적 지점. 반드시 시간을 남겨서 이 파트를 다 다룬다.");
 
-/* 38. 3대 압력 */
+/* 38-A. 2026 무관세 */
 {
   const s = S(true);
   kick(s, "06 산업 방향", MOSS);
-  T(s, "현장에서 체감하는 세 가지 압력", { color: W });
-  const p = [
-    { t: "수요 · 제도", d: "· 우유 소비 구조 변화\n· 수입 유제품 확대\n· 원유 쿼터·유대 체계의 경직성\n· 폐업하는 농가가 늘고 있습니다", c: INK2 },
-    { t: "비용 · 환경", d: "· 사료비 변동성 확대\n· 분뇨·악취 규제 강화\n· 탄소 대응 요구 본격화\n· 환경이 비용이 되는 구조", c: GREEN },
-    { t: "사람", d: "· 경영주 고령화\n· 승계 단절\n· 숙련 인력 확보난\n· 노동 강도가 진입을 막습니다", c: FAWN }
+  T(s, "2026년 — 관세의 벽이 완전히 사라졌습니다", { color: W });
+  const st = [
+    { n: "4,100호", l: "전국 낙농가 수\n연 4.9% 감소 — 10년 내 2,000~2,500호 전망" },
+    { n: "44%", l: "유제품 자급률\n정부 목표조차 2030년 48%" },
+    { n: "30.1kg", l: "1인당 흰 우유 소비\n10년간 약 7% 감소" }
   ];
-  p.forEach((c, i) => {
+  st.forEach((c, i) => {
     const x = 0.62 + i * 4.10;
-    card(s, { x: x, y: 1.50, w: 3.88, h: 3.05, fill: c.c });
-    s.addText(c.t, { x: x + 0.22, y: 1.72, w: 3.44, h: 0.50, fontSize: 18, bold: true, color: W, fontFace: HEAD, margin: 0, valign: "middle" });
-    s.addText(c.d, { x: x + 0.22, y: 2.35, w: 3.44, h: 2.00, fontSize: 13, color: W, fontFace: FONT, margin: 0, lineSpacing: 21 });
+    card(s, { x: x, y: 1.42, w: 3.88, h: 1.95, fill: INK2 });
+    s.addText(c.n, { x: x, y: 1.60, w: 3.88, h: 0.72, align: "center", valign: "middle", fontSize: 34, bold: true, color: FAWNL, fontFace: HEAD, margin: 0 });
+    s.addText(c.l, { x: x + 0.20, y: 2.34, w: 3.48, h: 0.90, align: "center", fontSize: 11.5, color: W, fontFace: FONT, margin: 0, lineSpacing: 17 });
   });
-  card(s, { x: 0.62, y: 4.85, w: 12.10, h: 1.95, fill: INK2 });
-  plain(s, "그런데 이 세 가지는 서로 연결되어 있습니다", { x: 0.95, y: 5.05, w: 11.4, h: 0.40, fontSize: 16, bold: true, color: FAWNL });
-  plain(s, "두수를 늘려 수익을 맞추려 하면 → 환경 부담과 노동 강도가 커지고 → 사람이 더 버티지 못합니다.\n같은 방향으로 더 밀어붙이는 방식으로는 이 세 개를 동시에 풀 수 없습니다.\n저희가 저지 · 환경 · 데이터 · 가공으로 방향을 튼 이유가 여기에 있습니다.", { x: 0.95, y: 5.50, w: 11.4, h: 1.10, fontSize: 13.5, color: W, ls: 21 });
-  s.addNotes("비관으로 끝내지 않는다. 세 압력이 연결되어 있으므로 '규모 확대'라는 단일 해법이 더는 통하지 않는다는 논리로 다음 장의 방향 제시로 넘어간다.");
+  card(s, { x: 0.62, y: 3.60, w: 12.10, h: 2.05, fill: INK2 });
+  plain(s, "그리고 올해, 관세가 사라졌습니다", { x: 0.95, y: 3.78, w: 11.4, h: 0.36, fontSize: 15.5, bold: true, color: FAWNL });
+  body(s, [
+    "미국산 유제품 — 2026. 1. 1부터 관세 0% (한·미 FTA)",
+    "EU산 유제품 — 2026. 7. 1부터 관세 0% (한·EU FTA)",
+    "낙농가 설문 95.9%가 '관세 철폐 후 전망 어둡다'",
+    "연간 소득 감소 추정 664억 ~ 최대 2,243억 원 (업계 추산)"
+  ], { x: 0.95, y: 4.22, w: 11.4, h: 1.30, fontSize: 13, color: W });
+  card(s, { x: 0.62, y: 5.88, w: 12.10, h: 1.00, fill: FAWN });
+  s.addText("무관세는 위기의 '원인'이 아니라, 이미 있던 격차가 '드러나는 계기'입니다", { x: 0.90, y: 5.88, w: 11.5, h: 1.00, fontSize: 15.5, bold: true, color: W, fontFace: HEAD, margin: 0, valign: "middle" });
+  s.addNotes("숫자 하나씩 짚는다. 자급률 44%는 '국민이 먹는 유제품의 절반 이상이 이미 수입'이라는 뜻. EU산 무관세가 지난달부터라는 점으로 체감도를 올린다. 다만 관세 자체보다 가려져 있던 원가 격차가 본질임을 예고하고 다음 장으로 넘어간다.");
 }
 
-/* 38-1. 지속가능성 — 구조적 고민 */
+/* 38-B. 격차의 실체 */
 {
   const s = S();
   kick(s, "06 산업 방향");
-  T(s, "한국에서 낙농을 계속하려면 — 다섯 가지 구조적 고민", { fontSize: 29 });
-  plain(s, "홍성낙협에서 낙농가분들께 말씀드렸던 내용입니다. 개별 농가의 노력으로는 풀리지 않는 것들을 먼저 정리했습니다.", { x: 0.62, y: 1.26, w: 12.1, h: 0.36, fontSize: 13, color: MUTED });
-
-  const q = [
-    { n: "1", t: "원유가 남습니다", d: "소비는 줄고 생산은 쿼터로 묶여 있습니다. 잉여 원유는 값을 제대로 받지 못하고,\n그 부담은 결국 농가로 돌아옵니다. 용도별 가격 체계 아래에서는 더 뚜렷해집니다." },
-    { n: "2", t: "수입 유제품과 같은 링에 섰습니다", d: "FTA 관세 철폐 일정이 진행되면서 가격만으로 겨루기 어려운 국면입니다.\n값으로 이길 수 없다면, 값이 아닌 것으로 겨뤄야 합니다." },
-    { n: "3", t: "사료비를 우리가 통제하지 못합니다", d: "조사료 자급률이 낮아 국제 곡물가와 환율이 그대로 경영비가 됩니다.\n초지·자가 조사료 기반이 없으면 외부 충격을 그대로 맞습니다." },
-    { n: "4", t: "환경 규제가 경영 조건이 되었습니다", d: "퇴비 부숙도, 악취, 탄소 — 예전에는 부수적 문제였지만 지금은 사육 지속 여부를 가릅니다.\n민원 한 건이 축사를 멈추게 합니다." },
-    { n: "5", t: "이어받을 사람이 없습니다", d: "고령화와 승계 단절, 그리고 쿼터가 자산이 되어 청년의 진입 자체가 막혔습니다.\n노동 강도가 높은 채로는 사람이 들어오지 않습니다." }
+  T(s, "격차의 실체 — 폴란드 멸균우유의 공습");
+  const st = [
+    { n: "5배", l: "멸균우유 수입 증가\n5년 만에 연 4.9만 톤 (전년비 +30%)" },
+    { n: "90%", l: "폴란드산 비중\n수입 멸균우유 10개 중 9개" },
+    { n: "2배 +", l: "원유 생산비 격차\n한국 1,100원대/L vs 유럽·미국 400~600원/L" }
   ];
-  q.forEach((c, i) => {
-    const y = 1.76 + i * 1.02;
-    card(s, { x: 0.62, y: y, w: 12.10, h: 0.92, fill: i % 2 === 0 ? TINT : TINT2 });
-    badge(s, 0.88, y + 0.23, c.n, { fill: i % 2 === 0 ? GREEN : FAWN, d: 0.46, fs: 13 });
-    s.addText(c.t, { x: 1.54, y: y + 0.04, w: 3.55, h: 0.84, fontSize: 14, bold: true, color: GREEND, fontFace: HEAD, margin: 0, valign: "middle", lineSpacing: 18 });
-    s.addText(c.d, { x: 5.25, y: y, w: 7.25, h: 0.92, fontSize: 11.5, color: BODY, fontFace: FONT, margin: 0, valign: "middle", lineSpacing: 17 });
+  st.forEach((c, i) => {
+    statCard(s, { x: 0.62 + i * 4.10, y: 1.45, w: 3.88, h: 2.05, num: c.n, label: c.l, numColor: FAWN, numSize: 34, fill: TINT });
   });
-  card(s, { x: 0.62, y: 6.92, w: 12.10, h: 0.001, fill: W });
-  foot(s, "※ 제도·관세 일정은 시점에 따라 달라질 수 있으므로 발표 시 최신 내용을 확인하시기 바랍니다.");
-  s.addNotes("홍성낙협 발표에서 다뤘던 진단. 낙농가 앞에서는 공감의 장이었지만, 오늘 청중(지도기관) 앞에서는 '개별 농가로는 못 푼다 = 그래서 기관이 필요하다'는 논리로 쓴다. 다섯 개 모두 다음 장의 해법과 1:1로 대응한다.");
+  card(s, { x: 0.62, y: 3.72, w: 12.10, h: 0.92, fill: TINT2, line: "D8E0D2" });
+  s.addText("소매가 —  폴란드산 멸균유 1,300~1,900원/L   vs   국산 신선유 3,000원대/L", { x: 0.90, y: 3.72, w: 11.5, h: 0.92, fontSize: 15, bold: true, color: GREEND, fontFace: HEAD, margin: 0, valign: "middle" });
+
+  card(s, { x: 0.62, y: 4.85, w: 12.10, h: 1.35, fill: MOSSL });
+  plain(s, "먼저 분명히 해둘 것", { x: 0.95, y: 5.02, w: 11.4, h: 0.34, fontSize: 14.5, bold: true, color: GREEND });
+  plain(s, "이 격차는 사료 수입 의존·토지 비용 등 구조에서 온 것입니다 — 농가의 노력 부족이 아닙니다.\n그러나 소비자는 우리 사정을 기다려주지 않습니다.", { x: 0.95, y: 5.42, w: 11.4, h: 0.70, fontSize: 13, color: BODY, ls: 20 });
+  card(s, { x: 0.62, y: 6.42, w: 12.10, h: 0.62, fill: INK });
+  s.addText("그렇다면 — 가격으로 못 이기는 싸움을 계속할 것인가", { x: 0.90, y: 6.42, w: 11.5, h: 0.62, fontSize: 15, bold: true, color: MOSSL, fontFace: HEAD, margin: 0, valign: "middle" });
+  s.addNotes("격차의 원인이 구조적임을 먼저 인정해 방어심리를 낮춘다. 그 다음 '가격 싸움을 계속할 것인가'라는 질문을 던지고 다음 장에서 판을 뒤집는다.");
 }
 
-/* 38-2. 지속가능성 — 누가 무엇을 할 것인가 */
+/* 38-C. 소비는 죽지 않았다 */
+{
+  const s = S();
+  kick(s, "06 산업 방향 · 핵심");
+  T(s, "그러나 — 소비는 죽지 않았습니다");
+  const st = [
+    { n: "역대 최고", l: "총 유제품 소비 (원유 환산)\n시장 자체는 살아 있습니다", c: GREEND },
+    { n: "+68%", l: "치즈 1인당 소비 3.7 kg\n5년간 68% 증가, 국내 19만 톤 시장", c: GREEND },
+    { n: "2%", l: "자연치즈 자급률\n시장의 96%가 수입산", c: FAWN }
+  ];
+  st.forEach((c, i) => {
+    statCard(s, { x: 0.62 + i * 4.10, y: 1.45, w: 3.88, h: 2.05, num: c.n, label: c.l, numColor: c.c, numSize: 30, fill: i === 2 ? TINT2 : TINT });
+  });
+  card(s, { x: 0.62, y: 3.72, w: 12.10, h: 1.55, fill: INK });
+  plain(s, "한국 낙농의 문제를 다시 정의하면", { x: 0.95, y: 3.90, w: 11.4, h: 0.36, fontSize: 14.5, bold: true, color: FAWNL });
+  plain(s, "'수요 소멸'이 아닙니다.\n성장하는 시장(가공)은 수입에 내주고, 축소되는 시장(음용유)에만 묶여 있는 구조입니다.", { x: 0.95, y: 4.32, w: 11.4, h: 0.80, fontSize: 16, bold: true, color: W, ls: 26 });
+
+  card(s, { x: 0.62, y: 5.48, w: 12.10, h: 1.40, fill: MOSSL });
+  plain(s, "성장하는 19만 톤 시장이 통째로 비어 있습니다", { x: 0.95, y: 5.66, w: 11.4, h: 0.34, fontSize: 14.5, bold: true, color: GREEND });
+  plain(s, "숙성치즈는 재고가 아니라 저장 가능한 자산입니다 — 수급 완충 기능을 합니다.\n고형분이 높은 원유(저지 등)일수록 치즈 수율에서 유리합니다. 목장형 유가공의 다음 단계가 여기 있습니다.", { x: 0.95, y: 6.04, w: 11.4, h: 0.72, fontSize: 12.5, color: BODY, ls: 19 });
+  s.addNotes("이 장이 진단 파트에서 가장 중요하다. 분위기를 위기에서 기회로 전환시키는 지점. '낙농이 망해가는 것이 아니라, 성장하는 시장에서 우리가 빠져 있는 것'이라는 재정의를 천천히 말한다.");
+}
+
+/* 38-D. 갈림길과 3무기 */
+{
+  const s = S();
+  kick(s, "06 산업 방향");
+  T(s, "갈림길 — 평균이 가장 위험합니다");
+  plain(s, "일본이 20년 먼저 걸어간 길에서 살아남은 것은 양극단이었습니다. '평균적인 농가'가 가장 먼저 사라졌습니다.", { x: 0.62, y: 1.26, w: 12.1, h: 0.36, fontSize: 13, color: MUTED });
+
+  card(s, { x: 0.62, y: 1.76, w: 5.95, h: 1.95, fill: TINT2, line: "E0E6DB" });
+  plain(s, "길 ①  규모화 + 데이터", { x: 0.95, y: 1.94, w: 5.3, h: 0.38, fontSize: 16, bold: true, color: GREEND });
+  plain(s, "원가로 버티는 전업농\n센서·AI로 번식·질병 손실을 줄여\n리터당 원가를 깎는 300두+ 모델", { x: 0.95, y: 2.38, w: 5.35, h: 1.15, fontSize: 12.5, color: BODY, ls: 20 });
+  card(s, { x: 6.77, y: 1.76, w: 5.95, h: 1.95, fill: MOSSL });
+  plain(s, "길 ②  브랜드 + 가공", { x: 7.10, y: 1.94, w: 5.3, h: 0.38, fontSize: 16, bold: true, color: GREEND });
+  plain(s, "가치로 파는 목장형 농가\n프리미엄 원유 + 유가공 + 직판으로\n소비자가격 전체를 가져오는 모델", { x: 7.10, y: 2.38, w: 5.35, h: 1.15, fontSize: 12.5, color: BODY, ls: 20 });
+  plain(s, "둘 다 못 가는 '어중간한 중간'이 가장 먼저 사라집니다.", { x: 0.62, y: 3.80, w: 12.1, h: 0.32, fontSize: 13, bold: true, color: FAWN });
+
+  const w = [
+    { n: "무기 1", t: "데이터", d: "사료값은 못 바꾸지만 번식·질병 손실은 바꿉니다.\n공태일수 1일 ≈ 1만 원 — 1년이면 소 한 마리 값.\n센서+AI로 공태일수 20~30일 단축 목표.", c: GREEN },
+    { n: "무기 2", t: "가치", d: "신선함·목장 직송·얼굴 있는 생산자는\n멸균 수입유가 침범할 수 없는 영역입니다.\nA2·저지·건초급여·목장형 유가공.", c: FAWN },
+    { n: "무기 3", t: "정책과 환경", d: "낙농은 식량안보 산업 — 공적 자금은 계속 들어옵니다.\n악취·분뇨·탄소는 비용이 아니라 '존속 면허'.\n깔짚·퇴비 관리가 출발점입니다.", c: MOSS }
+  ];
+  w.forEach((c, i) => {
+    const x = 0.62 + i * 4.10;
+    card(s, { x: x, y: 4.28, w: 3.88, h: 2.35, fill: TINT2, shadow: true });
+    s.addShape(pres.ShapeType.roundRect, { x: x, y: 4.28, w: 3.88, h: 0.70, fill: { color: c.c }, line: { type: "none" }, rectRadius: 0.10 });
+    s.addText(c.n, { x: x + 0.22, y: 4.36, w: 3.44, h: 0.26, fontSize: 10.5, color: i === 2 ? BODY : W, fontFace: FONT, margin: 0 });
+    s.addText(c.t, { x: x + 0.22, y: 4.60, w: 3.44, h: 0.32, fontSize: 16, bold: true, color: i === 2 ? BODY : W, fontFace: HEAD, margin: 0 });
+    s.addText(c.d, { x: x + 0.26, y: 5.10, w: 3.38, h: 1.45, fontSize: 11.5, color: BODY, fontFace: FONT, margin: 0, lineSpacing: 17 });
+  });
+  foot(s, "※ 공태일수 단축 수치는 국내외 파일럿에서의 목표치이며 목장별 결과는 다를 수 있습니다.");
+  s.addNotes("규모가 작다고 끝이 아니라 작으면 ②의 길이 있다는 점을 열어준다. 무기 3개는 앞의 파트 03·04·05와 각각 대응한다. 공태일수 1만 원은 청중이 가장 크게 반응하는 숫자.");
+}
+
+/* 38-E. 3층 해법 */
 {
   const s = S(true);
   kick(s, "06 산업 방향", MOSS);
-  T(s, "해법은 있습니다 — 다만 혼자 할 수 있는 일이 아닙니다", { color: W, fontSize: 29 });
-  plain(s, "같은 문제라도 농가가 할 일, 조합·지역이 할 일, 국가가 할 일이 다릅니다. 층을 나누지 않으면 아무도 시작하지 못합니다.", { x: 0.62, y: 1.26, w: 12.1, h: 0.36, fontSize: 13, color: MOSSL });
-
+  T(s, "다만 — 이 무기들은 농가 혼자 들 수 없습니다", { color: W });
+  plain(s, "같은 문제라도 농가가 할 일, 조합·지역이 할 일, 국가·연구기관이 할 일이 다릅니다. 층을 나누지 않으면 아무도 시작하지 못합니다.", { x: 0.62, y: 1.26, w: 12.1, h: 0.36, fontSize: 13, color: MOSSL });
   const lv = [
     { t: "농가가 할 일", s: "지금 당장, 내 목장에서", c: GREEN, l: [
       "원유의 성격을 바꾼다 — 품종·유전형·사양방식",
-      "잉여 원유를 제품으로 돌린다 (소규모 유가공)",
-      "조사료 자급률을 올려 사료비 방어선을 만든다",
-      "퇴비를 폐기물이 아니라 상품으로 관리한다",
+      "잉여 원유를 제품으로 돌린다",
+      "깔짚·퇴비를 관리해 '존속 면허'를 지킨다",
       "기록한다 — 기록 없이는 개선도 없습니다"
     ]},
     { t: "조합 · 지역이 할 일", s: "혼자서는 안 되는 것", c: FAWN, l: [
-      "공동 가공시설 — 개별 농가가 짓기 어려운 규모",
-      "공동 브랜드와 공동 판로 개척",
-      "공동 구매로 사료·자재 원가를 낮춘다",
-      "센서·데이터를 읽어줄 전문 인력의 공동 활용",
-      "성공·실패 사례를 조합 안에서 공유한다"
+      "지원사업 공동 신청 — 자부담을 낮춘다",
+      "공동 브랜드와 공동 판로",
+      "센서 데이터를 읽어줄 인력의 공동 활용",
+      "성공과 실패 사례를 조합 안에서 공유"
     ]},
     { t: "국가 · 연구기관이 할 일", s: "오늘 이 자리의 몫", c: "8A5A22", l: [
       "효과를 공인된 방법으로 측정하고 검증한다",
       "농가가 따라 할 수 있는 표준과 매뉴얼을 만든다",
       "기술 개발과 보급을 순차가 아니라 병행으로 돌린다",
       "차별화 사양·표시 기준을 제도로 정리한다",
-      "청년이 들어올 수 있는 진입 경로를 설계한다"
+      "비어 있는 시장(자연치즈)의 진입 기술을 지원한다"
     ]}
   ];
   lv.forEach((c, i) => {
     const x = 0.62 + i * 4.10;
-    card(s, { x: x, y: 1.78, w: 3.88, h: 4.15, fill: INK2 });
+    card(s, { x: x, y: 1.78, w: 3.88, h: 4.05, fill: INK2 });
     s.addShape(pres.ShapeType.roundRect, { x: x, y: 1.78, w: 3.88, h: 0.86, fill: { color: c.c }, line: { type: "none" }, rectRadius: 0.10 });
     s.addText(c.t, { x: x + 0.22, y: 1.84, w: 3.44, h: 0.44, fontSize: 15.5, bold: true, color: W, fontFace: HEAD, margin: 0, valign: "middle" });
     s.addText(c.s, { x: x + 0.22, y: 2.26, w: 3.44, h: 0.30, fontSize: 11, color: i === 0 ? MOSSL : W, fontFace: FONT, margin: 0 });
-    body(s, c.l, { x: x + 0.24, y: 2.82, w: 3.42, h: 3.00, fontSize: 11.5, color: W, gap: 7 });
+    body(s, c.l, { x: x + 0.24, y: 2.82, w: 3.42, h: 2.90, fontSize: 11.5, color: W, gap: 7 });
   });
-  card(s, { x: 0.62, y: 6.15, w: 12.10, h: 0.78, fill: FAWN });
-  s.addText("지속가능한 낙농은 농가의 각오로 되는 것이 아니라, 세 층이 같은 방향을 볼 때 됩니다", { x: 0.90, y: 6.15, w: 11.5, h: 0.78, fontSize: 15, bold: true, color: W, fontFace: HEAD, margin: 0, valign: "middle" });
-  s.addNotes("세 번째 칸(국가·연구기관)이 오늘 발표의 요청 목록과 그대로 일치한다는 점을 짚는다. 특히 3번 '개발과 보급을 병행'은 앞의 로봇 과제 슬라이드와 이어진다. 낙농가 앞에서는 1번 칸을 길게 말했지만, 오늘은 3번 칸에 시간을 쓴다.");
+  card(s, { x: 0.62, y: 6.05, w: 12.10, h: 0.85, fill: FAWN });
+  s.addText("지킬 시장과 내줄 시장을 구분하고 — 데이터로 원가를, 브랜드로 가격을, 정책 자금으로 전환 비용을", { x: 0.90, y: 6.05, w: 11.5, h: 0.85, fontSize: 15, bold: true, color: W, fontFace: HEAD, margin: 0, valign: "middle" });
+  s.addNotes("세 번째 칸이 오늘 발표의 요청 목록과 그대로 일치한다는 점을 짚는다. 낙농가 앞에서는 첫 칸을 길게 말했지만, 오늘은 세 번째 칸에 시간을 쓴다.");
 }
 
 /* 39. 방향 4가지 */
 {
   const s = S();
   kick(s, "06 산업 방향");
-  T(s, "현장에서 보는 낙농의 방향 — 네 가지 전환");
+  T(s, "저희는 ②의 길을 택했습니다 — 네 가지 전환");
   const d = [
     { n: "01", a: "규모", b: "가치", d: "두수 경쟁 대신 품종·유전형·사양방식으로 원유의 성격 자체를 차별화합니다.\n작은 목장이 살아남는 유일한 길은 '다른 우유'를 만드는 것입니다." },
     { n: "02", a: "비용", b: "자산", d: "분뇨와 악취를 처리 대상이 아니라 퇴비·탄소 자원으로 전환합니다.\n환경 규제를 방어가 아니라 기회로 바꾸는 설계가 필요합니다." },

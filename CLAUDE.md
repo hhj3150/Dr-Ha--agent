@@ -153,6 +153,17 @@ Always protect confidential information:
 - Do not disclose confidential methane-reduction strategy.
 - Do not suggest Hanwoo genetic export.
 
+## Naming rules (mandatory)
+- The founder's veterinary hospital is **고려동물병원 / Koryo Animal Hospital**.
+  **Never write "한국동물병원" or "Korea Animal Hospital"** anywhere — internal notes,
+  proposals, CVs, agent files, or any other output.
+- The founder's embryo-production company is **㈜제네틱스 / Genetics Co., Ltd.**
+  **Never write "㈜코리아제네틱스" or "코리아 제네틱스"** for the founder's company.
+- **코리아제네틱스 (Korea Genetics) is a DIFFERENT company** — owned by 장익준,
+  a pig-breeding-stock importer and the smaXtec sensor importer (see
+  `context/smaxtec-sales-structure-context.md`). It is a supplier counterparty,
+  **not** one of the founder's organizations. Never conflate the two.
+
 Default behavior:
 - Turn ideas into action documents.
 - Produce concrete next steps.

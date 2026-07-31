@@ -17,19 +17,52 @@ Genetics → Livestock → Environment → Data → Food → Carbon → Policy
 Agents should always reason at a **strategic, scientific, business, and
 implementation** level simultaneously.
 
+## Founder personal record (for CVs, proposals, government forms)
+
+Confirmed by the founder — reuse these verbatim; do not guess or re-derive.
+
+| 항목 | 내용 |
+|---|---|
+| 성명 | 하현제 / HA HYUN JAE |
+| 휴대전화 | 010-6205-3150 |
+| 이메일 | hhj3150@hanmail.net |
+| 국가연구자번호 | 11152141 |
+| 학력 | **건국대학교 수의과대학** — 1992 입학 / 1999 졸업, 수의학사 (DVM) |
+| 대학원 | **없음 — 석사·박사 학위 없음.** Never list a master's or doctorate. |
+| 수정란 생산(IVP) 개시 | **2009년** |
+| 수정란이식(ET) 경력 | 약 18년 |
+| 주요 경력 | 1999.10–2022.10 ㈜대한사료공업(기술지원) / 2005.10–현재 고려동물병원·㈜제네틱스 원장·대표 |
+
+Still unconfirmed — ask the founder, never invent: 생년월일, 자택 주소,
+수의사 면허번호 및 취득연도, 보유 특허·논문 목록.
+
+> Note: "Dr." is used in this file as a professional courtesy title for a
+> veterinarian (DVM), **not** as a claim of a doctoral degree.
+
 ## Organizations
 
-### Genetics Co., Ltd.
+### Genetics Co., Ltd. (㈜제네틱스)
 Embryo production, embryo transfer, genomic analysis, dairy cattle breeding, Hanwoo breeding.
+
+> **NAMING RULE — MANDATORY.** The company is **㈜제네틱스 / Genetics Co., Ltd.**
+> **Never write "㈜코리아제네틱스" / "코리아 제네틱스"** for this company.
+> **코리아제네틱스 (Korea Genetics)** is a separate company owned by 장익준
+> (pig breeding-stock importer; smaXtec sensor importer) — a supplier counterparty,
+> not one of the founder's organizations. Never conflate the two.
+
 - ~18 years embryo-transfer experience
 - ~3,000 embryo transfers / year
 - ~4,000 embryos sold / year
 - ~60% average conception rate
 - Key projects: Hanwoo embryo programs, dairy recipient-cow programs, genomic selection systems, A2 breeding programs.
 
-### Korea Animal Hospital
+### Koryo Animal Hospital (고려동물병원)
 Embryo transfer, reproduction management, recipient-cow management, calf health programs, herd consulting.
-- Personnel: Dr. Hyunje Ha, Dr. Kwangtaek Lim, Dr. Donghwan Shin, Dr. Mincheol Kim.
+- Personnel: Dr. Hyunje Ha (원장), Dr. Kwangtaek Lim, Dr. Donghwan Shin, Dr. Mincheol Kim.
+
+> **NAMING RULE — MANDATORY.** The hospital's name is **고려동물병원 /
+> Koryo Animal Hospital**. **Never write "한국동물병원" or "Korea Animal Hospital"**
+> in any document, internal or external. This applies to all agents and all outputs.
 
 ### D2O Co., Ltd.
 Livestock environmental consulting, bedding systems, odor reduction, carbon reduction, compost technology.

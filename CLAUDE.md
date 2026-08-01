@@ -153,6 +153,14 @@ Always protect confidential information:
 - Do not disclose confidential methane-reduction strategy.
 - Do not suggest Hanwoo genetic export.
 
+## Active engagement — Nepal Sindhuli dairy PMC (read before any related output)
+The founder is a **번식(reproduction) 참여전문가** on the **네팔 신둘리 한-네팔 시범
+낙농마을 낙농 생산성 및 가치사슬 향상 사업** (한국농어촌공사 글로벌사업처 발주 PMC
+용역, 2026~2030, 74.59억원). Proposal compiled by 해퍼코리아㈜ 이혜원 대표.
+Read `context/nepal-sindhuli-dairy-project-context.md` before writing anything for
+this project — RFP terms, 별지 서식 structure, evaluation criteria, and open questions
+are recorded there. Note: the client is **한국농어촌공사, not KOICA.**
+
 ## Naming rules (mandatory)
 - The founder's veterinary hospital is **고려동물병원 / Koryo Animal Hospital**.
   **Never write "한국동물병원" or "Korea Animal Hospital"** anywhere — internal notes,

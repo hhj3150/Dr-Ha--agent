@@ -17,19 +17,72 @@ Genetics → Livestock → Environment → Data → Food → Carbon → Policy
 Agents should always reason at a **strategic, scientific, business, and
 implementation** level simultaneously.
 
+## Founder personal record (for CVs, proposals, government forms)
+
+> **Full record: `context/founder-cv-and-awards.md`** — transcribed from the
+> founder's 농촌진흥청장 표창 추천 서류 (a document actually submitted to a
+> government agency). **Read that file before writing any CV, 공적조서, 정부
+> 서식, or proposal participant sheet. Do NOT ask the founder for these fields.**
+
+| 항목 | 내용 |
+|---|---|
+| 성명 | 하현제 / 河賢齊 / HA HYUN JAE |
+| 생년월일 | 1973.10.25. |
+| 자택 주소 | 경기도 안성시 공도읍 공도로 150 스위첸 116-1604 |
+| 휴대전화 | 010-6205-3150 |
+| 이메일 | hhj3150@hanmail.net |
+| 국가연구자번호 | 11152141 |
+| 고등학교 | **명신고등학교** |
+| 학력 | 건국대학교 수의과대학 수의학 (학사) — **1992.03 ~ 1999.02** |
+| 직장주소 | **경기도 안성시 보개면 양협길 29-67** (고려동물병원 · D2O 동일 소재지) |
+| 영어 | **읽기 B · 쓰기 B · 말하기 B** |
+| 대학원 | **없음 — 석사·박사 학위 없음.** Never list a master's or doctorate. |
+| 수의사 면허 | **제 10193호, 1999년 2월** |
+| 수의사 경력 | **1999 ~ 현재 (약 27년)** |
+| 고려동물병원 | **2005 개원·원장 (약 21년)** — 번식관리·수정란이식 진료 |
+| ㈜제네틱스 | **2009 설립·대표이사 (약 17년)** — 수정란이식·유전체 개량 |
+| 송영신목장 | **2011 ~ 현재 대표** (저지 전용목장 · A2 저지 헤이밀크) |
+| 디투오㈜ | **2021 설립·대표** |
+| **수상** | **2016.12.30. 농림축산식품부장관 표창(제99209호)** / **2021.11.11. 국무총리 표창(제214912호)** — 항상 기재 |
+| 논문 | **없음** — do not list any paper. |
+| 특허 | 목록 미제공 (founder will supply; leave blank until then) |
+
+**Year discipline:** 고려동물병원 개원 = **2005**, ㈜제네틱스 설립 = **2009**.
+Never merge the two into one "2005~현재 병원·제네틱스" line.
+
+D2O 소재지 (법인 주소, 자택과 구분): 경기도 안성시 보개면 양협길 29-67 (우 17508),
+Tel 031-674-4432.
+
+Handling: 주민등록번호·생년월일·자택 주소·면허번호는 실제 개인정보이므로, 제출
+서식이 요구하는 경우에만 기재하고 불필요한 문서에는 노출하지 않는다.
+
+> Note: "Dr." is used in this file as a professional courtesy title for a
+> veterinarian (DVM), **not** as a claim of a doctoral degree.
+
 ## Organizations
 
-### Genetics Co., Ltd.
+### Genetics Co., Ltd. (㈜제네틱스)
 Embryo production, embryo transfer, genomic analysis, dairy cattle breeding, Hanwoo breeding.
+
+> **NAMING RULE — MANDATORY.** The company is **㈜제네틱스 / Genetics Co., Ltd.**
+> **Never write "㈜코리아제네틱스" / "코리아 제네틱스"** for this company.
+> **코리아제네틱스 (Korea Genetics)** is a separate company owned by 장익준
+> (pig breeding-stock importer; smaXtec sensor importer) — a supplier counterparty,
+> not one of the founder's organizations. Never conflate the two.
+
 - ~18 years embryo-transfer experience
 - ~3,000 embryo transfers / year
 - ~4,000 embryos sold / year
 - ~60% average conception rate
 - Key projects: Hanwoo embryo programs, dairy recipient-cow programs, genomic selection systems, A2 breeding programs.
 
-### Korea Animal Hospital
+### Koryo Animal Hospital (고려동물병원)
 Embryo transfer, reproduction management, recipient-cow management, calf health programs, herd consulting.
-- Personnel: Dr. Hyunje Ha, Dr. Kwangtaek Lim, Dr. Donghwan Shin, Dr. Mincheol Kim.
+- Personnel: Dr. Hyunje Ha (원장), Dr. Kwangtaek Lim, Dr. Donghwan Shin, Dr. Mincheol Kim.
+
+> **NAMING RULE — MANDATORY.** The hospital's name is **고려동물병원 /
+> Koryo Animal Hospital**. **Never write "한국동물병원" or "Korea Animal Hospital"**
+> in any document, internal or external. This applies to all agents and all outputs.
 
 ### D2O Co., Ltd.
 Livestock environmental consulting, bedding systems, odor reduction, carbon reduction, compost technology.

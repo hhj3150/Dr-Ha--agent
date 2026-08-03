@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<title>데이터로 소를 키운다 — 연암대 특강 (인쇄용 PDF)</title>
+<style>
+  :root{
+    --bg:#0c1310; --bg2:#0f1a15; --ink:#f4f7f5; --mut:#a9b7b0;
+    --green:#34c17f; --green-d:#1f7a52; --gold:#e8b84b; --line:rgba(255,255,255,.14);
+    --card:rgba(255,255,255,.06);
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  html,body{height:100%}
+  body{
+    background:#050807; color:var(--ink); overflow:hidden;
+    font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  #viewport{position:fixed; inset:0; display:grid; place-items:center}
+  #stage{width:1280px; height:720px; position:relative; transform-origin:center center;
+    background:var(--bg); overflow:hidden; box-shadow:0 30px 120px rgba(0,0,0,.6)}
+  .slide{position:absolute; inset:0; opacity:0; visibility:hidden;
+    transition:opacity .45s ease; display:flex;
+    background:linear-gradient(135deg,#0b120f 0%,#12211a 55%,#0d1712 100%)}
+  .slide.active{opacity:1; visibility:visible}
+  .slide.active .rise{animation:rise .6s .05s both cubic-bezier(.2,.7,.2,1)}
+  @keyframes rise{from{opacity:0; transform:translateY(22px)}to{opacity:1; transform:none}}
+
+  img.bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; background:#0b120f}
+  .scrim{position:absolute; inset:0}
+  .scrim.bottom{background:linear-gradient(180deg,rgba(4,8,7,.15) 0%,rgba(4,8,7,.45) 40%,rgba(4,8,7,.82) 72%,rgba(4,8,7,.95) 100%)}
+  .scrim.left{background:linear-gradient(90deg,rgba(4,8,7,.96) 0%,rgba(4,8,7,.86) 40%,rgba(4,8,7,.45) 68%,rgba(4,8,7,.12) 100%)}
+  .scrim.dark{background:linear-gradient(180deg,rgba(4,8,7,.6),rgba(4,8,7,.8))}
+  /* 가독성: 사진 위 텍스트에 그림자 */
+  .cover h1,.cover .sub,.cover .meta,.full h2,.full .kicker,.full p,.full .note,.full .capbox p,.full ul.pts li{
+    text-shadow:0 2px 14px rgba(0,0,0,.9), 0 1px 3px rgba(0,0,0,.9)}
+
+  .pad{position:relative; z-index:2; width:100%; height:100%; padding:60px 76px 88px; display:flex; flex-direction:column}
+  .kicker{font-size:16px; letter-spacing:.14em; color:var(--green); font-weight:800; text-transform:uppercase; display:flex; align-items:center; gap:10px}
+  .kicker::before{content:""; width:26px; height:2px; background:var(--green); display:inline-block}
+  h1{font-size:64px; line-height:1.1; font-weight:900; letter-spacing:-.02em}
+  h2{font-size:44px; line-height:1.16; font-weight:850; letter-spacing:-.02em}
+  h3{font-size:27px; font-weight:800; line-height:1.3}
+  p.lead{font-size:23px; line-height:1.55; color:var(--mut); font-weight:500}
+  .hl{color:var(--gold)} .green{color:var(--green)}
+  .spacer{flex:1}
+
+  /* cover */
+  .cover .pad{justify-content:flex-end}
+  .cover h1{font-size:72px; max-width:16em}
+  .cover .sub{margin-top:20px; font-size:24px; color:#dfeae4; font-weight:600}
+  .cover .meta{margin-top:26px; display:flex; gap:26px; flex-wrap:wrap; font-size:17px; color:var(--mut)}
+  .cover .meta b{color:#eef4f0; font-weight:700}
+  .badge{display:inline-flex; align-items:center; gap:9px; background:rgba(52,193,127,.16);
+    border:1px solid rgba(52,193,127,.5); color:#c9f4de; padding:7px 15px; border-radius:999px; font-size:15px; font-weight:700}
+
+  /* full-bleed caption */
+  .capbox{max-width:20em}
+  .capbox h2{font-size:46px}
+  .capbox p{margin-top:16px; font-size:22px; line-height:1.5; color:#e4ede8; font-weight:500}
+
+  /* split */
+  .split .pad{flex-direction:row; align-items:center; gap:52px; padding:56px 72px}
+  .split .col-text{flex:1.05; display:flex; flex-direction:column; gap:18px}
+  .split .col-media{flex:1; height:78%; position:relative; border-radius:18px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,.5)}
+  .split .col-media img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+
+  ul.pts{list-style:none; display:flex; flex-direction:column; gap:14px; margin-top:6px}
+  ul.pts li{position:relative; padding-left:34px; font-size:21px; line-height:1.45; color:#e7efeb; font-weight:500}
+  ul.pts li::before{content:""; position:absolute; left:4px; top:11px; width:11px; height:11px; border-radius:3px;
+    background:var(--green); box-shadow:0 0 0 4px rgba(52,193,127,.18)}
+  ul.pts li b{color:#fff; font-weight:800}
+  ul.pts.gold li::before{background:var(--gold); box-shadow:0 0 0 4px rgba(232,184,75,.18)}
+
+  /* concept slides */
+  .concept{background:radial-gradient(1200px 600px at 78% -10%,rgba(52,193,127,.14),transparent 60%),var(--bg)}
+  .concept .pad{justify-content:center}
+  .center{align-items:center; text-align:center}
+
+  .cards{display:flex; gap:20px; margin-top:34px; width:100%}
+  .card{flex:1; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:26px 24px}
+  .card .n{font-size:15px; font-weight:800; color:var(--green); letter-spacing:.08em}
+  .card h3{margin-top:8px; font-size:24px}
+  .card p{margin-top:10px; font-size:17px; line-height:1.5; color:var(--mut)}
+  .card.big{padding:30px}
+
+  /* stack / flow */
+  .stack{display:flex; flex-direction:column; gap:16px; margin-top:30px; width:82%; align-self:center}
+  .layer{display:flex; align-items:center; gap:22px; background:var(--card); border:1px solid var(--line);
+    border-radius:16px; padding:22px 28px}
+  .layer .lv{font-size:15px; font-weight:800; color:#06120c; background:var(--green); border-radius:8px; padding:6px 12px; white-space:nowrap}
+  .layer h3{font-size:26px} .layer p{color:var(--mut); font-size:17px; margin-top:3px}
+  .layer.g2 .lv{background:var(--gold)} .layer.g3 .lv{background:#5fb0ff}
+
+  .flow{display:flex; align-items:stretch; gap:0; margin-top:34px; width:100%; justify-content:center; flex-wrap:wrap}
+  .node{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 20px; min-width:150px; text-align:center}
+  .node .ic{font-size:26px} .node h3{font-size:18px; margin-top:6px} .node p{font-size:14px; color:var(--mut); margin-top:4px}
+  .arrow{display:flex; align-items:center; color:var(--green); font-size:30px; padding:0 12px}
+
+  .arrowbig{display:flex; align-items:center; justify-content:center; gap:30px; margin-top:20px; width:100%}
+  .abox{flex:1; text-align:center; background:var(--card); border:1px solid var(--line); border-radius:20px; padding:40px 26px}
+  .abox .t{font-size:16px; color:var(--mut); font-weight:700; letter-spacing:.06em}
+  .abox .m{font-size:38px; font-weight:900; margin-top:10px}
+  .abox.to{border-color:rgba(52,193,127,.55); background:linear-gradient(180deg,rgba(52,193,127,.14),rgba(52,193,127,.04))}
+  .abox.to .m{color:var(--green)}
+  .arrowbig .ar{font-size:64px; color:var(--gold); font-weight:300}
+
+  /* circle / venn */
+  .venn{position:relative; width:560px; height:360px; margin:24px auto 0; align-self:center}
+  .venn .c{position:absolute; width:290px; height:290px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    text-align:center; font-weight:800; font-size:20px; mix-blend-mode:screen; padding:20px}
+  .venn .c1{background:rgba(52,193,127,.42); left:0; top:0}
+  .venn .c2{background:rgba(232,184,75,.4); right:0; top:0}
+  .venn .c3{background:rgba(95,176,255,.4); left:135px; bottom:0}
+  .venn .mid{position:absolute; left:50%; top:54%; transform:translate(-50%,-50%); z-index:5; font-size:15px; font-weight:900; color:#fff; text-shadow:0 1px 6px #000}
+
+  .cyc{display:flex; align-items:center; justify-content:center; gap:14px; margin-top:30px; flex-wrap:wrap}
+  .cyc .step{background:var(--card); border:1px solid var(--line); border-radius:999px; padding:16px 24px; font-size:20px; font-weight:800}
+  .cyc .step.acc{background:rgba(52,193,127,.16); border-color:rgba(52,193,127,.5); color:#cbf5e0}
+  .cyc .to{color:var(--gold); font-size:24px}
+
+  .quote{font-size:52px; line-height:1.28; font-weight:900; letter-spacing:-.02em; max-width:20em; text-align:center; align-self:center}
+  .quote .hl{color:var(--gold)}
+
+  .sumrow{display:flex; flex-direction:column; gap:18px; margin-top:26px; width:88%; align-self:center}
+  .sumrow .r{display:flex; gap:20px; align-items:flex-start; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px 26px}
+  .sumrow .r .k{font-size:34px; font-weight:900; color:var(--green); line-height:1}
+  .sumrow .r p{font-size:22px; line-height:1.45; font-weight:600}
+
+  .foot{position:absolute; left:76px; bottom:26px; right:76px; z-index:3; display:flex; justify-content:space-between;
+    align-items:center; font-size:14px; color:rgba(255,255,255,.5); letter-spacing:.03em}
+  .foot .brand{font-weight:800; color:rgba(255,255,255,.72)}
+  .cover .foot,.full .foot{color:rgba(255,255,255,.75)}
+
+  #bar{position:fixed; left:0; top:0; height:4px; background:linear-gradient(90deg,var(--green),var(--gold)); z-index:50; transition:width .3s}
+  #hud{position:fixed; right:16px; bottom:14px; z-index:50; font-size:13px; color:rgba(255,255,255,.55);
+    background:rgba(0,0,0,.4); padding:6px 12px; border-radius:999px; font-variant-numeric:tabular-nums}
+  #hint{position:fixed; left:16px; bottom:14px; z-index:50; font-size:12px; color:rgba(255,255,255,.4)}
+  .note{font-size:15px; color:rgba(255,255,255,.55); margin-top:14px}
+  .tl{display:flex; gap:10px; margin-top:26px; flex-wrap:wrap}
+  .tl .seg{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px 14px; font-size:14px; color:var(--mut)}
+  .tl .seg b{color:#eaf2ee; display:block; font-size:15px}
+</style>
+
+<style>
+  html,body{overflow:visible;height:auto;background:#0b120f}
+  #bar,#hud,#hint{display:none!important}
+  #viewport{position:static;display:block}
+  #stage{width:auto;height:auto;transform:none!important;box-shadow:none;background:transparent}
+  .slide{position:relative!important;opacity:1!important;visibility:visible!important;
+    width:1280px;height:720px;overflow:hidden;display:flex;page-break-after:always;break-after:page}
+  .slide:last-child{page-break-after:auto;break-after:auto}
+  .rise{opacity:1!important;transform:none!important;animation:none!important}
+  @page{size:1280px 720px;margin:0}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+</style>
+</head><body>
+
+
+<!-- 1 COVER -->
+<section class="slide cover">
+  <img class="bg" src="images/img01-title.png" data-remote="hf_20260707_051603_9ef4497b-957e-4fd5-830d-9b4cf9275eaf.png" alt="">
+  <div class="scrim bottom"></div>
+  <div class="pad">
+    <div class="rise"><span class="badge">연암대학교 축산 스마트팜 특강 · 2026.07.11</span></div>
+    <h1 class="rise">데이터로 소를 키운다</h1>
+    <div class="sub rise">스마트 축산의 현재와 미래 — 센서·AI·플랫폼이 바꾸는 축산</div>
+    <div class="meta rise">
+      <span>강사 <b>하현제</b> · 수의사</span>
+      <span>Genetics · D2O · Eco-BIT / CowTalk AI</span>
+      <span>약 45분</span>
+    </div>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>Eco-BIT · CowTalk AI</span></div>
+</section>
+
+<!-- 2 AGENDA -->
+<section class="slide concept">
+  <div class="pad">
+    <div class="kicker rise">오늘 이야기</div>
+    <h2 class="rise" style="margin-top:14px">45분 동안, 네 가지 질문에 답합니다</h2>
+    <div class="cards rise">
+      <div class="card"><div class="n">Q1</div><h3>왜 지금 '스마트' 축산인가?</h3><p>사람은 줄고, 지켜야 할 것은 늘어난다</p></div>
+      <div class="card"><div class="n">Q2</div><h3>센서는 무엇을 읽는가?</h3><p>소 몸속에서 24시간, 쉬지 않고</p></div>
+      <div class="card"><div class="n">Q3</div><h3>AI는 무엇을 예측하는가?</h3><p>발정 · 질병 · 분만을 사람보다 먼저</p></div>
+      <div class="card"><div class="n">Q4</div><h3>그래서 나는 무슨 일을?</h3><p>새로 열리는 직업과 필요한 역량</p></div>
+    </div>
+    <p class="lead rise" style="margin-top:28px">결론 먼저 — <span class="hl">축산은 이제 '경험 산업'이 아니라 '데이터 산업'이 됩니다.</span></p>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>02 · 오늘 이야기</span></div>
+</section>
+
+<!-- 3 HOOK -->
+<section class="slide full">
+  <img class="bg" src="images/img02-cow-eye.png" data-remote="hf_20260707_051638_c07c4402-8fcb-49df-bde4-1d74a649b554.png" alt="">
+  <div class="scrim left"></div>
+  <div class="pad" style="justify-content:center">
+    <div class="capbox rise">
+      <div class="kicker" style="margin-bottom:14px">Hook</div>
+      <h2>소 한 마리는 하루에<br><span class="green">수천 개의 데이터</span>를 만든다</h2>
+      <p>체온 · 반추 · 활동량 · 음수량… 매 순간. 그런데 우리는 그동안 그 데이터를 거의 다 <span class="hl">버려왔다.</span></p>
+      <p style="margin-top:10px">스마트 축산 = 버려지던 데이터를 붙잡아, <b>소가 말하기 전에 아는 것.</b></p>
+    </div>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>03 · 오프닝</span></div>
+</section>
+
+<!-- 4 REALITY -->
+<section class="slide split">
+  <div class="pad">
+    <div class="col-text">
+      <div class="kicker rise">1. 왜 지금인가</div>
+      <h2 class="rise">일할 사람은 줄고,<br>지켜야 할 것은 늘어난다</h2>
+      <ul class="pts rise">
+        <li>축산 농가 경영주 <b>평균 연령 60대</b> — 후계 인력 부족</li>
+        <li>노동력 위기: 소 한 마리씩 사람 손으로 챙기는 시대의 끝</li>
+        <li>질병 리스크 상승: 구제역·럼피스킨·AI</li>
+        <li>기후 리스크: 폭염·한파가 생산성을 흔든다</li>
+      </ul>
+      <p class="note rise">→ 스마트 축산은 '있으면 좋은 것'이 아니라 <b>'없으면 안 되는 것'</b>이 되었다.</p>
+    </div>
+    <div class="col-media rise">
+      <img src="images/img03-farmer-elderly.png" data-remote="hf_20260707_051640_e1690655-9b28-4722-823b-6ac3a42fb886.png" alt="">
+    </div>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>04 · 왜 지금인가</span></div>
+</section>
+
+<!-- 5 WHAT WE MISS -->
+<section class="slide full">
+  <img class="bg" src="images/img15-night-illness.png" data-remote="hf_20260707_051713_4b9e4fd2-ce0f-4dd9-b82e-2de10c8def13.png" alt="">
+  <div class="scrim left"></div>
+  <div class="pad" style="justify-content:center">
+    <div class="capbox rise" style="max-width:23em">
+      <div class="kicker" style="margin-bottom:14px">가장 비싼 실수</div>
+      <h2>"늦게 아는 것"</h2>
+      <ul class="pts" style="margin-top:20px">
+        <li><b>무발정(silent heat)</b> — 발정 1회 놓침 = 공태 +21일 = 손실</li>
+        <li><b>질병 조기 징후</b> — 눈에 보일 땐 이미 늦다</li>
+        <li><b>분만 사고</b> — 하필 새벽 3시, 아무도 없을 때</li>
+      </ul>
+      <p style="margin-top:16px">사람 눈이 놓치는 이 순간을, 센서와 AI가 먼저 잡는다.</p>
+    </div>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>05 · 왜 지금인가</span></div>
+</section>
+
+<!-- 6 PARADIGM -->
+<section class="slide concept center">
+  <div class="pad center">
+    <div class="kicker rise" style="align-self:center">패러다임 전환</div>
+    <h2 class="rise" style="margin-top:12px">경험에 '데이터'라는 눈을 하나 더 단다</h2>
+    <div class="arrowbig rise">
+      <div class="abox"><div class="t">지금까지</div><div class="m">경험 · 직관</div></div>
+      <div class="ar">→</div>
+      <div class="abox to"><div class="t">정밀축산 (PLF)</div><div class="m">측정 · 예측</div></div>
+    </div>
+    <p class="lead rise" style="margin-top:26px; text-align:center">핵심은 <span class="green">무리(herd) → 개체(individual)</span>. "우리 소 100마리"가 아니라 <span class="hl">"3번 소가 지금"</span>까지.</p>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>06 · 왜 지금인가</span></div>
+</section>
+
+<!-- 7 THREE LAYERS -->
+<section class="slide concept">
+  <div class="pad">
+    <div class="kicker rise">2. 핵심 기술</div>
+    <h2 class="rise" style="margin-top:12px">스마트 축산은 딱 3층이다</h2>
+    <div class="stack rise">
+      <div class="layer"><span class="lv">1층 · 센서</span><div><h3>Sensing — 몸에서 데이터를 읽는다</h3><p>위내 센서가 24시간 체온·반추·활동을 측정</p></div></div>
+      <div class="layer g2"><span class="lv">2층 · AI</span><div><h3>Intelligence — 데이터를 판단으로 바꾼다</h3><p>"3번 소, 발정 가능성 높음" — 사람의 언어로</p></div></div>
+      <div class="layer g3"><span class="lv">3층 · 플랫폼</span><div><h3>Platform — 함께 본다</h3><p>농가 · 수의사 · 정부가 각자 필요한 화면으로</p></div></div>
+    </div>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>07 · 핵심 기술</span></div>
+</section>
+
+<!-- 8 SENSOR -->
+<section class="slide split">
+  <div class="pad">
+    <div class="col-text">
+      <div class="kicker rise">1층 · 센서</div>
+      <h2 class="rise">웨어러블을 넘어,<br><span class="green">소의 몸속으로</span></h2>
+      <ul class="pts rise">
+        <li>목걸이 · 귀표(외부) → 떨어지고, 오염되고, 날씨 탄다</li>
+        <li><b>위내 센서(볼러스)</b> — 반추위 안에 안착, 몇 년간</li>
+        <li>몸 안쪽 <b>체온</b>은 가장 정직한 건강 신호</li>
+        <li>발정 ↑ · 질병 ↑ · 분만 임박 시 체온 변화</li>
+      </ul>
+      <p class="note rise">이 작은 캡슐 하나가, 사람이 절대 못 하는 24시간 관찰을 한다.</p>
+    </div>
+    <div class="col-media rise">
+      <img src="images/img05-sensor.png" data-remote="hf_20260707_051644_78d24ba7-331d-434f-900f-c48ba65df77f.png" alt="">
+    </div>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>08 · 핵심 기술</span></div>
+</section>
+
+<!-- 9 FOUR SIGNALS -->
+<section class="slide full">
+  <img class="bg" src="images/img06-barn.png" data-remote="hf_20260707_051649_6f40eabf-2ed8-4bca-bf34-57c32acec96a.png" alt="">
+  <div class="scrim bottom"></div>
+  <div class="pad" style="justify-content:flex-end">
+    <div class="rise"><div class="kicker" style="margin-bottom:12px">센서가 읽는 4가지</div>
+    <h2 style="max-width:15em">체온 · 반추 · 활동량 · 음수량 — 소의 '건강 언어'</h2></div>
+    <div class="cards rise" style="margin-top:22px">
+      <div class="card"><h3>🌡️ 체온</h3><p>발정·질병·분만의 1차 신호</p></div>
+      <div class="card"><h3>🔄 반추</h3><p>줄어들면 컨디션 저하 신호</p></div>
+      <div class="card"><h3>🚶 활동량</h3><p>급증 시 발정 가능성 ↑</p></div>
+      <div class="card"><h3>💧 음수량</h3><p>급감 시 이상 징후</p></div>
+    </div>
+    <p class="note rise" style="margin-top:16px">핵심은 '따로'가 아니라 <b>'조합'</b> — 체온↑·활동↓이면 발정이 아니라 병이다.</p>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>09 · 핵심 기술</span></div>
+</section>
+
+<!-- 10 AI PREDICTS -->
+<section class="slide split">
+  <div class="pad">
+    <div class="col-text">
+      <div class="kicker rise">2층 · AI (CowTalk AI)</div>
+      <h2 class="rise">데이터를 <span class="green">'사람의 언어'</span>로 번역한다</h2>
+      <ul class="pts gold rise">
+        <li>「3번 소 · 발정 가능성 높음 · <b>오늘 오후 수정 권장</b>」</li>
+        <li>「7번 소 · 질병 위험 · <b>수의사 확인 필요</b>」</li>
+        <li>「12번 소 · <b>24시간 내 분만 예상</b>」</li>
+      </ul>
+      <p class="note rise">농가에 필요한 건 그래프가 아니라 이 한 문장. 100마리든 500마리든, <b>지금 챙길 소만</b> 콕 집어준다.</p>
+    </div>
+    <div class="col-media rise">
+      <img src="images/img07-smartphone.png" data-remote="hf_20260707_051653_4ef00c69-7357-4b71-a5b0-75694f4481eb.png" alt="">
+    </div>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>10 · 핵심 기술</span></div>
+</section>
+
+<!-- 11 ECONOMICS -->
+<section class="slide concept center">
+  <div class="pad center">
+    <div class="kicker rise" style="align-self:center">숫자로 보는 가치</div>
+    <h2 class="rise" style="margin-top:12px">무발정을 잡는다는 것 = 돈을 버는 것</h2>
+    <div class="flow rise" style="margin-top:30px">
+      <div class="node"><div class="ic">😶</div><h3>발정 1회 놓침</h3><p>사람 눈의 한계</p></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="ic">📅</div><h3>공태 +21일</h3><p>사료비·기회비용</p></div>
+      <div class="arrow">→</div>
+      <div class="node" style="border-color:rgba(232,184,75,.5)"><div class="ic">💸</div><h3>순손실</h3><p>마리마다 · 목장마다</p></div>
+    </div>
+    <p class="lead rise" style="margin-top:28px; text-align:center">센서+AI로 <span class="green">발정 발견율 ↑ → 공태 ↓ → 농가 수익 ↑</span></p>
+    <p class="note rise" style="text-align:center">※ 구체 수치는 목장·품종별로 다르며 <b>현장 실증으로 검증</b>하는 것이 원칙 — 오늘은 '방향'을 기억.</p>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>11 · 핵심 기술</span></div>
+</section>
+
+<!-- 12 PLATFORM -->
+<section class="slide full">
+  <img class="bg" src="images/img08-control-room.png" data-remote="hf_20260707_051654_dff831d8-7e16-4631-94b3-6d51ffcbcb96.png" alt="">
+  <div class="scrim left"></div>
+  <div class="pad" style="justify-content:center">
+    <div class="capbox rise" style="max-width:24em">
+      <div class="kicker" style="margin-bottom:12px">3층 · 플랫폼 (Eco-BIT)</div>
+      <h2>같은 소 하나, <span class="green">세 사람이 다르게 본다</span></h2>
+      <ul class="pts" style="margin-top:18px">
+        <li><b>농가</b> — 내 3번 소 챙기기</li>
+        <li><b>수의사</b> — 여러 목장의 아픈 소만 모아서</li>
+        <li><b>정부·방역</b> — 지역 이상신호 지도</li>
+      </ul>
+      <p style="margin-top:14px">Eco-BIT = <span class="hl">Bio + Biotech + IT</span>. 개체 데이터가 모이면 <b>국가 방역 데이터</b>가 된다.</p>
+    </div>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>12 · 핵심 기술</span></div>
+</section>
+
+<!-- 13 DATA FLOW -->
+<section class="slide concept">
+  <div class="pad">
+    <div class="kicker rise">데이터는 이렇게 흐른다</div>
+    <h2 class="rise" style="margin-top:12px">센서 → 클라우드 → AI → 모두의 화면</h2>
+    <div class="flow rise" style="margin-top:36px">
+      <div class="node"><div class="ic">🐄</div><h3>소 · 위내센서</h3></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="ic">📡</div><h3>게이트웨이</h3></div>
+      <div class="arrow">→</div>
+      <div class="node"><div class="ic">☁️</div><h3>클라우드</h3></div>
+      <div class="arrow">→</div>
+      <div class="node" style="border-color:rgba(232,184,75,.5)"><div class="ic">🧠</div><h3>AI 분석</h3></div>
+      <div class="arrow">→</div>
+      <div class="node" style="border-color:rgba(52,193,127,.5)"><div class="ic">📱</div><h3>농가·수의사<br>·정부</h3></div>
+    </div>
+    <p class="lead rise" style="margin-top:34px; text-align:center">화살표는 한 방향이 아니다 — 처방·조치가 다시 데이터로 쌓여 <span class="green">쓸수록 똑똑해진다.</span></p>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>13 · 핵심 기술</span></div>
+</section>
+
+<!-- 14 POLICY -->
+<section class="slide full">
+  <img class="bg" src="images/img09-control-wall.png" data-remote="hf_20260707_051654_dff831d8-7e16-4631-94b3-6d51ffcbcb96.png" alt="">
+  <div class="scrim bottom"></div>
+  <div class="pad" style="justify-content:flex-end">
+    <div class="rise"><div class="kicker" style="margin-bottom:12px">3. 현장에서 벌어지는 일</div>
+    <h2 style="max-width:17em">이건 이미 '정책'이 되고 있다</h2></div>
+    <p class="lead rise" style="margin-top:16px; max-width:34em; color:#e4ede8">
+      경기도 <b class="green">AI 축산행정 플랫폼</b> — 5년 규모 대형 프로젝트. 센서·AI·플랫폼 3층 구조를 한 개 도(道) 전체에 깐다.</p>
+    <div class="cyc rise" style="margin-top:22px; justify-content:flex-start">
+      <span class="step acc">경기 (Flagship)</span><span class="to">→</span>
+      <span class="step">강원</span><span class="to">→</span>
+      <span class="step">전라</span><span class="to">→</span>
+      <span class="step">전국</span><span class="to">→</span>
+      <span class="step">해외</span>
+    </div>
+    <p class="note rise" style="margin-top:14px">표준이 바뀔 때 <b>새로운 일자리</b>가 생긴다 — 여러분 이야기다.</p>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>14 · 현장</span></div>
+</section>
+
+<!-- 15 BRAND -->
+<section class="slide split">
+  <div class="pad">
+    <div class="col-text">
+      <div class="kicker rise">데이터가 만든 프리미엄</div>
+      <h2 class="rise">건강한 데이터 →<br><span class="green">건강한 우유</span></h2>
+      <p class="lead rise">송영신목장 · <b>A2 저지 하이밀크</b></p>
+      <div class="cyc rise" style="justify-content:flex-start; margin-top:10px">
+        <span class="step acc">흙</span><span class="to">→</span><span class="step acc">풀</span><span class="to">→</span>
+        <span class="step acc">소</span><span class="to">→</span><span class="step acc">우유</span><span class="to">→</span><span class="step acc">사람</span>
+      </div>
+      <p class="note rise">"건강한 소에서 나온 우유"를 말이 아니라 <b>센서 데이터로 증명</b>한다. 그게 프리미엄의 근거.</p>
+    </div>
+    <div class="col-media rise">
+      <img src="images/img10-milk.png" data-remote="hf_20260707_051657_c1e52741-ce5e-46b9-a136-7075c461b581.png" alt="">
+    </div>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>15 · 현장</span></div>
+</section>
+
+<!-- 16 CIRCULAR -->
+<section class="slide split">
+  <div class="pad">
+    <div class="col-text">
+      <div class="kicker rise">순환농업 (D2O)</div>
+      <h2 class="rise">골칫거리(분뇨·악취·탄소)를<br><span class="green">자원으로</span></h2>
+      <div class="cyc rise" style="justify-content:flex-start">
+        <span class="step">소·분뇨</span><span class="to">→</span><span class="step acc">퇴비화</span><span class="to">→</span>
+        <span class="step">흙</span><span class="to">→</span><span class="step">풀</span><span class="to">↺</span>
+      </div>
+      <ul class="pts rise" style="margin-top:8px">
+        <li>축사 깔짚 기술 + 미생물로 분뇨를 <b>좋은 퇴비</b>로</li>
+        <li>악취·탄소 감축을 <b>측정·기록</b> → ESG·탄소 인증</li>
+      </ul>
+      <p class="note rise">미래 축산은 '얼마나 많이'만큼 <b>'얼마나 지속가능하냐'</b>로 평가받는다.</p>
+    </div>
+    <div class="col-media rise">
+      <img src="images/img11-soil.png" data-remote="hf_20260707_051702_680013f8-b5cc-4979-a723-5e57784f040f.png" alt="">
+    </div>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>16 · 현장</span></div>
+</section>
+
+<!-- 17 GLOBAL -->
+<section class="slide full">
+  <img class="bg" src="images/img12-uzbek.png" data-remote="hf_20260707_051704_b1138eed-6405-4e35-9d1d-05803202f4da.png" alt="">
+  <div class="scrim left"></div>
+  <div class="pad" style="justify-content:center">
+    <div class="capbox rise" style="max-width:25em">
+      <div class="kicker" style="margin-bottom:12px">국경을 넘는 축산</div>
+      <h2>기술과 유전자원을<br><span class="green">함께 수출한다</span></h2>
+      <ul class="pts" style="margin-top:18px">
+        <li><b>유전자원</b> — 한국 홀스타인 성감별 젖소 수정란</li>
+        <li><b>플랫폼</b> — CowTalk AI 해외 진출 (우즈베키스탄 파일럿)</li>
+      </ul>
+      <p style="margin-top:14px">축산 전공은 '동네 목장'에 갇히지 않는다. 유전학+데이터를 쥐면 <span class="hl">무대는 전 세계.</span></p>
+      <p class="note">※ 젖소 수정란에 한함 — 한우 유전자원 수출은 법으로 금지, 다루지 않는다.</p>
+    </div>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>17 · 현장</span></div>
+</section>
+
+<!-- 18 GENETICS -->
+<section class="slide split">
+  <div class="pad">
+    <div class="col-text">
+      <div class="kicker rise">모든 것의 시작점</div>
+      <h2 class="rise">어떤 소를<br><span class="green">태어나게 할 것인가</span></h2>
+      <ul class="pts rise">
+        <li>수정란 이식 + <b>유전체 선발</b>로 '태어날 때부터 우수한 소'</li>
+        <li>우유·건강·A2 등 좋은 형질을 계획적으로</li>
+        <li>참고 규모: 연 <b>약 3,000건</b> 이식 · 수태율 <b>약 60%</b> 수준의 현장 경험</li>
+      </ul>
+      <p class="note rise">유전학이 '좋은 소'를, 센서·AI가 '잘 키우고', 플랫폼이 '산업으로'. <b>유전자에서 데이터까지 하나로.</b></p>
+    </div>
+    <div class="col-media rise">
+      <img src="images/img13-lab.png" data-remote="hf_20260707_051707_b271f625-2c2a-4c3e-b609-f26d8f8c6d97.png" alt="">
+    </div>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>18 · 현장</span></div>
+</section>
+
+<!-- 19 JOBS -->
+<section class="slide full">
+  <img class="bg" src="images/img14-newgen.png" data-remote="hf_20260707_051709_acebdb59-5c2f-45d8-b0dd-fd622e80d782.png" alt="">
+  <div class="scrim bottom"></div>
+  <div class="pad" style="justify-content:flex-end">
+    <div class="rise"><div class="kicker" style="margin-bottom:12px">4. 여러분의 미래</div>
+    <h2 style="max-width:18em">새로 열리는 직업 — 여러분이 1순위 후보</h2></div>
+    <div class="cards rise" style="margin-top:20px">
+      <div class="card"><h3>📊 축산 데이터 분석가</h3></div>
+      <div class="card"><h3>🔧 센서 운영·설치</h3></div>
+      <div class="card"><h3>🧭 정밀축산 컨설턴트</h3></div>
+    </div>
+    <div class="cards rise" style="margin-top:14px">
+      <div class="card"><h3>💻 축산 플랫폼 PM</h3></div>
+      <div class="card"><h3>🧬 유전·수정란 기술자</h3></div>
+      <div class="card"><h3>🏡 스마트 목장 경영주</h3></div>
+    </div>
+    <p class="note rise" style="margin-top:14px">공통점? <b>5년 전엔 없던 직업</b>이다. 산업이 바뀌면 직업이 새로 생긴다.</p>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>19 · 여러분의 미래</span></div>
+</section>
+
+<!-- 20 SKILLS / VENN -->
+<section class="slide concept center">
+  <div class="pad center">
+    <div class="kicker rise" style="align-self:center">필요한 3가지 힘</div>
+    <h2 class="rise" style="margin-top:10px">셋이 겹치는 사람 = 가장 귀한 인재</h2>
+    <div class="venn rise">
+      <div class="c c1">생명<br><small style="font-size:14px;font-weight:600">생리·번식·질병</small></div>
+      <div class="c c2">데이터<br><small style="font-size:14px;font-weight:600">통계·앱·대시보드</small></div>
+      <div class="c c3">현장<br><small style="font-size:14px;font-weight:600">설치·관찰·소통</small></div>
+      <div class="mid">여러분</div>
+    </div>
+    <p class="note rise" style="text-align:center; margin-top:8px">데이터만 아는 사람도, 소만 아는 사람도 많다. <b>둘 다 겁 안 내는 사람</b>이 드물다.</p>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>20 · 여러분의 미래</span></div>
+</section>
+
+<!-- 21 DO NOW -->
+<section class="slide concept">
+  <div class="pad">
+    <div class="kicker rise">지금 당장 할 수 있는 것</div>
+    <h2 class="rise" style="margin-top:12px">졸업 후가 아니라, 지금부터</h2>
+    <ul class="pts rise" style="margin-top:24px; font-size:23px">
+      <li>학교 스마트팜 장비의 데이터를 <b>직접 열어보기</b></li>
+      <li>실습 관찰을 <b>엑셀·구글시트에 기록</b>으로 남기기</li>
+      <li>목장 실습 때 <b>"이 데이터로 뭘 알 수 있지?"</b> 질문하기</li>
+      <li>영어 조금 — 무대를 세계로 넓히는 열쇠</li>
+      <li><b>작은 프로젝트 하나를 '끝까지'</b> 완성해 보기</li>
+    </ul>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>21 · 여러분의 미래</span></div>
+</section>
+
+<!-- 22 QUOTE -->
+<section class="slide concept center">
+  <div class="pad center">
+    <div class="quote rise">축산은 이제 <span class="hl">생명과학과 데이터</span>가<br>만나는 산업이다.<br>그 교차점에 <span class="green">여러분</span>이 있다.</div>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>22 · 여러분의 미래</span></div>
+</section>
+
+<!-- 23 SUMMARY -->
+<section class="slide concept">
+  <div class="pad">
+    <div class="kicker rise">오늘의 요약</div>
+    <h2 class="rise" style="margin-top:10px">세 줄이면 충분합니다</h2>
+    <div class="sumrow rise">
+      <div class="r"><div class="k">1</div><p>스마트 축산 = 버려지던 데이터로, <b>소가 말하기 전에 아는 것</b></p></div>
+      <div class="r"><div class="k">2</div><p>기술은 3층 — <b>센서 → AI → 플랫폼</b></p></div>
+      <div class="r"><div class="k">3</div><p>축산 전공 + 데이터 = <b>앞으로 10년 가장 귀한 인재</b></p></div>
+    </div>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>23 · 마무리</span></div>
+</section>
+
+<!-- 24 THANKS -->
+<section class="slide cover">
+  <img class="bg" src="images/img16-closing.png" data-remote="hf_20260707_051711_9fed08af-cb06-49cb-9662-84fe74634004.png" alt="">
+  <div class="scrim bottom"></div>
+  <div class="pad">
+    <h1 class="rise" style="font-size:66px">고맙습니다.</h1>
+    <div class="sub rise">무엇이든 물어보세요 — 소 이야기, 진로, 창업 다 좋습니다.</div>
+    <div class="meta rise"><span>하현제 · 수의사</span><span>Genetics · D2O · Eco-BIT / CowTalk AI</span></div>
+  </div>
+  <div class="foot"><span class="brand">데이터로 소를 키운다</span><span>24 · Q&amp;A</span></div>
+</section>
+
+
+
+<script>
+(function(){var R="https://d8j0ntlcm91z4.cloudfront.net/user_3ElYiAWu98e8A0tSSuzytjpuMFT/";
+Array.prototype.forEach.call(document.querySelectorAll('img[data-remote]'),function(img){
+  img.addEventListener('error',function(){var r=R+img.getAttribute('data-remote');if(img.src.indexOf(R)===-1)img.src=r;});
+});})();
+</script>
+</body></html>

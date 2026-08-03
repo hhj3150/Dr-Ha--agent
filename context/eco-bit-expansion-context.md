@@ -18,6 +18,14 @@ Operating System**:
 - Carbon monitoring infrastructure
 - Government livestock management infrastructure
 
+## Standard go-to-market model
+Use the **CowTalk-Core Model** for every province/country proposal:
+CowTalk AI is the core (national livestock data hub); genetics, environment (Eco-BIT),
+sensors, and finance are modules layered on top. Reuse the 4-layer stack, pilot KPI set,
+3-stage business model, and risk register — swap only the finance/partner/localization
+layer per domestic vs international. See `context/cowtalk-core-model-context.md`.
+First applied case: `deliverables/uzbekistan-01-cowtalk-core-proposal.md`.
+
 ## CowTalk AI as a 5-fold strategic business
 1. Precision livestock platform
 2. smaXtec sensor operations business

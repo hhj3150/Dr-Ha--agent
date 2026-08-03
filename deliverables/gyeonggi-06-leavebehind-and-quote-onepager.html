@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>경기도 인수위 — 도지사 보고 요약 & 견적·컨소시엄 1페이저</title>
+<meta name="hz:slide-selector" content=".page" />
+<meta name="hz:canvas-width" content="794" />
+<meta name="hz:canvas-height" content="1123" />
+<link rel="stylesheet" href="https://use.typekit.net/wag6jrh.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.page, .page * { font-family: "noto-sans-cjk-kr", sans-serif; }
+
+body {
+  background: #5b6573;
+  font-family: "noto-sans-cjk-kr", sans-serif;
+  display: flex; flex-direction: column; align-items: center;
+  gap: 24px; padding: 24px;
+}
+
+.page {
+  position: relative;
+  width: 210mm; height: 297mm;
+  background: #FFFFFF;
+  overflow: hidden;
+  color: #0E2A47;
+}
+
+/* ---- top band ---- */
+.band {
+  background: linear-gradient(120deg,#0A1F38,#15406E);
+  color: #fff; padding: 9mm 14mm 8mm 14mm;
+  position: relative; overflow: hidden;
+}
+.band .kick { font-size: 9pt; font-weight: 700; letter-spacing: 2px; color:#7FB6FF; }
+.band .ttl { font-size: 21pt; font-weight: 900; margin-top: 3mm; line-height:1.12; letter-spacing:-0.5px; }
+.band .sub { font-size: 10.5pt; font-weight: 500; color:#C5D6EC; margin-top: 2.5mm; }
+.band .gl {
+  position:absolute; width:90mm; height:90mm; right:-30mm; top:-35mm;
+  background: radial-gradient(circle, rgba(29,111,224,0.45), rgba(29,111,224,0) 62%);
+}
+
+.wrap { padding: 7mm 14mm; }
+
+/* ---- one-line conclusion ---- */
+.concl {
+  background:#EAF1FC; border-left:4mm solid #1D6FE0; border-radius:0 8px 8px 0;
+  padding: 4mm 6mm; font-size: 11.5pt; font-weight:700; color:#143C7A; line-height:1.4;
+}
+.concl b { color:#0E2A47; }
+
+/* ---- section title ---- */
+.sec { font-size: 12pt; font-weight:900; color:#0E2A47; margin: 6mm 0 3mm 0; display:flex; align-items:center; gap:2.5mm; }
+.sec::before { content:""; width:4mm; height:4mm; background:#1D6FE0; border-radius:1.2mm; display:inline-block; }
+
+/* ---- pipeline ---- */
+.pipe { display:flex; align-items:stretch; gap:2mm; }
+.pstage { flex:1; border:1px solid #E2E8F1; border-radius:3mm; padding:4mm 4mm; background:#FAFBFD; }
+.pstage .pn { font-size:8pt; font-weight:900; color:#9DB2C8; }
+.pstage .pr { font-size:11pt; font-weight:900; margin-top:1.5mm; }
+.pstage .pd { font-size:8.5pt; font-weight:400; color:#5A6B7E; margin-top:1.5mm; line-height:1.4; }
+.parr { align-self:center; color:#1D6FE0; font-weight:900; font-size:15pt; }
+
+/* ---- stat row ---- */
+.stats { display:flex; gap:3mm; }
+.stat { flex:1; border:1px solid #E2E8F1; border-radius:3mm; padding:4mm; text-align:center; background:#fff; }
+.stat .n { font-size:18pt; font-weight:900; color:#1D6FE0; line-height:1; letter-spacing:-0.5px; }
+.stat .l { font-size:8pt; font-weight:500; color:#5A6B7E; margin-top:2mm; line-height:1.35; }
+
+/* ---- why-us box ---- */
+.why { background:linear-gradient(120deg,#0E2A47,#15406E); color:#EAF1FC; border-radius:3mm; padding:5mm 6mm; }
+.why .t { font-size:9pt; font-weight:700; color:#7FB6FF; letter-spacing:1px; }
+.why .m { font-size:10.5pt; font-weight:700; color:#fff; margin-top:2mm; line-height:1.5; }
+.why .m em { color:#FFD27A; font-style:normal; }
+.why ul { margin:3mm 0 0 5mm; }
+.why li { font-size:9.5pt; line-height:1.6; color:#D6E3F2; }
+.why li b { color:#fff; }
+
+/* ---- chips ---- */
+.chips { display:flex; flex-wrap:wrap; gap:2mm; }
+.chip { background:#EAF1FC; color:#1D5BBE; font-size:9pt; font-weight:700; padding:2.5mm 4mm; border-radius:20mm; }
+.chip.g { background:#E7F4EE; color:#15885C; }
+
+/* ---- asks ---- */
+.asks { display:flex; gap:3mm; }
+.ask { flex:1; border:1px solid #E2E8F1; border-radius:3mm; padding:4mm; }
+.ask .b { width:7mm; height:7mm; border-radius:1.8mm; color:#fff; font-weight:900; font-size:10pt; display:flex; align-items:center; justify-content:center; }
+.ask h5 { font-size:10pt; font-weight:900; color:#0E2A47; margin-top:2.5mm; }
+.ask p { font-size:8.5pt; font-weight:400; color:#5A6B7E; margin-top:1.5mm; line-height:1.4; }
+
+/* ---- footer ---- */
+.foot { position:absolute; left:14mm; right:14mm; bottom:8mm; border-top:1px solid #DCE3EC; padding-top:3mm;
+  display:flex; justify-content:space-between; font-size:8pt; font-weight:500; color:#8593A4; }
+.foot b { color:#0E2A47; }
+
+/* ============ tables (page 2) ============ */
+table { width:100%; border-collapse:collapse; }
+.tbl th { background:#0E2A47; color:#fff; font-size:8.5pt; font-weight:700; padding:2.5mm 3mm; text-align:left; }
+.tbl td { font-size:8.5pt; padding:2.3mm 3mm; border-bottom:1px solid #E8EDF3; color:#34465A; }
+.tbl tr:nth-child(even) td { background:#F8FAFC; }
+.tbl .num { text-align:right; font-weight:700; color:#0E2A47; }
+.tbl .fit { color:#E0A12E; font-weight:900; letter-spacing:1px; }
+.tbl .sum td { background:#EAF1FC; font-weight:900; color:#0E2A47; border-top:2px solid #1D6FE0; }
+
+/* target tiers */
+.tiers { display:flex; gap:3mm; }
+.tier { flex:1; border-radius:3mm; padding:4mm; color:#fff; }
+.tier .l { font-size:8pt; font-weight:700; opacity:.9; }
+.tier .n { font-size:16pt; font-weight:900; margin-top:1mm; }
+.tier .d { font-size:8pt; font-weight:400; margin-top:1.5mm; opacity:.92; line-height:1.35; }
+
+/* quote table */
+.q td { font-size:9pt; padding:3mm; border-bottom:1px solid #E8EDF3; color:#34465A; }
+.q .item { font-weight:700; color:#0E2A47; }
+.q .amt { text-align:right; font-weight:900; color:#1D6FE0; font-size:10pt; white-space:nowrap; }
+.q .cond { font-size:8pt; color:#7A8A9C; }
+.q .rev { background:#E7F4EE; }
+.q .rev .amt { color:#15885C; }
+
+/* consortium */
+.cons { display:flex; align-items:center; gap:2mm; flex-wrap:wrap; }
+.cnode { border:1px solid #CBD8E6; border-radius:2.5mm; padding:3mm 4mm; font-size:8.5pt; font-weight:700; color:#0E2A47; background:#fff; text-align:center; }
+.cnode.hub { background:#0E2A47; color:#fff; border-color:#0E2A47; }
+.cnode.acc { background:#EAF1FC; color:#1D5BBE; border-color:#BCD4F0; }
+.carr { color:#9DB2C8; font-weight:900; font-size:11pt; }
+
+.note { font-size:8pt; color:#8593A4; margin-top:2.5mm; line-height:1.4; }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- PAGE 1 — LEAVE-BEHIND (도지사 보고 요약)                      -->
+<!-- ============================================================ -->
+<div class="page" data-canvas-width="794" data-canvas-height="1123">
+  <div class="band">
+    <div class="gl"></div>
+    <div class="kick">경기도 도지사 보고용 핵심 요약 · ONE-PAGE BRIEF</div>
+    <div class="ttl">CowTalk AI × Eco-BIT</div>
+    <div class="sub">경기도 AI 축산행정 플랫폼 — 예측·예방·정밀 행정 실행 파트너 제안</div>
+  </div>
+
+  <div class="wrap">
+    <div class="concl">센서도 경기, 두뇌도 경기 — <b>102.3억원 플랫폼의 데이터 입력단(센서)과 분석단(AI)을 동시에 책임지는 유일한 현장형 파트너.</b></div>
+
+    <div class="sec">운영체제 3단 구조</div>
+    <div class="pipe">
+      <div class="pstage"><div class="pn">01 · 입력</div><div class="pr" style="color:#1D6FE0;">SmaXtec 센서</div><div class="pd">반추위 볼러스 — 체온·반추·활동·음수 24시간 수집</div></div>
+      <div class="parr">→</div>
+      <div class="pstage"><div class="pn">02 · 두뇌</div><div class="pr" style="color:#1E9E6A;">CowTalk AI</div><div class="pd">질병·번식·분만을 ‘발생 전’ 예측·경보</div></div>
+      <div class="parr">→</div>
+      <div class="pstage"><div class="pn">03 · 행정</div><div class="pr" style="color:#E0A12E;">Eco-BIT</div><div class="pd">시군→道 단위 예측·예방·정밀 행정 대시보드</div></div>
+    </div>
+
+    <div class="sec">핵심 숫자</div>
+    <div class="stats">
+      <div class="stat"><div class="n">40.3%</div><div class="l">전국 대비 경기 젖소 사육두수 (전국 1위)</div></div>
+      <div class="stat"><div class="n">7,750두</div><div class="l">시범 실증 규모 (31시군·155농장·RCT)</div></div>
+      <div class="stat"><div class="n">102.3억</div><div class="l">5개년 총 사업 규모</div></div>
+      <div class="stat"><div class="n">5개년</div><div class="l">기반→효율화→의사결정→고도화</div></div>
+    </div>
+
+    <div class="sec">왜 D2O인가</div>
+    <div class="why">
+      <div class="t">정책연구 원문 명시</div>
+      <div class="m">“반추위 센서(<em>SmaXtec</em>) 도입 + 실시간성 한계 → <em>본사 기술 제휴 필수</em>” — 그 국내 합법 공급·제휴 채널이 곧 <em>D2O</em>입니다.</div>
+      <ul>
+        <li><b>진입축 1 — SmaXtec 국내 독점 영업·API 보유:</b> 7,750두 공급·설치·운영·구독 직접 수행</li>
+        <li><b>진입축 2 — CowTalk AI 탑재:</b> 플랫폼의 예측·경보 두뇌(AI 분석엔진)</li>
+        <li><b>현장 실증 역량:</b> 제네틱스 · 고려동물병원 · 송영신목장 — 7,750두 RCT 실행 가능</li>
+      </ul>
+    </div>
+
+    <div class="sec">기대효과 <span style="font-size:8pt;font-weight:500;color:#9DB2C8;">(파일럿 목표)</span></div>
+    <div class="chips">
+      <div class="chip">재정 낭비·중복 제거</div>
+      <div class="chip">가축질병 실시간 관제·조기대응</div>
+      <div class="chip">정책 시뮬레이터(RCT 검증)</div>
+      <div class="chip g">낙농→한우·양돈 확산</div>
+      <div class="chip g">온실가스 연계 저탄소 축산</div>
+      <div class="chip">전국·해외 표준 발원지 선점</div>
+    </div>
+
+    <div class="sec">인수위 결정 요청 — 다음 100일</div>
+    <div class="asks">
+      <div class="ask"><div class="b" style="background:#1D6FE0;">1</div><h5>시범사업 트랙 확정</h5><p>7,750두 RCT 실증을 ‘1호 데이터 행정 과제’로 채택</p></div>
+      <div class="ask"><div class="b" style="background:#1E9E6A;">2</div><h5>실행 파트너 지정</h5><p>‘센서+CowTalk AI’ 단일 패키지 우선 검토</p></div>
+      <div class="ask"><div class="b" style="background:#E0A12E;">3</div><h5>표준화 선언</h5><p>경기 모델을 道 표준·전국 확산 기준으로 설계</p></div>
+    </div>
+  </div>
+
+  <div class="foot"><span><b>CowTalk AI × Eco-BIT</b> — 경기도 AI 축산행정 플랫폼</span><span>D2O · Genetics · 고려동물병원 · 송영신목장 &nbsp;|&nbsp; 발표 하현제 · 2026.06</span></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PAGE 2 — 견적 · 컨소시엄 1페이저                              -->
+<!-- ============================================================ -->
+<div class="page" data-canvas-width="794" data-canvas-height="1123">
+  <div class="band">
+    <div class="gl"></div>
+    <div class="kick">수주영역 · 수행 견적 · 컨소시엄(안) · QUOTE & CONSORTIUM</div>
+    <div class="ttl">102.3억 플랫폼 — 우리 수행 범위와 견적</div>
+    <div class="sub">6대 과제 매핑 · SmaXtec 공급 견적(대외 단가) · 컨소시엄 구조 · 100일 로드맵</div>
+  </div>
+
+  <div class="wrap">
+    <div class="sec">1. 102.3억 6대 과제 — 우리 수행영역 매핑</div>
+    <table class="tbl">
+      <tr><th style="width:34%;">대과제</th><th style="width:12%;">예산(억)</th><th style="width:10%;">적합도</th><th>우리 수행 범위</th></tr>
+      <tr><td>시범운영·고도화·확산</td><td class="num">47.8</td><td class="fit">★★★</td><td>센서 공급·설치·운영(7,750두) + CowTalk 경보 + RCT 실증</td></tr>
+      <tr><td>AI 분석엔진</td><td class="num">11.5</td><td class="fit">★★★</td><td>CowTalk AI 탑재(번식·질병·분만 예측·경보 엔진)</td></tr>
+      <tr><td>데이터통합 플랫폼</td><td class="num">19.0</td><td class="fit">★★</td><td>Eco-BIT 연계(센서 표준화·연동·대시보드 일부)</td></tr>
+      <tr><td>운영·보안</td><td class="num">13.5</td><td class="fit">★</td><td>센서 운영·데이터 보안 일부 협력</td></tr>
+      <tr><td>업무지원 서비스</td><td class="num">10.5</td><td class="fit">★</td><td>농가 교육·현장 지원 일부</td></tr>
+      <tr><td>감리</td><td class="num">4.1</td><td class="fit">—</td><td>해당 없음 (독립 감리)</td></tr>
+      <tr class="sum"><td>합계</td><td class="num">102.3</td><td></td><td>핵심 집중영역 = 시범 + AI엔진</td></tr>
+    </table>
+
+    <div class="sec">2. 우리 타깃 권역 (3단계)</div>
+    <div class="tiers">
+      <div class="tier" style="background:linear-gradient(120deg,#1D6FE0,#1453B0);"><div class="l">1차 · 주력</div><div class="n">59.3억</div><div class="d">시범운영(47.8) + AI 분석엔진(11.5) — 2대 축 직접</div></div>
+      <div class="tier" style="background:linear-gradient(120deg,#1E9E6A,#15885C);"><div class="l">2차 · 연계</div><div class="n">19.0억</div><div class="d">데이터통합 플랫폼 — Eco-BIT 연동, 주관사 협업</div></div>
+      <div class="tier" style="background:linear-gradient(120deg,#E0A12E,#C2851A);"><div class="l">3차 · 부분</div><div class="n">24.0억</div><div class="d">운영·보안 + 업무지원 — 선택적 참여</div></div>
+    </div>
+
+    <div class="sec">3. SmaXtec 공급·구독 견적 <span style="font-size:8pt;font-weight:500;color:#9DB2C8;">(7,750두·155농장 기준 / 대외 단가)</span></div>
+    <table class="q">
+      <tr><td class="item">통신중계기 설치 + 인프라 구축</td><td class="cond">목장당 500만원 · 1회성 · 155농장</td><td class="amt">7.75억</td></tr>
+      <tr class="rev"><td class="item">센서 이용 구독 (4년)</td><td class="cond">두당 월 12,000원 · 7,750두 · 48개월 · 고장 무상교체</td><td class="amt">약 44.6억</td></tr>
+    </table>
+    <div class="note">※ 시범 공식기간은 36개월·3단계이며, 위 구독은 표준 농가계약(4년) 기준 산정 — 과금 시점·단계에 따라 조정. <b style="color:#15885C;">두당 월 구독 = 5개년 반복매출 엔진</b>이 사업·재정의 핵심.</div>
+
+    <div class="sec">4. 컨소시엄 구조(안)</div>
+    <div class="cons">
+      <div class="cnode acc">경기도<br>(발주)</div>
+      <div class="carr">→</div>
+      <div class="cnode">주관기관<br>(정책연구·플랫폼)</div>
+      <div class="carr">→</div>
+      <div class="cnode hub">D2O / 하현제<br>SmaXtec 국내 독점영업·API<br>+ CowTalk AI + Eco-BIT + 현장실증</div>
+      <div class="carr">↔</div>
+      <div class="cnode">SmaXtec 본사<br>(기술 제휴)</div>
+    </div>
+    <div class="note">정책연구가 지목한 <b style="color:#0E2A47;">국내 유일 합법 SmaXtec 공급·제휴 채널 = D2O/하현제</b> — 입찰의 결정적 명분. D2O가 센서 공급 + AI 분석 + 현장 실증을 단일 패키지로 수행해 통합 리스크를 최소화.</div>
+
+    <div class="sec">5. 실행 로드맵 — 30 / 60 / 90일</div>
+    <div class="asks">
+      <div class="ask"><div class="b" style="background:#1D6FE0;">30</div><h5>합의·착수</h5><p>공공사업 물량·단가 합의, 판매조건 확정 + 7,750두 실증 설계서 착수</p></div>
+      <div class="ask"><div class="b" style="background:#1E9E6A;">60</div><h5>견적 v1</h5><p>1차 권역(59.3억) 수행제안 + 센서 공급·구독 견적 v1</p></div>
+      <div class="ask"><div class="b" style="background:#E0A12E;">90</div><h5>제출본</h5><p>컨소시엄 역할분담 합의 + 경기도/주관 제출본 + 공공 SLA(설치·수신율·AS)</p></div>
+    </div>
+  </div>
+
+  <div class="foot"><span><b>CowTalk AI × Eco-BIT</b> — 경기도 AI 축산행정 플랫폼</span><span>내부 검토용 · 단가/기간 협의 시 확정 &nbsp;|&nbsp; 2026.06</span></div>
+</div>
+
+</body>
+</html>

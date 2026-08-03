@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>CowTalk AI × Eco-BIT — 경기도 인수위 브리핑</title>
+<meta name="hz:slide-selector" content=".slide" />
+<meta name="hz:canvas-width" content="1920" />
+<meta name="hz:canvas-height" content="1080" />
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #5b6573;
+  font-family: 'Noto Sans KR', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 28px;
+}
+
+.slide {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background: #F6F8FB;
+  overflow: hidden;
+  color: #0E2A47;
+}
+
+/* ---------- shared roles ---------- */
+.kicker {
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #1D6FE0;
+}
+.s-title {
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 1.16;
+  color: #0E2A47;
+  letter-spacing: -1px;
+}
+.s-sub {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.5;
+  color: #5A6B7E;
+}
+.body {
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 1.6;
+  color: #34465A;
+}
+.label {
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: #1E9E6A;
+}
+.accent-rule {
+  width: 92px;
+  height: 7px;
+  background: #1D6FE0;
+  border-radius: 4px;
+}
+
+/* content frame */
+.frame { position: absolute; left: 112px; top: 96px; right: 112px; }
+.foot {
+  position: absolute;
+  left: 112px; right: 112px; bottom: 52px;
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 1px solid #DCE3EC;
+  padding-top: 20px;
+  font-size: 20px; font-weight: 500; color: #8593A4;
+}
+.foot b { color: #0E2A47; font-weight: 700; }
+
+.head-title { margin-top: 22px; }
+.head-rule { margin-top: 26px; }
+
+/* ---------- cards / chips ---------- */
+.card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F1;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(14,42,71,0.05);
+}
+.chip {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: #EAF1FC; color: #1D5BBE;
+  font-weight: 700; font-size: 24px;
+  padding: 14px 22px; border-radius: 999px;
+}
+.num-badge {
+  width: 58px; height: 58px; border-radius: 14px;
+  background: #1D6FE0; color: #fff;
+  font-weight: 900; font-size: 30px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ---------- dark slides ---------- */
+.slide.dark { background: #0A1F38; color: #EAF1FC; }
+.slide.dark .s-title { color: #FFFFFF; }
+.slide.dark .foot { border-top: 1px solid rgba(255,255,255,0.16); color: #8FA6C2; }
+.slide.dark .foot b { color: #FFFFFF; }
+
+/* ============================================================ */
+/*  SLIDE 1 — COVER                                             */
+/* ============================================================ */
+.cover-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+.cover-glow {
+  position: absolute; width: 1100px; height: 1100px; right: -340px; top: -260px;
+  background: radial-gradient(circle, rgba(29,111,224,0.42) 0%, rgba(29,111,224,0) 62%);
+}
+.cover-glow2 {
+  position: absolute; width: 760px; height: 760px; left: -220px; bottom: -260px;
+  background: radial-gradient(circle, rgba(30,158,106,0.30) 0%, rgba(30,158,106,0) 64%);
+}
+.c-kicker {
+  font-size: 25px; font-weight: 700; letter-spacing: 5px; color: #6FB0FF;
+}
+.c-display {
+  font-weight: 900; font-size: 112px; line-height: 1.1; color: #fff;
+  letter-spacing: -2px;
+}
+.c-display .hl { color: #6FB0FF; }
+.c-sub { font-size: 33px; font-weight: 500; color: #C5D6EC; line-height: 1.5; }
+.c-tag {
+  display: inline-block;
+  background: rgba(29,111,224,0.20);
+  border: 1px solid rgba(111,176,255,0.5);
+  color: #BFD8F7;
+  font-weight: 700; font-size: 24px;
+  padding: 14px 28px; border-radius: 999px;
+}
+
+/* ============================================================ */
+/*  generic two-col                                            */
+/* ============================================================ */
+.cols { display: flex; gap: 44px; }
+
+/* stat block */
+.stat-num { font-weight: 900; font-size: 76px; color: #1D6FE0; line-height: 1; letter-spacing: -1px; }
+.stat-lab { font-weight: 500; font-size: 24px; color: #5A6B7E; margin-top: 12px; line-height: 1.4; }
+
+/* ---------- pipeline (slide 5) ---------- */
+.stage {
+  flex: 1; padding: 40px 34px; border-radius: 20px; background:#fff;
+  border: 1px solid #E2E8F1; box-shadow: 0 10px 28px rgba(14,42,71,0.05);
+  position: relative;
+}
+.stage .st-no { font-weight:900; font-size:26px; color:#9DB2C8; }
+.stage .st-role { font-weight:700; font-size:26px; margin-top:8px; }
+.stage .st-name { font-weight:900; font-size:34px; margin-top:14px; color:#0E2A47; line-height:1.25; }
+.stage .st-desc { font-weight:400; font-size:23px; color:#5A6B7E; margin-top:16px; line-height:1.55; }
+.arrow { align-self:center; font-size:50px; color:#1D6FE0; font-weight:900; }
+
+/* prediction chips grid */
+.pred-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+.pred {
+  background:#fff; border:1px solid #E2E8F1; border-radius:14px;
+  padding:22px 24px; font-weight:700; font-size:25px; color:#0E2A47;
+  display:flex; align-items:center; gap:14px;
+}
+.dot { width:14px; height:14px; border-radius:50%; background:#1E9E6A; flex:none; }
+.dot.b { background:#1D6FE0; } .dot.a { background:#E0A12E; } .dot.r { background:#D7483B; }
+
+/* bar chart */
+.bars { display:flex; align-items:flex-end; gap:46px; height:400px; }
+.bar-col { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%; }
+.bar {
+  width:118px; border-radius:12px 12px 0 0;
+  background:linear-gradient(180deg,#3D86F0,#1D6FE0);
+  display:flex; align-items:flex-start; justify-content:center; padding-top:14px;
+  color:#fff; font-weight:900; font-size:30px;
+}
+.bar.peak { background:linear-gradient(180deg,#27B07C,#1E9E6A); }
+.bar-yr { margin-top:18px; font-weight:900; font-size:24px; color:#0E2A47; }
+.bar-stage { margin-top:4px; font-weight:500; font-size:20px; color:#7A8A9C; text-align:center; }
+
+/* impact cards */
+.imp-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.imp { background:#fff; border:1px solid #E2E8F1; border-radius:18px; padding:32px 30px; }
+.imp h4 { font-weight:900; font-size:27px; color:#1D6FE0; }
+.imp p { font-weight:400; font-size:22px; color:#46586C; line-height:1.5; margin-top:12px; }
+.imp .ico { font-size:34px; }
+
+/* timeline */
+.tl { display:flex; gap:0; margin-top:18px; }
+.tl-step { flex:1; position:relative; padding-right:24px; }
+.tl-bar { height:12px; border-radius:6px; background:#1D6FE0; }
+.tl-step:nth-child(2) .tl-bar { background:#1E9E6A; }
+.tl-step:nth-child(3) .tl-bar { background:#E0A12E; }
+.tl-when { font-weight:900; font-size:24px; margin-top:16px; color:#0E2A47; }
+.tl-what { font-weight:400; font-size:22px; color:#5A6B7E; margin-top:6px; line-height:1.45; }
+
+/* asks */
+.ask { display:flex; gap:26px; align-items:flex-start; background:#fff; border:1px solid #E2E8F1; border-radius:18px; padding:30px 34px; }
+.ask h4 { font-weight:900; font-size:30px; color:#0E2A47; }
+.ask p { font-weight:400; font-size:24px; color:#5A6B7E; margin-top:8px; line-height:1.5; }
+
+/* highlight box */
+.hl-box {
+  background:linear-gradient(135deg,#0E2A47,#15406E);
+  color:#EAF1FC; border-radius:20px; padding:40px 44px;
+}
+.hl-box .t { font-weight:700; font-size:24px; color:#6FB0FF; letter-spacing:1px; }
+.hl-box .m { font-weight:700; font-size:31px; line-height:1.5; margin-top:16px; color:#fff; }
+.hl-box .m em { color:#FFD27A; font-style:normal; }
+</style>
+</head>
+<body>
+
+<!-- ====================== SLIDE 1 : COVER ====================== -->
+<div class="slide dark" data-canvas-width="1920" data-canvas-height="1080">
+  <div class="cover-grid"></div>
+  <div class="cover-glow"></div>
+  <div class="cover-glow2"></div>
+  <div style="position:absolute; left:120px; top:120px;">
+    <div class="c-kicker">경기도 도지사직 인수위원회 정책 브리핑</div>
+  </div>
+  <div style="position:absolute; left:120px; top:300px; right:120px;">
+    <div class="c-tag">예측 · 예방 · 정밀 행정으로의 대전환</div>
+    <div class="c-display" style="margin-top:34px;">축산은 소프트웨어가 아니라<br><span class="hl">道 단위 운영체제</span>입니다</div>
+    <div class="c-sub" style="margin-top:38px;">CowTalk AI × Eco-BIT — 경기도 AI 축산행정 플랫폼 실행 파트너 제안</div>
+  </div>
+  <div style="position:absolute; left:120px; right:120px; bottom:90px; display:flex; justify-content:space-between; align-items:flex-end;">
+    <div class="c-sub" style="font-size:26px; color:#9FB6D2;">D2O · Genetics · 고려동물병원 · 송영신목장</div>
+    <div class="c-sub" style="font-size:26px; color:#9FB6D2; text-align:right;">2026. 06 &nbsp;|&nbsp; 발표 — 하현제</div>
+  </div>
+</div>
+
+<!-- ====================== SLIDE 2 : WHY NOW ====================== -->
+<div class="slide" data-canvas-width="1920" data-canvas-height="1080">
+  <div class="frame">
+    <div class="kicker">WHY NOW · 왜 경기도인가</div>
+    <div class="s-title head-title">대한민국 최대 축산기반,<br>그러나 행정은 여전히 ‘사후 대응’</div>
+    <div class="accent-rule head-rule"></div>
+
+    <div class="cols" style="margin-top:54px;">
+      <div style="flex:1.05; display:flex; flex-direction:column; gap:46px;">
+        <div>
+          <div class="stat-num">40.3%</div>
+          <div class="stat-lab">전국 대비 경기도 젖소 사육두수 — 전국 1위 낙농 기반</div>
+        </div>
+        <div>
+          <div class="stat-num">38.7%</div>
+          <div class="stat-lab">전국 대비 경기도 낙농 농가 비중</div>
+        </div>
+        <div>
+          <div class="stat-num">72,642두</div>
+          <div class="stat-lab">유우검정 참여 — 경기 1,346농가 (데이터는 이미 쌓이고 있다)</div>
+        </div>
+      </div>
+      <div style="flex:1.25;">
+        <div class="hl-box" style="background:linear-gradient(135deg,#7A2218,#B33A2A);">
+          <div class="t" style="color:#FFC9B6;">THE PARADOX · 역설</div>
+          <div class="m" style="font-size:33px;">ICT 센서로 <em>데이터는 쌓이지만</em>, 행정과 실시간으로 연결되지 않아 <em>대부분 사후 보고</em>에 머문다.</div>
+          <div class="body" style="color:#F2D8CF; margin-top:24px; font-size:25px;">→ 정책의 신속성 · 정확성 · 근거가 부족해진다.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span><b>CowTalk AI × Eco-BIT</b> — 경기도 AI 축산행정 플랫폼</span><span>근거: 경기도 AI 축산행정 플랫폼 정책연구(2026) · 02</span></div>
+</div>
+
+<!-- ====================== SLIDE 3 : THE PROBLEM ====================== -->
+<div class="slide" data-canvas-width="1920" data-canvas-height="1080">
+  <div class="frame">
+    <div class="kicker">THE PROBLEM · 진단</div>
+    <div class="s-title head-title">사후 보고 행정의 세 가지 한계</div>
+    <div class="accent-rule head-rule"></div>
+
+    <div class="cols" style="margin-top:60px;">
+      <div class="card" style="flex:1; padding:44px 38px;">
+        <div class="num-badge" style="background:#D7483B;">1</div>
+        <div class="s-sub" style="font-weight:900; font-size:32px; color:#0E2A47; margin-top:26px;">느린 대응</div>
+        <div class="body" style="margin-top:18px;">질병·재난은 이미 확산된 뒤에야 보고된다. 유방염·구제역·럼피스킨은 ‘발생 후 통계’가 아니라 ‘발생 전 신호’로 잡아야 한다.</div>
+      </div>
+      <div class="card" style="flex:1; padding:44px 38px;">
+        <div class="num-badge" style="background:#E0A12E;">2</div>
+        <div class="s-sub" style="font-weight:900; font-size:32px; color:#0E2A47; margin-top:26px;">약한 근거</div>
+        <div class="body" style="margin-top:18px;">투입한 지원·규제가 실제로 효과가 있었는지 결과 데이터로 검증하지 못한다. 정책이 ‘감(感)’에 의존한다.</div>
+      </div>
+      <div class="card" style="flex:1; padding:44px 38px;">
+        <div class="num-badge" style="background:#1D6FE0;">3</div>
+        <div class="s-sub" style="font-weight:900; font-size:32px; color:#0E2A47; margin-top:26px;">끊긴 연계</div>
+        <div class="body" style="margin-top:18px;">센서·혈통·유통·가격·환경·온실가스 데이터가 따로 논다. 사일로(silo)가 통합 행정을 막는다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span><b>CowTalk AI × Eco-BIT</b> — 경기도 AI 축산행정 플랫폼</span><span>03</span></div>
+</div>
+
+<!-- ====================== SLIDE 4 : THE SHIFT (dark) ====================== -->
+<div class="slide dark" data-canvas-width="1920" data-canvas-height="1080">
+  <div class="cover-glow" style="opacity:0.7;"></div>
+  <div style="position:absolute; left:112px; top:150px;">
+    <div class="c-kicker">THE SHIFT · 패러다임 전환</div>
+  </div>
+  <div style="position:absolute; left:112px; right:112px; top:330px;">
+    <div style="display:flex; align-items:center; gap:40px; flex-wrap:wrap;">
+      <span style="font-weight:900; font-size:84px; color:#8FA6C2; letter-spacing:-2px;">사후 대응</span>
+      <span style="font-weight:900; font-size:70px; color:#6FB0FF;">→</span>
+      <span style="font-weight:900; font-size:90px; color:#fff; letter-spacing:-2px;">예측 · 예방 · 정밀 행정</span>
+    </div>
+    <div class="c-sub" style="margin-top:54px; max-width:1400px;">같은 데이터, 다른 행정. 핵심은 ‘얼마나 모았는가’가 아니라 <span style="color:#FFD27A; font-weight:700;">‘예측해서 먼저 움직이는가’</span> 입니다.</div>
+  </div>
+  <div class="foot"><span><b>CowTalk AI × Eco-BIT</b></span><span>04</span></div>
+</div>
+
+<!-- ====================== SLIDE 5 : THE SYSTEM ====================== -->
+<div class="slide" data-canvas-width="1920" data-canvas-height="1080">
+  <div class="frame">
+    <div class="kicker">THE SYSTEM · 운영체제 3단 구조</div>
+    <div class="s-title head-title" style="font-size:54px;">데이터가 행정 액션이 되는 폐(閉)루프</div>
+    <div class="accent-rule head-rule"></div>
+
+    <div class="cols" style="margin-top:56px; align-items:stretch; gap:18px;">
+      <div class="stage">
+        <div class="st-no">01 · 입력 (INPUT)</div>
+        <div class="st-role" style="color:#1D6FE0;">SmaXtec 반추위 센서</div>
+        <div class="st-name">소의 몸속 24시간 신호</div>
+        <div class="st-desc">체온 · 반추 · 활동 · 음수 · pH 경향을 실시간 수집하는 위내(胃內) 볼러스 센서 — 하드웨어 입력단.</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="stage" style="border-color:#BFE0CF;">
+        <div class="st-no">02 · 두뇌 (AI)</div>
+        <div class="st-role" style="color:#1E9E6A;">CowTalk AI</div>
+        <div class="st-name">질병·번식·분만 예측·경보</div>
+        <div class="st-desc">센서 신호를 학습해 이상을 ‘발생 전’에 잡아내는 AI 분석엔진 — 플랫폼의 두뇌.</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="stage" style="border-color:#F0DDB6;">
+        <div class="st-no">03 · 행정 (ACTION)</div>
+        <div class="st-role" style="color:#E0A12E;">Eco-BIT 대시보드</div>
+        <div class="st-name">시군 → 道 단위 정밀 관제</div>
+        <div class="st-desc">예측 결과를 행정 대시보드로 연결해 예측·예방·정밀 행정을 구현하는 통합 플랫폼.</div>
+      </div>
+    </div>
+    <div style="margin-top:40px; background:#EAF1FC; border-radius:16px; padding:26px 36px; font-weight:700; font-size:27px; color:#1D5BBE;">
+      입력단(센서)과 분석단(AI)을 <span style="color:#0E2A47;">동시에 책임지는 단일 패키지</span> — 통합 리스크 없는 한 손의 책임.
+    </div>
+  </div>
+  <div class="foot"><span><b>CowTalk AI × Eco-BIT</b> — 경기도 AI 축산행정 플랫폼</span><span>05</span></div>
+</div>
+
+<!-- ====================== SLIDE 6 : COWTALK AI ====================== -->
+<div class="slide" data-canvas-width="1920" data-canvas-height="1080">
+  <div class="frame">
+    <div class="kicker">COWTALK AI · 두뇌</div>
+    <div class="s-title head-title" style="font-size:54px;">소의 몸속 신호를, 행정이 먼저 읽는다</div>
+    <div class="accent-rule head-rule"></div>
+
+    <div class="cols" style="margin-top:56px;">
+      <div style="flex:0.95;">
+        <div class="card" style="padding:40px 38px;">
+          <div class="label">SENSOR · 위내 볼러스 1개</div>
+          <div class="s-sub" style="font-weight:900; color:#0E2A47; font-size:32px; margin-top:18px;">5대 생체 신호</div>
+          <div style="display:flex; flex-direction:column; gap:14px; margin-top:24px;">
+            <div class="pred" style="background:#F6F8FB;"><span class="dot b"></span>체온 (발열·감염 조기 신호)</div>
+            <div class="pred" style="background:#F6F8FB;"><span class="dot b"></span>반추 활동 (소화·대사 건강)</div>
+            <div class="pred" style="background:#F6F8FB;"><span class="dot b"></span>활동량 (발정·스트레스)</div>
+            <div class="pred" style="background:#F6F8FB;"><span class="dot b"></span>음수량 · pH 경향</div>
+          </div>
+        </div>
+      </div>
+      <div style="flex:1.15;">
+        <div class="label" style="color:#1D6FE0;">PREDICTION · AI가 예측·경보하는 것</div>
+        <div class="pred-grid" style="margin-top:24px;">
+          <div class="pred"><span class="dot r"></span>유방염</div>
+          <div class="pred"><span class="dot r"></span>케토시스</div>
+          <div class="pred"><span class="dot r"></span>유열(저칼슘혈증)</div>
+          <div class="pred"><span class="dot r"></span>제엽염</div>
+          <div class="pred"><span class="dot a"></span>발정 · 미약발정</div>
+          <div class="pred"><span class="dot a"></span>분만 시점</div>
+          <div class="pred"><span class="dot"></span>폐사 · 이상 조기경보</div>
+          <div class="pred"><span class="dot b"></span>군집 이상(herd) 감지</div>
+        </div>
+        <div style="margin-top:26px; background:#EAF1FC; border-radius:14px; padding:22px 28px; font-weight:700; font-size:25px; color:#1D5BBE;">
+          농가엔 <b style="color:#0E2A47;">알림</b>, 행정엔 <b style="color:#0E2A47;">통계</b> — 한 데이터, 두 사용자.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span><b>CowTalk AI × Eco-BIT</b> — 경기도 AI 축산행정 플랫폼</span><span>06</span></div>
+</div>
+
+<!-- ====================== SLIDE 7 : ALIGNMENT ====================== -->
+<div class="slide" data-canvas-width="1920" data-canvas-height="1080">
+  <div class="frame">
+    <div class="kicker">ALIGNMENT · 정책연구와의 정합</div>
+    <div class="s-title head-title" style="font-size:52px;">경기도는 이미 그 길을 설계했고,<br>그 자리에 우리가 있습니다</div>
+    <div class="accent-rule head-rule"></div>
+
+    <div class="cols" style="margin-top:50px;">
+      <div style="flex:1;">
+        <div class="body" style="font-size:26px;">경기도 AI 축산행정 플랫폼 정책연구(5개년·총 102.3억원)의 설계 방향:</div>
+        <div style="display:flex; flex-direction:column; gap:16px; margin-top:24px;">
+          <div class="chip" style="font-size:25px;">① 데이터 통합 · 표준화 (공통의 언어)</div>
+          <div class="chip" style="font-size:25px;">② AI 분석 · 시각화 (RAG · MCP)</div>
+          <div class="chip" style="font-size:25px;">③ 예측 · 예방 · 정밀 행정으로 전환</div>
+        </div>
+        <div class="body" style="font-size:24px; margin-top:26px; color:#5A6B7E;">→ 우리의 3단 구조(센서 → CowTalk AI → Eco-BIT)와 정확히 일치합니다.</div>
+      </div>
+      <div style="flex:1.1;">
+        <div class="hl-box">
+          <div class="t">정책연구 원문 명시</div>
+          <div class="m">“반추위 센서(<em>SmaXtec</em>) 도입 + 실시간성 한계 → <em>본사 기술 제휴 필수</em>”</div>
+          <div class="body" style="color:#C5D6EC; margin-top:24px; font-size:25px;">그 국내 공급·제휴 주체가 바로 <b style="color:#FFD27A;">D2O</b>입니다. 보고서가 지목한 자리에 우리가 서 있습니다.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span><b>CowTalk AI × Eco-BIT</b> — 경기도 AI 축산행정 플랫폼</span><span>근거: 정책연구 최종보고 v1.1.0 · 07</span></div>
+</div>
+
+<!-- ====================== SLIDE 8 : THE PILOT ====================== -->
+<div class="slide" data-canvas-width="1920" data-canvas-height="1080">
+  <div class="frame">
+    <div class="kicker">THE PILOT · 낙농 ICT 시범사업</div>
+    <div class="s-title head-title" style="font-size:54px;">31개 시군 × 5개 농장 × 50두 = <span style="color:#1D6FE0;">7,750두</span> RCT 실증</div>
+    <div class="accent-rule head-rule"></div>
+
+    <div class="cols" style="margin-top:50px; gap:28px;">
+      <div class="card" style="flex:1; padding:30px 22px; text-align:center;"><div class="stat-num" style="font-size:60px;">31</div><div class="stat-lab">개 시군</div></div>
+      <div class="card" style="flex:1; padding:30px 22px; text-align:center;"><div class="stat-num" style="font-size:60px;">155</div><div class="stat-lab">개 농장</div></div>
+      <div class="card" style="flex:1; padding:30px 22px; text-align:center;"><div class="stat-num" style="font-size:60px;">7,750</div><div class="stat-lab">착유우 (총)</div></div>
+      <div class="card" style="flex:1; padding:30px 22px; text-align:center;"><div class="stat-num" style="font-size:60px;">36</div><div class="stat-lab">개월 · 3단계</div></div>
+    </div>
+
+    <div class="tl" style="margin-top:50px;">
+      <div class="tl-step"><div class="tl-bar"></div><div class="tl-when">0–6개월</div><div class="tl-what">① ICT 도입 · 기반 구축<br>센서 설치·등록·데이터 수신</div></div>
+      <div class="tl-step"><div class="tl-bar"></div><div class="tl-when">7–24개월</div><div class="tl-what">② AI 플랫폼 · 데이터 통합<br>CowTalk 예측·경보 운영</div></div>
+      <div class="tl-step"><div class="tl-bar"></div><div class="tl-when">25–36개월</div><div class="tl-what">③ 정책 실증 · 확산<br>한우·양돈으로 확대</div></div>
+    </div>
+
+    <div style="margin-top:42px; background:#EAF1FC; border-radius:16px; padding:24px 34px; font-weight:700; font-size:25px; color:#1D5BBE;">
+      선정 · 비선정 농가 데이터를 <b style="color:#0E2A47;">모두 확보</b> → 무작위비교시험(RCT)으로 정책효과를 과학적으로 검증.
+    </div>
+  </div>
+  <div class="foot"><span><b>CowTalk AI × Eco-BIT</b> — 경기도 AI 축산행정 플랫폼</span><span>08</span></div>
+</div>
+
+<!-- ====================== SLIDE 9 : ROADMAP & BUDGET ====================== -->
+<div class="slide" data-canvas-width="1920" data-canvas-height="1080">
+  <div class="frame">
+    <div class="kicker">ROADMAP · 5개년 총 102.3억원</div>
+    <div class="s-title head-title" style="font-size:50px;">기반구축 → 행정 효율화 → 의사결정 강화 → 정책 고도화</div>
+    <div class="accent-rule head-rule"></div>
+
+    <div class="cols" style="margin-top:48px; align-items:flex-end;">
+      <div style="flex:1.5;">
+        <div class="bars">
+          <div class="bar-col"><div class="bar" style="height:269px;">21.0</div><div class="bar-yr">1년차</div><div class="bar-stage">기반구축</div></div>
+          <div class="bar-col"><div class="bar" style="height:191px;">14.9</div><div class="bar-yr">2년차</div><div class="bar-stage">행정 효율화</div></div>
+          <div class="bar-col"><div class="bar peak" style="height:360px;">28.1</div><div class="bar-yr">3년차</div><div class="bar-stage">의사결정 강화</div></div>
+          <div class="bar-col"><div class="bar" style="height:256px;">20.0</div><div class="bar-yr">4년차</div><div class="bar-stage">정책 고도화</div></div>
+          <div class="bar-col"><div class="bar" style="height:234px;">18.3</div><div class="bar-yr">5년차</div><div class="bar-stage">정책 고도화</div></div>
+        </div>
+        <div class="bar-stage" style="text-align:center; margin-top:20px; font-size:19px;">단위: 억원 · 출처 경기도 AI 축산행정 플랫폼 정책연구</div>
+      </div>
+      <div style="flex:0.85; padding-left:36px;">
+        <div class="card" style="padding:34px 32px;">
+          <div class="stat-num">102.3억</div>
+          <div class="stat-lab">5개년 총 사업 규모</div>
+          <div style="height:1px; background:#E2E8F1; margin:26px 0;"></div>
+          <div class="s-sub" style="font-size:25px; font-weight:700; color:#1E9E6A;">반복매출의 핵심</div>
+          <div class="body" style="font-size:23px; margin-top:10px;">1회성 하드웨어가 아니라 <b style="color:#0E2A47;">5개년 구독</b>(센서·CowTalk 분석)이 사업·재정의 중심.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span><b>CowTalk AI × Eco-BIT</b> — 경기도 AI 축산행정 플랫폼</span><span>09</span></div>
+</div>
+
+<!-- ====================== SLIDE 10 : IMPACT ====================== -->
+<div class="slide" data-canvas-width="1920" data-canvas-height="1080">
+  <div class="frame">
+    <div class="kicker">IMPACT · 기대효과 <span style="color:#9DB2C8; font-weight:500;">(파일럿 목표치)</span></div>
+    <div class="s-title head-title">도민 · 재정 · 산업이 함께 얻는 것</div>
+    <div class="accent-rule head-rule"></div>
+
+    <div class="imp-grid" style="margin-top:54px;">
+      <div class="imp"><div class="ico">💰</div><h4>재정 효율</h4><p>중복·낭비 예산을 데이터로 식별·제거. 근거 기반 재정 집행.</p></div>
+      <div class="imp"><div class="ico">🛡️</div><h4>방역·재난</h4><p>럼피스킨·구제역 등 가축질병 실시간 관제 및 조기 대응 체계.</p></div>
+      <div class="imp"><div class="ico">📊</div><h4>정책 시뮬레이터</h4><p>지원·규제 효과를 결과 데이터(RCT)로 사전 검증 후 집행.</p></div>
+      <div class="imp"><div class="ico">🐄</div><h4>산업 확산</h4><p>낙농 → 한우 · 양돈으로 확대. 농가 생산성·소득 향상.</p></div>
+      <div class="imp"><div class="ico">🌱</div><h4>탄소·환경</h4><p>온실가스 데이터 연계로 친환경·저탄소 축산 행정 기반.</p></div>
+      <div class="imp" style="background:#0E2A47; border-color:#0E2A47;"><div class="ico">🏆</div><h4 style="color:#6FB0FF;">표준 선점</h4><p style="color:#C5D6EC;">경기도가 대한민국 디지털 축산행정의 <b style="color:#fff;">표준 발원지</b>가 된다.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span><b>CowTalk AI × Eco-BIT</b> — 경기도 AI 축산행정 플랫폼</span><span>※ 수치는 기대·파일럿 목표 · 10</span></div>
+</div>
+
+<!-- ====================== SLIDE 11 : WHO WE ARE ====================== -->
+<div class="slide" data-canvas-width="1920" data-canvas-height="1080">
+  <div class="frame">
+    <div class="kicker">WHO WE ARE · 실행 역량</div>
+    <div class="s-title head-title" style="font-size:54px;">센서도 우리, 두뇌도 우리 —<br>통합 리스크 없는 단일 책임</div>
+    <div class="accent-rule head-rule"></div>
+
+    <div class="cols" style="margin-top:50px;">
+      <div class="card" style="flex:1; padding:40px 38px; border-top:6px solid #1D6FE0;">
+        <div class="label" style="color:#1D6FE0;">진입축 1</div>
+        <div class="s-sub" style="font-weight:900; font-size:32px; color:#0E2A47; margin-top:14px;">SmaXtec 국내 공급</div>
+        <div class="body" style="margin-top:18px;">하현제 / D2O = 국내 SmaXtec 위내센서 공급 채널. 7,750두 공급·설치·등록·운영·구독을 직접 수행.</div>
+      </div>
+      <div class="card" style="flex:1; padding:40px 38px; border-top:6px solid #1E9E6A;">
+        <div class="label">진입축 2</div>
+        <div class="s-sub" style="font-weight:900; font-size:32px; color:#0E2A47; margin-top:14px;">CowTalk AI 탑재</div>
+        <div class="body" style="margin-top:18px;">플랫폼의 AI·의사결정 레이어. 센서 → 번식·질병·분만 예측·경보 → 행정 대시보드로 잇는 두뇌.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:40px;">
+      <div class="label" style="color:#5A6B7E; letter-spacing:1px;">현장 실증 자산</div>
+      <div style="display:flex; gap:16px; margin-top:18px; flex-wrap:wrap;">
+        <div class="chip">제네틱스 — 수정란 · 유전체</div>
+        <div class="chip">고려동물병원 — 수의 임상</div>
+        <div class="chip">송영신목장 — 현장 실증</div>
+        <div class="chip">D2O — 환경 · 탄소 · 사양관리</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span><b>CowTalk AI × Eco-BIT</b> — 경기도 AI 축산행정 플랫폼</span><span>11</span></div>
+</div>
+
+<!-- ====================== SLIDE 12 : SCALE ====================== -->
+<div class="slide dark" data-canvas-width="1920" data-canvas-height="1080">
+  <div class="cover-glow" style="opacity:0.6;"></div>
+  <div style="position:absolute; left:112px; top:104px;">
+    <div class="c-kicker">SCALE · 경기에서 표준으로</div>
+  </div>
+  <div style="position:absolute; left:112px; right:112px; top:228px;">
+    <div class="s-title" style="color:#fff; font-size:54px; line-height:1.2;">경기 플래그십이 대한민국 축산행정의<br><span style="color:#6FB0FF;">표준 운영체제(OS)</span>가 됩니다</div>
+
+    <div style="display:flex; align-items:stretch; gap:14px; margin-top:64px;">
+      <div style="flex:1; background:rgba(29,111,224,0.22); border:1px solid rgba(111,176,255,0.45); border-radius:16px; padding:30px 26px;">
+        <div style="font-weight:900; font-size:26px; color:#6FB0FF;">①</div>
+        <div style="font-weight:900; font-size:30px; color:#fff; margin-top:12px;">경기</div>
+        <div class="c-sub" style="font-size:22px; margin-top:8px;">플래그십 레퍼런스</div>
+      </div>
+      <div style="align-self:center; color:#6FB0FF; font-weight:900; font-size:38px;">›</div>
+      <div style="flex:1; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.16); border-radius:16px; padding:30px 26px;">
+        <div style="font-weight:900; font-size:26px; color:#9FB6D2;">②</div>
+        <div style="font-weight:900; font-size:30px; color:#fff; margin-top:12px;">강원</div>
+        <div class="c-sub" style="font-size:22px; margin-top:8px;">한우·고랭지 확산</div>
+      </div>
+      <div style="align-self:center; color:#6FB0FF; font-weight:900; font-size:38px;">›</div>
+      <div style="flex:1; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.16); border-radius:16px; padding:30px 26px;">
+        <div style="font-weight:900; font-size:26px; color:#9FB6D2;">③</div>
+        <div style="font-weight:900; font-size:30px; color:#fff; margin-top:12px;">전북 · 전남</div>
+        <div class="c-sub" style="font-size:22px; margin-top:8px;">호남 축산벨트</div>
+      </div>
+      <div style="align-self:center; color:#6FB0FF; font-weight:900; font-size:38px;">›</div>
+      <div style="flex:1; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.16); border-radius:16px; padding:30px 26px;">
+        <div style="font-weight:900; font-size:26px; color:#9FB6D2;">④</div>
+        <div style="font-weight:900; font-size:30px; color:#fff; margin-top:12px;">전국 多道</div>
+        <div class="c-sub" style="font-size:22px; margin-top:8px;">국가 표준화</div>
+      </div>
+      <div style="align-self:center; color:#27B07C; font-weight:900; font-size:38px;">›</div>
+      <div style="flex:1; background:rgba(30,158,106,0.20); border:1px solid rgba(39,176,124,0.5); border-radius:16px; padding:30px 26px;">
+        <div style="font-weight:900; font-size:26px; color:#5FD3A3;">⑤</div>
+        <div style="font-weight:900; font-size:30px; color:#fff; margin-top:12px;">해외</div>
+        <div class="c-sub" style="font-size:22px; margin-top:8px;">중앙아·동남아·중동</div>
+      </div>
+    </div>
+    <div class="c-sub" style="margin-top:54px;">경기도가 만든 표준을 다른 道와 해외 정부가 따라옵니다 — <span style="color:#FFD27A; font-weight:700;">경기 = 디지털 축산행정의 발원지.</span></div>
+  </div>
+  <div class="foot"><span><b>CowTalk AI × Eco-BIT</b></span><span>12</span></div>
+</div>
+
+<!-- ====================== SLIDE 13 : THE ASK ====================== -->
+<div class="slide" data-canvas-width="1920" data-canvas-height="1080">
+  <div class="frame">
+    <div class="kicker">THE ASK · 인수위 결정 요청</div>
+    <div class="s-title head-title">다음 100일, 세 가지만 결정해 주십시오</div>
+    <div class="accent-rule head-rule"></div>
+
+    <div style="display:flex; flex-direction:column; gap:22px; margin-top:50px;">
+      <div class="ask">
+        <div class="num-badge" style="background:#1D6FE0;">1</div>
+        <div><h4>시범사업 트랙 확정</h4><p>낙농 ICT 7,750두 RCT 실증을 새 도정의 ‘1호 데이터 행정 과제’로 채택.</p></div>
+      </div>
+      <div class="ask">
+        <div class="num-badge" style="background:#1E9E6A;">2</div>
+        <div><h4>실행 파트너 지정</h4><p>‘센서 공급 + CowTalk AI 탑재’ 단일 패키지를 우선 검토 대상으로 지정(통합 리스크 최소화).</p></div>
+      </div>
+      <div class="ask">
+        <div class="num-badge" style="background:#E0A12E;">3</div>
+        <div><h4>표준화 선언</h4><p>경기 모델을 道 표준·전국 확산 기준으로 설계 — 경기를 표준 발원지로 명문화.</p></div>
+      </div>
+    </div>
+
+    <div style="margin-top:38px; background:#0E2A47; border-radius:16px; padding:26px 36px; color:#fff; font-weight:700; font-size:26px;">
+      D2O는 30 / 60 / 90일 내 <span style="color:#FFD27A;">실증 설계서 · 견적 · 컨소시엄안</span>을 제출할 준비가 되어 있습니다.
+    </div>
+  </div>
+  <div class="foot"><span><b>CowTalk AI × Eco-BIT</b> — 경기도 AI 축산행정 플랫폼</span><span>13</span></div>
+</div>
+
+<!-- ====================== SLIDE 14 : CLOSING (dark) ====================== -->
+<div class="slide dark" data-canvas-width="1920" data-canvas-height="1080">
+  <div class="cover-grid"></div>
+  <div class="cover-glow"></div>
+  <div class="cover-glow2"></div>
+  <div style="position:absolute; left:120px; right:120px; top:330px;">
+    <div class="c-display" style="font-size:104px;">센서도 경기, <span class="hl">두뇌도 경기.</span></div>
+    <div class="c-sub" style="margin-top:40px; font-size:36px;">대한민국 축산행정의 표준을, 경기도에서 시작하겠습니다.</div>
+  </div>
+  <div style="position:absolute; left:120px; right:120px; bottom:96px; display:flex; justify-content:space-between; align-items:flex-end;">
+    <div>
+      <div style="font-weight:900; font-size:30px; color:#fff;">감사합니다</div>
+      <div class="c-sub" style="font-size:24px; color:#9FB6D2; margin-top:10px;">하현제 · D2O / Genetics / 고려동물병원 · CowTalk AI × Eco-BIT</div>
+    </div>
+    <div class="c-sub" style="font-size:24px; color:#9FB6D2; text-align:right;">경기도 도지사직 인수위원회 정책 브리핑 · 2026.06</div>
+  </div>
+</div>
+
+</body>
+</html>

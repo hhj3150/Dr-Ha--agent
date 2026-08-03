@@ -30,10 +30,13 @@ the core sales channel** in every strategy.
 ## Product family
 A2 Jersey Hay Milk, A2 Hay Milk, A2 Yogurt, Greek Yogurt, Kaymak, Ice Cream, Milk Tea.
 
-Known product data — A2 Jersey Hay Milk per 100 mL: 92.64 kcal, carbohydrate 5.07 g,
-sugars 4.75 g, fat 6.0 g, trans fat 0.16 g, saturated fat 4.4 g, cholesterol 21.7 mg,
-protein 4.59 g, sodium 41.8 mg. Production: plate heat exchanger; homogenization →
-pasteurization (75 °C / 20 s, APV homogenizer) → cooling → filling → packaging.
+Known product data — A2 Jersey Hay Milk raw-milk composition (founder-corrected
+2026-07-29): **milk fat 4.5%, milk protein 3.5%**. Use these as the authoritative
+component figures. (An earlier per-100 mL nutrition panel listing fat 6.0 g /
+protein 4.59 g / 92.64 kcal was OUTDATED — do not reuse it; any full nutrition-label
+panel must be re-confirmed against current lab values before external use.)
+Production: plate heat exchanger; homogenization → pasteurization (75 °C / 20 s,
+APV homogenizer) → cooling → filling → packaging.
 
 ## Brand philosophy
 Soil to Soul — Healthy Soil → Healthy Grass → Healthy Cow → Healthy Milk → Healthy

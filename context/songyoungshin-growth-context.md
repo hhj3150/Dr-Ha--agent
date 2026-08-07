@@ -43,12 +43,31 @@ the 2026-07-29 approved print artwork. Manufacturer: 농업회사법인 주식�
 | A2저지 플레인요거트 | 500 mL | 8800348640010 | 202603750182 | 소비기한 |
 | A2저지 플레인요거트 | 180 mL | 8800348640058 | 202603750182 | 소비기한 |
 
+**영양성분 표시 기준 — 100 mL 기준이 원칙.** The 750 mL and 500 mL labels declare
+nutrition **per 100 mL**; the 180 mL labels declare **per total contents** (a 180 mL
+pack is one serving). Both are permitted by 표시기준 and the artwork is correct as
+printed — never raise this as a labeling defect. **Quote per-100 mL figures in all
+external documents** (buyer decks, brand introductions, detail pages, POP), and label
+the basis explicitly so the 180 mL per-pack numbers are not mistaken for per-100 mL.
+
 Per 100 mL — **헤이밀크**: 75 kcal, fat 4.5 g, trans fat 0 g, saturated fat 3.0 g,
 protein 3.8 g, carbohydrate 4.8 g, sugars 4.8 g, sodium 40 mg, cholesterol 15 mg.
 **플레인요거트**: 70 kcal, fat 4.5 g, trans fat 0 g, saturated fat 3.0 g, protein 3.8 g,
 carbohydrate 4.1 g, sugars 3.7 g, sodium 40 mg, cholesterol 15 mg; 무지유고형분 8.4%,
 유산균 1 mL당 7.2억 CFU. Ingredients — 헤이밀크: A2A2저지 원유 100% (국산);
 요거트: 원유 99.997% (국산) + 유산균(덴마크) 0.003%.
+
+Per-pack totals (180 mL labels): 헤이밀크 135 kcal, fat 8.1 g, protein 6.8 g,
+sodium 70 mg / 요거트 130 kcal, fat 8.1 g, protein 6.8 g, sodium 70 mg.
+Pack energy: 헤이밀크 750 mL = 560 kcal, 180 mL = 135 kcal;
+요거트 500 mL = 360 kcal, 180 mL = 130 kcal.
+
+**기한 표기**: 우유(헤이밀크) = **유통기한** (우유류는 소비기한 표시제 유예 대상),
+발효유(요거트) = **소비기한**. The split across SKUs is legally correct — not an error.
+
+**"국내 1호 젖소 동물복지 인증목장 / 젖소 저탄소 인증목장의 원유 사용"** is printed on
+the labels. This is an exclusivity claim under 표시·광고법 and needs substantiation
+(인증기관 확인서 / 인증일자) on file before repeating it in any external document.
 
 Production: plate heat exchanger; homogenization (APV) → HTST pasteurization
 (75 °C / 20 s) → cooling → filling → packaging. Yogurt: raw-milk pasteurization

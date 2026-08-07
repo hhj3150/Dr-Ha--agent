@@ -30,10 +30,36 @@ the core sales channel** in every strategy.
 ## Product family
 A2 Jersey Hay Milk, A2 Hay Milk, A2 Yogurt, Greek Yogurt, Kaymak, Ice Cream, Milk Tea.
 
-Known product data — A2 Jersey Hay Milk per 100 mL: 92.64 kcal, carbohydrate 5.07 g,
-sugars 4.75 g, fat 6.0 g, trans fat 0.16 g, saturated fat 4.4 g, cholesterol 21.7 mg,
-protein 4.59 g, sodium 41.8 mg. Production: plate heat exchanger; homogenization →
-pasteurization (75 °C / 20 s, APV homogenizer) → cooling → filling → packaging.
+**Label-declared values (authoritative for all external documents)** — confirmed from
+the 2026-07-29 approved print artwork. Manufacturer: 농업회사법인 주식회사 디투오,
+경기도 안성시 미양면 미양로 466. Tel 031-674-3150. Certifications: HACCP,
+동물복지 축산농장 (제동물복지-10-30-6호), 저탄소 농축산물 (제2024-2-068호),
+가축행복 인증 축산물 (가축행복-23-2-2호); 경기도 퀸스저지 참여.
+
+| SKU | 용량 | GTIN-13 | 품목보고번호 | 기한표기 |
+|---|---|---|---|---|
+| A2저지 헤이밀크 | 750 mL | 8800348640027 | 202603750181 | 유통기한 |
+| A2저지 헤이밀크 | 180 mL | 8800348640003 | 202603750181 | 유통기한 |
+| A2저지 플레인요거트 | 500 mL | 8800348640010 | 202603750182 | 소비기한 |
+| A2저지 플레인요거트 | 180 mL | 8800348640058 | 202603750182 | 소비기한 |
+
+Per 100 mL — **헤이밀크**: 75 kcal, fat 4.5 g, trans fat 0 g, saturated fat 3.0 g,
+protein 3.8 g, carbohydrate 4.8 g, sugars 4.8 g, sodium 40 mg, cholesterol 15 mg.
+**플레인요거트**: 70 kcal, fat 4.5 g, trans fat 0 g, saturated fat 3.0 g, protein 3.8 g,
+carbohydrate 4.1 g, sugars 3.7 g, sodium 40 mg, cholesterol 15 mg; 무지유고형분 8.4%,
+유산균 1 mL당 7.2억 CFU. Ingredients — 헤이밀크: A2A2저지 원유 100% (국산);
+요거트: 원유 99.997% (국산) + 유산균(덴마크) 0.003%.
+
+Production: plate heat exchanger; homogenization (APV) → HTST pasteurization
+(75 °C / 20 s) → cooling → filling → packaging. Yogurt: raw-milk pasteurization
+85–90 °C / 25–30 min → culture → fermentation → cooling → filling.
+
+> **Superseded figures — do not use externally.** An earlier internal note recorded
+> 92.64 kcal, fat 6.0 g, protein 4.59 g, trans fat 0.16 g, cholesterol 21.7 mg per
+> 100 mL. These conflict with the printed label and are likely raw-milk analysis or an
+> older batch. All consumer-facing and buyer-facing documents must use the
+> label-declared values above. See
+> `deliverables/galleria-2026/06-라벨-도안-검수-리포트.md`.
 
 ## Brand philosophy
 Soil to Soul — Healthy Soil → Healthy Grass → Healthy Cow → Healthy Milk → Healthy

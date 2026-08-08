@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<title>송영신목장 A2 저지 헤이밀크 — 제품 소개서</title>
+<style>
+  :root{ --green:#00694E; --tan:#C8A063; --ink:#141414; --muted:#5c5c5c; --line:#d8d5cf; --bg-soft:#F7F5F0; }
+  @page{ size:A4; margin:14mm 14mm 15mm 14mm; @bottom-center{ content:counter(page); } }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{ font-family:"Noto Sans CJK KR","Noto Sans KR",sans-serif; color:var(--ink);
+    font-size:9.4pt; line-height:1.5; -webkit-font-smoothing:antialiased; word-break:keep-all; }
+  .page{ page-break-after:always; }
+  .page:last-child{ page-break-after:auto; }
+  .cover{ height:255mm; display:flex; flex-direction:column; justify-content:space-between; }
+  .cover-top{ padding-top:8mm; }
+  .eyebrow{ font-size:8.6pt; letter-spacing:.22em; color:var(--muted); text-transform:uppercase; font-weight:600; }
+  .cover-rule{ height:3px; background:var(--green); width:52mm; margin:5mm 0 13mm; }
+  .cover-mark{ display:inline-block; background:var(--tan); color:#fff; padding:2.2mm 6mm;
+    border-radius:2mm; font-size:9.4pt; font-weight:700; letter-spacing:.06em; }
+  .cover-farm{ font-size:12pt; font-weight:700; color:var(--muted); margin:9mm 0 2mm; letter-spacing:.02em; }
+  h1.cover-title{ font-size:33pt; line-height:1.2; font-weight:800; margin:0 0 4mm; letter-spacing:-.025em; }
+  .cover-en{ font-size:13pt; color:var(--tan); font-weight:700; letter-spacing:.15em; margin-bottom:6mm; }
+  .doc-kind{ display:inline-block; border:1.5px solid var(--green); color:var(--green);
+    font-size:10pt; font-weight:800; padding:1.6mm 5mm; border-radius:1.6mm; margin-bottom:10mm; }
+  .cover-lede{ font-size:11.4pt; line-height:1.74; color:#2b2b2b;
+    border-left:3px solid var(--tan); padding-left:6mm; max-width:136mm; }
+  .cover-lede strong{ color:var(--green); }
+  .cover-certs{ display:flex; gap:3mm; flex-wrap:wrap; margin-top:12mm; }
+  .chip{ border:1px solid var(--green); color:var(--green); padding:1.6mm 4mm;
+    border-radius:14mm; font-size:8.6pt; font-weight:700; }
+  .chip.solid{ background:var(--green); color:#fff; }
+  .cover-bottom{ border-top:1px solid var(--line); padding-top:6mm;
+    display:flex; justify-content:space-between; align-items:flex-end; font-size:9pt; color:var(--muted); }
+  .cover-bottom .org{ color:var(--ink); }
+  .cover-bottom .org b{ font-size:11pt; }
+  h2{ page-break-after:avoid; font-size:13.2pt; font-weight:800; color:var(--green);
+    margin:0 0 3mm; padding-bottom:1.8mm; border-bottom:2px solid var(--green); letter-spacing:-.01em; }
+  h2 .num{ display:inline-block; background:var(--green); color:#fff; width:6.4mm; height:6.4mm;
+    line-height:6.4mm; text-align:center; border-radius:1.2mm; font-size:9pt; margin-right:2.4mm; }
+  h2 .sub{ font-size:9.4pt; font-weight:600; color:var(--muted); margin-left:3mm; letter-spacing:0; }
+  h3{ font-size:10.4pt; font-weight:800; margin:3.6mm 0 1.6mm; color:var(--ink); }
+  h3 .tag{ color:var(--tan); margin-right:2mm; font-size:12pt; }
+  p{ margin:0 0 2.2mm; }
+  .muted{ color:var(--muted); font-size:8.8pt; }
+  .hl{ color:var(--green); font-weight:700; }
+  .callout{ background:var(--bg-soft); border-left:3px solid var(--tan); padding:2.8mm 4mm; margin:2.8mm 0; font-size:9pt; }
+  .callout.green{ border-left-color:var(--green); }
+  table{ width:100%; border-collapse:collapse; margin:2.4mm 0 3mm; font-size:8.7pt; }
+  th,td{ border:1px solid var(--line); padding:1.45mm 2.4mm; text-align:left; vertical-align:middle; }
+  thead th{ background:var(--green); color:#fff; font-weight:700; border-color:var(--green); }
+  tbody tr:nth-child(even){ background:#FAF9F6; }
+  td.c, th.c{ text-align:center; }
+  th.rowhead{ background:var(--bg-soft); color:var(--ink); font-weight:700; }
+  .t-compact th, .t-compact td{ padding:1.4mm 2.2mm; font-size:8.4pt; }
+  .hero-val{ color:var(--green); font-weight:800; }
+  .flow{ background:var(--bg-soft); border:1px solid var(--line); padding:3.4mm 4mm; margin:2.2mm 0; text-align:center; }
+  .flow-row{ font-size:10.6pt; font-weight:700; }
+  .flow-row .arw{ color:var(--tan); margin:0 2.4mm; font-weight:400; }
+  .flow-back{ margin-top:3mm; font-size:9pt; color:var(--green); font-weight:700; }
+  .card{ border:1px solid var(--line); border-top:3px solid var(--tan); padding:3.2mm 4mm; margin:2.6mm 0; page-break-inside:avoid; }
+  .card h3{ margin-top:0; }
+  .card-row{ display:flex; gap:3mm; }
+  .card.half{ flex:1 1 0; margin-top:0; }
+  .prod-head{ display:flex; align-items:baseline; gap:4mm; margin-bottom:1mm; }
+  .prod-kr{ font-size:17pt; font-weight:800; letter-spacing:-.02em; }
+  .prod-en{ font-size:9.6pt; font-weight:700; color:var(--tan); letter-spacing:.12em; }
+  .prod-type{ display:inline-block; background:var(--green); color:#fff; font-size:8pt;
+    font-weight:700; padding:1mm 3mm; border-radius:1.2mm; }
+  .prod-lede{ font-size:10.2pt; color:#2b2b2b; margin:2.4mm 0 3mm;
+    border-left:3px solid var(--tan); padding-left:4mm; }
+  .two{ display:flex; gap:4mm; }
+  .two > *{ flex:1 1 0; }
+  ul{ margin:0 0 2.2mm; padding-left:4.6mm; }
+  li{ margin-bottom:1mm; }
+  .sign{ margin-top:6mm; padding-top:4mm; border-top:1px solid var(--line);
+    text-align:right; font-size:11pt; font-weight:700; }
+  .sign .org{ display:block; font-size:9pt; color:var(--muted); font-weight:400; margin-bottom:1.5mm; }
+</style></head><body>
+<!-- ===================== COVER ===================== -->
+<section class="page cover">
+  <div class="cover-top">
+    <div class="eyebrow">Song Young Shin Farm · Product Introduction</div>
+    <div class="cover-rule"></div>
+    <span class="cover-mark">Made by Soil</span>
+    <div class="cover-farm">송영신목장</div>
+    <h1 class="cover-title">A2 저지 헤이밀크</h1>
+    <div class="cover-en">A2 JERSEY HAY MILK</div>
+    <div class="doc-kind">제품 소개서</div>
+    <div class="cover-lede">
+      <strong>우유</strong>와 <strong>플레인요거트</strong>, 두 제품군 4종.<br>
+      A2A2 유전자가 확인된 저지 젖소의 원유로, 첨가물 없이 만듭니다.
+    </div>
+    <div class="cover-certs">
+      <span class="chip solid">국내 1호 젖소 동물복지</span>
+      <span class="chip solid">저탄소 농축산물</span>
+      <span class="chip">깨끗한 목장</span>
+      <span class="chip">경기도 가축행복농장</span>
+      <span class="chip">HACCP</span>
+    </div>
+  </div>
+  <div class="cover-bottom">
+    <div class="org">
+      <b>농업회사법인 주식회사 디투오 · 송영신목장</b><br>
+      경기도 안성시 미양면 미양로 466
+    </div>
+    <div style="text-align:right">
+      031-674-3150 · hhj3150@hanmail.net<br>
+      www.a2jerseymilk.com<br>
+      2026. 08.
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 1. 라인업 ===================== -->
+<section class="page">
+  <h2><span class="num">1</span>제품 라인업</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width:30%">제품명 (라벨 표기명)</th>
+        <th class="c" style="width:11%">식품유형</th>
+        <th class="c" style="width:11%">용량</th>
+        <th class="c" style="width:11%">열량</th>
+        <th style="width:21%">바코드 (GTIN-13)</th>
+        <th>품목보고번호</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>송영신목장 A2저지 헤이밀크</strong></td><td class="c">우유</td><td class="c hero-val">750 mL</td><td class="c">560 kcal</td><td>8 800348 640027</td><td>202603750181</td></tr>
+      <tr><td><strong>송영신목장 A2저지 헤이밀크</strong></td><td class="c">우유</td><td class="c hero-val">180 mL</td><td class="c">135 kcal</td><td>8 800348 640003</td><td>202603750181</td></tr>
+      <tr><td><strong>송영신목장 A2저지 플레인요거트</strong></td><td class="c">발효유</td><td class="c hero-val">500 mL</td><td class="c">360 kcal</td><td>8 800348 640010</td><td>202603750182</td></tr>
+      <tr><td><strong>송영신목장 A2저지 플레인요거트</strong></td><td class="c">발효유</td><td class="c hero-val">180 mL</td><td class="c">130 kcal</td><td>8 800348 640058</td><td>202603750182</td></tr>
+    </tbody>
+  </table>
+
+  <h3>공통 사양</h3>
+  <div class="two">
+    <div>
+      <table class="t-compact">
+        <tbody>
+          <tr><th class="rowhead" style="width:36%">제조원</th><td>농업회사법인 주식회사 디투오</td></tr>
+          <tr><th class="rowhead">소재지</th><td>경기도 안성시 미양면 미양로 466</td></tr>
+          <tr><th class="rowhead">원산지</th><td>국산 (경기도 안성)</td></tr>
+          <tr><th class="rowhead">보관방법</th><td>0~10℃ 냉장보관</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <table class="t-compact">
+        <tbody>
+          <tr><th class="rowhead" style="width:36%">용기 · 포장</th><td>용기 PET / 뚜껑 PE / 라벨 PS</td></tr>
+          <tr><th class="rowhead">공급 형태</th><td>냉장 직배송 (배송 주기 협의)</td></tr>
+          <tr><th class="rowhead">반품 · 교환</th><td>본사 및 구입처</td></tr>
+          <tr><th class="rowhead">문의 · 주문</th><td><strong>031-674-3150</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h3>용량 운영 안내</h3>
+  <table class="t-compact">
+    <thead><tr><th style="width:18%">용량</th><th>제안 용도</th></tr></thead>
+    <tbody>
+      <tr><td class="hero-val">750 mL</td><td>우유 — 가정 상비 · 정기배송 주력. 브랜드의 기준 제품</td></tr>
+      <tr><td class="hero-val">500 mL</td><td>요거트 — 가정용 상시 취식. 온 가족 · 여러 회 취식</td></tr>
+      <tr><td class="hero-val">180 mL</td><td>우유 · 요거트 — 1회 음용/취식, 시음 · 체험, 선물세트 구성, 간편 섭취</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout green">
+    <strong>180 mL 2종은 브랜드 진입용, 750 · 500 mL는 재구매용</strong>으로 설계했습니다.
+    소용량으로 처음 맛보게 하고 대용량으로 정착시키는 구조입니다.
+  </div>
+
+  <div class="callout">
+    <strong>기한 표기 안내</strong> — 우유는 <strong>유통기한</strong>, 요거트는 <strong>소비기한</strong>으로
+    표기합니다. 우유류는 소비기한 표시제 유예 대상이고 발효유는 적용 대상이므로,
+    각각의 법정 표기를 따른 것입니다.
+  </div>
+</section>
+
+<!-- ===================== 2. 우유 ===================== -->
+<section class="page">
+  <h2><span class="num">2</span>제품 ① 우유</h2>
+
+  <div class="prod-head">
+    <span class="prod-kr">A2저지 헤이밀크</span>
+    <span class="prod-type">우유</span>
+  </div>
+  <div class="prod-en">A2 JERSEY HAY MILK &nbsp;·&nbsp; 750 mL / 180 mL</div>
+  <div class="prod-lede">
+    조사료 중심으로 사양한 A2A2 저지 젖소의 <strong>원유 100%</strong>.
+    첨가물 없이, <strong>저온 단시간 살균(75℃ · 20초)</strong>으로 원유 본연의 풍미를 살렸습니다.
+  </div>
+
+  <div class="two">
+    <div>
+      <h3>제품 사양</h3>
+      <table class="t-compact">
+        <tbody>
+          <tr><th class="rowhead" style="width:34%">식품유형</th><td>우유</td></tr>
+          <tr><th class="rowhead">원재료명 및 함량</th><td><strong>A2A2저지 원유 100% (국산)</strong></td></tr>
+          <tr><th class="rowhead">살균방법</th><td>HTST 살균 75℃ · 20초 (살균제품)</td></tr>
+          <tr><th class="rowhead">보관방법</th><td>0~10℃ 냉장보관</td></tr>
+          <tr><th class="rowhead">기한표기</th><td>유통기한 (라벨 표기일까지)</td></tr>
+          <tr><th class="rowhead">품목보고번호</th><td>202603750181</td></tr>
+          <tr><th class="rowhead">용기 · 포장</th><td>용기 PET / 뚜껑 PE / 라벨 PS</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h3>영양성분 — 100 mL당</h3>
+      <table class="t-compact">
+        <tbody>
+          <tr><th class="rowhead" style="width:46%">열량</th><td>75 kcal</td></tr>
+          <tr><th class="rowhead">지방</th><td class="hero-val">4.5 g (8%)</td></tr>
+          <tr><th class="rowhead">&nbsp;&nbsp;— 트랜스지방</th><td class="hero-val">0 g</td></tr>
+          <tr><th class="rowhead">&nbsp;&nbsp;— 포화지방</th><td>3.0 g (20%)</td></tr>
+          <tr><th class="rowhead">단백질</th><td class="hero-val">3.8 g (7%)</td></tr>
+          <tr><th class="rowhead">탄수화물 / 당류</th><td>4.8 g / 4.8 g</td></tr>
+          <tr><th class="rowhead">나트륨</th><td>40 mg (2%)</td></tr>
+          <tr><th class="rowhead">콜레스테롤</th><td>15 mg (5%)</td></tr>
+        </tbody>
+      </table>
+      <p class="muted" style="margin-top:1.5mm">180 mL 제품은 라벨에 총 내용량 기준으로 표시됩니다.</p>
+    </div>
+  </div>
+
+  <h3>제품 특징</h3>
+  <ul>
+    <li><strong>유지방 4.5%</strong> — 시판 일반 우유(통상 3.2~3.6%) 대비 높은 수준.
+        저지종 고유의 진한 풍미와 고소한 뒷맛</li>
+    <li><strong>단백질 3.8 g / 100 mL</strong> — 일반 우유(통상 3.0~3.2 g)보다 높음</li>
+    <li><strong>트랜스지방 0 g</strong> — 조사료 중심 사양과 저온 살균의 결과</li>
+    <li><strong>원유 100%, 무첨가</strong> — 유화제 · 안정제 · 향료를 일절 사용하지 않음</li>
+    <li><strong>A2A2 유전형 원유만 사용</strong> — 개체 단위 유전자 검사로 선발</li>
+  </ul>
+  <p class="muted">※ 일반 우유 수치는 시판 제품 통상 범위입니다.</p>
+
+  <div class="callout">
+    <strong>취식 제안</strong> — 차갑게 그대로 음용할 때 저지 원유의 밀도가 가장 잘 드러납니다.
+    커피 · 라떼에 사용하면 유지방이 높아 별도 크림 없이도 바디감이 형성됩니다.
+  </div>
+</section>
+
+<!-- ===================== 3. 요거트 ===================== -->
+<section class="page">
+  <h2><span class="num">3</span>제품 ② 요거트</h2>
+
+  <div class="prod-head">
+    <span class="prod-kr">A2저지 플레인요거트</span>
+    <span class="prod-type">발효유</span>
+  </div>
+  <div class="prod-en">A2 JERSEY PLAIN YOGURT &nbsp;·&nbsp; 500 mL / 180 mL</div>
+  <div class="prod-lede">
+    같은 A2A2 저지 원유에 <strong>유산균만</strong> 더했습니다.
+    설탕 · 향료 · 증점제를 넣지 않은 <strong>무가당 플레인</strong>으로, 원유의 밀도가 그대로 남습니다.
+  </div>
+
+  <div class="two">
+    <div>
+      <h3>제품 사양</h3>
+      <table class="t-compact">
+        <tbody>
+          <tr><th class="rowhead" style="width:34%">식품유형</th><td>발효유</td></tr>
+          <tr><th class="rowhead">원재료명 및 함량</th><td><strong>A2A2저지 원유 99.997% (국산)</strong>,<br>유산균(덴마크) 0.003%</td></tr>
+          <tr><th class="rowhead">무지유고형분</th><td>8.4%</td></tr>
+          <tr><th class="rowhead">유산균수</th><td class="hero-val">1 mL당 7.2억 CFU</td></tr>
+          <tr><th class="rowhead">살균방법</th><td>원유 살균 85~90℃ · 25~30분</td></tr>
+          <tr><th class="rowhead">보관방법</th><td>0~10℃ 냉장보관</td></tr>
+          <tr><th class="rowhead">기한표기</th><td>소비기한 (라벨 표기일까지)</td></tr>
+          <tr><th class="rowhead">품목보고번호</th><td>202603750182</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h3>영양성분 — 100 mL당</h3>
+      <table class="t-compact">
+        <tbody>
+          <tr><th class="rowhead" style="width:46%">열량</th><td>70 kcal</td></tr>
+          <tr><th class="rowhead">지방</th><td class="hero-val">4.5 g (8%)</td></tr>
+          <tr><th class="rowhead">&nbsp;&nbsp;— 트랜스지방</th><td class="hero-val">0 g</td></tr>
+          <tr><th class="rowhead">&nbsp;&nbsp;— 포화지방</th><td>3.0 g (20%)</td></tr>
+          <tr><th class="rowhead">단백질</th><td class="hero-val">3.8 g (7%)</td></tr>
+          <tr><th class="rowhead">탄수화물 / 당류</th><td>4.1 g / 3.7 g</td></tr>
+          <tr><th class="rowhead">나트륨</th><td>40 mg (2%)</td></tr>
+          <tr><th class="rowhead">콜레스테롤</th><td>15 mg (5%)</td></tr>
+        </tbody>
+      </table>
+      <p class="muted" style="margin-top:1.5mm">총 유산균수 — 500 mL 3,600억 CFU / 180 mL 1,296억 CFU</p>
+    </div>
+  </div>
+
+  <h3>제품 특징</h3>
+  <ul>
+    <li><strong>무가당 플레인</strong> — 당류 3.7 g / 100 mL로 원유 유래 유당 수준. 설탕 무첨가</li>
+    <li><strong>유산균 1 mL당 7.2억 CFU</strong> — 덴마크산 스타터 사용</li>
+    <li><strong>증점제 무첨가</strong> — 저지 원유의 높은 고형분으로 자연스러운 되직함 구현</li>
+    <li><strong>원유 99.997%</strong> — 유산균을 제외하면 사실상 원유만으로 이루어진 배합</li>
+    <li>우유와 <strong>동일한 A2A2 저지 원유</strong> 사용 — 브랜드 전 제품이 같은 원유에서 출발</li>
+  </ul>
+
+  <div class="callout">
+    <strong>취식 제안</strong> — 그대로 떠먹거나 과일 · 그래놀라 · 꿀과 함께.
+    무가당이므로 드레싱 · 소스 · 베이킹 부재료로도 활용할 수 있습니다.
+  </div>
+
+  <div class="sign">
+    <span class="org">농업회사법인 주식회사 디투오 · 송영신목장</span>
+    대표 &nbsp;하 현 제
+  </div>
+</section>
+
+</body></html>

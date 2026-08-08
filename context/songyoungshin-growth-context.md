@@ -65,6 +65,64 @@ Pack energy: 헤이밀크 750 mL = 560 kcal, 180 mL = 135 kcal;
 **기한 표기**: 우유(헤이밀크) = **유통기한** (우유류는 소비기한 표시제 유예 대상),
 발효유(요거트) = **소비기한**. The split across SKUs is legally correct — not an error.
 
+## Certifications (5) — quote with the certificate number
+
+| 인증 | 인증번호 |
+|---|---|
+| 동물복지 축산농장 — **국내 1호 젖소 부문** | 제동물복지-10-30-6호 |
+| 저탄소 농축산물 | 제2024-2-068호 |
+| 깨끗한 목장 | **확인 필요** |
+| 경기도 가축행복농장 | 가축행복-23-2-2호 |
+| HACCP | **확인 필요** |
+
+Also: 경기도 「퀸스저지」 사업 참여. Earlier drafts wrote "가축행복 인증 축산물" —
+the correct name is **경기도 가축행복농장**, and **깨끗한 목장** was missing entirely.
+
+## Farm values to carry in every brand document
+
+- **HBP 시스템 (Humus Bedded Pack)** — the farm's foundational technology: peat moss +
+  sawdust bedding that composts in place, handling animal welfare and manure/odor at once.
+  Never reduce this to "D2O 순환농업 기술" — name HBP explicitly.
+- **냄새 없는 아름다운 목장** — odor cut at the source by HBP; 깨끗한 목장 인증 is the proof.
+- **재생농업 실천** — Healing Compost returned to the pasture restores soil organic matter;
+  흙 → 풀 → 소 → 퇴비 → 흙.
+- **로컬푸드** — bred, milked, processed and bottled in 경기도 안성; no external raw milk.
+
+The Soil-to-Soul cycle runs: 흙 → 풀 → 소 → 우유, and back via
+목장 분뇨 → **HBP 시스템** → **Healing Compost** → 흙.
+
+## A2A2 herd — 42 head confirmed
+
+From two 젖소 A2 형질검사 결과서 (merged in
+`deliverables/genetics/A2-genotype-test-results-merged.pdf`):
+
+| 검사 | 검사일 | 의뢰처 | 검사두수 | A2A2 | A1A2 | A1A1 |
+|---|---|---|---|---|---|---|
+| 1차 | 2025-12-24 | 송영신목장 | 37 | **34** | 3 | 0 |
+| 2차 | 2026-01-21 | 고려동물병원 | 8 | **8** | 0 | 0 |
+| 합계 | — | — | 45 | **42** | 3 | 0 |
+
+Full per-head list: `deliverables/genetics/A2A2-cow-list.md` / `.csv` (A2A2 only —
+the three A1A2 head are listed separately as excluded and must be kept out of the
+A2 milk stream). Open items: the 8 head from 고려동물병원 carry only 관리번호
+(639, 640, 651, 654, 655, 656, 657, 659), not 12-digit 개체식별번호, and their farm
+of record needs confirming.
+
+## Standing deliverables — brand & product introductions
+
+`deliverables/brand/` holds the two current introduction documents. They are
+**general-purpose** — never address them to one buyer or name a specific retailer:
+
+- `A2-Jersey-Hay-Milk_Brand-Introduction.pdf` (A4 5p) — philosophy, what the name means,
+  the 5 certifications, the four farm values, differentiators, production, company
+- `A2-Jersey-Hay-Milk_Product-Introduction.pdf` (A4 4p) — lineup, then 우유 and 요거트 in detail
+- `brand.html` / `product.html` / `_style.css` — sources; edit and re-render with
+  `chromium --headless --no-pdf-header-footer --print-to-pdf=out.pdf brand.html`
+
+The brand is **A2 Jersey Hay Milk** — that name leads every document. The product range
+is **우유 and 요거트 only**; do not add 카이막, 그릭요거트, 아이스크림 or 밀크티 unless
+the founder says they have launched.
+
 **"국내 1호 젖소 동물복지 인증목장 / 젖소 저탄소 인증목장의 원유 사용"** is printed on
 the labels. This is an exclusivity claim under 표시·광고법 and needs substantiation
 (인증기관 확인서 / 인증일자) on file before repeating it in any external document.

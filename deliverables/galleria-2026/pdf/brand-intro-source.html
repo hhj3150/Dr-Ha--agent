@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>송영신목장 A2 저지 헤이밀크 — 상품 및 브랜드 소개서</title>
+<style>
+  :root{
+    --green:#00694E;        /* 3425C */
+    --tan:#C8A063;          /* 4254C */
+    --red:#C8102E;          /* 3517C */
+    --ink:#141414;
+    --muted:#5c5c5c;
+    --line:#d8d5cf;
+    --bg-soft:#F7F5F0;
+  }
+  @page{
+    size: A4;
+    margin: 14mm 14mm 15mm 14mm;
+    @bottom-center{ content: counter(page); }
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    font-family:"Noto Sans CJK KR","Noto Sans KR",sans-serif;
+    color:var(--ink);
+    font-size:9.4pt;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    word-break:keep-all;
+  }
+  .page{ page-break-after:always; }
+  .page:last-child{ page-break-after:auto; }
+
+  /* ---------- COVER ---------- */
+  .cover{
+    height:255mm;
+    display:flex; flex-direction:column;
+    justify-content:space-between;
+    padding:0;
+  }
+  .cover-top{ padding-top:6mm; }
+  .eyebrow{
+    font-size:8.6pt; letter-spacing:.22em; color:var(--muted);
+    text-transform:uppercase; font-weight:600;
+  }
+  .cover-rule{ height:3px; background:var(--green); width:52mm; margin:5mm 0 12mm; }
+  .cover-mark{
+    display:inline-block; background:var(--tan); color:#fff;
+    padding:2.2mm 6mm; border-radius:2mm;
+    font-size:9.4pt; font-weight:700; letter-spacing:.06em;
+  }
+  h1.cover-title{
+    font-size:31pt; line-height:1.24; font-weight:800;
+    margin:9mm 0 4mm; letter-spacing:-.02em;
+  }
+  .cover-en{
+    font-size:12.4pt; color:var(--tan); font-weight:700;
+    letter-spacing:.16em; margin-bottom:9mm;
+  }
+  .cover-lede{
+    font-size:11.6pt; line-height:1.72; color:#2b2b2b;
+    border-left:3px solid var(--tan); padding-left:6mm; max-width:132mm;
+  }
+  .cover-lede strong{ color:var(--green); }
+  .cover-certs{
+    display:flex; gap:3mm; flex-wrap:wrap; margin-top:11mm;
+  }
+  .chip{
+    border:1px solid var(--green); color:var(--green);
+    padding:1.6mm 4mm; border-radius:14mm;
+    font-size:8.6pt; font-weight:700;
+  }
+  .chip.solid{ background:var(--green); color:#fff; }
+  .cover-bottom{
+    border-top:1px solid var(--line); padding-top:6mm;
+    display:flex; justify-content:space-between; align-items:flex-end;
+    font-size:9pt; color:var(--muted);
+  }
+  .cover-bottom .to{ color:var(--ink); }
+  .cover-bottom .to b{ font-size:11pt; }
+
+  /* ---------- SECTIONS ---------- */
+  h2{ page-break-after:avoid;
+    font-size:13.2pt; font-weight:800; color:var(--green);
+    margin:0 0 3mm; padding-bottom:1.8mm;
+    border-bottom:2px solid var(--green);
+    letter-spacing:-.01em;
+  }
+  h2 .num{
+    display:inline-block; background:var(--green); color:#fff;
+    width:6.4mm; height:6.4mm; line-height:6.4mm; text-align:center;
+    border-radius:1.2mm; font-size:9pt; margin-right:2.4mm;
+  }
+  h3{
+    font-size:10.4pt; font-weight:800; margin:3.6mm 0 1.6mm; color:var(--ink);
+  }
+  h3 .tag{
+    color:var(--tan); margin-right:2mm; font-size:12pt;
+  }
+  p{ margin:0 0 2.2mm; }
+  .muted{ color:var(--muted); font-size:8.8pt; }
+  strong{ font-weight:700; }
+  .hl{ color:var(--green); font-weight:700; }
+
+  .callout{
+    background:var(--bg-soft); border-left:3px solid var(--tan);
+    padding:2.8mm 4mm; margin:2.8mm 0; font-size:9pt;
+  }
+  .callout.green{ border-left-color:var(--green); }
+
+  /* ---------- TABLES ---------- */
+  table{ width:100%; border-collapse:collapse; margin:2.4mm 0 3mm; font-size:8.7pt; }
+  th,td{ border:1px solid var(--line); padding:1.45mm 2.4mm; text-align:left; vertical-align:middle; }
+  thead th{ background:var(--green); color:#fff; font-weight:700; border-color:var(--green); }
+  tbody tr:nth-child(even){ background:#FAF9F6; }
+  td.num, th.num{ text-align:right; font-variant-numeric:tabular-nums; }
+  td.c, th.c{ text-align:center; }
+  .t-compact th, .t-compact td{ padding:1.4mm 2.2mm; font-size:8.4pt; }
+  .hero-val{ color:var(--green); font-weight:800; }
+
+  /* ---------- PHILOSOPHY FLOW ---------- */
+  .flow{
+    background:var(--bg-soft); border:1px solid var(--line);
+    padding:3.4mm 4mm; margin:2.2mm 0; text-align:center;
+  }
+  .flow-row{ font-size:10.6pt; font-weight:700; color:var(--ink); }
+  .flow-row .arw{ color:var(--tan); margin:0 2.4mm; font-weight:400; }
+  .flow-back{
+    margin-top:3mm; font-size:9pt; color:var(--green); font-weight:700;
+  }
+
+  /* ---------- DIFFERENTIATOR CARDS ---------- */
+  .card{
+    border:1px solid var(--line); border-top:3px solid var(--tan);
+    padding:3.2mm 4mm; margin:2.6mm 0; page-break-inside:avoid;
+  }
+  .card h3{ margin-top:0; }
+  .card-row{ display:flex; gap:3mm; }
+  .card.half{ flex:1 1 0; margin-top:0; }
+
+  /* ---------- LINEUP ---------- */
+  .sku-name{ font-weight:700; }
+  .sku-vol{ color:var(--green); font-weight:800; }
+
+  /* ---------- SIGN ---------- */
+  .sign{
+    margin-top:6mm; padding-top:4mm; border-top:1px solid var(--line);
+    text-align:right; font-size:11pt; font-weight:700;
+  }
+  .sign .org{ display:block; font-size:9pt; color:var(--muted); font-weight:400; margin-bottom:1.5mm; }
+  ul{ margin:0 0 2.2mm; padding-left:4.6mm; }
+  li{ margin-bottom:0.9mm; }
+</style>
+</head>
+<body>
+
+<!-- ================= COVER ================= -->
+<section class="page cover">
+  <div class="cover-top">
+    <div class="eyebrow">Song Young Shin Farm · Brand Introduction</div>
+    <div class="cover-rule"></div>
+    <span class="cover-mark">A2 저지 · Made by Soil</span>
+    <h1 class="cover-title">송영신목장<br>A2 저지 헤이밀크</h1>
+    <div class="cover-en">A2 JERSEY HAY MILK</div>
+    <div class="cover-lede">
+      국내 1호 젖소 <strong>동물복지 · 저탄소 인증목장</strong>에서,<br>
+      <strong>A2A2 유전자</strong>가 확인된 저지 젖소의 원유 100%로 만든 단일목장 우유.
+    </div>
+    <div class="cover-certs">
+      <span class="chip solid">동물복지 축산농장</span>
+      <span class="chip solid">저탄소 농축산물</span>
+      <span class="chip">HACCP</span>
+      <span class="chip">가축행복 인증 축산물</span>
+      <span class="chip">경기도 퀸스저지</span>
+    </div>
+  </div>
+
+  <div class="cover-bottom">
+    <div class="to">
+      <b>갤러리아백화점 식품관 입점 제안</b><br>
+      홍석진 이사님 귀중
+    </div>
+    <div style="text-align:right">
+      농업회사법인 주식회사 디투오 · 송영신목장<br>
+      경기도 안성시 미양면 미양로 466 · 031-674-3150<br>
+      2026. 08.
+    </div>
+  </div>
+</section>
+
+<!-- ================= P2 : 철학 + 차별점 ================= -->
+<section class="page">
+  <h2><span class="num">1</span>브랜드 철학 — Soil to Soul</h2>
+
+  <div class="flow">
+    <div class="flow-row">
+      건강한 흙 <span class="arw">→</span> 건강한 풀 <span class="arw">→</span> 행복한 소
+      <span class="arw">→</span> 좋은 우유 <span class="arw">→</span> 건강한 사람
+    </div>
+    <div class="flow-back">↑ &nbsp; 퇴비 · 순환 (Healing Compost) &nbsp; ↵</div>
+  </div>
+
+  <p>송영신목장의 출발점은 우유가 아니라 <strong>흙</strong>입니다. 목장에서 나온 분뇨는 D2O 순환농업
+  기술로 프리미엄 퇴비가 되어 목초지로 돌아가고, 그 풀을 먹은 소가 다시 우유를 만듭니다.
+  라벨에 새긴 <strong>“Made by Soil”</strong>은 카피가 아니라 이 목장의 운영 원리입니다.</p>
+
+  <p>수의학 박사이자 가축 생명공학 · 축산환경 기술 전문가인 <strong>하현제 대표</strong>가
+  20년 가까이 축적한 유전 · 번식 · 사양 · 환경 기술을 한 목장에 집약한 결과물입니다.</p>
+
+  <h2 style="margin-top:6mm"><span class="num">2</span>네 가지 차별점</h2>
+
+  <div class="card">
+    <h3><span class="tag">①</span>국내 1호 — 젖소 <span class="hl">동물복지 + 저탄소</span> 동시 인증목장</h3>
+    <table class="t-compact">
+      <thead><tr><th style="width:46%">인증</th><th>인증번호</th></tr></thead>
+      <tbody>
+        <tr><td>동물복지 축산농장</td><td>제동물복지-10-30-6호</td></tr>
+        <tr><td>저탄소 농축산물</td><td>제2024-2-068호</td></tr>
+        <tr><td>HACCP (식품안전관리인증)</td><td>인증 보유</td></tr>
+        <tr><td>가축행복 인증 축산물</td><td>가축행복-23-2-2호</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-bottom:0">젖소 부문에서 동물복지와 저탄소를 함께 인증받은 <strong>국내 1호 목장</strong>의 원유를
+    사용합니다. 프리미엄 식품관 고객이 가장 민감하게 반응하는 <strong>동물복지 · ESG</strong> 두 축을
+    <strong>제3자 공인 인증</strong>으로 동시에 충족합니다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="tag">②</span>A2A2 — 품종이 아니라 <span class="hl">유전자</span>로 선발한 원유</h3>
+    <p>일반 우유에는 A1 · A2 두 가지 베타카제인이 섞여 있습니다. 송영신목장은 <strong>유전자 검사로
+    A2A2 유전형이 확인된 개체의 원유만</strong> 사용하며, 원재료명에
+    <strong>“A2A2저지 원유 100% (국산)”</strong>으로 명시했습니다.</p>
+    <ul>
+      <li>목장 자체 유전체 분석 역량 보유 — ㈜제네틱스 (수정란 이식 · 유전체 분석 전문)</li>
+      <li><strong>“A2 우유를 사와서 파는” 것이 아니라 “A2 소를 만들어서 짜는” 구조</strong></li>
+    </ul>
+    <p class="muted" style="margin-bottom:0">A2 베타카제인은 일부 소비자에게 소화 부담이 덜한 것으로 알려져 있습니다.
+    (질병의 예방 · 치료 효과를 표방하지 않습니다.)</p>
+  </div>
+
+  <div class="card-row"><div class="card half">
+    <h3><span class="tag">③</span>유럽 전통 Hay Milk — 조사료 중심 사양</h3>
+    <p style="margin-bottom:0">곡물 사료를 최소화하고 <strong>건초 · 목초 등 조사료 중심</strong>으로 사양합니다.
+    소의 반추 생리에 맞는 사양 체계이며, 유럽 프리미엄 낙농에서 확립된 방식입니다.</p>
+  </div>
+
+  <div class="card half">
+    <h3><span class="tag">④</span>국내 <span class="hl">단일목장</span> 저지 원유 · 목장형 유가공</h3>
+    <p style="margin-bottom:0">여러 목장의 원유를 모아 쓰지 않습니다. <strong>한 목장, 한 품종, 한 유전형.</strong>
+    착유부터 병입까지 한 곳에서 이루어져 <strong>원유 이동거리가 사실상 0 km</strong>입니다.</p>
+  </div></div>
+</section>
+
+<!-- ================= P3 : 제품 스펙 ================= -->
+<section class="page">
+  <h2><span class="num">3</span>제품 스펙 (라벨 표시값)</h2>
+
+  <h3>3.1 영양성분 — 100 mL당</h3>
+  <table>
+    <thead>
+      <tr><th style="width:34%">항목</th><th class="c">A2저지 헤이밀크</th><th class="c">A2저지 플레인요거트</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>열량</td><td class="c">75 kcal</td><td class="c">70 kcal</td></tr>
+      <tr><td>나트륨</td><td class="c">40 mg (2%)</td><td class="c">40 mg (2%)</td></tr>
+      <tr><td>탄수화물</td><td class="c">4.8 g (1%)</td><td class="c">4.1 g (1%)</td></tr>
+      <tr><td>&nbsp;&nbsp;— 당류</td><td class="c">4.8 g (5%)</td><td class="c">3.7 g (4%)</td></tr>
+      <tr><td><strong>지방</strong></td><td class="c hero-val">4.5 g (8%)</td><td class="c">4.5 g (8%)</td></tr>
+      <tr><td>&nbsp;&nbsp;— <strong>트랜스지방</strong></td><td class="c hero-val">0 g</td><td class="c hero-val">0 g</td></tr>
+      <tr><td>&nbsp;&nbsp;— 포화지방</td><td class="c">3.0 g (20%)</td><td class="c">3.0 g (20%)</td></tr>
+      <tr><td>콜레스테롤</td><td class="c">15 mg (5%)</td><td class="c">15 mg (5%)</td></tr>
+      <tr><td><strong>단백질</strong></td><td class="c hero-val">3.8 g (7%)</td><td class="c">3.8 g (7%)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout green">
+    <strong>소구 포인트</strong>
+    <ul style="margin-top:2mm; margin-bottom:0">
+      <li><strong>유지방 4.5%</strong> — 시판 일반 우유(통상 3.2~3.6%) 대비 높은 수준. 저지종 고유의 진한 풍미</li>
+      <li><strong>트랜스지방 0 g</strong> — 조사료 중심 사양 + 저온 살균의 결과</li>
+      <li><strong>첨가물 없음</strong> — 헤이밀크는 원유 100%, 요거트는 원유 + 유산균만</li>
+      <li class="muted" style="font-size:8.2pt">※ 일반 우유 수치는 시판 제품 통상 범위 / 180 mL 제품은 라벨에 총 내용량 기준 표시</li>
+    </ul>
+  </div>
+
+  <h3>3.2 제조 사양</h3>
+  <table class="t-compact">
+    <thead>
+      <tr><th style="width:24%">항목</th><th style="width:38%">헤이밀크</th><th>플레인요거트</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>식품유형</td><td>우유</td><td>발효유</td></tr>
+      <tr><td>원재료</td><td>A2A2저지 원유 100% (국산)</td><td>A2A2저지 원유 99.997%(국산), 유산균(덴마크) 0.003%</td></tr>
+      <tr><td>살균</td><td><strong>HTST 75℃ · 20초</strong> (저온 단시간)</td><td>원유 살균 85~90℃ · 25~30분</td></tr>
+      <tr><td>무지유고형분</td><td>—</td><td>8.4%</td></tr>
+      <tr><td>유산균수</td><td>—</td><td><strong>1 mL당 7.2억 CFU</strong></td></tr>
+      <tr><td>보관</td><td>0~10℃ 냉장</td><td>0~10℃ 냉장</td></tr>
+      <tr><td>용기</td><td>PET / 뚜껑 PE / 라벨 PS</td><td>PET / 뚜껑 PE / 라벨 PS</td></tr>
+    </tbody>
+  </table>
+
+  <h3>3.3 제조공정 (헤이밀크)</h3>
+  <div class="flow" style="text-align:left; font-size:9pt; line-height:1.55">
+    착유 (A2A2 저지 100%) <span style="color:var(--tan)">→</span> 냉각 저유
+    <span style="color:var(--tan)">→</span> 여과 · 청정
+    <span style="color:var(--tan)">→</span> 균질 (APV)<br>
+    <span style="color:var(--tan)">→</span> <strong>HTST 살균 75℃ · 20초</strong>
+    <span style="color:var(--tan)">→</span> 냉각
+    <span style="color:var(--tan)">→</span> 충전
+    <span style="color:var(--tan)">→</span> 포장 · 코드표시<br>
+    <span style="color:var(--tan)">→</span> 자가품질검사
+    <span style="color:var(--tan)">→</span> 0~10℃ 냉장 출하
+  </div>
+
+  <div class="callout">
+<strong>저온 단시간 살균(75℃/20초)</strong>은 초고온 살균 대비 풍미 손실이 적습니다. 짧은 유통기한에 맞춰 <strong>주 2~3회 냉장 직배송</strong>합니다.
+  </div>
+</section>
+
+<!-- ================= P4 : 라인업 + 제안 ================= -->
+<section class="page">
+  <h2><span class="num">4</span>제품 라인업 — 현재 4 SKU, 전량 생산 중</h2>
+
+  <table>
+    <thead>
+      <tr><th style="width:32%">제품</th><th class="c" style="width:13%">용량</th><th class="c" style="width:14%">식품유형</th><th class="c" style="width:13%">열량</th><th>제안 포지션</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="sku-name">A2저지 헤이밀크</td><td class="c sku-vol">750 mL</td><td class="c">우유</td><td class="c">560 kcal</td><td>가정 상비 · 정기배송 주력</td></tr>
+      <tr><td class="sku-name">A2저지 헤이밀크</td><td class="c sku-vol">180 mL</td><td class="c">우유</td><td class="c">135 kcal</td><td>그랩앤고 · 시식 · 선물세트</td></tr>
+      <tr><td class="sku-name">A2저지 플레인요거트</td><td class="c sku-vol">500 mL</td><td class="c">발효유</td><td class="c">360 kcal</td><td>프리미엄 냉장 디저트</td></tr>
+      <tr><td class="sku-name">A2저지 플레인요거트</td><td class="c sku-vol">180 mL</td><td class="c">발효유</td><td class="c">130 kcal</td><td>데일리 · 단품 구매 유입</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>750 mL + 500 mL = 헤비 유저용 / 180 mL 2종 = 신규 고객 진입용</strong> 구조입니다.
+  백화점 식품관에서는 <strong>180 mL로 시식 · 첫 구매를 유도하고 750 mL로 재구매를 전환</strong>하는
+  운영을 제안드립니다.</p>
+
+  <h3>확대 예정 품목 (2차 협의)</h3>
+  <p>그릭요거트 · <strong>카이막</strong> · A2 아이스크림 · A2 밀크티</p>
+  <div class="callout">
+    <strong>카이막</strong>은 국내 대형 유통 채널에서 정식 상품화 사례가 드문 품목이며,
+    유지방이 높은 저지 원유의 강점이 가장 극대화됩니다.
+    <strong>갤러리아 단독 선출시 기획</strong>을 제안드립니다.
+  </div>
+
+  <h2 style="margin-top:6mm"><span class="num">5</span>갤러리아 입점 제안</h2>
+
+  <h3>5.1 왜 갤러리아인가</h3>
+  <ul>
+    <li><strong>동물복지 · 저탄소 · A2 · 단일목장</strong> — 설명 없이 가치를 이해하는 고객층</li>
+    <li>압구정 상권 = 프리미엄 유제품 구매 빈도 최상위</li>
+    <li>인증 기반 스토리텔링 상품에 최적화된 식품관 MD 구조</li>
+  </ul>
+
+  <h3>5.2 운영 제안</h3>
+  <table class="t-compact">
+    <thead><tr><th style="width:26%">구분</th><th>제안</th></tr></thead>
+    <tbody>
+      <tr><td>입점 형태</td><td>특정매입 / 직매입 — 협의</td></tr>
+      <tr><td>초기 SKU</td><td><strong>4종</strong> (헤이밀크 750 · 180 / 요거트 500 · 180)</td></tr>
+      <tr><td>배송</td><td><strong>주 2~3회 냉장 직배송</strong> (안성 → 압구정, 콜드체인 유지)</td></tr>
+      <tr><td>시식 운영</td><td><strong>오픈 4주간 주말 시식</strong> — 180 mL 활용</td></tr>
+      <tr><td>판촉물</td><td>인증 4종 배너, Soil to Soul 리플렛, 목장 영상, QR</td></tr>
+    </tbody>
+  </table>
+
+  <h3>5.3 매장 연출 제안 — “인증으로 말하는 매대”</h3>
+  <p>저지 우유는 맛으로 설득되지만, <strong>구매 결정은 인증에서 납니다.</strong> 매대 상단에
+  <strong>동물복지 · 저탄소 · HACCP · 가축행복 4개 인증 마크와 인증번호</strong>를 크게 노출하는
+  연출을 제안드립니다. 프리미엄 식품관에서 가장 강력한 신뢰 신호입니다.</p>
+
+  <h3>5.4 온 · 오프라인 연계</h3>
+  <p>자사몰(www.a2jerseymilk.com) 정기배송과 연계해, 갤러리아 매장을
+  <strong>브랜드 체험 접점 + 정기배송 유입 채널</strong>로 운영할 수 있습니다.
+  매장 QR → 구독 전환 시 첫 회 혜택 등 공동 프로모션 제안이 가능합니다.</p>
+</section>
+
+<!-- ================= P5 : 회사 개요 ================= -->
+<section class="page">
+  <h2><span class="num">6</span>회사 개요</h2>
+
+  <table class="t-compact">
+    <tbody>
+      <tr><th style="width:26%; background:var(--bg-soft); color:var(--ink)">제조원</th><td><strong>농업회사법인 주식회사 디투오</strong></td></tr>
+      <tr><th style="background:var(--bg-soft); color:var(--ink)">목장</th><td>송영신목장</td></tr>
+      <tr><th style="background:var(--bg-soft); color:var(--ink)">소재지</th><td>경기도 안성시 미양면 미양로 466</td></tr>
+      <tr><th style="background:var(--bg-soft); color:var(--ink)">대표자</th><td>하현제 (수의학 박사)</td></tr>
+      <tr><th style="background:var(--bg-soft); color:var(--ink)">브랜드</th><td>A2 JERSEY HAY MILK — <em>Made by Soil</em></td></tr>
+      <tr><th style="background:var(--bg-soft); color:var(--ink)">고객상담 · 주문</th><td><strong>031-674-3150</strong></td></tr>
+      <tr><th style="background:var(--bg-soft); color:var(--ink)">이메일</th><td>hhj3150@hanmail.net</td></tr>
+      <tr><th style="background:var(--bg-soft); color:var(--ink)">웹</th><td>www.a2jerseymilk.com</td></tr>
+      <tr><th style="background:var(--bg-soft); color:var(--ink)">지자체 협력</th><td>경기도 「퀸스저지」 사업 참여</td></tr>
+    </tbody>
+  </table>
+
+  <h3>관계 기업 역량</h3>
+  <table class="t-compact">
+    <thead><tr><th style="width:26%">기업</th><th>역량</th></tr></thead>
+    <tbody>
+      <tr><td><strong>㈜제네틱스</strong></td><td>수정란 이식 · 유전체 분석 · 젖소 개량 (연간 수정란 이식 약 3,000건)</td></tr>
+      <tr><td><strong>㈜디투오</strong></td><td>축산환경 · 순환농업 기술 (D2O Bedding, Healing Compost)</td></tr>
+      <tr><td><strong>한국동물병원</strong></td><td>번식 · 수의 관리</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout green">
+    브랜드 스토리가 마케팅 언어가 아니라 <strong>실제 보유 기술 · 인증 · 사업 실적</strong>에 근거합니다.
+  </div>
+
+  <h2 style="margin-top:6.5mm"><span class="num">7</span>마무리</h2>
+  <p>송영신목장은 우유를 만드는 목장이 아니라, <strong>흙 · 소 · 우유 · 퇴비가 하나로 순환하는
+  농업 시스템</strong>입니다. 동물복지와 저탄소를 젖소 부문 국내 1호로 동시에 인증받은 것도
+  그 시스템의 결과일 뿐, 목표가 아니었습니다.</p>
+  <p>A2 저지 헤이밀크의 가치를 가장 정확히 알아보는 고객이 있는 곳이 갤러리아라고 판단합니다.
+  좋은 인연으로 이어지기를 기대합니다.</p>
+
+  <div class="sign">
+    <span class="org">농업회사법인 주식회사 디투오 · 송영신목장</span>
+    대표 &nbsp;하 현 제 &nbsp;드림
+  </div>
+</section>
+
+</body>
+</html>

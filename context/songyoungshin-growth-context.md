@@ -30,10 +30,147 @@ the core sales channel** in every strategy.
 ## Product family
 A2 Jersey Hay Milk, A2 Hay Milk, A2 Yogurt, Greek Yogurt, Kaymak, Ice Cream, Milk Tea.
 
-Known product data — A2 Jersey Hay Milk per 100 mL: 92.64 kcal, carbohydrate 5.07 g,
-sugars 4.75 g, fat 6.0 g, trans fat 0.16 g, saturated fat 4.4 g, cholesterol 21.7 mg,
-protein 4.59 g, sodium 41.8 mg. Production: plate heat exchanger; homogenization →
-pasteurization (75 °C / 20 s, APV homogenizer) → cooling → filling → packaging.
+**Label-declared values (authoritative for all external documents)** — confirmed from
+the 2026-07-29 approved print artwork. Manufacturer: 농업회사법인 주식회사 디투오,
+경기도 안성시 미양면 미양로 466. Tel 031-674-3150. Certifications: HACCP,
+동물복지 축산농장 (제동물복지-10-30-6호), 저탄소 농축산물 (제2024-2-068호),
+가축행복 인증 축산물 (가축행복-23-2-2호); 경기도 퀸스저지 참여.
+
+| SKU | 용량 | GTIN-13 | 품목보고번호 | 기한표기 |
+|---|---|---|---|---|
+| A2저지 헤이밀크 | 750 mL | 8800348640027 | 202603750181 | 유통기한 |
+| A2저지 헤이밀크 | 180 mL | 8800348640003 | 202603750181 | 유통기한 |
+| A2저지 플레인요거트 | 500 mL | 8800348640010 | 202603750182 | 소비기한 |
+| A2저지 플레인요거트 | 180 mL | 8800348640058 | 202603750182 | 소비기한 |
+
+**영양성분 표시 기준 — 100 mL 기준이 원칙.** The 750 mL and 500 mL labels declare
+nutrition **per 100 mL**; the 180 mL labels declare **per total contents** (a 180 mL
+pack is one serving). Both are permitted by 표시기준 and the artwork is correct as
+printed — never raise this as a labeling defect. **Quote per-100 mL figures in all
+external documents** (buyer decks, brand introductions, detail pages, POP), and label
+the basis explicitly so the 180 mL per-pack numbers are not mistaken for per-100 mL.
+
+Per 100 mL — **헤이밀크**: 75 kcal, fat 4.5 g, trans fat 0 g, saturated fat 3.0 g,
+protein 3.8 g, carbohydrate 4.8 g, sugars 4.8 g, sodium 40 mg, cholesterol 15 mg.
+**플레인요거트**: 70 kcal, fat 4.5 g, trans fat 0 g, saturated fat 3.0 g, protein 3.8 g,
+carbohydrate 4.1 g, sugars 3.7 g, sodium 40 mg, cholesterol 15 mg; 무지유고형분 8.4%,
+유산균 1 mL당 7.2억 CFU. Ingredients — 헤이밀크: A2A2저지 원유 100% (국산);
+요거트: 원유 99.997% (국산) + 유산균(덴마크) 0.003%.
+
+Per-pack totals (180 mL labels): 헤이밀크 135 kcal, fat 8.1 g, protein 6.8 g,
+sodium 70 mg / 요거트 130 kcal, fat 8.1 g, protein 6.8 g, sodium 70 mg.
+Pack energy: 헤이밀크 750 mL = 560 kcal, 180 mL = 135 kcal;
+요거트 500 mL = 360 kcal, 180 mL = 130 kcal.
+
+**기한 표기**: 우유(헤이밀크) = **유통기한** (우유류는 소비기한 표시제 유예 대상),
+발효유(요거트) = **소비기한**. The split across SKUs is legally correct — not an error.
+
+## Certifications (5) — quote with the certificate number
+
+| 인증 | 인증번호 |
+|---|---|
+| 동물복지 축산농장 — **국내 1호 젖소 부문** | 제동물복지-10-30-6호 |
+| 저탄소 농축산물 | 제2024-2-068호 |
+| 깨끗한 목장 | **확인 필요 — 유일한 미확보 번호** |
+| 경기도 가축행복농장 | 가축행복-23-2-2호 |
+| HACCP (유가공장) | 제2026-3-0230호 |
+
+Also: 경기도 「퀸스저지」 사업 참여. Earlier drafts wrote "가축행복 인증 축산물" —
+the correct name is **경기도 가축행복농장**, and **깨끗한 목장** was missing entirely.
+
+## Farm values to carry in every brand document
+
+- **HBP 시스템 (Humus Bedded Pack)** — the farm's foundational technology: peat moss +
+  sawdust bedding that composts in place, handling animal welfare and manure/odor at once.
+  Never reduce this to "D2O 순환농업 기술" — name HBP explicitly.
+- **냄새 없는 아름다운 목장** — odor cut at the source by HBP; 깨끗한 목장 인증 is the proof.
+- **재생농업 실천** — Healing Compost returned to the pasture restores soil organic matter;
+  흙 → 풀 → 소 → 퇴비 → 흙.
+- **로컬푸드** — bred, milked, processed and bottled in 경기도 안성; no external raw milk.
+
+The Soil-to-Soul cycle runs: 흙 → 풀 → 소 → 우유, and back via
+목장 분뇨 → **HBP 시스템** → **Healing Compost** → 흙.
+
+## A2A2 herd — 42 head confirmed
+
+From two 젖소 A2 형질검사 결과서 (merged in
+`deliverables/genetics/A2-genotype-test-results-merged.pdf`):
+
+| 검사 | 검사일 | 의뢰처 | 검사두수 | A2A2 | A1A2 | A1A1 |
+|---|---|---|---|---|---|---|
+| 1차 | 2025-12-24 | 송영신목장 | 37 | **34** | 3 | 0 |
+| 2차 | 2026-01-21 | 고려동물병원 | 8 | **8** | 0 | 0 |
+| 합계 | — | — | 45 | **42** | 3 | 0 |
+
+Full per-head list: `deliverables/genetics/A2A2-cow-list.md` / `.csv` (A2A2 only —
+the three A1A2 head are listed separately as excluded and must be kept out of the
+A2 milk stream). Open items: the 8 head from 고려동물병원 carry only 관리번호
+(639, 640, 651, 654, 655, 656, 657, 659), not 12-digit 개체식별번호, and their farm
+of record needs confirming.
+
+## Pedigree certificates — 저어지 혈통등록증명서 (KAIA)
+
+Issued by **사단법인 한국종축개량협회**. Files 13–17 held so far, merged in
+`deliverables/genetics/pedigree-certificates-13-17-merged.pdf`; register at
+`deliverables/genetics/pedigree-register.md` / `.csv`. Numbering implies files
+1–12 exist — append them to the register when they arrive.
+
+| 파일 | 등록번호 | 개체식별번호 | 명호 | 생년월일 | A2 |
+|---:|---|---|---|---|:---:|
+| 13 | 501462157 | 002 1697 2801 2 | L&H MANTRA RONALDO JIVE 439TH-ET | 2021-11-18 | **A2A2** |
+| 14 | 501462159 | 002 1697 2802 9 | L&H MANTRA RONALDO JUICY 440TH-ET | 2021-11-19 | 미검사 |
+| 15 | 501462161 | 002 1697 2791 3 | L&H MANTRA RONALDO JEROM 441ST-ET | 2021-11-20 | **A2A2** |
+| 16 | 501479457 | 002 1717 4081 4 | L&H MANTRA RONALDO 455TH-ET | 2022-03-05 | **A2A2** |
+| 17 | 501479221 | 002 1723 6293 6 | L&H OLIVER RONALDO 464TH | 2022-03-31 | 미검사 |
+
+All five: 암 · RED · sired by **JX FARIA BROTHERS RONALDO {3}-ET** (023124526292 /
+1JE00922), 조부 JX SCHULTZ VOLCANO HARRIS {4} (29JE03866). 13/14/15 are full sisters
+out of L&H MANTRA JOLIE(248)-ET. Breeder and owner on every certificate:
+**송영신, 회원번호 12066**, registered at **경기 안성시 보개면 양협길29-67 고려동물병원**.
+
+Two things this settles and raises:
+- The 고려동물병원 address on these certificates ties that name to 송영신's own
+  registered address — relevant to the 8 head tested there on 2026-01-21.
+- The registered address (보개면 양협길29-67) differs from the label's manufacturing
+  address (미양면 미양로 466). Keep the sited-vs-registered distinction straight in
+  any external document.
+
+Certificate 품종 wording is **저어지**, not 저지 — quote public documents verbatim.
+Names carry **-ET**: these are embryo-transfer animals, the physical proof that
+㈜제네틱스's embryo work feeds the milking herd.
+
+Pair pedigree (품종) with the A2 형질검사 (유전형) — the two together are what
+substantiates the "A2 저지" brand name. 14 and 17 have no genotype test yet.
+
+## Standing deliverables — brand & product introductions
+
+`deliverables/brand/` holds the two current introduction documents. They are
+**general-purpose** — never address them to one buyer or name a specific retailer:
+
+- `A2-Jersey-Hay-Milk_Brand-Introduction.pdf` (A4 5p) — philosophy, what the name means,
+  the 5 certifications, the four farm values, differentiators, production, company
+- `A2-Jersey-Hay-Milk_Product-Introduction.pdf` (A4 4p) — lineup, then 우유 and 요거트 in detail
+- `brand.html` / `product.html` / `_style.css` — sources; edit and re-render with
+  `chromium --headless --no-pdf-header-footer --print-to-pdf=out.pdf brand.html`
+
+The brand is **A2 Jersey Hay Milk** — that name leads every document. The product range
+is **우유 and 요거트 only**; do not add 카이막, 그릭요거트, 아이스크림 or 밀크티 unless
+the founder says they have launched.
+
+**"국내 1호 젖소 동물복지 인증목장 / 젖소 저탄소 인증목장의 원유 사용"** is printed on
+the labels. This is an exclusivity claim under 표시·광고법 and needs substantiation
+(인증기관 확인서 / 인증일자) on file before repeating it in any external document.
+
+Production: plate heat exchanger; homogenization (APV) → HTST pasteurization
+(75 °C / 20 s) → cooling → filling → packaging. Yogurt: raw-milk pasteurization
+85–90 °C / 25–30 min → culture → fermentation → cooling → filling.
+
+> **Superseded figures — do not use externally.** An earlier internal note recorded
+> 92.64 kcal, fat 6.0 g, protein 4.59 g, trans fat 0.16 g, cholesterol 21.7 mg per
+> 100 mL. These conflict with the printed label and are likely raw-milk analysis or an
+> older batch. All consumer-facing and buyer-facing documents must use the
+> label-declared values above. See
+> `deliverables/galleria-2026/06-라벨-도안-검수-리포트.md`.
 
 ## Brand philosophy
 Soil to Soul — Healthy Soil → Healthy Grass → Healthy Cow → Healthy Milk → Healthy

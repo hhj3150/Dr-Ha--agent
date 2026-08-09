@@ -108,6 +108,40 @@ A2 milk stream). Open items: the 8 head from 고려동물병원 carry only 관�
 (639, 640, 651, 654, 655, 656, 657, 659), not 12-digit 개체식별번호, and their farm
 of record needs confirming.
 
+## Pedigree certificates — 저어지 혈통등록증명서 (KAIA)
+
+Issued by **사단법인 한국종축개량협회**. Files 13–17 held so far, merged in
+`deliverables/genetics/pedigree-certificates-13-17-merged.pdf`; register at
+`deliverables/genetics/pedigree-register.md` / `.csv`. Numbering implies files
+1–12 exist — append them to the register when they arrive.
+
+| 파일 | 등록번호 | 개체식별번호 | 명호 | 생년월일 | A2 |
+|---:|---|---|---|---|:---:|
+| 13 | 501462157 | 002 1697 2801 2 | L&H MANTRA RONALDO JIVE 439TH-ET | 2021-11-18 | **A2A2** |
+| 14 | 501462159 | 002 1697 2802 9 | L&H MANTRA RONALDO JUICY 440TH-ET | 2021-11-19 | 미검사 |
+| 15 | 501462161 | 002 1697 2791 3 | L&H MANTRA RONALDO JEROM 441ST-ET | 2021-11-20 | **A2A2** |
+| 16 | 501479457 | 002 1717 4081 4 | L&H MANTRA RONALDO 455TH-ET | 2022-03-05 | **A2A2** |
+| 17 | 501479221 | 002 1723 6293 6 | L&H OLIVER RONALDO 464TH | 2022-03-31 | 미검사 |
+
+All five: 암 · RED · sired by **JX FARIA BROTHERS RONALDO {3}-ET** (023124526292 /
+1JE00922), 조부 JX SCHULTZ VOLCANO HARRIS {4} (29JE03866). 13/14/15 are full sisters
+out of L&H MANTRA JOLIE(248)-ET. Breeder and owner on every certificate:
+**송영신, 회원번호 12066**, registered at **경기 안성시 보개면 양협길29-67 고려동물병원**.
+
+Two things this settles and raises:
+- The 고려동물병원 address on these certificates ties that name to 송영신's own
+  registered address — relevant to the 8 head tested there on 2026-01-21.
+- The registered address (보개면 양협길29-67) differs from the label's manufacturing
+  address (미양면 미양로 466). Keep the sited-vs-registered distinction straight in
+  any external document.
+
+Certificate 품종 wording is **저어지**, not 저지 — quote public documents verbatim.
+Names carry **-ET**: these are embryo-transfer animals, the physical proof that
+㈜제네틱스's embryo work feeds the milking herd.
+
+Pair pedigree (품종) with the A2 형질검사 (유전형) — the two together are what
+substantiates the "A2 저지" brand name. 14 and 17 have no genotype test yet.
+
 ## Standing deliverables — brand & product introductions
 
 `deliverables/brand/` holds the two current introduction documents. They are

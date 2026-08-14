@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>하현제 소개 — 피트모스·풀브산 축사환경 솔루션</title>
+<style>
+@page {
+  size: A4;
+  margin: 18mm 16mm 16mm 16mm;
+  @bottom-center {
+    content: "하현제 · 피트모스 · 풀브산 축사환경 솔루션          " counter(page) " / " counter(pages);
+    font-family: "Noto Sans CJK KR", sans-serif;
+    font-size: 7.5pt;
+    color: #9a9287;
+  }
+}
+@page :first { margin: 0; @bottom-center { content: ""; } }
+
+* { box-sizing: border-box; }
+html { -weasy-hyphens: none; }
+body {
+  font-family: "Noto Sans CJK KR", "NanumGothic", sans-serif;
+  font-size: 9.6pt;
+  line-height: 1.62;
+  color: #2c2a26;
+  margin: 0;
+}
+
+/* ---------- palette ---------- */
+:root {}
+.accent { color: #4a6b3d; }
+
+/* ---------- cover ---------- */
+.cover {
+  page-break-after: always;
+  height: 297mm;
+  padding: 0;
+  position: relative;
+  background: #f6f4ef;
+}
+.cover-band {
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 92mm;
+  background: #3d5233;
+}
+.cover-inner { position: absolute; top: 0; left: 0; right: 0; bottom: 0; padding: 26mm 22mm; }
+.cover-eyebrow {
+  color: #c3d4b3; font-size: 9pt; letter-spacing: 3px; margin-bottom: 9mm;
+}
+.cover-title {
+  color: #ffffff; font-size: 30pt; font-weight: 700; line-height: 1.32; letter-spacing: -0.5px;
+}
+.cover-sub {
+  color: #d7e3cd; font-size: 12.5pt; margin-top: 6mm; font-weight: 400;
+}
+.cover-quote {
+  margin-top: 34mm;
+  border-left: 3px solid #7b9668;
+  padding: 2mm 0 2mm 7mm;
+  font-size: 14pt; line-height: 1.6; color: #33402c; font-weight: 700;
+}
+.cover-quote small { display:block; font-size: 10pt; font-weight: 400; color: #6b6558; margin-top: 4mm; line-height:1.6; }
+.cover-points { margin-top: 20mm; }
+.cp {
+  border-top: 0.6px solid #ddd7ca; padding: 4.5mm 0 4.5mm 0;
+  font-size: 9.2pt; color: #55504a; line-height: 1.6;
+}
+.cp:last-child { border-bottom: 0.6px solid #ddd7ca; }
+.cp-n { color: #a3b593; font-weight: 700; font-size: 8.5pt; letter-spacing: 1px; margin-right: 4mm; }
+.cp b { color: #33402c; font-size: 10.4pt; margin-right: 3mm; }
+.cp em { font-style: normal; color: #6b6558; }
+.cover-foot {
+  position: absolute; left: 22mm; right: 22mm; bottom: 20mm;
+  border-top: 1px solid #d8d2c6; padding-top: 5mm;
+  font-size: 9.5pt; color: #55504a;
+}
+.cover-foot b { color: #3d5233; }
+.cover-orgs { font-size: 9pt; color: #7a7368; margin-top: 2mm; }
+
+/* ---------- sections ---------- */
+h2 {
+  font-size: 13.5pt; color: #3d5233; margin: 0 0 4mm 0; padding-bottom: 2.2mm;
+  border-bottom: 2px solid #3d5233; font-weight: 700; letter-spacing: -0.3px;
+}
+h2 .num { color: #a8b89b; margin-right: 3mm; font-size: 12pt; }
+h3 { font-size: 10.4pt; color: #2c2a26; margin: 6mm 0 2.5mm 0; font-weight: 700; }
+h3::before { content: "▪ "; color: #7b9668; }
+p { margin: 0 0 3mm 0; }
+section { page-break-inside: avoid; margin-bottom: 9mm; }
+section.flowable { page-break-inside: auto; }
+.newpage { page-break-before: always; }
+
+ul { margin: 0 0 3mm 0; padding-left: 5mm; }
+li { margin-bottom: 1.4mm; }
+
+table { width: 100%; border-collapse: collapse; margin: 3mm 0 4mm 0; font-size: 8.9pt; }
+th {
+  background: #eef1e9; color: #3d5233; text-align: left; font-weight: 700;
+  padding: 2.2mm 2.6mm; border-bottom: 1.4px solid #9db38c;
+}
+td { padding: 2.2mm 2.6mm; border-bottom: 0.6px solid #e2ded4; vertical-align: top; }
+tr:nth-child(even) td { background: #fbfaf7; }
+td.k { font-weight: 700; color: #3d5233; white-space: nowrap; }
+
+.lead {
+  background: #f4f6f1; border-left: 3px solid #7b9668;
+  padding: 4mm 5mm; margin: 0 0 5mm 0; font-size: 10pt; line-height: 1.66;
+}
+.lead b { color: #3d5233; }
+
+.callout {
+  background: #fdfbf5; border: 1px solid #e0d9c8; border-radius: 2mm;
+  padding: 4mm 5mm; margin: 3mm 0 4mm 0; font-size: 9.3pt;
+}
+.callout b { color: #8a6d2f; }
+
+.flow {
+  background: #f4f6f1; border: 1px solid #d5decb; border-radius: 2mm;
+  padding: 5mm; margin: 3mm 0 4mm 0; text-align: center; font-size: 9.2pt; line-height: 1.9;
+}
+.flow .step { font-weight: 700; color: #33402c; }
+.flow .arrow { color: #7b9668; font-weight: 700; }
+.flow .out { color: #8a6d2f; font-weight: 700; }
+
+.two { display: table; width: 100%; }
+.two > div { display: table-cell; width: 50%; vertical-align: top; }
+.two > div:first-child { padding-right: 4mm; }
+.two > div:last-child { padding-left: 4mm; }
+
+.card {
+  border: 1px solid #e2ded4; border-radius: 2mm; padding: 3.5mm 4mm; margin-bottom: 3mm;
+  page-break-inside: avoid;
+}
+.card b { color: #3d5233; display: block; margin-bottom: 1.5mm; font-size: 9.8pt; }
+.card .first { display:block; margin-top: 2mm; color: #6b6558; font-size: 8.6pt; }
+
+.faq { margin-bottom: 3.5mm; page-break-inside: avoid; }
+.faq .q { font-weight: 700; color: #3d5233; margin-bottom: 1mm; }
+.faq .a { color: #3a3733; }
+
+.steps { counter-reset: s; }
+.step-row { display: table; width: 100%; margin-bottom: 2.5mm; page-break-inside: avoid; }
+.step-row .n {
+  display: table-cell; width: 9mm; vertical-align: top;
+  color: #7b9668; font-weight: 700; font-size: 11pt;
+}
+.step-row .t { display: table-cell; vertical-align: top; }
+.step-row .t b { color: #2c2a26; }
+
+.contact {
+  background: #3d5233; color: #ffffff; border-radius: 2mm; padding: 6mm 7mm; margin-top: 6mm;
+  page-break-inside: avoid;
+}
+.contact h4 { margin: 0 0 3mm 0; font-size: 11.5pt; color: #ffffff; }
+.contact table { margin: 0; font-size: 9.4pt; }
+.contact td { border: none; padding: 1.4mm 0; color: #e8efe2; background: none !important; }
+.contact td.k { color: #b9cdab; width: 24mm; }
+
+.note {
+  margin-top: 6mm; padding-top: 3mm; border-top: 0.6px solid #ddd8cd;
+  font-size: 8pt; color: #8a8378; line-height: 1.6;
+}
+</style>
+</head>
+<body>
+
+<!-- ================= COVER ================= -->
+<div class="cover">
+  <div class="cover-band"></div>
+  <div class="cover-inner">
+    <div class="cover-eyebrow">D2O · LIVESTOCK ENVIRONMENT SOLUTION</div>
+    <div class="cover-title">피트모스 · 풀브산<br>축사환경 솔루션</div>
+    <div class="cover-sub">수의사 하현제 소개자료</div>
+
+    <div class="cover-quote">
+      “소를 진료하던 수의사가,<br>소가 서 있는 바닥부터 바꿉니다.”
+      <small>축사의 악취 · 분뇨 · 깔짚 문제를 ‘처리’가 아니라 <b>‘발효 설계’</b>로 해결합니다.</small>
+    </div>
+
+    <div class="cover-points">
+      <div class="cp">
+        <span class="cp-n">01</span>
+        <b>피트모스 깔짚</b>
+        수분을 잡고 냄새 조건을 낮추며, 바닥을 발효층으로 만드는 <em>탄소 기질</em>
+      </div>
+      <div class="cp">
+        <span class="cp-n">02</span>
+        <b>풀브산 액상제 (Dr. Ha Liquid)</b>
+        악취 저감 · 발효 촉진 · 양분 안정화 — <em>바닥의 미생물을 깨우는 기능제</em>
+      </div>
+      <div class="cp">
+        <span class="cp-n">03</span>
+        <b>HBP 부식 깔짚 시스템</b>
+        깔짚 교체 주기 연장, 노동 절감, 분뇨는 <em>프리미엄 퇴비 원료로</em>
+      </div>
+    </div>
+
+    <div class="cover-foot">
+      <b>하현제</b> 수의사 · 농업 시스템 설계자
+      <div class="cover-orgs">㈜제네틱스 · 고려동물병원 · ㈜디투오(D2O) · 송영신목장</div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= P1 : 인사 + 프로필 ================= -->
+<section>
+  <h2><span class="num">01</span>인사드립니다</h2>
+  <p>안녕하십니까. 수의사 하현제입니다.</p>
+  <p>저는 20년 가까이 소를 진료하고 번식을 관리해 왔습니다. 그 현장에서 반복해서 확인한 사실이 하나
+  있습니다. <b>유방염도, 발굽 질환도, 번식 성적도 결국 소가 서 있는 바닥에서 시작된다</b>는 것입니다.
+  그래서 저는 소를 치료하는 일에서 한 걸음 더 들어가, <b>축사의 바닥 자체를 다시 설계하는 일</b>을
+  하고 있습니다.</p>
+  <p>그 해답으로 찾은 두 가지가 <b>피트모스(부식질 깔짚)</b>와 <b>풀브산 기반 환경 액상제</b>입니다.
+  본 자료로 그 원리와 현장 적용 방법을 간략히 소개드립니다.</p>
+</section>
+
+<section>
+  <h2><span class="num">02</span>하현제는 누구인가</h2>
+  <table>
+    <tr><td class="k">전문 분야</td><td>수의사 / 가축 번식·수정란 이식 / 축산환경 · 탄소 기술</td></tr>
+    <tr><td class="k">소속</td><td>㈜제네틱스 · 고려동물병원 · ㈜디투오(D2O) · 송영신목장</td></tr>
+    <tr><td class="k">번식 경력</td><td>수정란 이식 약 18년 · 연 약 3,000두 이식 · 연 약 4,000개 수정란 공급 · 평균 수태율 약 60%</td></tr>
+    <tr><td class="k">환경 기술</td><td>D2O Bedding / Dr. Ha Bedding / Dr. Ha Liquid / HBP(부식 깔짚 축사) / 힐링퇴비</td></tr>
+    <tr><td class="k">국가 R&amp;D</td><td>산업통상자원부 3년 국책 연구개발과제 참여기업</td></tr>
+    <tr><td class="k">실증 현장</td><td>송영신목장 — 직접 운영하는 목장에 먼저 적용해 검증</td></tr>
+  </table>
+  <div class="lead">
+    <b>차별점.</b> 자재를 유통하는 회사가 아니라, <b>소를 아는 수의사가 설계한 축사환경 시스템</b>입니다.
+    효과를 냄새의 체감이 아니라 <b>체세포·번식 성적·비용이라는 숫자</b>로 확인하는 방식으로 일합니다.
+  </div>
+</section>
+
+<!-- ================= P2 : 피트모스 ================= -->
+<section class="newpage">
+  <h2><span class="num">03</span>왜 피트모스인가</h2>
+
+  <h3>현장의 문제</h3>
+  <ul>
+    <li>톱밥 수급 불안정 · 가격 변동 · 품질 편차(이물 · 수분 · 곰팡이)</li>
+    <li>젖으면 뭉치고 암모니아 냄새가 급격히 상승 → 환기 부담, 민원, 유방염 압박</li>
+    <li>깔짚 교체 주기가 짧아 인건비와 장비 사용이 지속적으로 발생</li>
+    <li>배출된 분뇨는 ‘처리 비용’, 퇴비 품질은 들쭉날쭉</li>
+  </ul>
+
+  <h3>피트모스의 물성이 축사에서 갖는 의미</h3>
+  <table>
+    <tr><th style="width:38%">특성</th><th>축사에서 의미하는 것</th></tr>
+    <tr><td>높은 보수력 · 흡습력</td><td>요(尿) 수분을 빠르게 흡수 → 표층 건조 상태 유지</td></tr>
+    <tr><td>낮은 pH(약산성)</td><td>암모니아 휘산이 억제되는 방향으로 작용</td></tr>
+    <tr><td>높은 유기탄소 · 부식질<br>(휴믹 · 풀브산 함유)</td><td>질소를 붙잡아 두는 <b>탄소 공급원</b> → 발효의 기질</td></tr>
+    <tr><td>미세 다공 구조</td><td>미생물 서식 공간 확보 → 바닥 자체가 발효층이 됨</td></tr>
+    <tr><td>균일한 규격 품질</td><td>로트별 편차가 작아 관리 프로토콜의 표준화가 가능</td></tr>
+  </table>
+
+  <div class="callout">
+    <b>핵심.</b> 피트모스는 ‘흡수만 잘 되는 비싼 톱밥’이 아닙니다. <b>바닥에서 발효를 일으키는 탄소 기질</b>입니다.
+    톱밥이 깔고 치우는 소모품이라면, 피트모스는 <b>운영하는 시스템</b>입니다.
+  </div>
+
+  <h3>축종별 적용</h3>
+  <table>
+    <tr><th style="width:16%">축종</th><th style="width:42%">적용 형태</th><th>1차 기대 포인트</th></tr>
+    <tr><td>낙농</td><td>프리스톨 상부 깔짚 / HBP 운동장</td><td>유방염 위생, 체세포, 소가 눕는 시간</td></tr>
+    <tr><td>한우</td><td>깔짚 축사 표층 관리</td><td>악취 · 수분 · 발굽, 깔짚 교체 주기</td></tr>
+    <tr><td>양돈</td><td>발효 깔짚 · 퇴비화 보조</td><td>악취 민원, 분뇨 수분 조절</td></tr>
+    <tr><td>가금</td><td>깔짚 표층</td><td>암모니아, 족저피부염</td></tr>
+    <tr><td>퇴비장 · 유기질비료</td><td>수분조절재 · 발효 촉진</td><td>발효 온도 유지, 퇴비 등급</td></tr>
+  </table>
+  <p style="font-size:8.6pt;color:#7a7368;">※ 실제 사용량과 교체 주기는 축사 구조 · 두수 · 환기 조건에 따라 달라지며, 현장 진단 후 산출해 드립니다.</p>
+</section>
+
+<!-- ================= P3 : 풀브산 + HBP ================= -->
+<section class="newpage">
+  <h2><span class="num">04</span>왜 풀브산인가 — Dr. Ha Liquid</h2>
+  <p><b>Dr. Ha Liquid</b>는 <b>풀브산(fulvic acid) 기반의 축산환경 기능성 액상제</b>입니다.
+  원료 구성과 배합은 회사 기밀로 비공개하며, <b>기능과 성능</b>으로 판단해 주시면 됩니다.</p>
+  <table>
+    <tr><th style="width:32%">기능</th><th>내용</th></tr>
+    <tr><td class="k">악취 저감 작용</td><td>암모니아 · 황화계 악취가 발생하는 조건을 억제하는 방향으로 바닥 환경을 조성</td></tr>
+    <tr><td class="k">발효(퇴비화) 촉진</td><td>유용 미생물이 활성화되는 환경을 만들어 분뇨의 분해 · 부숙을 앞당김</td></tr>
+    <tr><td class="k">양분 안정화</td><td>질소 손실을 줄이는 방향으로 작용 → 배출 퇴비의 품질 상승</td></tr>
+    <tr><td class="k">탄소 관리 연계</td><td>부식질 형태로 탄소를 토양에 되돌리는 순환 설계의 핵심 고리</td></tr>
+  </table>
+  <div class="callout">
+    <b>왜 둘을 함께 쓰는가.</b> 피트모스가 <b>집(구조 · 탄소 · 수분)</b>을 만들고,
+    풀브산 액상제가 <b>그 집에 사는 미생물을 깨웁니다.</b>
+    하나만 쓰면 흡수제이거나 첨가제로 끝나지만, 함께 쓰면 <b>바닥이 발효 반응조가 됩니다.</b>
+    저희가 자재 판매가 아니라 <b>시스템 제공</b>이라고 말씀드리는 이유입니다.
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">05</span>두 기술의 결합 — HBP 부식 깔짚 시스템</h2>
+  <div class="flow">
+    <span class="step">피트모스</span> <span style="color:#7a7368">(탄소 · 수분 · 다공 구조)</span>
+    &nbsp;<span class="arrow">+</span>&nbsp;
+    <span class="step">Dr. Ha Liquid</span> <span style="color:#7a7368">(풀브산 · 발효 · 악취 제어)</span><br>
+    <span class="arrow">+</span>&nbsp; 교반 관리 &nbsp;<span class="arrow">+</span>&nbsp; 환기 · 수분 관리<br>
+    <span class="arrow">↓</span><br>
+    <span class="step">축사 바닥 = 상시 발효층 (HBP · Humus Bedded Pack)</span><br>
+    <span class="arrow">↓</span><br>
+    악취 저감 방향 · 표층 건조 · 소가 눕는 시간 증가 · 깔짚 교체 주기 연장<br>
+    <span class="arrow">↓</span><br>
+    <span class="out">배출물 = 폐기물이 아니라 프리미엄 퇴비(힐링퇴비) 원료</span>
+  </div>
+
+  <h3>농가에서 지켜야 할 관리점은 세 가지뿐입니다</h3>
+  <table>
+    <tr><th style="width:20%">관리 항목</th><th>기준</th></tr>
+    <tr><td class="k">① 수분</td><td>손에 쥐어 뭉쳐지되 물이 배어나오지 않는 상태를 유지</td></tr>
+    <tr><td class="k">② 교반</td><td>정해진 주기로 표층을 뒤집어 공기를 공급(호기 발효 유지)</td></tr>
+    <tr><td class="k">③ 보충 · 살포</td><td>표층 상태에 따라 피트모스를 보충하고 Dr. Ha Liquid를 정량 살포</td></tr>
+  </table>
+  <p style="font-size:9pt;">냄새가 올라온다면 대부분 <b>수분 과다 또는 교반 부족</b> 신호입니다.
+  판단 기준과 조치 방법은 <b>현장 매뉴얼 1장</b>으로 정리해 드리고, 초기 3개월은 밀착 지원합니다.</p>
+</section>
+
+<!-- ================= P4 : 라인업 + KPI ================= -->
+<section class="newpage">
+  <h2><span class="num">06</span>제품 및 서비스</h2>
+  <table>
+    <tr><th style="width:28%">구분</th><th style="width:44%">내용</th><th>대상</th></tr>
+    <tr><td class="k">D2O Bedding</td><td>축사용 피트모스 깔짚 (수입 피트모스 기반)</td><td>낙농 · 한우 · 양돈 · 가금</td></tr>
+    <tr><td class="k">Dr. Ha Bedding</td><td>상용 피트모스 베딩 제품</td><td>일반 농가 · 유통</td></tr>
+    <tr><td class="k">Dr. Ha Liquid</td><td>풀브산 기반 환경 액상제 (악취 · 발효 · 양분 안정화)</td><td>축사 · 퇴비장</td></tr>
+    <tr><td class="k">HBP 시스템 설계</td><td>축사 진단 → 깔짚 깊이 · 교반 · 환기 · 살포 프로토콜 설계</td><td>신축 · 개보수 농가</td></tr>
+    <tr><td class="k">힐링퇴비 프로그램</td><td>HBP 배출물의 프리미엄 퇴비화 및 활용 설계</td><td>경종 연계 · 조사료 재배</td></tr>
+    <tr><td class="k">컨설팅</td><td>수의 · 번식 관점의 통합 축사환경 컨설팅</td><td>대규모 농가 · 지자체</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2><span class="num">07</span>기대효과와 측정 방법</h2>
+  <p>아래는 <b>기대효과이자 실증 목표</b>입니다. 농가별 실제 수치는 적용 전 기준치를 측정한 뒤,
+  30 · 60 · 90일 비교 데이터로 확정해 드립니다.</p>
+  <table>
+    <tr><th style="width:14%">영역</th><th style="width:30%">기대효과</th><th style="width:28%">측정 지표</th><th>측정 방법</th></tr>
+    <tr><td class="k">악취</td><td>암모니아 · 복합악취 저감</td><td>암모니아 농도, 복합악취 희석배수</td><td>휴대용 측정기 · 공인기관 시료</td></tr>
+    <tr><td class="k">위생</td><td>표층 건조, 오염 감소</td><td>체세포수, 유방염 발생률</td><td>유우군 검정 · 진료 기록</td></tr>
+    <tr><td class="k">소 행동</td><td>눕는 시간 · 되새김 증가</td><td>반추 · 활동 데이터</td><td>반추위 센서 연동</td></tr>
+    <tr><td class="k">노동</td><td>깔짚 교체 · 청소 시간 감소</td><td>월 작업시간, 장비 사용</td><td>작업일지</td></tr>
+    <tr><td class="k">퇴비</td><td>부숙 촉진, 양분 안정</td><td>부숙도, N·P·K, 수분</td><td>퇴비 성분 분석</td></tr>
+    <tr><td class="k">비용</td><td>깔짚 총비용 절감</td><td>두당 월 깔짚 비용</td><td>농가 회계 비교</td></tr>
+    <tr><td class="k">탄소</td><td>유기물의 토양 환원</td><td>퇴비 시용량, 유기탄소</td><td>순환 데이터 기록</td></tr>
+  </table>
+  <div class="callout">
+    <b>데이터로 증명합니다.</b> 저희의 축사환경 데이터는 정밀축산 플랫폼(Eco-BIT · CowTalk AI)의
+    소 개체 데이터와 연결됩니다. “냄새가 줄었다”는 체감 대신
+    <b>“체세포 · 반추시간 · 번식 성적이 이렇게 움직였다”</b>는 기록으로 보고드립니다.
+  </div>
+</section>
+
+<!-- ================= P5 : 순환 + 신뢰 ================= -->
+<section class="newpage">
+  <h2><span class="num">08</span>이 기술이 향하는 곳 — 순환 축산</h2>
+  <div class="flow">
+    <span class="step">건강한 흙</span> <span class="arrow">→</span>
+    <span class="step">좋은 조사료</span> <span class="arrow">→</span>
+    <span class="step">건강한 소</span> <span class="arrow">→</span>
+    <span class="step">좋은 우유 · 고기</span><br>
+    <span class="arrow">↑</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="arrow">↓</span><br>
+    <span class="out">힐링퇴비</span> <span class="arrow">←</span>
+    <span class="step">HBP 발효 깔짚 (피트모스 + 풀브산)</span> <span class="arrow">←</span>
+    <span class="step">분뇨</span>
+  </div>
+  <ul>
+    <li>분뇨를 <b>비용(처리 대상)에서 자산(퇴비 · 토양 탄소)</b>으로 전환합니다.</li>
+    <li>축산 민원의 1순위인 <b>악취</b>를 일회성 탈취가 아니라 구조적으로 관리합니다.</li>
+    <li>향후 <b>탄소 · ESG · 친환경 인증</b> 및 정부 정책사업과 연결 가능한 데이터가 축적됩니다.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="num">09</span>신뢰의 근거</h2>
+  <table>
+    <tr><td class="k">① 자기 목장 우선 적용</td><td>송영신목장에서 직접 운영하며 검증하고 있는 기술입니다.</td></tr>
+    <tr><td class="k">② 수의 임상 기반</td><td>유방염 · 발굽 · 번식 성적으로 효과를 판단하는 관점에서 설계했습니다.</td></tr>
+    <tr><td class="k">③ 국가 R&amp;D 수행</td><td>산업통상자원부 3년 국책과제 참여기업으로 연구 · 기록 체계를 갖추고 있습니다.</td></tr>
+    <tr><td class="k">④ 현장 조직 운영</td><td>연 3,000두 규모 수정란 이식을 수행하는 실행 조직을 보유하고 있습니다.</td></tr>
+    <tr><td class="k">⑤ 데이터 역량</td><td>정밀축산 플랫폼과 연동해 효과를 수치화할 수 있습니다.</td></tr>
+  </table>
+</section>
+
+<!-- ================= P6 : 협업 + 절차 ================= -->
+<section>
+  <h2><span class="num">10</span>어떻게 함께할 수 있습니까</h2>
+  <div class="two">
+    <div>
+      <div class="card">
+        <b>농가</b>
+        축사 진단 → 사용량 · 비용 산출 → 시범 우사(1개 동 또는 1개 구역) 적용 → 30 · 60 · 90일 측정
+        <span class="first">첫 단계 — 방문 진단 및 시범 견적</span>
+      </div>
+      <div class="card">
+        <b>대리점 · 총판</b>
+        지역 조건 협의, 제품 · 기술 교육, 농가 제안서 및 견적 양식 제공, 시범농가 공동 구축
+        <span class="first">첫 단계 — 지역 및 목표 물량 협의</span>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <b>농협 · 축협</b>
+        조합원 공동구매 조건, 축사환경 집합 교육 자료 제공, 악취 민원 대응 프로그램
+        <span class="first">첫 단계 — 관내 시범농가 3~5호 선정</span>
+      </div>
+      <div class="card">
+        <b>지자체 · 연구기관</b>
+        악취저감 · 가축분뇨 · 탄소중립 시책 연계 실증 설계, 측정 KPI 및 보고 체계, 공동 실증
+        <span class="first">첫 단계 — 시범사업 실증 설계(안) 협의</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">11</span>도입 절차</h2>
+  <div class="steps">
+    <div class="step-row"><div class="n">01</div><div class="t"><b>진단</b> — 축사 구조 · 두수 · 환기 · 현재 깔짚 · 악취 현황 확인 <span style="color:#7a7368">(방문 1회)</span></div></div>
+    <div class="step-row"><div class="n">02</div><div class="t"><b>설계</b> — 깔짚 깊이 · 초기 투입량 · 교반 주기 · 액상 살포 계획 수립 <span style="color:#7a7368">(약 1주)</span></div></div>
+    <div class="step-row"><div class="n">03</div><div class="t"><b>시범</b> — 1개 동 또는 구역에 적용, 적용 전 기준치(Before) 측정</div></div>
+    <div class="step-row"><div class="n">04</div><div class="t"><b>검증</b> — 30 · 60 · 90일 지표 측정 및 비교 리포트 제출 <span style="color:#7a7368">(3개월)</span></div></div>
+    <div class="step-row"><div class="n">05</div><div class="t"><b>전환</b> — 전 축사 확대 및 정기 공급 · 관리 계약 <span style="color:#7a7368">(협의)</span></div></div>
+  </div>
+</section>
+
+<!-- ================= P7 : FAQ + 연락처 ================= -->
+<section class="flowable">
+  <h2><span class="num">12</span>자주 묻는 질문</h2>
+
+  <div class="faq">
+    <div class="q">Q. 톱밥보다 비싸지 않습니까?</div>
+    <div class="a">A. 자재 단가만 보면 그렇습니다. 비교는 <b>두당 월 총비용</b>(자재 + 교체 인건비 + 장비 + 퇴비 가치 + 위생 손실)으로 하셔야 합니다. 교체 주기와 노동이 줄고 배출물이 퇴비 가치를 갖는 구조이므로, 농가별 비용 비교표를 만들어 드립니다.</div>
+  </div>
+  <div class="faq">
+    <div class="q">Q. 수입 자재인데 수급은 안정적입니까?</div>
+    <div class="a">A. 수입 피트모스를 기반으로 하며, 연간 소요량 기준의 사전 물량 계약과 재고 계획으로 대응합니다. 계약 농가 및 조합 물량은 우선 배정합니다.</div>
+  </div>
+  <div class="faq">
+    <div class="q">Q. 기존 축사를 개조해야 합니까?</div>
+    <div class="a">A. 대부분 <b>기존 축사 그대로 시작</b>합니다. 핵심은 시설이 아니라 깔짚 운영 방식(깊이 · 교반 · 수분 관리)을 바꾸는 것입니다.</div>
+  </div>
+  <div class="faq">
+    <div class="q">Q. 냄새가 정말 줄어듭니까?</div>
+    <div class="a">A. 저감되는 방향으로 작용한다고 말씀드리며, <b>측정으로 증명</b>합니다. 적용 전 기준치를 먼저 측정하고 30 · 60 · 90일 비교표를 제공합니다.</div>
+  </div>
+  <div class="faq">
+    <div class="q">Q. Dr. Ha Liquid는 무엇으로 만듭니까?</div>
+    <div class="a">A. <b>풀브산 기반의 축산환경 기능성 액상제</b>입니다. 원료와 배합은 회사 기밀이며, 기능(악취 · 발효 · 양분 안정화)과 사용법 · 성능으로 판단해 주시면 됩니다.</div>
+  </div>
+  <div class="faq">
+    <div class="q">Q. 관리가 어렵지 않습니까?</div>
+    <div class="a">A. 관리 포인트는 <b>수분 · 교반 · 보충</b> 세 가지입니다. 현장 매뉴얼과 교육을 제공하고, 초기 3개월은 밀착 지원합니다.</div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">13</span>다음 단계</h2>
+  <div class="steps">
+    <div class="step-row"><div class="n">01</div><div class="t">방문 진단 일정 협의 — 축사 현황 · 두수 · 현재 깔짚 비용 확인</div></div>
+    <div class="step-row"><div class="n">02</div><div class="t">시범 구역 선정 및 적용 전 기준치 측정</div></div>
+    <div class="step-row"><div class="n">03</div><div class="t">맞춤 견적서 및 비용 비교표 제출</div></div>
+    <div class="step-row"><div class="n">04</div><div class="t">30 · 60 · 90일 검증 리포트 확인 후 전환 여부 결정</div></div>
+  </div>
+
+  <div class="contact">
+    <h4>문의</h4>
+    <table>
+      <tr><td class="k">담당</td><td>하현제 (수의사)</td></tr>
+      <tr><td class="k">전화</td><td>010-6205-3150</td></tr>
+      <tr><td class="k">이메일</td><td>hhj3150@hanmail.net</td></tr>
+      <tr><td class="k">소속</td><td>㈜디투오(D2O) · ㈜제네틱스 · 고려동물병원 · 송영신목장</td></tr>
+    </table>
+  </div>
+
+  <div class="note">
+    본 자료에 기재된 효과는 기대효과이자 실증 목표이며, 농가별 실제 성과는 적용 전후 측정 데이터로 확정합니다.
+    사용량 · 가격 · 공급 조건은 현장 진단 후 견적 시 확정됩니다.
+    Dr. Ha Liquid의 원료 구성 및 배합은 회사 기밀로 비공개합니다.
+  </div>
+</section>
+
+</body>
+</html>

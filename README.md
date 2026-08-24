@@ -36,6 +36,15 @@ Export business context: `context/global-embryo-export-context.md`. Export targe
 
 Expansion context: `context/eco-bit-expansion-context.md` (government-scale livestock OS; 5-phase path; Tier 1/2/3 priorities; Uzbekistan CowTalk reference).
 
+### Legal & regulatory (cross-cutting)
+18. `legal-compliance-agent.md` - 법무·규제 검토: contracts/MOU/NDA/약관, 인허가·규제 (축산·비료·유가공·통신판매·검역·전파), 표시·광고 심의, 개인정보·데이터·AI 책임, 정부과제 컴플라이언스, 지식재산, 인사·노무·중대재해, 분쟁 1차 정리
+
+Legal context: `context/legal-compliance-context.md` (ROK statute map by business + verification discipline).
+This agent is used **first** for legal questions and **last** as the release gate for any external
+deliverable (제안서·계약서·라벨·상세페이지·보도자료·수출서류·정부 제출문서). It produces internal
+risk screening, not an attorney opinion, and escalates high-risk matters to licensed
+변호사·변리사·노무사·세무사·관세사.
+
 ## Agent → workflows / templates map
 
 | Agent | Workflows | Templates |
@@ -56,6 +65,7 @@ Expansion context: `context/eco-bit-expansion-context.md` (government-scale live
 | songyoungshin-ecommerce | ecommerce-launch-checklist | product-detail-page-template |
 | provincial-government-expansion | policy-proposal-workflow | proposal-template, decision-memo-template |
 | cowtalk-global-expansion | policy-proposal-workflow, country-entry-checklist | country-entry-report-template, proposal-template |
+| legal-compliance | legal-risk-review-workflow, contract-review-workflow | legal-review-memo-template, contract-review-checklist-template, compliance-checklist-template |
 
 ## How to use in Claude Code
 
@@ -78,6 +88,8 @@ For multi-agent work, start with CEO Strategy Agent, then route the task to the 
 - Embryo transfer, genomic selection, Hanwoo strategy, A2A2 breeding -> Genetics Biotech Agent
 - Milk, yogurt, cafe, brochure, package, brand story -> A2 Hay Milk Brand Agent
 - Financial model, business roadmap, investor deck -> CEO Strategy Agent, then relevant specialist
+- Contract, 약관, 인허가, 표시/광고 심의, 개인정보, 컴플라이언스, 분쟁 -> Legal & Regulatory Compliance Agent
+- Anything being SENT outside the company -> relevant specialist first, Legal & Regulatory Compliance Agent last
 
 ## Non-disclosure rules
 

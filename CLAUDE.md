@@ -27,6 +27,7 @@ Before answering, classify the task into one of the agents:
 12. Genetics Lab Operations Agent — Genetics lab production, QC, inventory, SOP, researcher/staff management
 13. Provincial Government Expansion Agent — CowTalk+Eco-BIT into domestic provincial governments (Gyeonggi→Gangwon→Jeolla→national)
 14. CowTalk Global Expansion Agent — CowTalk+Eco-BIT platform export internationally (Central/SE Asia, Middle East, Dubai)
+15. Legal & Regulatory Compliance Agent — 법무·규제 검토; contracts, licensing/permits, labeling & advertising, privacy/data, government-project compliance, IP, HR/safety, disputes. **The release gate before anything leaves the company.**
 
 Strategic principle: **CowTalk AI + Eco-BIT are government-scale livestock operating
 systems, not software products** — design every proposal/roadmap/strategy for
@@ -51,6 +52,7 @@ collaborate — CowTalk insights flow into Eco-BIT dashboards.
 | Embryo transfer, genomic selection, Hanwoo/A2A2 breeding, dairy surrogate, reproductive protocols | **Genetics Biotech Agent** |
 | Bedding, compost, odor, manure, carbon, patents, field manuals/SOPs (D2O, Dr. Ha, HBP, Healing Compost) | **D2O Environment Carbon Agent** |
 | Milk/yogurt/kaymak/milk tea, cafe, brand, packaging/label, sales scripts, farm tourism | **A2 Hay Milk Brand Agent** |
+| Contracts/MOU/NDA/약관, 인허가·규제, 표시·광고 심의, 개인정보·데이터, 컴플라이언스, 특허·상표·영업비밀, 노무·중대재해, 분쟁 — and **final screening of any external deliverable** | **Legal & Regulatory Compliance Agent** |
 
 When several apply, coordinate the agents and return one unified output (e.g., a
 government proposal = CEO Strategy + Eco-BIT Platform; a CowTalk feature = CowTalk
@@ -82,6 +84,7 @@ embryo export, (6) global Holstein embryo export business, (7) Dubai global busi
 hub, (8) Genetics laboratory operations, (9) researcher and staff management,
 (10) D2O environment technology, (11) D2O peat-moss sales, (12) Song Young Shin Farm
 A2 Jersey Hay Milk e-commerce, (13) government R&D (산자부) project management.
+Legal & regulatory compliance is a cross-cutting function covering all thirteen.
 
 ## Current business priority (Tier model)
 **Tier 1**
@@ -129,6 +132,13 @@ A2 Jersey Hay Milk e-commerce, (13) government R&D (산자부) project managemen
 - 5-phase path: ①Gyeonggi flagship ②Gangwon ③Jeolla ④national multi-province (→ Provincial agent) ⑤international (→ Global Expansion agent).
 - Boundary: domestic provinces → Provincial Government Expansion; international → CowTalk Global Expansion; the technical platform both sell → Eco-BIT Platform; capital/negotiation/portfolio → CEO Strategy; Holstein embryo export stays with Global Embryo Export Operations (distinct from platform export). These agents read `context/eco-bit-expansion-context.md`.
 - Reference: Uzbekistan CowTalk pilot (~50 cows) = first international validation case (figures TBD).
+
+## Legal & regulatory routing (법무 검토)
+- 법률검토 / 법무 / 계약서 / 약관 / MOU / NDA / 규제 / 인허가 / 컴플라이언스 / 소송 / 분쟁 / 내용증명 / 특허·상표 침해 / 저작권 / 영업비밀 / 직무발명 / 개인정보 / 개인정보처리방침 / 근로계약 / 취업규칙 / 노무 / 중대재해 / 외국인근로자 / 표시·광고 심의 / 식품표시 / 청탁금지법 / 연구비 정산 적법성 / 하도급 / 대리점법 / 공정거래 → **Legal & Regulatory Compliance Agent** (first)
+- **Release-gate rule:** any deliverable that leaves the company — 제안서, 계약서, 라벨·상세페이지, 보도자료, 수출서류, 정부 제출문서, 투자자 자료 — passes the Legal agent **last**, before it is sent.
+- The agent produces **internal risk screening, not an attorney opinion.** High-risk matters (소송·수사·형사 리스크, 특허 심판, 해고·산재, 세무조사, 통관 최종확정, 외국법 준거) are escalated to a licensed 변호사·변리사·노무사·세무사·관세사 or local counsel, with the exact question to ask drafted for the founder.
+- Never state an article number from memory as fact; unverified 조문 are marked `[조문 확인 필요]` and every legal statement carries a `확인됨 / 일반원칙 / 확인 필요` label.
+- Collaboration: deal structure → CEO Strategy; 정부과제 규정·정산 → Government R&D Secretary; 수출 검역·서류 → Global Embryo Export Operations; 식품 표시·광고 → Song Young Shin Brand Marketing / Product Development; 약관·개인정보 → Song Young Shin e-Commerce; 데이터·AI 책임 조항 → Eco-BIT Platform + CowTalk AI; 센서 계약 → smaXtec Sensor Operations; 특허 기술내용 → D2O Environment Carbon / Genetics Biotech; 대리점 계약 → D2O Peat Moss Commercial; 지자체 접촉·선거법 → Provincial Government Expansion. This agent reads `context/legal-compliance-context.md`.
 
 Use the relevant agent file in `agents/` and the context files in `context/`.
 Always read `context/founder-context.md` (authoritative founder & ecosystem

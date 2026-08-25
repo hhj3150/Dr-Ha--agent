@@ -68,6 +68,20 @@
 **⏱:**     배정 시간
 ```
 
+### slides/ — PowerPoint 강의 자료 (실제 강단용)
+
+원고에서 자동 생성했습니다. **각 슬라이드의 발표자 노트에 영어 대사 전문**이 들어 있어,
+발표자 보기(Presenter View)를 켜면 회장님 화면에만 읽을 대사가 표시됩니다.
+
+| 파일 | 모듈 | 슬라이드 |
+|---|---|---|
+| `slides/Module-1-Embryo-Transfer.pptx` | 수정란이식 120분 | 46장 |
+| `slides/Module-2-Estrus-Synchronization.pptx` | 발정동기화 120분 | 47장 |
+| `slides/Module-3-Rumen-Physiology-and-Diseases.pptx` | 반추위 생리·질병 120분 | 53장 |
+| `slides/사용법-발표자노트.md` | **발표자 보기 설정법·인쇄법·점검표** | — |
+
+슬라이드 하단 우측의 `S24` 번호는 원고 파일의 슬라이드 번호와 **정확히 일치**합니다.
+
 ### 운영·평가·배포물
 
 | 파일 | 용도 | 배포 대상 |

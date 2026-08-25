@@ -1,3 +1,6 @@
+> ⚠️ **[v1 · 요약 개요]** 이 파일은 슬라이드 요약본입니다. **실제 강의 원고는 `scripts/` 폴더의 영문·한글 전체 스크립트**를 사용하십시오.
+> 시간 배분도 v2(`scripts/00-run-sheet-v2.md`)가 최신입니다.
+
 # 02 · Module 2 — ESTRUS SYNCHRONIZATION (발정동기화)
 ## 130 min (M2-A 80' + M2-B 50') · Slides S1–S22 + Case Workshop
 

@@ -1,3 +1,6 @@
+> ⚠️ **[v1 · 요약 개요]** 이 파일은 슬라이드 요약본입니다. **실제 강의 원고는 `scripts/` 폴더의 영문·한글 전체 스크립트**를 사용하십시오.
+> 시간 배분도 v2(`scripts/00-run-sheet-v2.md`)가 최신입니다.
+
 # 01 · Module 1 — EMBRYO TRANSFER (수정란이식)
 ## 150 min (M1-A 80' + M1-B 70') · Slides S1–S24
 

@@ -33,7 +33,7 @@
 | 언어 | **영어 강의** (필리핀 수정사는 영어 구사) · 슬라이드 영문 · 순차통역 대기 |
 | 원고 | **영문 발화 원고 + 한글 완전 대응본** (슬라이드 번호 일치) — `scripts/` |
 | 과목 | ①수정란이식(MOET·OPU-IVF·IVP) ②발정동기화(난포파·Ovsynch 계열·G6G·센서) ③반추위 소화생리 + 다발성 질병 11종 |
-| 형식 | 전문가 강의 + 실습 데모 + 케이스 워크숍 + 사진퀴즈 + 평가·수료 |
+| 형식 | **이론 강의 전용 (실습 없음)** — 강의 + 판서 + 도해 + 사진퀴즈 + 케이스 토론 + 평가·수료 |
 | 강사 | 하현제 원장 (수의사, 수정란이식 18년, 연 3,000두 이식, 연 4,000개 공급) |
 | 근거 | 최신 국제 낙농과학 기준. 수치는 *published range* / *Korea field data* / *target·pilot* 로 구분 표기 |
 
@@ -49,7 +49,7 @@
 
 | 파일 | 내용 | 분량 |
 |---|---|---|
-| `scripts/00-run-sheet-v2.md` | **시간표 v2** — M1/M2/M3 각 120분 + 운영 60분 = 420분 | 진행표 |
+| `scripts/00-run-sheet-v2.md` | **진행표 + 운영 시나리오 + 통역 + 리스크** (M1/M2/M3 각 120분 = 420분) | 운영 총괄 |
 | `scripts/M1-embryo-transfer-EN.md` | **[강단용]** 수정란이식 영문 원고 | S0–S38 |
 | `scripts/M1-embryo-transfer-KR.md` | 수정란이식 한글 원고 | S0–S38 |
 | `scripts/M2-estrus-synchronization-EN.md` | **[강단용]** 발정동기화 영문 원고 | S1–S40 |
@@ -72,11 +72,12 @@
 
 | 파일 | 용도 | 배포 대상 |
 |---|---|---|
-| `04-field-pocket-cards.md` | 현장 포켓카드 (A5 6면, 인쇄·코팅용, 영문) | 교육생 20부 |
-| `05-assessment-and-certification.md` | 사전/사후 시험 각 15문항 + 실기 체크리스트 + 수료증 | 운영진 |
-| `06-instructor-logistics-kit.md` | 준비물·교보재·통역·실습장비·D-day 체크리스트 | 운영진 |
-| `00-master-run-sheet.md` *(v1)* | 운영 시나리오·통역 운영·리스크 대응 | 강사·운영진 |
-| `01`~`03-module-*.md` *(v1)* | 슬라이드 요약 개요 — **원고는 scripts/ 사용** | 참고용 |
+| `01-field-pocket-cards.md` | 현장 포켓카드 (A5 6면, 인쇄·코팅용, 영문) | 교육생 20부 |
+| `02-assessment-and-certification.md` | 사전/사후 시험 각 15문항 + 구두 확인 문항 + 수료증 | 운영진 |
+| `03-instructor-logistics-kit.md` | 준비물·교보재·통역·D-day 체크리스트 | 운영진 |
+
+> v1 요약본(`00-master-run-sheet.md`, `01`~`03-module-*.md`)은 **삭제**했습니다.
+> 운영 시나리오·통역·리스크 대응은 모두 `scripts/00-run-sheet-v2.md`로 통합했습니다.
 
 ## 3-1. 모듈별 수록 범위 (회장님 요청 반영)
 

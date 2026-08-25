@@ -1,5 +1,6 @@
 # 05 · ASSESSMENT & CERTIFICATION
-## Pre-test 15 Q (30') · Post-test 15 Q (20') · 실기 체크리스트 · 수료증
+## Pre-test 15문항 · Post-test 15문항 · 수료증 · 만족도 설문
+> **이론 강의 전용 과정입니다. 실기 평가는 없습니다.**
 
 ---
 
@@ -49,39 +50,27 @@
 
 ---
 
-## C. 실기 체크리스트 (Practical Skills Checklist · 관찰평가)
+## C. 구두 확인 문항 (강의 중 즉석 점검 · 채점 없음)
 
-관찰자: 강사 또는 보조강사 · 각 항목 ✅/❌ · **핵심항목(★) 실패 시 재교육 필요 표기**
+실기 평가가 없으므로, **강의 중 구두 확인**으로 이해도를 점검합니다.
+강사가 해당 슬라이드 직후 무작위로 2~3명을 지목해 답하게 합니다. 점수화하지 않고 **오답 시 즉시 재설명**합니다.
 
-**ST1 · Straw handling & thawing**
-- [ ] Reads straw label correctly (donor / sire / stage-grade / sex) ★
-- [ ] Identifies straw in the tank neck without warming the goblet
-- [ ] Air 3–5 sec, then **37 °C for 20–30 sec** with timer ★
-- [ ] Dries and cuts the sealed end square
+| 시점 | 확인 문항 | 정답 요지 |
+|---|---|---|
+| M1 S10 직후 | "수란우 7기준 중 그날 이식 여부를 결정하는 것은?" | **D7 황체 확인** |
+| M1 S29 직후 | "직접이식 스트로 해동 온도와 시간은?" | **37 °C, 20–30초** |
+| M1 S28 직후 | "유리화 스트로에 직접이식 프로토콜을 쓰면?" | 수정란 사망 — 실험실 카드 준수 |
+| M2 S11 직후 | "PGF2α가 듣지 않는 소는?" | **황체가 없는 소**(무배란, D0–5) |
+| M2 S19 직후 | "Ovsynch에서 2차 GnRH 후 수정까지 몇 시간?" | **16–20시간** |
+| M2 S24 직후 | "5일 프로토콜에서 PGF를 두 번 놓는 이유는?" | **부황체가 5일 = 불응성** |
+| M2 S31 직후 | "수정란 10개에 수란우 몇 두를 동기화?" | **약 15두 (1.4–1.6배)** |
+| M3 S4 직후 | "pH가 떨어지면 먼저 죽는 미생물은?" | **섬유분해균** |
+| M3 S20 직후 | "좌측 9–12늑골 핑 소리는?" | **좌측 제4위 전위(LDA)** |
+| M3 S28 직후 | "준임상 케토시스 BHB 기준값은?" | **1.2 mmol/L 이상** |
+| M3 S35 직후 | "후산정체 시 절대 하지 말아야 할 것은?" | **손으로 떼어내지 말 것** |
+| M3 S38 직후 | "황체 + 액체 찬 자궁 = 무엇으로 오인?" | **임신** — 초음파 확인 필수 |
 
-**ST2 · Gun loading & hygiene**
-- [ ] Correct gun assembly, straw seated fully
-- [ ] **Uses a new sanitary sheath** ★
-- [ ] Keeps the loaded gun protected from sun/wind
-- [ ] States the 5–10 minute limit
-
-**ST3 · Ovary / CL evaluation**
-- [ ] Identifies CL vs follicle vs cyst on specimen or model ★
-- [ ] States the CL side correctly ★
-- [ ] States "No CL → no transfer"
-
-**ST4 · Records**
-- [ ] Completes all 14 fields of the record line ★
-- [ ] Assigns an ease score
-
-**Transfer sequence (verbal or model)**
-- [ ] Epidural before manipulation
-- [ ] Confirms CL side immediately before insertion ★
-- [ ] Deposits in the **cranial 1/3 of the ipsilateral horn** ★
-
-**판정:** ★항목 7개 중 6개 이상 통과 = 실기 Pass.
-
----
+> 강사 노트: 오답률이 높은 문항은 **Post-test 해설 시간에 다시 다룹니다.**
 
 ## D. 수료증 (Certificate of Completion) 문안
 
@@ -113,7 +102,7 @@
 ```
 
 **발급 규칙**
-- Pass (12/15 이상 + 실기 Pass) → **Certificate of Completion**
+- Pass (Post-test **12/15 이상**) → **Certificate of Completion**
 - Conditional / 이하 → **Certificate of Attendance** (문안에서 "successfully completed" → "attended")
 - 발급번호 체계: `PH-ET-2026-001` ~ `PH-ET-2026-020` (사후 추적 및 재교육 관리용)
 
@@ -124,7 +113,7 @@
 2. 프로토콜 표와 포켓카드가 **실무에 유용하다.**
 3. 강의 속도와 통역이 **이해하기 충분했다.**
 4. **수정란이식을 직접 해보고 싶다.** (→ 시범농장 모집 지표)
-5. **추가 심화교육(2일 실기과정)에 참가하겠다.** (→ 후속 교육 수요 지표)
+5. **추가 심화교육(실기 포함 과정)에 참가하겠다.** (→ 후속 교육 수요 지표)
 
 자유기술: "가장 도움이 된 내용 1가지" / "더 배우고 싶은 내용 1가지"
 

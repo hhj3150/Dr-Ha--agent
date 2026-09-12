@@ -1,5 +1,5 @@
 # 05 · ASSESSMENT & CERTIFICATION
-## Pre-test 15문항 · Post-test 15문항 · 수료증 · 만족도 설문
+## Pre-test 15문항 · Post-test 15문항 · 응용문제 5문항 · 수료증 · 만족도 설문
 > **이론 강의 전용 과정입니다. 실기 평가는 없습니다.**
 
 ---
@@ -71,6 +71,99 @@
 | M3 S38 직후 | "황체 + 액체 찬 자궁 = 무엇으로 오인?" | **임신** — 초음파 확인 필수 |
 
 > 강사 노트: 오답률이 높은 문항은 **Post-test 해설 시간에 다시 다룹니다.**
+
+## C-2. 응용문제 5문항 (Application-level · Google Forms용)
+
+> **출제 의도:** 암기가 아니라 **현장 판단**을 묻습니다.
+> 각 문항은 "이 상황에서 당신은 무엇을 하겠는가 / 어떤 일이 벌어지는가"를 묻는 시나리오형입니다.
+> 사전·사후 시험(A·B)과 **별개**로, Google Forms 온라인 퀴즈 또는 사후 복습용으로 사용하십시오.
+
+### 배점·운영
+| 항목 | 기준 |
+|---|---|
+| 문항 수 | 5문항 (각 20점, 총 100점) |
+| 형식 | 4지선다 단일 정답 · 필수 응답 |
+| 소요 | 약 7분 |
+| 합격선 | **4/5 (80점)** |
+| 용도 | 교육 종료 후 1주 이내 온라인 발송 → **사후 기억 정착 + 참가자 재접촉 명분** |
+
+---
+
+### ■ Google Forms 붙여넣기용 (영문 원문)
+
+**Q1.**
+You are about to transfer one Grade 1 frozen sexed Holstein embryo. On transfer day you palpate the recipient and find **no corpus luteum on either ovary**. What should you do?
+
+- A) Transfer into the left uterine horn anyway
+- B) Thaw the embryo and place it in the horn with the largest follicle
+- C) **Reject this recipient and do not thaw the embryo**
+- D) Give GnRH and transfer 24 hours later
+
+---
+
+**Q2.**
+A cow has not been seen in heat for 120 days and is in body condition score 2.5. You inject PGF2α. Nothing happens. Why?
+
+- A) The dose was too low for her body weight
+- B) **She is anovular — there is no functional corpus luteum for PGF2α to act on**
+- C) PGF2α is effective only in heifers
+- D) PGF2α always requires two injections 11 days apart
+
+---
+
+**Q3.**
+In an Ovsynch programme you give the second GnRH at 08:00 on Day 9. When should the fixed-time insemination be done?
+
+- A) Immediately, at 08:00 on Day 9
+- B) 6–8 hours later, the same afternoon
+- C) **16–20 hours later, on Day 10**
+- D) 48 hours later, on Day 11
+
+---
+
+**Q4.**
+A herd is fed a high-concentrate, finely chopped ration. Bulk milk fat has fallen, the fat-to-protein ratio in early-lactation cows is 0.95, and the manure is loose with gas bubbles and undigested grain. What is the most likely diagnosis?
+
+- A) Clinical ketosis
+- B) **Subacute ruminal acidosis (SARA)**
+- C) Left displaced abomasum
+- D) Clinical hypocalcaemia
+
+---
+
+**Q5.**
+You are monitoring a dry-cow anionic salt (DCAD) programme. Urine pH in your Holstein dry cows measures **7.4**. What does this tell you?
+
+- A) The programme is working correctly
+- B) The cows are over-acidified — reduce the anionic salts immediately
+- C) **The cows are still alkaline — the anionic salts are not working and milk fever risk remains**
+- D) The result indicates a urinary tract infection
+
+---
+
+### ■ 정답 및 해설 (강사·운영진용 · 교육생 배포 금지)
+
+| Q | 정답 | 근거 슬라이드 | 한글 해설 |
+|---|---|---|---|
+| 1 | **C** | M1 S31 · S32 | 황체가 없으면 프로게스테론 지지가 없어 D7 수정란은 착상하지 못하고 죽습니다. **"No CL, no transfer"** — 수란우를 탈락시키고 **스트로를 해동하지 않는 것**이 핵심입니다. 해동한 뒤 포기하면 수정란을 버리는 것입니다. |
+| 2 | **B** | M2 S8 · S11 | PGF2α는 **기능성 황체가 있을 때만** 작용합니다(대략 D6–17). 산후 120일 무발정 + BCS 2.5 = 전형적 무배란우이므로 작용 표적 자체가 없습니다. 용량 문제가 아닙니다. → **CIDR 기반 프로토콜(± eCG)** 로 전환하고, 그 전에 **사양 교정**이 선행되어야 합니다. |
+| 3 | **C** | M2 S16 · S19 | GnRH 후 배란은 **24–32시간**, 정자는 **수정능획득에 약 6시간** 필요. 따라서 난자 도착 전에 정자가 난관에 대기하도록 **16–20시간 후** 수정합니다. **"정자가 먼저, 난자가 나중."** |
+| 4 | **B** | M3 S4 · S13 · S14 | 고농후·세절 사료 → 유효섬유 부족 → 저작·타액·중탄산 감소 → pH 하락 → **섬유분해균 사멸 → 아세트산 감소 → 유지방 저하**. 착유 초기 지방:단백 **1.0 미만**, 기포성 묽은 분변, 미소화 곡류가 전형적 SARA 삼징후입니다. |
+| 5 | **C** | M3 S24 | 목표 요 pH는 **홀스타인 6.0–6.5**. **7.4는 여전히 알칼리성** → PTH 수용체 불응 상태가 유지되어 칼슘 동원 실패 → 유열·준임상 저칼슘 위험 지속. 조치는 음이온염 **증량 또는 급여 점검**(섭취량·혼합·고칼륨 조사료). 5.5 미만이면 과교정으로 사료 섭취가 떨어집니다. |
+
+### ■ 오답 선택지 설계 의도 (문항 품질 관리)
+- **Q1-D**: "GnRH 주고 24시간 뒤 이식" — 그럴듯하지만 배란 후 7일이 되어야 하므로 시점이 완전히 어긋납니다. 시점 개념 이해 여부를 가릅니다.
+- **Q2-A**: "용량 부족" — 현장에서 가장 흔한 **오진**입니다. 이 선택지를 고른 교육생은 재교육 대상입니다.
+- **Q3-B**: "6–8시간 후" — 발정 관찰 후 수정(AM–PM) 감각으로 답하면 걸리는 함정입니다.
+- **Q4-A**: 케토시스 — 유량·유지방 저하가 겹쳐 혼동되지만, **분변 소견과 지방:단백 비율**이 감별점입니다.
+- **Q5-B**: 과교정 — 방향은 알지만 **목표 범위를 모르면** 반대로 답하게 됩니다.
+
+### ■ Google Forms 설정 팁
+1. 설정 → **퀴즈로 만들기** 켜기 → 문항별 **20점** 배정
+2. 각 문항 우하단 **답안 및 배점** → 정답 체크 → **답변 관련 의견**에 위 해설 영문 요약 입력 (제출 즉시 학습 효과)
+3. **필수 질문** 토글 ON (샘플 양식의 빨간 별표)
+4. 응답 → **Google Sheets 연결** → 참가자 20명 정답률을 문항별로 집계
+5. **오답률 50% 초과 문항은 사후 온라인 보충자료의 주제**로 사용
 
 ## D. 수료증 (Certificate of Completion) 문안
 

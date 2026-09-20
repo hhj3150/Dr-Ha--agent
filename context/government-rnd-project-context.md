@@ -96,3 +96,10 @@ Eco-BIT / CowTalk agents reference this when relevant.
 
 > 우리(D2O) 역할 요약: **현장 실증 + 사업화 영업·교육·확산**. 양산/판가 주체는 GMW·충남대이며, D2O는 수요·실증·시장 확산 담당.
 
+
+## Demonstration site (실증지) — persistent reference
+The 1st demonstration site is Song Young Shin Farm's barn. Its full specification
+(dimensions, pillar grid, resting-area definition, bedding rules, daily tilling and
+monitoring items, robot layout) is the **authoritative record in
+`context/demo-site-barn-context.md`** and must be used for every deliverable of this
+project until project end (2028-12-31). Floor plan files: `deliverables/floorplan/`.

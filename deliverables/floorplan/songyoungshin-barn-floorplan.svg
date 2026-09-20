@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="1100" viewBox="0 0 1210 1100" font-family="NanumGothic, Noto Sans KR, sans-serif">
+<rect width="1210" height="1100" fill="white"/>
+<text x="150" y="40" font-size="24" font-weight="bold">송영신목장 실증 우사 개념 평면도 — 자율주행 깔개 관리 로봇(갈전구리) 배치안</text>
+<text x="150" y="66" font-size="14" fill="#444">산자부 10대 메가프로젝트 기술산업화 · RS-2026-25508014 · 공동연구개발기관(수요사) ㈜D2O · 작성 2026-09-20 · 개념도(DRAFT, 현장 도면으로 확정 전)</text>
+<rect x="150" y="130" width="800" height="240" fill="#e8f1dc" stroke="#999" stroke-width="1"/>
+<text x="550" y="262.8" font-size="15" text-anchor="middle" font-weight="bold" fill="#222">A동 휴식 공간 (베딩 기준 면적) 15 m × 50 m = 750 m²</text>
+<text x="550" y="280.8" font-size="12" text-anchor="middle" fill="#444">톱밥 + 피트모스 베딩, 두께 ≥ 60 cm · 갈전구리 작업 구역</text>
+<rect x="150" y="370" width="800" height="32" fill="#d6e9f7" stroke="#999" stroke-width="1"/>
+<text x="550" y="391.0" font-size="12" text-anchor="middle" font-weight="bold" fill="#222">A동 음수 공간 2 m</text>
+<rect x="150" y="402" width="800" height="48" fill="#f6e9c9" stroke="#999" stroke-width="1"/>
+<text x="550" y="431.0" font-size="12" text-anchor="middle" font-weight="bold" fill="#222">A동 사조 공간 3 m</text>
+<rect x="150" y="450" width="800" height="80" fill="#ececec" stroke="#999" stroke-width="1"/>
+<text x="550" y="495.0" font-size="15" text-anchor="middle" font-weight="bold" fill="#222">중앙 복도 5 m × 50 m = 250 m² (착유대기실 · 소 이동통로 · 트랙터/로봇 진입 통로)</text>
+<rect x="150" y="530" width="800" height="48" fill="#f6e9c9" stroke="#999" stroke-width="1"/>
+<text x="550" y="559.0" font-size="12" text-anchor="middle" font-weight="bold" fill="#222">B동 사조 공간 3 m</text>
+<rect x="150" y="578" width="800" height="32" fill="#d6e9f7" stroke="#999" stroke-width="1"/>
+<text x="550" y="599.0" font-size="12" text-anchor="middle" font-weight="bold" fill="#222">B동 음수 공간 2 m</text>
+<rect x="150" y="610" width="800" height="240" fill="#e8f1dc" stroke="#999" stroke-width="1"/>
+<text x="550" y="738.0" font-size="15" text-anchor="middle" font-weight="bold" fill="#222">B동 휴식 공간 (베딩 기준 면적) 15 m × 50 m = 750 m²</text>
+<text x="550" y="756.0" font-size="12" text-anchor="middle" fill="#444">톱밥 + 피트모스 베딩, 두께 ≥ 60 cm · 갈전구리 작업 구역</text>
+<rect x="150" y="130" width="800" height="720" fill="none" stroke="#111" stroke-width="4"/>
+<line x1="150" y1="450" x2="950" y2="450" stroke="#111" stroke-width="3"/>
+<line x1="150" y1="530" x2="950" y2="530" stroke="#111" stroke-width="3"/>
+<rect x="144" y="458.0" width="12" height="64" fill="white" stroke="#c0392b" stroke-width="2" stroke-dasharray="4,3"/>
+<rect x="944" y="458.0" width="12" height="64" fill="white" stroke="#c0392b" stroke-width="2" stroke-dasharray="4,3"/>
+<text x="150" y="549.2" font-size="11" text-anchor="middle" fill="#c0392b">출입구(서)</text>
+<text x="950" y="549.2" font-size="11" text-anchor="middle" fill="#c0392b">출입구(동)</text>
+<rect x="145" y="125" width="10" height="10" fill="#111"/>
+<rect x="225" y="125" width="10" height="10" fill="#111"/>
+<rect x="305" y="125" width="10" height="10" fill="#111"/>
+<rect x="385" y="125" width="10" height="10" fill="#111"/>
+<rect x="465" y="125" width="10" height="10" fill="#111"/>
+<rect x="545" y="125" width="10" height="10" fill="#111"/>
+<rect x="625" y="125" width="10" height="10" fill="#111"/>
+<rect x="705" y="125" width="10" height="10" fill="#111"/>
+<rect x="785" y="125" width="10" height="10" fill="#111"/>
+<rect x="865" y="125" width="10" height="10" fill="#111"/>
+<rect x="945" y="125" width="10" height="10" fill="#111"/>
+<rect x="145" y="285" width="10" height="10" fill="#111"/>
+<rect x="225" y="285" width="10" height="10" fill="#111"/>
+<rect x="305" y="285" width="10" height="10" fill="#111"/>
+<rect x="385" y="285" width="10" height="10" fill="#111"/>
+<rect x="465" y="285" width="10" height="10" fill="#111"/>
+<rect x="545" y="285" width="10" height="10" fill="#111"/>
+<rect x="625" y="285" width="10" height="10" fill="#111"/>
+<rect x="705" y="285" width="10" height="10" fill="#111"/>
+<rect x="785" y="285" width="10" height="10" fill="#111"/>
+<rect x="865" y="285" width="10" height="10" fill="#111"/>
+<rect x="945" y="285" width="10" height="10" fill="#111"/>
+<rect x="145" y="445" width="10" height="10" fill="#111"/>
+<rect x="225" y="445" width="10" height="10" fill="#111"/>
+<rect x="305" y="445" width="10" height="10" fill="#111"/>
+<rect x="385" y="445" width="10" height="10" fill="#111"/>
+<rect x="465" y="445" width="10" height="10" fill="#111"/>
+<rect x="545" y="445" width="10" height="10" fill="#111"/>
+<rect x="625" y="445" width="10" height="10" fill="#111"/>
+<rect x="705" y="445" width="10" height="10" fill="#111"/>
+<rect x="785" y="445" width="10" height="10" fill="#111"/>
+<rect x="865" y="445" width="10" height="10" fill="#111"/>
+<rect x="945" y="445" width="10" height="10" fill="#111"/>
+<rect x="145" y="525" width="10" height="10" fill="#111"/>
+<rect x="225" y="525" width="10" height="10" fill="#111"/>
+<rect x="305" y="525" width="10" height="10" fill="#111"/>
+<rect x="385" y="525" width="10" height="10" fill="#111"/>
+<rect x="465" y="525" width="10" height="10" fill="#111"/>
+<rect x="545" y="525" width="10" height="10" fill="#111"/>
+<rect x="625" y="525" width="10" height="10" fill="#111"/>
+<rect x="705" y="525" width="10" height="10" fill="#111"/>
+<rect x="785" y="525" width="10" height="10" fill="#111"/>
+<rect x="865" y="525" width="10" height="10" fill="#111"/>
+<rect x="945" y="525" width="10" height="10" fill="#111"/>
+<rect x="145" y="685" width="10" height="10" fill="#111"/>
+<rect x="225" y="685" width="10" height="10" fill="#111"/>
+<rect x="305" y="685" width="10" height="10" fill="#111"/>
+<rect x="385" y="685" width="10" height="10" fill="#111"/>
+<rect x="465" y="685" width="10" height="10" fill="#111"/>
+<rect x="545" y="685" width="10" height="10" fill="#111"/>
+<rect x="625" y="685" width="10" height="10" fill="#111"/>
+<rect x="705" y="685" width="10" height="10" fill="#111"/>
+<rect x="785" y="685" width="10" height="10" fill="#111"/>
+<rect x="865" y="685" width="10" height="10" fill="#111"/>
+<rect x="945" y="685" width="10" height="10" fill="#111"/>
+<rect x="145" y="845" width="10" height="10" fill="#111"/>
+<rect x="225" y="845" width="10" height="10" fill="#111"/>
+<rect x="305" y="845" width="10" height="10" fill="#111"/>
+<rect x="385" y="845" width="10" height="10" fill="#111"/>
+<rect x="465" y="845" width="10" height="10" fill="#111"/>
+<rect x="545" y="845" width="10" height="10" fill="#111"/>
+<rect x="625" y="845" width="10" height="10" fill="#111"/>
+<rect x="705" y="845" width="10" height="10" fill="#111"/>
+<rect x="785" y="845" width="10" height="10" fill="#111"/>
+<rect x="865" y="845" width="10" height="10" fill="#111"/>
+<rect x="945" y="845" width="10" height="10" fill="#111"/>
+<line x1="150" y1="290" x2="950" y2="290" stroke="#111" stroke-width="1" stroke-dasharray="6,4"/>
+<text x="964" y="294" font-size="11" fill="#111">중간 기둥 열 (가로 10 m)</text>
+<line x1="150" y1="690" x2="950" y2="690" stroke="#111" stroke-width="1" stroke-dasharray="6,4"/>
+<text x="964" y="694" font-size="11" fill="#111">중간 기둥 열 (가로 10 m)</text>
+<defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f6feb"/></marker></defs>
+<path d="M 918,154.0 L 182,154.0 L 182,202.0 L 918,202.0 L 918,250.0 L 182,250.0 L 182,314.0 L 918,314.0 L 918,346.0 L 182,346.0" fill="none" stroke="#1f6feb" stroke-width="2" stroke-dasharray="8,5" marker-end="url(#arr)"/>
+<polygon points="544,149.0 556,154.0 544,159.0" fill="#1f6feb" transform="rotate(180 550 154.0)"/>
+<polygon points="544,197.0 556,202.0 544,207.0" fill="#1f6feb" transform="rotate(0 550 202.0)"/>
+<polygon points="544,245.0 556,250.0 544,255.0" fill="#1f6feb" transform="rotate(180 550 250.0)"/>
+<polygon points="544,309.0 556,314.0 544,319.0" fill="#1f6feb" transform="rotate(0 550 314.0)"/>
+<polygon points="544,341.0 556,346.0 544,351.0" fill="#1f6feb" transform="rotate(180 550 346.0)"/>
+<text x="198" y="333.2" font-size="11" fill="#1f6feb">자율주행 교반 경로(안): 기둥 열 사이 왕복, 작업 폭 약 3 m 가정, 끝단 회전 · 실측 회전반경으로 확정</text>
+<g transform="translate(342,202.0)">
+<rect x="-17.6" y="-11.2" width="35.2" height="22.4" rx="6" fill="#f39c12" stroke="#7d4e00" stroke-width="2"/>
+<rect x="-41.6" y="-16.0" width="22.4" height="32.0" fill="#8e44ad" stroke="#4a235a" stroke-width="2"/>
+<text x="0" y="5" font-size="11" text-anchor="middle" fill="#111" font-weight="bold">갈전구리</text>
+<text x="-30.4" y="4" font-size="9" text-anchor="middle" fill="white">로터리</text>
+</g>
+<text x="364.4" y="221.2" font-size="12" font-weight="bold" fill="#7d4e00">갈전구리 = 자율주행 깔개 관리 축산 로봇 (1차 시제품, 30HP급 하이브리드 + 로터리 작업기)</text>
+<text x="364.4" y="237.2" font-size="11" fill="#7d4e00">차체 약 2.2 × 1.4 m 가정 (GMW 설계 확정 후 수정) · 현행 작업 장비: 56 HP 트랙터 + 로터리, 매일 아침 1회 교반</text>
+<g transform="translate(758,778.0)" opacity="0.55">
+<rect x="-17.6" y="-11.2" width="35.2" height="22.4" rx="6" fill="#f39c12" stroke="#7d4e00" stroke-width="2"/>
+<rect x="19.2" y="-16.0" width="22.4" height="32.0" fill="#8e44ad" stroke="#4a235a" stroke-width="2"/>
+<text x="0" y="5" font-size="11" text-anchor="middle" fill="#111" font-weight="bold">갈전구리</text>
+</g>
+<text x="735.6" y="821.2" font-size="11" text-anchor="end" fill="#7d4e00">B동 작업 시 (동일 로봇, 복도 경유 이동)</text>
+<path d="M 990.0,490.0 L 934,490.0 L 934,386 L 926.0,154.0" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="3,3"/>
+<rect x="990.0" y="466" width="72.0" height="48" fill="#fdecea" stroke="#c0392b" stroke-width="1.5"/>
+<text x="1026.0" y="486.8" font-size="10" text-anchor="middle" fill="#c0392b">로봇 대기·충전</text>
+<text x="1026.0" y="504.4" font-size="10" text-anchor="middle" fill="#c0392b">스테이션(제안)</text>
+<text x="922.8" y="427.6" font-size="10" text-anchor="end" fill="#c0392b">로봇 진입로(제안, 동측 끝단)</text>
+<line x1="150" y1="102" x2="950" y2="102" stroke="#333" stroke-width="1"/>
+<line x1="150" y1="97" x2="150" y2="107" stroke="#333" stroke-width="1"/>
+<text x="190.0" y="96" font-size="10" text-anchor="middle" fill="#333">5 m</text>
+<line x1="230" y1="97" x2="230" y2="107" stroke="#333" stroke-width="1"/>
+<text x="270.0" y="96" font-size="10" text-anchor="middle" fill="#333">5 m</text>
+<line x1="310" y1="97" x2="310" y2="107" stroke="#333" stroke-width="1"/>
+<text x="350.0" y="96" font-size="10" text-anchor="middle" fill="#333">5 m</text>
+<line x1="390" y1="97" x2="390" y2="107" stroke="#333" stroke-width="1"/>
+<text x="430.0" y="96" font-size="10" text-anchor="middle" fill="#333">5 m</text>
+<line x1="470" y1="97" x2="470" y2="107" stroke="#333" stroke-width="1"/>
+<text x="510.0" y="96" font-size="10" text-anchor="middle" fill="#333">5 m</text>
+<line x1="550" y1="97" x2="550" y2="107" stroke="#333" stroke-width="1"/>
+<text x="590.0" y="96" font-size="10" text-anchor="middle" fill="#333">5 m</text>
+<line x1="630" y1="97" x2="630" y2="107" stroke="#333" stroke-width="1"/>
+<text x="670.0" y="96" font-size="10" text-anchor="middle" fill="#333">5 m</text>
+<line x1="710" y1="97" x2="710" y2="107" stroke="#333" stroke-width="1"/>
+<text x="750.0" y="96" font-size="10" text-anchor="middle" fill="#333">5 m</text>
+<line x1="790" y1="97" x2="790" y2="107" stroke="#333" stroke-width="1"/>
+<text x="830.0" y="96" font-size="10" text-anchor="middle" fill="#333">5 m</text>
+<line x1="870" y1="97" x2="870" y2="107" stroke="#333" stroke-width="1"/>
+<text x="910.0" y="96" font-size="10" text-anchor="middle" fill="#333">5 m</text>
+<line x1="950" y1="97" x2="950" y2="107" stroke="#333" stroke-width="1"/>
+<text x="550" y="80" font-size="13" text-anchor="middle" font-weight="bold" fill="#333">길이 50 m (세로 방향 기둥 5 m 간격 × 10 베이, 기둥 11열)</text>
+<line x1="90" y1="130" x2="90" y2="850" stroke="#333" stroke-width="1"/>
+<line x1="85" y1="130" x2="95" y2="130" stroke="#333" stroke-width="1"/>
+<line x1="85" y1="450" x2="95" y2="450" stroke="#333" stroke-width="1"/>
+<text x="82" y="294.0" font-size="12" text-anchor="end" font-weight="bold" fill="#333">A동 20 m</text>
+<line x1="85" y1="450" x2="95" y2="450" stroke="#333" stroke-width="1"/>
+<line x1="85" y1="530" x2="95" y2="530" stroke="#333" stroke-width="1"/>
+<text x="82" y="494.0" font-size="12" text-anchor="end" font-weight="bold" fill="#333">복도 5 m</text>
+<line x1="85" y1="530" x2="95" y2="530" stroke="#333" stroke-width="1"/>
+<line x1="85" y1="850" x2="95" y2="850" stroke="#333" stroke-width="1"/>
+<text x="82" y="694.0" font-size="12" text-anchor="end" font-weight="bold" fill="#333">B동 20 m</text>
+<text x="30" y="490.0" transform="rotate(-90 30 490.0)" font-size="13" text-anchor="middle" font-weight="bold" fill="#333">전체 폭 45 m (가로 방향 기둥 10 m 간격 × 2 베이/동)</text>
+<line x1="1150" y1="130" x2="1150" y2="450" stroke="#333" stroke-width="1"/>
+<line x1="1145" y1="130" x2="1155" y2="130" stroke="#333" stroke-width="1"/>
+<line x1="1145" y1="370" x2="1155" y2="370" stroke="#333" stroke-width="1"/>
+<text x="1158" y="254.0" font-size="11" fill="#333">휴식 15 m</text>
+<line x1="1145" y1="370" x2="1155" y2="370" stroke="#333" stroke-width="1"/>
+<line x1="1145" y1="402" x2="1155" y2="402" stroke="#333" stroke-width="1"/>
+<text x="1158" y="390.0" font-size="11" fill="#333">음수 2 m</text>
+<line x1="1145" y1="402" x2="1155" y2="402" stroke="#333" stroke-width="1"/>
+<line x1="1145" y1="450" x2="1155" y2="450" stroke="#333" stroke-width="1"/>
+<text x="1158" y="430.0" font-size="11" fill="#333">사조 3 m</text>
+<line x1="1150" y1="530" x2="1150" y2="850" stroke="#333" stroke-width="1"/>
+<line x1="1145" y1="530" x2="1155" y2="530" stroke="#333" stroke-width="1"/>
+<line x1="1145" y1="578" x2="1155" y2="578" stroke="#333" stroke-width="1"/>
+<text x="1158" y="558.0" font-size="11" fill="#333">사조 3 m</text>
+<line x1="1145" y1="578" x2="1155" y2="578" stroke="#333" stroke-width="1"/>
+<line x1="1145" y1="610" x2="1155" y2="610" stroke="#333" stroke-width="1"/>
+<text x="1158" y="598.0" font-size="11" fill="#333">음수 2 m</text>
+<line x1="1145" y1="610" x2="1155" y2="610" stroke="#333" stroke-width="1"/>
+<line x1="1145" y1="850" x2="1155" y2="850" stroke="#333" stroke-width="1"/>
+<text x="1158" y="734.0" font-size="11" fill="#333">휴식 15 m</text>
+<line x1="990" y1="130" x2="990" y2="290" stroke="#333" stroke-width="1"/>
+<line x1="990" y1="290" x2="990" y2="450" stroke="#333" stroke-width="1"/>
+<line x1="985" y1="130" x2="995" y2="130" stroke="#333" stroke-width="1"/>
+<line x1="985" y1="290" x2="995" y2="290" stroke="#333" stroke-width="1"/>
+<line x1="985" y1="450" x2="995" y2="450" stroke="#333" stroke-width="1"/>
+<text x="998" y="214" font-size="10" fill="#333">기둥 10 m</text>
+<text x="998" y="374" font-size="10" fill="#333">기둥 10 m</text>
+<text x="150" y="890" font-size="14" font-weight="bold">범례</text>
+<rect x="150" y="897" width="22" height="14" fill="#e8f1dc" stroke="#999"/>
+<text x="180" y="908" font-size="12">휴식 공간 = 베딩 기준 면적 (동당 750 m², 합계 1,500 m²)</text>
+<rect x="150" y="917" width="22" height="14" fill="#f6e9c9" stroke="#999"/>
+<text x="180" y="928" font-size="12">사조 공간 (사료 섭취, 베딩 제외)</text>
+<rect x="150" y="937" width="22" height="14" fill="#d6e9f7" stroke="#999"/>
+<text x="180" y="948" font-size="12">음수 공간 (베딩 제외)</text>
+<rect x="150" y="957" width="22" height="14" fill="#ececec" stroke="#999"/>
+<text x="180" y="968" font-size="12">복도 (착유대기실·이동통로, 베딩 제외)</text>
+<rect x="582" y="897" width="10" height="10" fill="#111"/><text x="600" y="908" font-size="12">기둥 (가로 10 m · 세로 5 m 간격)</text>
+<line x1="582" y1="924" x2="606" y2="924" stroke="#1f6feb" stroke-width="2" stroke-dasharray="8,5"/><text x="612" y="928" font-size="12">갈전구리 자율주행 교반 경로(안)</text>
+<line x1="582" y1="944" x2="606" y2="944" stroke="#c0392b" stroke-width="2" stroke-dasharray="3,3"/><text x="612" y="948" font-size="12">로봇 진입·복귀 경로 및 스테이션(제안)</text>
+<rect x="582" y="958" width="22" height="12" rx="3" fill="#f39c12" stroke="#7d4e00"/><text x="612" y="968" font-size="12">갈전구리 본체 + 로터리 작업기</text>
+<text x="150" y="1002" font-size="11" fill="#333">주기: 피트모스 투입 기준 = 휴식 공간 50 m²당 1 ~ 2 m³ (톱밥량과 무관) · 베딩 두께 ≥ 60 cm · 56 HP 트랙터 매일 아침 로터리 교반</text>
+<text x="150" y="1020" font-size="11" fill="#333">확인 필요: ① 사조·음수 공간의 순서와 경계 위치 ② 중간 기둥 열의 정확한 위치 ③ 출입구·로봇 진입로 위치 ④ 로봇 차체 치수(GMW 설계) — 현장 도면 확정 후 갱신</text>
+<text x="150" y="1038" font-size="11" fill="#333">축척: 1 m = 16 px (원본 SVG 기준) · 개념 평면도이며 시공 도면이 아님</text>
+</svg>

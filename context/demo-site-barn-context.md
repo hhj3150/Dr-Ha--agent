@@ -103,7 +103,9 @@ Items marked **확인 필요** are still to be confirmed.
 
 ## 8. Files
 - 손도면 원본: `deliverables/floorplan/barn-sketch-founder-2026-09-21.jpg`
-- 평면도 v2: `deliverables/floorplan/songyoungshin-barn-floorplan.{svg,png,dxf}` (+ `-crop.png` 문서 삽입용)
+- 평면도 v3: `deliverables/floorplan/songyoungshin-barn-floorplan.{svg,png,dxf}` (+ `-crop.png` 문서 삽입용)
+- 현장 사진 (2026-09): `deliverables/floorplan/photos/` — 착유장 사조·베딩, 교반 직후 베딩 표면, 휴식 공간 기둥·우군
+- 간담회 발표자료 D2O 파트(3장): `deliverables/motie-rs-2026-25508014-간담회-발표자료-D2O파트.pdf`
 - AI 작도 프롬프트: `deliverables/floorplan/ai-floorplan-prompt.md`
 - 중간보고서(전문): `deliverables/motie-rs-2026-25508014-interim-report-d2o-demo-site.md`
 - 중간점검 제출자료(2p): `deliverables/motie-rs-2026-25508014-중간점검-제출자료-D2O.{pdf,docx}`

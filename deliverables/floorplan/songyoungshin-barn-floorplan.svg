@@ -2,9 +2,9 @@
 <rect width="1400" height="1235" fill="white"/>
 <text x="140" y="40" font-size="24" font-weight="bold">송영신목장 실증 우사 개념 평면도 v2 — 자율주행 깔개 관리 로봇(갈전구리) 배치안</text>
 <text x="140" y="66" font-size="14" fill="#444">산자부 10대 메가프로젝트 기술산업화 · RS-2026-25508014 · 공동연구개발기관(수요사) ㈜D2O · 2026-09-21 회장님 손도면 기준 작도 · 개념도(DRAFT)</text>
-<rect x="140" y="185" width="160" height="720" fill="#f5f5f5" stroke="#999" stroke-width="1"/>
-<text transform="translate(220.0,545.0) rotate(-90)" font-size="14" text-anchor="middle" font-weight="bold" fill="#333">서측 부속 구역</text>
-<text transform="translate(238.0,545.0) rotate(-90)" font-size="11" text-anchor="middle" fill="#555">10 m × 45 m = 450 m² (용도 확인 필요)</text>
+<rect x="140" y="185" width="160" height="720" fill="#efe6d6" stroke="#999" stroke-width="1"/>
+<text transform="translate(220.0,545.0) rotate(-90)" font-size="14" text-anchor="middle" font-weight="bold" fill="#333">퇴비장 (수직형 교반기 설치)</text>
+<text transform="translate(238.0,545.0) rotate(-90)" font-size="11" text-anchor="middle" fill="#555">10 × 45 m = 450 m² · 통로 분뇨 매일 1회 반입</text>
 <rect x="300" y="185" width="800" height="272" fill="#e8f1dc" stroke="#999" stroke-width="1"/>
 <text x="700.0" y="320.6" font-size="15" text-anchor="middle" font-weight="bold" fill="#222">A동 휴식 공간 (베딩 기준 면적) 17 m × 50 m에서 트랙터 주차 제외 = 800 m²</text>
 <text x="700.0" y="338.6" font-size="12" text-anchor="middle" fill="#444">톱밥 + 피트모스 베딩 ≥ 60 cm · 갈전구리 작업 구역 · 급수조 3개 외벽 설치</text>
@@ -36,6 +36,16 @@
 <rect x="396" y="898" width="64" height="10" fill="#4a90d9" stroke="#1b4f8a"/>
 <rect x="684" y="898" width="64" height="10" fill="#4a90d9" stroke="#1b4f8a"/>
 <text x="396" y="927" font-size="11" fill="#1b4f8a">급수조</text>
+<circle cx="220" cy="239.4" r="32.0" fill="#c9b48a" stroke="#6b4f1d" stroke-width="2"/>
+<circle cx="220" cy="239.4" r="8.0" fill="#6b4f1d"/>
+<text x="220" y="287.4" font-size="10" text-anchor="middle" fill="#6b4f1d">수직형 교반기</text>
+<defs><marker id="arrg" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2e7d32"/></marker></defs>
+<path d="M 1020,495.4 L 260.0,495.4" fill="none" stroke="#2e7d32" stroke-width="2" stroke-dasharray="2,4" marker-end="url(#arrg)"/>
+<path d="M 1020,594.6 L 260.0,594.6" fill="none" stroke="#2e7d32" stroke-width="2" stroke-dasharray="2,4" marker-end="url(#arrg)"/>
+<path d="M 780,881.0 L 260.0,881.0" fill="none" stroke="#2e7d32" stroke-width="2" stroke-dasharray="2,4" marker-end="url(#arrg)"/>
+<text x="828" y="491.4" font-size="10" fill="#2e7d32">스키드로더 분뇨 배출(매일 1회) → 퇴비장</text>
+<text x="828" y="606.6" font-size="10" fill="#2e7d32">스키드로더 분뇨 배출(매일 1회) → 퇴비장</text>
+<text x="428" y="875.0" font-size="10" fill="#2e7d32">급수 통로 분뇨 배출 → 퇴비장</text>
 <rect x="140" y="185" width="960" height="720" fill="none" stroke="#111" stroke-width="4"/>
 <line x1="300" y1="185" x2="300" y2="905" stroke="#111" stroke-width="3"/>
 <line x1="300" y1="505" x2="1100" y2="505" stroke="#111" stroke-width="3"/>
@@ -159,7 +169,7 @@
 <line x1="1020" y1="140" x2="1020" y2="150" stroke="#333"/>
 <text x="1060.0" y="139" font-size="10" text-anchor="middle">5 m</text>
 <line x1="1100" y1="140" x2="1100" y2="150" stroke="#333"/>
-<text x="700" y="123" font-size="13" text-anchor="middle" font-weight="bold">본동 길이 50 m (세로 방향 기둥 5 m 간격, 회장님 구두 기준) + 서측 부속 10 m = 전체 60 m</text>
+<text x="700" y="123" font-size="13" text-anchor="middle" font-weight="bold">본동 길이 50 m (세로 방향 기둥 5 m 간격, 회장님 구두 기준) + 서측 퇴비장 10 m = 전체 60 m</text>
 <line x1="80" y1="185" x2="80" y2="905" stroke="#333"/>
 <line x1="75" y1="185" x2="85" y2="185" stroke="#333"/>
 <line x1="75" y1="457" x2="85" y2="457" stroke="#333"/>
@@ -189,17 +199,19 @@
 <line x1="892" y1="945" x2="940" y2="945" stroke="#333"/><text x="916.0" y="959" font-size="10" text-anchor="middle">3</text>
 <text x="140" y="995" font-size="14" font-weight="bold">범례</text>
 <rect x="140" y="1002" width="22" height="14" fill="#e8f1dc" stroke="#999"/><text x="170" y="1013" font-size="12">휴식 공간 = 베딩 기준 면적 (A동 800 + B동 518 = 1,318 m²)</text>
-<rect x="140" y="1022" width="22" height="14" fill="#f6e9c9" stroke="#999"/><text x="170" y="1033" font-size="12">사조 공간 (베딩 제외)</text>
-<rect x="140" y="1042" width="22" height="14" fill="#d6e9f7" stroke="#999"/><text x="170" y="1053" font-size="12">급수 통로 · 급수조(외벽) (베딩 제외)</text>
+<rect x="140" y="1022" width="22" height="14" fill="#f6e9c9" stroke="#999"/><text x="170" y="1033" font-size="12">사조 공간 3 m (무깔짚 이동 통로, 매일 분뇨 배출)</text>
+<rect x="140" y="1042" width="22" height="14" fill="#d6e9f7" stroke="#999"/><text x="170" y="1053" font-size="12">급수 통로 3 m · 급수조(외벽) (무깔짚, 매일 분뇨 배출)</text>
 <rect x="140" y="1062" width="22" height="14" fill="#ececec" stroke="#999"/><text x="170" y="1073" font-size="12">복도 (착유대기실·이동통로, 베딩 제외)</text>
-<rect x="570" y="1002" width="22" height="14" fill="#fde2c8" stroke="#999"/><text x="600" y="1013" font-size="12">트랙터 주차 5 × 10 m (로봇 대기·충전 공유 제안)</text>
-<rect x="570" y="1022" width="22" height="14" fill="#e3d7f2" stroke="#999"/><text x="600" y="1033" font-size="12">로봇착유기실 10 × 10 m</text>
-<rect x="570" y="1042" width="22" height="14" fill="#dcdcdc" stroke="#999"/><text x="600" y="1053" font-size="12">착유 대기·이동 통로 (확인 필요)</text>
-<rect x="1000" y="1002" width="10" height="10" fill="#111"/><text x="1018" y="1013" font-size="12">기둥 (가로 10 m · 세로 5 m, 위치 확인 필요)</text>
-<line x1="1000" y1="1029" x2="1024" y2="1029" stroke="#1f6feb" stroke-width="2" stroke-dasharray="8,5"/><text x="1030" y="1033" font-size="12">갈전구리 자율주행 교반 경로(안)</text>
-<line x1="1000" y1="1049" x2="1024" y2="1049" stroke="#c0392b" stroke-width="2" stroke-dasharray="3,3"/><text x="1030" y="1053" font-size="12">로봇 진입·이동 경로(제안)</text>
-<rect x="1000" y="1063" width="22" height="12" rx="3" fill="#f39c12" stroke="#7d4e00"/><text x="1030" y="1073" font-size="12">갈전구리 본체 + 로터리 작업기</text>
+<rect x="600" y="1002" width="22" height="14" fill="#fde2c8" stroke="#999"/><text x="630" y="1013" font-size="12">트랙터 주차 5 × 10 m (로봇 대기·충전 공유 제안)</text>
+<rect x="600" y="1022" width="22" height="14" fill="#e3d7f2" stroke="#999"/><text x="630" y="1033" font-size="12">로봇착유기실 10 × 10 m</text>
+<rect x="600" y="1042" width="22" height="14" fill="#dcdcdc" stroke="#999"/><text x="630" y="1053" font-size="12">착유 대기·이동 통로 (경계 확인 필요)</text>
+<rect x="600" y="1062" width="22" height="14" fill="#efe6d6" stroke="#999"/><text x="630" y="1073" font-size="12">퇴비장 10 × 45 m (수직형 교반기)</text>
+<rect x="1060" y="1002" width="10" height="10" fill="#111"/><text x="1078" y="1013" font-size="12">기둥 (가로 10 m · 세로 5 m, 위치 확인 필요)</text>
+<line x1="1060" y1="1029" x2="1084" y2="1029" stroke="#1f6feb" stroke-width="2" stroke-dasharray="8,5"/><text x="1090" y="1033" font-size="12">갈전구리 자율주행 교반 경로(안)</text>
+<line x1="1060" y1="1049" x2="1084" y2="1049" stroke="#c0392b" stroke-width="2" stroke-dasharray="3,3"/><text x="1090" y="1053" font-size="12">로봇 진입·이동 경로(제안)</text>
+<line x1="1060" y1="1089" x2="1084" y2="1089" stroke="#2e7d32" stroke-width="2" stroke-dasharray="2,4"/><text x="1090" y="1093" font-size="12">스키드로더 분뇨 배출 동선 → 퇴비장</text>
+<rect x="1060" y="1063" width="22" height="12" rx="3" fill="#f39c12" stroke="#7d4e00"/><text x="1090" y="1073" font-size="12">갈전구리 본체 + 로터리 작업기</text>
 <text x="140" y="1107" font-size="11" fill="#333">기준: 피트모스 투입 = 휴식 공간 50 m²당 1 ~ 2 m³ (톱밥량과 무관) → 1회 약 26 ~ 53 m³ · 베딩 두께 ≥ 60 cm · 56 HP 트랙터 매일 아침 로터리 교반</text>
-<text x="140" y="1125" font-size="11" fill="#333">출처: 2026-09-21 회장님 손도면 (17 m / 3 m / 5 m / 3 m / 14 m / 3 m, 트랙터 5×10, 로봇착유기 10×10, 휴식 길이 37 m, 서측 10 m). 기둥 위치는 구두 기준(가로 10 m·세로 5 m)이며 도면 확인 필요.</text>
-<text x="140" y="1143" font-size="11" fill="#333">확인 필요: ① 서측 10 m 구역 용도 ② 착유 대기·이동 통로 경계 ③ 기둥 실제 위치 ④ 로봇 차체 치수(GMW) · 개념 평면도이며 시공 도면이 아님</text>
+<text x="140" y="1125" font-size="11" fill="#333">출처: 2026-09-21 회장님 손도면·구두 (17/3/5/3/14/3 m, 트랙터 5×10, 로봇착유기 10×10, 휴식 길이 37 m, 서측 퇴비장 10 m·수직형 교반기). 사조·급수 통로는 무깔짚, 분뇨는 매일 1회 스키드로더로 퇴비장 반입. 기둥 위치는 구두 기준.</text>
+<text x="140" y="1143" font-size="11" fill="#333">확인 필요: ① 착유 대기·이동 통로 경계 ② 기둥 실제 위치 ③ 로봇 차체 치수(GMW) ④ 퇴비장 내 교반기 위치·반입구 · 개념 평면도이며 시공 도면이 아님</text>
 </svg>

@@ -42,3 +42,8 @@
 1. 경기도 **사업 수지표(P&L)** 1장 — 지금 단가 다 모임.
 2. 회장님 단가 확인(§4-1) 반영.
 3. 송영신 쇼핑몰 GAP 보고 받으면 정렬 우선순위.
+
+## 7. 2026-09-12 추가: 필리핀 PCC–KOICA 강의자료 (브랜치 `claude/eager-ride-gv8os3`)
+- 배경: DA-PCC × KOICA **NDHIP(2023–2027)** 교육 시리즈(Muñoz, Nueva Ecija). 드라이브 "필리핀코이카" 폴더 = 위내센서 100개 견적(바이온텍·TNT리서치), "코이카" 폴더 = 회장님 강사 KOICA 젖소농가 교육 커리큘럼(번식·질병·유방염).
+- 산출물: `deliverables/philippines-koica-lecture-deck.pptx`(영문 43장, 발표자 노트 [KR] 요지) · `.pdf` 동일 · `philippines-koica-lecture-plan.md`(한국어 기획서·PENDING 7건) · `.build.js`(재생성 스크립트, pptxgenjs).
+- PENDING: 강의 일시/시간, 청중 구성(물소:젖소), NDHIP 내 역할, 실제 smaXtec 화면 삽입, 한국 산유량 확정치, 파일럿 설계안 제안 가능 여부, 타갈로그 자막.

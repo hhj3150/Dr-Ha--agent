@@ -122,6 +122,9 @@ A2 Jersey Hay Milk e-commerce, (13) government R&D (산자부) project managemen
   Eco-BIT; overseas farm monitoring → CowTalk AI. These agents read `context/global-embryo-export-context.md`.
 - **Export rule:** the export target is **Korean Holstein sexed dairy embryos only.**
   **Hanwoo genetic export is prohibited and must never be proposed.**
+- 젖소개량사업소 / 저지 수정란 입찰 / 국내산 저지종 성감별 수정란 확보·공급 및 이식관리 용역 (㈜제네틱스
+  단독 입찰, 계약~2027.11.30) → **Genetics Biotech + Genetics Lab Operations Agent** (first), bid/contract
+  → CEO Strategy. Active project; read and keep updated `context/jersey-embryo-bid-2026-context.md`.
 
 ## CowTalk+Eco-BIT expansion routing (province → national → international)
 - 도지사 정책제안 / 지방선거 / 광역지자체 / 경기도·강원도·전라도 / 한우 디지털 플랫폼 / 축산 디지털 전환 / 지역 축산정책 / 道 예산 → **Provincial Government Expansion Agent** (first; Phases 1–4)

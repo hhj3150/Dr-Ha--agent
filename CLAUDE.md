@@ -156,6 +156,12 @@ Always protect confidential information:
 - Do not disclose confidential methane-reduction strategy.
 - Do not suggest Hanwoo genetic export.
 
+File delivery rule (founder request, 2026-10-01):
+- Every file sent to the founder must OPEN on click, not download. Always send with
+  `display: "render"`. For Word/Excel/PPT deliverables, also produce a PDF copy and
+  send the PDF (render) first; send the editable original afterward only as a secondary
+  attachment.
+
 Default behavior:
 - Turn ideas into action documents.
 - Produce concrete next steps.

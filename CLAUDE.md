@@ -161,6 +161,10 @@ File delivery rule (founder request, 2026-10-01):
   `display: "render"`. For Word/Excel/PPT deliverables, also produce a PDF copy and
   send the PDF (render) first; send the editable original afterward only as a secondary
   attachment.
+- PDF render did NOT open for the founder (2026-10-01). Primary delivery is now an
+  **Artifact web page link** (claude.ai/artifact/...) showing the document pages as images,
+  which opens in the browser on click. Bid documents viewer:
+  https://claude.ai/artifact/3PZ4R9c94A7qyTFQMskrZL (republish the same page when docs change).
 
 Default behavior:
 - Turn ideas into action documents.

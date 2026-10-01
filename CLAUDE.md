@@ -122,6 +122,9 @@ A2 Jersey Hay Milk e-commerce, (13) government R&D (산자부) project managemen
   Eco-BIT; overseas farm monitoring → CowTalk AI. These agents read `context/global-embryo-export-context.md`.
 - **Export rule:** the export target is **Korean Holstein sexed dairy embryos only.**
   **Hanwoo genetic export is prohibited and must never be proposed.**
+- 젖소개량사업소 / 저지 수정란 입찰 / 국내산 저지종 성감별 수정란 확보·공급 및 이식관리 용역 (㈜제네틱스
+  단독 입찰, 계약~2027.11.30) → **Genetics Biotech + Genetics Lab Operations Agent** (first), bid/contract
+  → CEO Strategy. Active project; read and keep updated `context/jersey-embryo-bid-2026-context.md`.
 
 ## CowTalk+Eco-BIT expansion routing (province → national → international)
 - 도지사 정책제안 / 지방선거 / 광역지자체 / 경기도·강원도·전라도 / 한우 디지털 플랫폼 / 축산 디지털 전환 / 지역 축산정책 / 道 예산 → **Provincial Government Expansion Agent** (first; Phases 1–4)
@@ -152,6 +155,16 @@ Always protect confidential information:
 - Do not disclose Dr. Ha Liquid origin.
 - Do not disclose confidential methane-reduction strategy.
 - Do not suggest Hanwoo genetic export.
+
+File delivery rule (founder request, 2026-10-01):
+- Every file sent to the founder must OPEN on click, not download. Always send with
+  `display: "render"`. For Word/Excel/PPT deliverables, also produce a PDF copy and
+  send the PDF (render) first; send the editable original afterward only as a secondary
+  attachment.
+- PDF render did NOT open for the founder (2026-10-01). Primary delivery is now an
+  **Artifact web page link** (claude.ai/artifact/...) showing the document pages as images,
+  which opens in the browser on click. Bid documents viewer:
+  https://claude.ai/artifact/3PZ4R9c94A7qyTFQMskrZL (republish the same page when docs change).
 
 Default behavior:
 - Turn ideas into action documents.

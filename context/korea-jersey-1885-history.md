@@ -26,6 +26,12 @@ re-confirmed 2026-10-06.
   **"암소 2두와 수소 1두, 총 3두"** externally.
 - Background: 1883 보빙사 (Bobingsa mission) — Choe Gyeong-seok visited a model farm near
   Boston and the USDA; on return, Gojong granted land for the experimental farm.
+- Extra details (founder's research): Choe visited the **Walcott Model Farm** near Boston; Gojong's
+  land grant was about **8 ri in circumference**; Foulk noted the Jerseys were **superior to Korean
+  cattle in milk production** (paraphrase — dairy purpose clear); plan = import stock → improve
+  native stock → Western husbandry → milk → butter/cheese. A Korean Jersey study (~137 years
+  later) also names the 1885 3-head import as the start of Jersey keeping in Korea.
+- Route of the breed: Jersey Island (UK) → USA → California → Joseon (1885).
 - Next research: NYPL Everett Frazar Papers 1883–1948, Box 1 Folder 3 (Letters 1885–1888) for
   invoices / seller farm / pedigree; Foulk papers; American Jersey Cattle Club herd register.
 

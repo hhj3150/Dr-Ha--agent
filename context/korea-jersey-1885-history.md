@@ -47,3 +47,17 @@ dairy farm → Dec 2025 whole herd converted to A2A2 Jersey via embryo transfer 
 ## Deliverables using this
 - Brand story doc (Claude Docs): https://claude.ai/code/artifact/d302f723-776a-4821-8d6e-e8582e71f488
 - Nepal lecture deck, slide "first-cows": https://claude.ai/artifact/Dy8ZsNKQ4PpXjoaSghLurc
+
+## Herd pedigree register (received 2026-10-06; 46 registered Jerseys)
+- Founder cows: JOLIE (248, reg 501254705), JASMINE (250, 501254706), JOURNEY (251, 501254707),
+  SMART (252, 501267528). Origin of founders (imported-embryo 1st generation?) — to confirm.
+- Daughters 14 (2020–2022): JOLIE 5 (357, 398, 439, 441, 494) · JASMINE 4 (400, 455, 485, 490) ·
+  JOURNEY 4 (414, 423, 426, 428) · SMART 1 (350). 13 registered as ET-born ("-이티").
+- Granddaughters 5: 565 (←357), 590 (←441), 612 (←455), 609 (←485), 564 (←350).
+- Spring 2026: 10 heifer calves (16 Feb–23 Mar 2026), 7 out of Seoul Milk–prefix dams.
+- Prefixes: L&H 31, 서울우유 12 (G1–G14 series; how acquired — to confirm), others 3.
+- Sires: 17 bulls, all North American (USA 42 offspring, CAN 4 — Boomerang). Most used:
+  Steve 8, Ronaldo 6, Chive 6, Boomerang 4, Dustin 4, Chrome 3, Pine 3.
+- Breeding note: Steve/Ronaldo/Chive daughters are numerous — check sire relationships before
+  mating these families to avoid inbreeding.
+- Register covers 46 of the ~70 head; A2A2 status is not in the register (separate test results).

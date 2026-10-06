@@ -52,7 +52,7 @@ dairy farm → Dec 2025 whole herd converted to A2A2 Jersey via embryo transfer 
 - Founder cows: JOLIE (248, reg 501254705), JASMINE (250, 501254706), JOURNEY (251, 501254707),
   SMART (252, 501267528). Origin of founders (imported-embryo 1st generation?) — to confirm.
 - Daughters 14 (2020–2022): JOLIE 5 (357, 398, 439, 441, 494) · JASMINE 4 (400, 455, 485, 490) ·
-  JOURNEY 4 (414, 423, 426, 428) · SMART 1 (350). 13 registered as ET-born ("-이티").
+  JOURNEY 4 (414, 423, 426, 428) · SMART 1 (350). 10 of these 14 are ET-born ("-이티"); 13 ET-born in the whole register.
 - Granddaughters 5: 565 (←357), 590 (←441), 612 (←455), 609 (←485), 564 (←350).
 - Spring 2026: 10 heifer calves (16 Feb–23 Mar 2026), 7 out of Seoul Milk–prefix dams.
 - Prefixes: L&H 31, 서울우유 12 (G1–G14 series; how acquired — to confirm), others 3.

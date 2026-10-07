@@ -53,6 +53,8 @@ dairy farm → Dec 2025 whole herd converted to A2A2 Jersey via embryo transfer 
 ## Deliverables using this
 - Brand story doc (Claude Docs): https://claude.ai/code/artifact/d302f723-776a-4821-8d6e-e8582e71f488
 - Nepal lecture deck, slide "first-cows": https://claude.ai/artifact/Dy8ZsNKQ4PpXjoaSghLurc
+- Sindhuli (Nepal) dairy-farmer lecture, 8 Oct 2026: https://claude.ai/artifact/63Zvb3FpQXPcntBRPifgPg —
+  founder asked to KEEP 1885 history and pedigree OUT of this deck (memory only).
 
 ## Herd pedigree register (received 2026-10-06; 46 registered Jerseys)
 - Founder cows: JOLIE (248, reg 501254705), JASMINE (250, 501254706), JOURNEY (251, 501254707),

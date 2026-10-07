@@ -35,6 +35,13 @@ sugars 4.75 g, fat 6.0 g, trans fat 0.16 g, saturated fat 4.4 g, cholesterol 21.
 protein 4.59 g, sodium 41.8 mg. Production: plate heat exchanger; homogenization →
 pasteurization (75 °C / 20 s, APV homogenizer) → cooling → filling → packaging.
 
+## Official product photo (use this from now on)
+`assets/brand/songyoungshin-a2-jersey-products.jpg` — founder-supplied (2026-10-08) studio shot of the
+current line-up: A2저지 헤이밀크 (A2 Jersey Hay Milk) 180 mL ×2 and 750 mL (brown neck band) and
+A2저지 플레인요거트 (A2 Jersey Plain Yogurt) 500 mL and 180 mL (green neck band), "송영신목장" cow logo.
+Use this image whenever a deck, page or document shows our products; the older "유기농 목초우유"
+bottle image is retired.
+
 ## Brand philosophy
 Heritage story: Korea's first Western dairy cows were 3 Jerseys from California (1885); Song
 Young Shin Farm returned to that first breed in Dec 2025 — "한국의 첫 젖소, 140년 만의 귀환".

@@ -36,6 +36,10 @@ protein 4.59 g, sodium 41.8 mg. Production: plate heat exchanger; homogenization
 pasteurization (75 °C / 20 s, APV homogenizer) → cooling → filling → packaging.
 
 ## Brand philosophy
+Heritage story: Korea's first Western dairy cows were 3 Jerseys from California (1885); Song
+Young Shin Farm returned to that first breed in Dec 2025 — "한국의 첫 젖소, 140년 만의 귀환".
+Facts, evidence levels and claim rules: `context/korea-jersey-1885-history.md`.
+
 Soil to Soul — Healthy Soil → Healthy Grass → Healthy Cow → Healthy Milk → Healthy
 Human. Premium, natural, animal-welfare, low-carbon, circular agriculture. Connects
 to D2O circular agriculture and Healing Compost (Soil → Grass → Cow → Milk →

@@ -57,3 +57,12 @@ Design every output for province → national → international scalability. Gov
 proposals emphasize animal welfare, disease prevention, carbon reduction, productivity,
 rural income, administrative efficiency, jobs. Mark budgets/figures as estimates/targets.
 Apply `confidentiality-rules.md`. Korean when the user writes Korean.
+
+## Nepal — Sindhuli CowTalk pilot proposal (presented 2026-10-08, founder's figures, to confirm)
+- Sindhuli dairy co-op: ~70 member farms, ~143 cattle; ~50 farms keep cows supported through
+  Heifer Korea.
+- Proposal: ~100 smaXtec rumen sensors on cattle ≥12 months; a smaXtec repeater covers ~200 m
+  radius, so install the minimum number of repeaters at shared points (collection centre, village
+  common spots) after GPS-mapping all farms; one "Sindhuli CowTalk" dashboard for farmers, vets
+  and the co-op; review after one season. Combine with ET and a humus-barn demo.
+- Cows are dairy cattle; never frame as Hanwoo or Korean beef genetics.

@@ -60,7 +60,7 @@ Eco-BIT / CowTalk agents reference this when relevant.
 - Mark any figure not in this summary as draft/to-confirm. EA0808 percentage to be verified.
 
 ## Research lead & participating researchers (our entity)
-**Our participating entity:** 농업회사법인 주식회사 **디투오 (D2O)** — 경기도 안성시 보개면 양협길 29-67 (우 17508), Tel 031-674-4432.
+**Our participating entity:** 농업회사법인 주식회사 **디투오 (D2O)** — 경기도 안성시 미양면 미양로 466 (실증지 송영신목장: 경기도 안성시 미양면 갈전리 286-8). ※ 보개면 양협길 29-67은 ㈜제네틱스 주소.
 
 - **연구책임자 (우리 측):** 하현제 (HA HYUN JAE) · 대한민국 · 국가연구자번호 **11152141** · 디투오 이사(기술지원) · ☎010-6205-3150 · hhj3150@hanmail.net
   - 학력: 1992.03–1999.03 건국대학교 수의학 학사

@@ -130,6 +130,9 @@ A2 Jersey Hay Milk e-commerce, (13) government R&D (산자부) project managemen
 - Boundary: domestic provinces → Provincial Government Expansion; international → CowTalk Global Expansion; the technical platform both sell → Eco-BIT Platform; capital/negotiation/portfolio → CEO Strategy; Holstein embryo export stays with Global Embryo Export Operations (distinct from platform export). These agents read `context/eco-bit-expansion-context.md`.
 - Reference: Uzbekistan CowTalk pilot (~50 cows) = first international validation case (figures TBD).
 
+## Documentary project routing
+- 한국 낙농 140년 다큐멘터리 / 「한 마리의 소, 140년의 약속」 / 최경석·Heifer·MVS·은헌기·Mennonite Dairy Farm·Heifer Korea·네팔 신둘리 / 다큐 피치덱 → **CEO Strategy Agent** (lead) + A2 Hay Milk Brand / Songyoungshin Brand Marketing (narrative). Single source of truth: `context/dairy-140-documentary-brief.md` (read with `context/korea-jersey-1885-history.md`). Separate verified fact / testimony / interpretation / needs-verification; no invented relationships, photos, or numbers.
+
 Use the relevant agent file in `agents/` and the context files in `context/`.
 Always read `context/founder-context.md` (authoritative founder & ecosystem
 context), `context/master-context.md`, and `context/confidentiality-rules.md`

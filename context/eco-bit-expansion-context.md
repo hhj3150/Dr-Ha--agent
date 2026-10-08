@@ -66,3 +66,7 @@ Apply `confidentiality-rules.md`. Korean when the user writes Korean.
   common spots) after GPS-mapping all farms; one "Sindhuli CowTalk" dashboard for farmers, vets
   and the co-op; review after one season. Combine with ET and a humus-barn demo.
 - Cows are dairy cattle; never frame as Hanwoo or Korean beef genetics.
+
+## Sindhuli = "Nepal's Anseong Farmland" idea (founder, Oct 2026 — vision, not a commitment)
+- Anseong Farmland began as the 1969 Korea–West Germany Dairy Demonstration Farm (한독낙농시범목장, West German loan for ~200 cows); reborn in 2012 as Anseong Farmland, a dairy/livestock theme park operated by NH (농협경제지주). Song Young Shin Farm runs the Hey! Hay Milk café there.
+- Address: 안성시 공도읍 (대)신두리 — "Sinduri", nearly the same name as Sindhuli. Founder's vision: make Sindhuli a dairy theme park for Nepali families, a dairy-skills training center, and a dairy breeding farm (dairy only; no Hanwoo).

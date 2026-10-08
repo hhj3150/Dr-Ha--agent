@@ -75,3 +75,8 @@ forage-centered feeding. Avoid medical/disease-treatment claims; use only provid
 lab values for nutrition. Apply `confidentiality-rules.md` (no Dr. Ha Liquid origin,
 no confidential methane strategy, no Hanwoo genetic export). Use Korean when the
 user writes in Korean.
+
+## People & family-farm values (confirmed by founder, Oct 2026)
+- Four Nepali staff work at Song Young Shin Farm; Sugam (수검) has been with the farm about six years (founder: "6년").
+- Founder's values to carry in storytelling: sustainable agriculture, a society where people live (사람 사는 사회), family farming, protecting the local community and countryside, building on healthy soil, never damaging farmland, passing it on to the next generation.
+- Farm photo set: assets/brand/farm/ (entrance sign "송영신목장 · Farmstead Creamery", Jersey heifers on HBP, creamery, filling line, Hey! Hay Milk café, Sugam and son, founder portrait, family in field).

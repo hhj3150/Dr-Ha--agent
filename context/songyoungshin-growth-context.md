@@ -81,3 +81,4 @@ user writes in Korean.
 - assets/brand/farm/family-field.jpg is the founder's own family.
 - Founder's values to carry in storytelling: sustainable agriculture, a society where people live (사람 사는 사회), family farming, protecting the local community and countryside, building on healthy soil, never damaging farmland, passing it on to the next generation.
 - Farm photo set: assets/brand/farm/ (entrance sign "송영신목장 · Farmstead Creamery", Jersey heifers on HBP, creamery, filling line, Hey! Hay Milk café, Sugam and son, founder portrait, family in field).
+- Sales channels (founder, Oct 2026): main channel = own online shop (shop.a2jerseymilk.com) by subscription; also Galleria department store (Apgujeong luxury hall) and the Hey! Hay Milk café at Anseong Farmland. Photos: assets/brand/farm/ysf-online-shop.jpg, ysf-galleria-shelf.jpg.

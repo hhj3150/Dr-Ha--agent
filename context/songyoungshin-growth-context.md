@@ -77,6 +77,7 @@ no confidential methane strategy, no Hanwoo genetic export). Use Korean when the
 user writes in Korean.
 
 ## People & family-farm values (confirmed by founder, Oct 2026)
-- Four Nepali staff work at Song Young Shin Farm; Sugam (수검) has been with the farm about six years (founder: "6년").
+- Four Nepali staff work at Song Young Shin Farm: Sugam (수검), Sagar (사가르), Madhab (마덥), Krishna (크리스나). Sugam has worked here 6 years — the founder jokingly calls him "the real boss of our farm" (실질적인 사장님).
+- assets/brand/farm/family-field.jpg is the founder's own family.
 - Founder's values to carry in storytelling: sustainable agriculture, a society where people live (사람 사는 사회), family farming, protecting the local community and countryside, building on healthy soil, never damaging farmland, passing it on to the next generation.
 - Farm photo set: assets/brand/farm/ (entrance sign "송영신목장 · Farmstead Creamery", Jersey heifers on HBP, creamery, filling line, Hey! Hay Milk café, Sugam and son, founder portrait, family in field).

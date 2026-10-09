@@ -1,6 +1,6 @@
 # Embryo Transfer from the Basics — Script (KO + EN)
 
-Embryo Transfer Symposium · 9 October 2026 · Dr. Ha Hyun-Jae, DVM · 23 slides
+Embryo Transfer Symposium · 9 October 2026 · Dr. Ha Hyun-Jae, DVM · 27 slides
 
 ## Slide 1 · Embryo Transfer from the Basics
 
@@ -86,55 +86,79 @@ Embryo Transfer Symposium · 9 October 2026 · Dr. Ha Hyun-Jae, DVM · 23 slides
 
 > Next, the embryo itself. Read the straw: stage, grade, sex and freezing method decide what you are allowed to do next.
 
-## Slide 15 · Stages 4–7 for transfer; only Grade 1 is frozen for export
+## Slide 15 · Where fertilization happens, and where the embryo must be
+
+자궁의 해부학적 모식도로 이동 경로를 보겠습니다. 아래부터 질, 자궁경관, 자궁체, 그리고 좌우 두 개의 자궁각, 그 끝에 가느다란 난관, 그리고 난소가 있습니다. 1번, 발정이 시작되고 약 24시간에서 30시간 뒤에 난소에서 배란이 일어나고, 그 자리에 황체가 생깁니다. 2번, 인공수정 때 정액은 자궁경관을 지나 자궁체에 주입하고, 정자는 스스로 헤엄쳐 자궁각을 지나 난관까지 올라갑니다. 3번, 수정은 자궁이 아니라 난관의 팽대부에서 일어납니다. 이날이 0일입니다. 4번, 수정란은 분열하면서 난관을 천천히 내려와 4일에서 5일째, 8세포에서 16세포 시기에 자궁으로 들어갑니다. 5번, 7일에서 8일째 배반포는 황체가 있는 쪽 자궁각의 끝부분에 있습니다. 그래서 수정란이식 때 우리는 7일령 수정란을 바로 이 자리, 황체 쪽 자궁각의 앞쪽 3분의 1에 넣습니다. 자연이 수정란을 두는 곳에 똑같이 두는 것입니다.
+
+> Let us follow the path on a schematic of the tract. From below: vagina, cervix, uterine body, the two uterine horns, the thin oviducts at their tips, and the ovaries. One: about 24 to 30 hours after heat begins, the ovary ovulates and a corpus luteum forms in its place. Two: at AI, semen passes the cervix and is deposited in the uterine body; sperm swim up through the horn to the oviduct. Three: fertilization happens not in the uterus but in the ampulla of the oviduct — that is Day 0. Four: the embryo divides as it moves down the oviduct and enters the uterus on Day 4 to 5, at 8 to 16 cells. Five: the Day 7 to 8 blastocyst lies at the tip of the horn on the CL side. That is why, in ET, we place the Day-7 embryo exactly there — the cranial third of the horn on the CL side — where nature would have put it.
+
+## Slide 16 · From one cell to a blastocyst in 7–8 days
+
+수정란의 발달 단계를 그림으로 보겠습니다. 수정된 첫날은 1세포, 접합자입니다. 둘째 날 2세포, 2일에서 3일 4세포, 3일에서 4일에 8세포에서 16세포가 됩니다. 5일에서 6일이 되면 세포들이 뭉쳐 상실배가 되고, 7일째 안에 빈 공간, 즉 포배강이 생기기 시작하면 초기 배반포입니다. 7일에서 8일에 배반포, 8일째 확장 배반포가 되고, 9일에서 10일이 되면 투명대를 깨고 나오는 부화 배반포가 됩니다. 아래 숫자는 국제 기준 IETS 단계 번호입니다. 이식과 동결에 쓰는 것은 4번에서 7번이고, 진하게 표시한 6번 배반포와 7번 확장 배반포가 가장 좋습니다. 8번 이상은 투명대를 잃었기 때문에 신선 이식만 가능하고, 국제 기준대로 세척할 수 없어 동결이나 수출은 할 수 없습니다.
+
+> Here are the stages in pictures. Day 1, one cell — the zygote. Day 2, two cells; Day 2 to 3, four cells; Day 3 to 4, eight to sixteen cells. By Day 5 to 6 the cells compact into a morula; on Day 7 a fluid cavity begins to form — the early blastocyst. Day 7 to 8, blastocyst; Day 8, expanded blastocyst; Day 9 to 10 it breaks out of the zona — the hatched blastocyst. The numbers below are IETS stage codes. Stages 4 to 7 are used for transfer and freezing; 6 and 7, shown dark, are best. Stage 8 and beyond have lost the zona: fresh transfer only, they cannot be washed to the international standard, and they are not frozen or exported.
+
+## Slide 17 · A blastocyst about 0.15–0.2 mm across
+
+이식하는 7일에서 8일령 수정란을 확대한 그림입니다. 실제 지름은 약 0.15에서 0.2밀리미터로 현미경으로만 보입니다. 1번, 바깥의 투명대입니다. 수정란을 보호하는 껍질이고, 국제 기준에서 가장 중요한 부분입니다. 세척과 수출을 하려면 반드시 온전해야 합니다. 2번, 영양외배엽입니다. 바깥 세포층으로, 나중에 태반이 됩니다. 3번, 내세포괴입니다. 안쪽의 세포 덩어리로, 이것이 송아지가 됩니다. 4번, 포배강입니다. 액체로 찬 공간이고 7일에서 8일에 커지면서 확장 배반포가 됩니다. 아래 문장이 다음 슬라이드로 이어집니다. 온전한 투명대와 올바른 세척, 이 두 가지가 수정란을 통해 병이 옮지 않게 하는 방어벽입니다.
+
+> This is the Day 7 to 8 embryo we transfer, enlarged. Its real diameter is about 0.15 to 0.2 millimetres — visible only under a microscope. One: the zona pellucida, the protective shell and, for international standards, the most important part — it must be intact for washing and export. Two: the trophectoderm, the outer cell layer, which becomes the placenta. Three: the inner cell mass, which becomes the calf. Four: the blastocoel, the fluid-filled cavity that enlarges on Day 7 to 8 into the expanded blastocyst. And this leads to the next slide: an intact zona plus correct washing is the barrier that stops disease travelling with the embryo.
+
+## Slide 18 · Stages 4–7 for transfer; only Grade 1 is frozen for export
 
 국제수정란기술학회, IETS 기준입니다. 전 세계 모든 스트로에 이 기준이 적혀 있습니다. 단계는 4에서 7까지가 이식 재료입니다. 6번 배반포와 7번 확장 배반포가 결과도 가장 좋고 동결에도 가장 강합니다. 8번 부화 배반포는 투명대를 벗어났기 때문에 신선 이식만 가능하고, 국제 위생 기준으로 세척할 수 없고 동결도 잘 안 됩니다. 등급은 품질입니다. 1등급은 대칭이고 균일하며 세포의 85% 이상이 정상입니다. 저희 프로그램의 원칙은 분명합니다. 수출용으로 동결하는 것은 1등급뿐입니다. 2등급은 채란한 농장에서 신선 이식, 3등급은 농장 판단, 4등급은 폐기입니다. 그리고 성감별 수정란은 약 90%가 암컷입니다. 임신 10두 중 수송아지가 1두 정도 나오는 것은 정상이지 불량이 아닙니다.
 
 > The IETS system is on every straw in the world. Stages 4 to 7 are transfer material; 6, blastocyst, and 7, expanded blastocyst, give the best results and freeze best. Stage 8, hatched, has left its zona: fresh transfer only, it cannot be washed to the international sanitary standard and does not freeze reliably. Grade is quality: grade 1 is symmetrical, uniform, at least 85 percent intact. Our rule: only grade 1 is frozen for export; grade 2 fresh on the farm of collection; grade 3 an on-farm decision; grade 4 discarded. Sexed embryos are about 90 percent female — about one bull calf in ten pregnancies is normal, not a defect.
 
-## Slide 16 · We use slow freezing — vitrification explained, not recommended
+## Slide 19 · The international standard: WOAH Code + IETS Manual
+
+수정란을 통한 질병 전파의 국제 기준입니다. 기준을 만드는 곳은 두 곳입니다. 세계동물보건기구, WOAH의 육상동물위생규약에 수정란 채취와 처리에 관한 장이 있고, 국제수정란기술학회 IETS의 매뉴얼이 구체적인 방법을 정합니다. 그리고 실제 수출입에서는 항상 수입국의 위생증명 조건이 적용됩니다. 핵심 요건은 여섯 가지입니다. 첫째, 공식 수의사가 감독하는 승인된 팀. 둘째, 공란우는 건강한 농장에서, 도축장 난소는 생체 검사와 도체 검사를 거친 소에서만. 셋째, 투명대가 온전하고 부착물이 없는지 현미경으로 확인. 넷째, 10회 세척, 매번 100배 희석, 매번 새 피펫, 필요하면 트립신 세척. 다섯째, 병원체가 없는 배지와 혈청, 소혈청알부민 같은 동물 유래 물질, 그리고 항생제. 여섯째, 멸균 밀봉 스트로와 IETS 표기, 깨끗한 액체질소 탱크, 기록과 위생증명서입니다. 오른쪽은 IETS 1범주, 기준대로 처리하면 위험을 무시할 수 있는 소의 질병입니다. 지방성 소 백혈병, 구제역, 블루텅, 브루셀라, 트립신 처리를 한 IBR, 그리고 광우병입니다. 다만 체외수정란은 투명대에 병원체가 더 잘 붙기 때문에 세척만으로는 부족하고, 저희처럼 도축장 난소를 쓰는 경우 원료 관리와 BVD 같은 재료 검사를 WOAH 체외수정란 장에 따라 함께 해야 합니다.
+
+> The international standard for disease transmission by embryos. Two bodies set it: the World Organisation for Animal Health, whose Terrestrial Animal Health Code has chapters on embryo collection and processing, and the IETS, whose Manual gives the methods. In real trade, the importing country's health certificate conditions always apply. Six core requirements: an approved team under an official veterinarian; donors from healthy herds, and abattoir ovaries only from animals that passed ante- and post-mortem inspection; an intact zona free of adherent material, checked under the microscope; ten washes, each a 1:100 dilution, with a new pipette each time, plus a trypsin wash where required; pathogen-free media and animal-derived products such as serum and BSA, with antibiotics; and sterile sealed straws with IETS labels, clean liquid nitrogen tanks, records and a health certificate. On the right, IETS Category 1 for cattle — negligible risk when embryos are handled to the standard: enzootic bovine leukosis, foot-and-mouth disease, bluetongue, Brucella abortus, IBR with trypsin treatment, and BSE. In vitro embryos have a stickier zona, so washing alone is not enough; with abattoir ovaries, as in our programme, source control and testing of materials such as for BVD virus follow the WOAH chapter on in vitro embryos.
+
+## Slide 20 · We use slow freezing — vitrification explained, not recommended
 
 동결 방법입니다. 저희는 완만동결, 즉 슬로프리징을 씁니다. 에틸렌글리콜을 동해방지제로 써서 천천히 냉각합니다. 에틸렌글리콜은 분자가 작아 빨리 스며들고 자궁 안에서 스스로 희석되기 때문에, 수조, 타이머, 이식기만 있으면 우사에서 바로 직접이식할 수 있습니다. 접시도, 현미경도, 실험실 단계도 필요 없습니다. 현장에서 가장 단순하고 실수가 적은 방법입니다. 참고로 유리화 동결도 설명드리겠습니다. 아주 높은 농도의 동해방지제와 초급속 냉각으로 얼음 없이 유리처럼 굳히는 방법입니다. 그런데 녹일 때 그 수정란을 만든 실험실의 절차대로 여러 단계로 가온하고 희석해야 하고, 직접이식은 할 수 없습니다. 현장에서는 단계가 많고 실수할 여지가 커서 저희는 권하지 않습니다. 다만 한 가지는 꼭 기억하십시오. 혹시라도 유리화 스트로를 받게 되면 실험실 카드를 따르고, 절대 직접이식 방법으로 녹이지 마십시오. 수정란이 반드시 죽습니다.
 
 > Freezing method. We use slow freezing with ethylene glycol. Ethylene glycol is small, permeates quickly and dilutes inside the uterus, so with only a water bath, a timer and a transfer gun you can direct-transfer in the barn — no dishes, no microscope, no lab steps. It is the simplest method in the field, with the least room for error. For information, vitrification uses very high cryoprotectant concentrations and ultra-rapid cooling to form a glass without ice. But it must be warmed and diluted step by step with the producing lab's protocol and cannot be direct-transferred. In the field that means more steps and more room for error, so we do not recommend it. One thing to remember: if you ever receive a vitrified straw, follow the lab card and never thaw it as a direct-transfer straw — the embryo will die.
 
-## Slide 17 · Air 3–5 s · water 37 °C 20–30 s
+## Slide 21 · Air 3–5 s · water 37 °C 20–30 s
 
 직접이식 스트로의 융해 순서입니다. 숫자를 따라 해 주십시오. 공기 3초에서 5초, 37도 물에 20초에서 30초. 현장에서 늘 보는 실수가 세 가지 있습니다. 첫째, 스트로를 찾는다고 고블릿 전체를 탱크 밖 공기 중으로 들어 올립니다. 그러면 다른 스트로들이 녹았다가 다시 얼어서 모두 망가집니다. 탱크 목 부분 안에서 찾으십시오. 둘째, 스트로의 물기를 닦지 않아 물이 이식기에 들어가 오염됩니다. 셋째, 수정란을 녹여 놓고 그제서야 소를 잡으러 갑니다. 소를 먼저 잡고, 맨 마지막에 녹이십시오. 녹인 뒤 5분에서 10분 안에 이식하고, 햇빛과 바람을 피하십시오.
 
 > Thawing a direct-transfer straw. Say the numbers with me: air three to five seconds; water bath 37 degrees, twenty to thirty seconds. Three errors I see constantly. First, lifting the whole goblet out of the tank while searching — the other straws warm and re-cool and are destroyed; search inside the tank neck. Second, not drying the straw, so water contaminates the gun. Third, thawing the embryo and then going to catch the cow. Catch the cow first; thaw last. Transfer within five to ten minutes, out of sun and wind.
 
-## Slide 18 · Nine steps — never force the cervix
+## Slide 22 · Nine steps — never force the cervix
 
 이식 기술 아홉 단계입니다. 경막외 마취는 선택이 아닙니다. 마취 없이는 소가 힘을 주고 직장이 수축해서 정확하게 만지거나 넣을 수 없습니다. 2% 리도카인 2에서 3밀리리터를 주고 꼬리가 늘어질 때까지 기다립니다. 다섯 번째 단계에서 좋은 시술자와 그렇지 않은 시술자가 갈립니다. 이식기를 경관에 밀어 넣는 것이 아닙니다. 직장벽을 통해 경관을 손에 쥐고, 경관을 이식기 쪽으로 한 고리씩 끼워 넣습니다. 힘으로 밀고 있다면 멈추고 다시 잡으십시오. 황체가 있는 쪽 자궁각의 앞쪽 3분의 1에 천천히 끝까지 주입하고, 곧게 빼서 스트로가 비었는지 확인합니다. 그리고 마지막, 하루가 끝날 때가 아니라 즉시 기록합니다. 기억은 기록이 아닙니다.
 
 > Nine steps. The epidural is not optional: without it the cow strains, the rectum contracts and you cannot feel or place anything accurately — 2 to 3 mL of 2 percent lidocaine, and wait for the tail to relax. Step five separates good technicians from poor ones: you do not push the gun through the cervix; you hold the cervix through the rectal wall and feed it onto the gun, ring by ring. If you are forcing, stop and reposition. Deposit slowly and completely in the cranial third of the horn on the CL side, withdraw straight and check the straw is empty. And record immediately, not at the end of the day — memory is not a record.
 
-## Slide 19 · Score every transfer 1–3; record 14 fields
+## Slide 23 · Score every transfer 1–3; record 14 fields
 
 오늘 드릴 수 있는 가장 유용한 습관입니다. 모든 이식에 1에서 3까지 난이도 점수를 매기십시오. 1은 쉽고 출혈이 없음, 2는 약간의 저항, 3은 어렵고 시스에 피가 묻고 여러 번 시도한 경우입니다. 그리고 한 달에 한 번 3점이 몇 번이었는지 세어 보십시오. 열 번 중 한 번 이상이 3점이라면 문제는 수정란 공급자도 소도 아닙니다. 손, 보정 시설, 아니면 인내심입니다. 저도 18년 동안 저 자신에게 이걸 써 왔습니다. 불편하지만 가장 빨리 느는 방법입니다. 오른쪽은 기록지 항목 14개입니다. 수란우 번호부터 체형, 황체 방향과 크기, 수정란 정보, 융해 시각, 시술자, 난이도까지 이식 직후 바로 적으십시오.
 
 > The most useful habit I can give you: score every transfer from 1 to 3. One, easy with no blood; two, some resistance; three, difficult, blood on the sheath, repeated attempts. Once a month count your threes. If more than about one in ten is a three, the problem is not the supplier or the cows — it is your hands, your restraint facilities or your patience. I have used this on myself for eighteen years; it is uncomfortable and it is the fastest way to improve. On the right are the fourteen record fields — write them immediately after each transfer.
 
-## Slide 20 · The transfer takes 5 minutes; the pregnancy takes 45 days
+## Slide 24 · The transfer takes 5 minutes; the pregnancy takes 45 days
 
 이식은 5분이지만 임신이 안정되기까지는 45일이 걸립니다. 전 세계에서 가장 흔한 관리 실수는 이식하고 다음 주에 수란우를 다른 무리로 옮기는 것입니다. 무리 스트레스, 사료 변화, 더위는 모두 같은 방향, 즉 초기 배아 손실로 작용합니다. 이식 후 7일에서 10일 동안은 이동, 재편성, 수송, 백신, 제각을 하지 마십시오. 사료와 우사를 바꾸지 말고 체형을 유지하십시오. 더위 대책은 임신 대책입니다. 그늘, 환풍기, 물, 그리고 작업은 오전 9시 전에 하십시오. 그리고 재발정을 기록하십시오. 18일에서 24일에 돌아오면 정상 길이 주기로, 수정이나 아주 초기 발달 실패를 뜻합니다. 늦게 돌아오면 더 늦은 배아 손실, 즉 더위나 질병을 의심해야 합니다. 실패의 패턴이 어디를 봐야 할지 알려 줍니다.
 
 > The transfer takes five minutes; the pregnancy takes forty-five days to become secure. The most common mistake worldwide is moving recipients to a new group the week after transfer — social stress, ration change and heat all push toward early embryonic loss. For 7 to 10 days: no moving, regrouping, transport, vaccination or dehorning. Keep ration and housing the same and condition stable. Heat abatement is a pregnancy tool: shade, fans, water, handling before 9 am. Record returns to heat: a return at Day 18 to 24 points to fertilization or very early failure; a late return points to later loss — heat stress or disease. The pattern of failures tells you where to look.
 
-## Slide 21 · Scan at Day 28–32, recheck at Day 55–60
+## Slide 25 · Scan at Day 28–32, recheck at Day 55–60
 
 임신진단은 초음파로 28일에서 32일에 하고, 꼭 55일에서 60일에 한 번 더 확인하십시오. 늦은 배아 손실과 초기 태아 손실은 실제로 있고, 더운 지역에서는 흔합니다. 한 번만 보면 지키지 못한 임신을 성공으로 기록하게 되고, 프로그램이 어디서 새는지 영원히 모릅니다. 오른쪽은 현실적인 숫자입니다. 문헌 기준으로 체내 신선 55~70%, 체내 동결 직접이식 45~60%, 체외 신선 40~55%, 체외 유리화 35~50%입니다. 저희 회사의 한국 현장 평균은 약 60%이고, 최근 5년간 해외에서 이식한 저희 성감별 동결 체외수정란도 약 60%입니다. 이것은 한국의 수란우와 한국의 관리로 얻은 숫자입니다. 새로 시작하는 프로그램의 첫해 현실적 목표는 40에서 50%입니다. 첫해에 65%를 약속하는 사람이 있다면 조심하십시오. 그리고 대리모 선정과 더위 관리를 개선하면서 올려 갑니다. 1%가 오를 때마다 실제 돈이 됩니다.
 
 > Diagnose by ultrasound at Day 28 to 32, and always recheck at Day 55 to 60. Late embryonic and early fetal loss is real and common in hot climates; with one check you record pregnancies you did not keep and never find where your programme leaks. Honest numbers: published ranges are 55 to 70 percent for in vivo fresh, 45 to 60 for in vivo frozen direct transfer, 40 to 55 for IVP fresh, 35 to 50 for IVP vitrified. Our Korean field average is about 60 percent, and our sexed frozen IVF embryos transferred abroad over the last five years have also reached about 60 percent — with Korean recipients and management. A realistic first-year target for a new programme is 40 to 50 percent; be careful of anyone promising 65 in year one. Then you improve with better recipient selection and heat management, and every point is real money.
 
-## Slide 22 · One recipient, four checkpoints
+## Slide 26 · One recipient, four checkpoints
 
 오늘 내용을 현장 체크리스트 하나로 정리했습니다. 수란우 한 마리에 네 번의 확인입니다. 첫째, 등록 한 달 전, 미경산 처녀우를 우선으로 일곱 가지 기준, 체형, 생식기 검사, 건강 기록, 그리고 사양 교정입니다. 둘째, 동기화 기간, 수정란 도착일 서면 확정, 수정란 1개당 1.5두, 일정대로 CIDR, PGF, GnRH입니다. 셋째, 이식 당일, 배란 7일째, 황체 18에서 20mm 이상과 방향 기록, 스트로 확인, 소를 먼저 잡고, 녹이고, 이식, 그리고 난이도 점수입니다. 넷째, 사후 관리, 7일에서 10일 이동 금지, 더위 대책, 18일에서 24일 재발정 관찰, 28일에서 32일과 55일에서 60일 초음파입니다. 이 네 칸만 지켜도 수태율이 달라집니다.
 
 > Today in one field checklist: one recipient, four checkpoints. Before enrolment, a month ahead: maiden heifers first, seven criteria, body condition, tract exam, health records, feeding correction. Synchronization: shipment date confirmed in writing, 1.5 cows per embryo, CIDR, PGF and GnRH on schedule. Transfer day, ovulation plus seven: CL of 18 to 20 mm or more with side recorded, read the straw, catch the cow, thaw, transfer, ease score. Follow-up: no moving for 7 to 10 days, heat abatement, watch for heat return at Day 18 to 24, scan at Day 28 to 32 and 55 to 60. Keep these four boxes and your conception rate will change.
 
-## Slide 23 · Thank you · 감사합니다
+## Slide 27 · Thank you · 감사합니다
 
 오늘 가져가실 네 문장입니다. 첫째, 인공수정은 아비 쪽을 개량하고, 수정란이식은 소 전체를 바꿉니다. 둘째, 대리모가 곧 결과이고, 기본은 미경산 처녀우입니다. 황체 없으면 이식 없습니다. 셋째, 거꾸로 계획하십시오. 배란일은 이식일 빼기 7일, 수정란 1개당 1.5두를 동기화합니다. 넷째, 스트로를 읽으십시오. 저희는 완만동결 직접이식 스트로를 씁니다. 유리화 스트로는 융해 방법이 다르니 직접이식하면 안 됩니다. 감사합니다. 이제 질문을 받겠습니다. 오늘 오후 현장에서 수란우를 함께 보면서 직접 확인해 보겠습니다.
 

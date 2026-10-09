@@ -54,3 +54,8 @@ core business.
 ## Discipline
 International documents (MOU, contracts, certificates) are drafts requiring legal/veterinary
 review. Mark targets/figures as estimates or pilot until confirmed. Korean when the user writes Korean.
+
+## Genetics Co. IVP production facts (founder, Oct 2026)
+- Embryos are produced by IVF from **abattoir-derived ovaries/oocytes**, fertilized with **sexed semen**.
+- **Individual (per-donor) culture**, not conventional pooled batch culture → each embryo keeps its dam's identity and can be selected for breeding.
+- Overseas transfers of **sexed, frozen IVF embryos: conception rate ≈ 60% over the last 5 years** (company field data; cite as such).

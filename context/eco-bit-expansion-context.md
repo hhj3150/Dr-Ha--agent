@@ -57,3 +57,16 @@ Design every output for province → national → international scalability. Gov
 proposals emphasize animal welfare, disease prevention, carbon reduction, productivity,
 rural income, administrative efficiency, jobs. Mark budgets/figures as estimates/targets.
 Apply `confidentiality-rules.md`. Korean when the user writes Korean.
+
+## Nepal — Sindhuli CowTalk pilot proposal (presented 2026-10-08, founder's figures, to confirm)
+- Sindhuli dairy co-op: ~70 member farms, ~143 cattle; ~50 farms keep cows supported through
+  Heifer Korea.
+- Proposal: ~100 smaXtec rumen sensors on cattle ≥12 months; a smaXtec repeater covers ~200 m
+  radius, so install the minimum number of repeaters at shared points (collection centre, village
+  common spots) after GPS-mapping all farms; one "Sindhuli CowTalk" dashboard for farmers, vets
+  and the co-op; review after one season. Combine with ET and a humus-barn demo.
+- Cows are dairy cattle; never frame as Hanwoo or Korean beef genetics.
+
+## Sindhuli = "Nepal's Anseong Farmland" idea (founder, Oct 2026 — vision, not a commitment)
+- Anseong Farmland began as the 1969 Korea–West Germany Dairy Demonstration Farm (한독낙농시범목장, West German loan for ~200 cows); reborn in 2012 as Anseong Farmland, a dairy/livestock theme park operated by NH (농협경제지주). Song Young Shin Farm runs the Hey! Hay Milk café there.
+- Address: 안성시 공도읍 (대)신두리 — "Sinduri", nearly the same name as Sindhuli. Founder's vision: make Sindhuli a dairy theme park for Nepali families, a dairy-skills training center, and a dairy breeding farm (dairy only; no Hanwoo).

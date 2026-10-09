@@ -59,3 +59,4 @@ review. Mark targets/figures as estimates or pilot until confirmed. Korean when 
 - Embryos are produced by IVF from **abattoir-derived ovaries/oocytes**, fertilized with **sexed semen**.
 - **Individual (per-donor) culture**, not conventional pooled batch culture → each embryo keeps its dam's identity and can be selected for breeding.
 - Overseas transfers of **sexed, frozen IVF embryos: conception rate ≈ 60% over the last 5 years** (company field data; cite as such).
+- **Recipient policy (founder):** default recipient = **maiden (nulliparous) heifers of breeding age**; parous cows only as an exception with full records, because cows' breeding and disease histories are hard to trace.

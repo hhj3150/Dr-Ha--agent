@@ -16,9 +16,9 @@ Embryo Transfer Symposium · 9 October 2026 · Dr. Ha Hyun-Jae, DVM · 23 slides
 
 ## Slide 3 · AI improves the sire side. ET replaces the whole animal.
 
-먼저 인공수정과 수정란이식의 차이입니다. 인공수정은 유전의 절반, 즉 아비 쪽만 선택할 수 있습니다. 암소 기반이 낮으면 세대가 지나도 조금씩만 좋아집니다. 수정란이식은 아비와 어미를 모두 선택하니 송아지 유전의 100%를 우리가 고릅니다. 우수한 암소 한 마리가 1년에 1마리가 아니라 10마리, 20마리 이상을 남길 수 있습니다. 그리고 대리모는 이미 가진 건강한 소면 됩니다. 가장 능력이 낮은 소가 가장 좋은 송아지의 엄마가 될 수 있습니다. 이 문장을 적어 두십시오. 인공수정은 아비 쪽을 개량하고, 수정란이식은 소 전체를 바꿉니다.
+먼저 인공수정과 수정란이식의 차이입니다. 인공수정은 유전의 절반, 즉 아비 쪽만 선택할 수 있습니다. 암소 기반이 낮으면 세대가 지나도 조금씩만 좋아집니다. 수정란이식은 아비와 어미를 모두 선택하니 송아지 유전의 100%를 우리가 고릅니다. 우수한 암소 한 마리가 1년에 1마리가 아니라 10마리, 20마리 이상을 남길 수 있습니다. 그리고 대리모는 유전이 아니라 자궁을 제공합니다. 능력이 평범한 건강한 처녀우가 가장 좋은 송아지의 엄마가 될 수 있습니다. 이 문장을 적어 두십시오. 인공수정은 아비 쪽을 개량하고, 수정란이식은 소 전체를 바꿉니다.
 
-> Artificial insemination lets you choose only half of the genetics — the sire. If your cows are genetically poor, AI improves the calf only slowly. Embryo transfer selects both sire and dam: one hundred percent of the calf's genetics is chosen. One elite female can leave ten, twenty or more calves a year instead of one. And the recipient can be any healthy cow you already own — your poorest cow can become the mother of your best calf. Write this down: AI improves the sire side; ET replaces the whole animal.
+> Artificial insemination lets you choose only half of the genetics — the sire. If your cows are genetically poor, AI improves the calf only slowly. Embryo transfer selects both sire and dam: one hundred percent of the calf's genetics is chosen. One elite female can leave ten, twenty or more calves a year instead of one. And the recipient provides the uterus, not the genetics — a healthy maiden heifer of modest merit can become the mother of your best calf. Write this down: AI improves the sire side; ET replaces the whole animal.
 
 ## Slide 4 · Cost per pregnancy, not price per embryo
 
@@ -44,11 +44,11 @@ Embryo Transfer Symposium · 9 October 2026 · Dr. Ha Hyun-Jae, DVM · 23 slides
 
 > Now today's core. We have seen how embryos are made; here is the truth of the field: the recipient contributes more to the result than the embryo. A grade 1 embryo from an elite donor, put into a thin, non-cycling, forty-day-postpartum cow with a dirty uterus, will fail — and people will blame the embryo, the supplier, the country. It was the cow.
 
-## Slide 8 · Seven criteria — one failure means rejection
+## Slide 8 · Default recipient: a maiden heifer of breeding age
 
-대리모 선정의 일곱 가지 기준입니다. 하나라도 맞지 않으면 탈락입니다. 첫째, 발정 주기가 정상이어야 하고 기록된 발정이 한 번 이상 있어야 합니다. 둘째, 체형점수 2.75에서 3.25, 그리고 안정적이어야 합니다. 셋째, 분만 후 50일에서 60일 이상 지나 자궁이 회복되어야 합니다. 넷째, 생식기가 정상이어야 합니다. 자궁축농증, 유착, 만성 자궁내막염이 없어야 합니다. 다섯째, 열, 파행, 급성 유방염, 만성질환이 없어야 합니다. 여섯째, 미경산우는 14~15개월 이상에 목표 체중, 경산우는 1산에서 5산이 좋습니다. 일곱째, 이식 당일, 7일째 기능성 황체가 확인되어야 합니다. 그리고 이 마지막 기준이 그날을 결정합니다. 따라 해 주십시오. 황체 없으면 이식 없다.
+대리모 선정입니다. 저희 원칙은 분명합니다. 기본 대리모는 가임 연령의 미경산 처녀우입니다. 이유는 간단합니다. 처녀우는 어디서 왔는지 이력이 분명하고, 자궁이 깨끗하고, 분만 손상이나 산후 질병이 없습니다. 반면 경산우는 그동안 어떤 번식 문제가 있었는지, 어떤 병을 앓았는지 이력과 병력을 추적하기 어려운 경우가 많습니다. 그래서 경산우는 기록이 완비된 경우에만 예외로 씁니다. 분만 후 60일 이상, 자궁 회복, 1산에서 5산입니다. 처녀우의 기준은 일곱 가지입니다. 첫째, 한 번도 분만하지 않은 처녀우. 둘째, 14~15개월 이상에 목표 체중. 셋째, 기록된 발정이 한 번 이상. 넷째, 체형점수 2.75에서 3.25. 다섯째, 생식기가 정상이고 프리마틴이 아니며 경관이 통과될 것. 여섯째, 열이나 파행, 만성질환이 없고 백신을 마쳤을 것. 일곱째, 이식 당일 7일째 기능성 황체. 하나라도 맞지 않으면 탈락입니다. 따라 해 주십시오. 황체 없으면 이식 없다.
 
-> Seven criteria; one failure means rejection. One: cycling, with at least one recorded estrus. Two: body condition 2.75 to 3.25, stable. Three: at least 50 to 60 days postpartum with the uterus involuted. Four: a normal tract — no pyometra, adhesions or chronic endometritis. Five: no fever, lameness, acute mastitis or chronic disease. Six: heifers at least 14 to 15 months and at target weight; cows of parity one to five. Seven: a functional Day-7 corpus luteum confirmed by palpation or ultrasound. The seventh decides the day. Say it with me: no CL, no transfer.
+> Recipient selection. Our rule is clear: the default recipient is a maiden heifer of breeding age. Heifers have a known origin, a clean uterus, and no calving injury or postpartum disease, whereas a cow's breeding and disease history is often hard to trace. Cows are used only as an exception, with full records: at least 60 days postpartum, involuted uterus, parity one to five. The seven heifer criteria: one, never calved; two, at least 14 to 15 months and at target breeding weight; three, at least one recorded estrus; four, body condition 2.75 to 3.25; five, a normal tract, not a freemartin, cervix passable; six, no fever, lameness or chronic disease, and vaccinated; seven, a functional Day-7 CL on transfer day. One failure means rejection. Say it with me: no CL, no transfer.
 
 ## Slide 9 · Target 2.75–3.25 — and stable or rising
 
@@ -130,12 +130,12 @@ Embryo Transfer Symposium · 9 October 2026 · Dr. Ha Hyun-Jae, DVM · 23 slides
 
 ## Slide 22 · One recipient, four checkpoints
 
-오늘 내용을 현장 체크리스트 하나로 정리했습니다. 수란우 한 마리에 네 번의 확인입니다. 첫째, 등록 한 달 전, 일곱 가지 기준, 체형, 생식기 검사, 건강 기록, 그리고 사양 교정입니다. 둘째, 동기화 기간, 수정란 도착일 서면 확정, 수정란 1개당 1.5두, 일정대로 CIDR, PGF, GnRH입니다. 셋째, 이식 당일, 배란 7일째, 황체 18에서 20mm 이상과 방향 기록, 스트로 확인, 소를 먼저 잡고, 녹이고, 이식, 그리고 난이도 점수입니다. 넷째, 사후 관리, 7일에서 10일 이동 금지, 더위 대책, 18일에서 24일 재발정 관찰, 28일에서 32일과 55일에서 60일 초음파입니다. 이 네 칸만 지켜도 수태율이 달라집니다.
+오늘 내용을 현장 체크리스트 하나로 정리했습니다. 수란우 한 마리에 네 번의 확인입니다. 첫째, 등록 한 달 전, 미경산 처녀우를 우선으로 일곱 가지 기준, 체형, 생식기 검사, 건강 기록, 그리고 사양 교정입니다. 둘째, 동기화 기간, 수정란 도착일 서면 확정, 수정란 1개당 1.5두, 일정대로 CIDR, PGF, GnRH입니다. 셋째, 이식 당일, 배란 7일째, 황체 18에서 20mm 이상과 방향 기록, 스트로 확인, 소를 먼저 잡고, 녹이고, 이식, 그리고 난이도 점수입니다. 넷째, 사후 관리, 7일에서 10일 이동 금지, 더위 대책, 18일에서 24일 재발정 관찰, 28일에서 32일과 55일에서 60일 초음파입니다. 이 네 칸만 지켜도 수태율이 달라집니다.
 
-> Today in one field checklist: one recipient, four checkpoints. Before enrolment, a month ahead: seven criteria, body condition, tract exam, health records, feeding correction. Synchronization: shipment date confirmed in writing, 1.5 cows per embryo, CIDR, PGF and GnRH on schedule. Transfer day, ovulation plus seven: CL of 18 to 20 mm or more with side recorded, read the straw, catch the cow, thaw, transfer, ease score. Follow-up: no moving for 7 to 10 days, heat abatement, watch for heat return at Day 18 to 24, scan at Day 28 to 32 and 55 to 60. Keep these four boxes and your conception rate will change.
+> Today in one field checklist: one recipient, four checkpoints. Before enrolment, a month ahead: maiden heifers first, seven criteria, body condition, tract exam, health records, feeding correction. Synchronization: shipment date confirmed in writing, 1.5 cows per embryo, CIDR, PGF and GnRH on schedule. Transfer day, ovulation plus seven: CL of 18 to 20 mm or more with side recorded, read the straw, catch the cow, thaw, transfer, ease score. Follow-up: no moving for 7 to 10 days, heat abatement, watch for heat return at Day 18 to 24, scan at Day 28 to 32 and 55 to 60. Keep these four boxes and your conception rate will change.
 
 ## Slide 23 · Thank you · 감사합니다
 
-오늘 가져가실 네 문장입니다. 첫째, 인공수정은 아비 쪽을 개량하고, 수정란이식은 소 전체를 바꿉니다. 둘째, 대리모가 곧 결과입니다. 황체 없으면 이식 없습니다. 셋째, 거꾸로 계획하십시오. 배란일은 이식일 빼기 7일, 수정란 1개당 1.5두를 동기화합니다. 넷째, 스트로를 읽으십시오. 직접이식과 유리화는 융해 방법이 다릅니다. 감사합니다. 이제 질문을 받겠습니다. 오늘 오후 현장에서 수란우를 함께 보면서 직접 확인해 보겠습니다.
+오늘 가져가실 네 문장입니다. 첫째, 인공수정은 아비 쪽을 개량하고, 수정란이식은 소 전체를 바꿉니다. 둘째, 대리모가 곧 결과이고, 기본은 미경산 처녀우입니다. 황체 없으면 이식 없습니다. 셋째, 거꾸로 계획하십시오. 배란일은 이식일 빼기 7일, 수정란 1개당 1.5두를 동기화합니다. 넷째, 스트로를 읽으십시오. 직접이식과 유리화는 융해 방법이 다릅니다. 감사합니다. 이제 질문을 받겠습니다. 오늘 오후 현장에서 수란우를 함께 보면서 직접 확인해 보겠습니다.
 
-> Four sentences to take home. One: AI improves the sire side; ET replaces the whole animal. Two: the recipient is the product — no CL, no transfer. Three: plan backwards — ovulation is transfer day minus seven, and synchronize 1.5 cows per embryo. Four: read the straw — direct-transfer and vitrified embryos are thawed differently. Thank you. I will take your questions now, and we will check recipients together in the field.
+> Four sentences to take home. One: AI improves the sire side; ET replaces the whole animal. Two: the recipient is the product, maiden heifers first — no CL, no transfer. Three: plan backwards — ovulation is transfer day minus seven, and synchronize 1.5 cows per embryo. Four: read the straw — direct-transfer and vitrified embryos are thawed differently. Thank you. I will take your questions now, and we will check recipients together in the field.

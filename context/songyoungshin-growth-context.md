@@ -35,7 +35,18 @@ sugars 4.75 g, fat 6.0 g, trans fat 0.16 g, saturated fat 4.4 g, cholesterol 21.
 protein 4.59 g, sodium 41.8 mg. Production: plate heat exchanger; homogenization →
 pasteurization (75 °C / 20 s, APV homogenizer) → cooling → filling → packaging.
 
+## Official product photo (use this from now on)
+`assets/brand/songyoungshin-a2-jersey-products.jpg` — founder-supplied (2026-10-08) studio shot of the
+current line-up: A2저지 헤이밀크 (A2 Jersey Hay Milk) 180 mL ×2 and 750 mL (brown neck band) and
+A2저지 플레인요거트 (A2 Jersey Plain Yogurt) 500 mL and 180 mL (green neck band), "송영신목장" cow logo.
+Use this image whenever a deck, page or document shows our products; the older "유기농 목초우유"
+bottle image is retired.
+
 ## Brand philosophy
+Heritage story: Korea's first Western dairy cows were 3 Jerseys from California (1885); Song
+Young Shin Farm returned to that first breed in Dec 2025 — "한국의 첫 젖소, 140년 만의 귀환".
+Facts, evidence levels and claim rules: `context/korea-jersey-1885-history.md`.
+
 Soil to Soul — Healthy Soil → Healthy Grass → Healthy Cow → Healthy Milk → Healthy
 Human. Premium, natural, animal-welfare, low-carbon, circular agriculture. Connects
 to D2O circular agriculture and Healing Compost (Soil → Grass → Cow → Milk →
@@ -64,3 +75,10 @@ forage-centered feeding. Avoid medical/disease-treatment claims; use only provid
 lab values for nutrition. Apply `confidentiality-rules.md` (no Dr. Ha Liquid origin,
 no confidential methane strategy, no Hanwoo genetic export). Use Korean when the
 user writes in Korean.
+
+## People & family-farm values (confirmed by founder, Oct 2026)
+- Four Nepali staff work at Song Young Shin Farm: Sugam (수검), Sagar (사가르), Madhab (마덥), Krishna (크리스나). Sugam has worked here 6 years — the founder jokingly calls him "the real boss of our farm" (실질적인 사장님).
+- assets/brand/farm/family-field.jpg is the founder's own family.
+- Founder's values to carry in storytelling: sustainable agriculture, a society where people live (사람 사는 사회), family farming, protecting the local community and countryside, building on healthy soil, never damaging farmland, passing it on to the next generation.
+- Farm photo set: assets/brand/farm/ (entrance sign "송영신목장 · Farmstead Creamery", Jersey heifers on HBP, creamery, filling line, Hey! Hay Milk café, Sugam and son, founder portrait, family in field).
+- Sales channels (founder, Oct 2026): main channel = own online shop (shop.a2jerseymilk.com) by subscription; also Galleria department store (Apgujeong luxury hall) and the Hey! Hay Milk café at Anseong Farmland. Photos: assets/brand/farm/ysf-online-shop.jpg, ysf-galleria-shelf.jpg.

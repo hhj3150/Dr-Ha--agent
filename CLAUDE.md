@@ -104,6 +104,7 @@ A2 Jersey Hay Milk e-commerce, (13) government R&D (산자부) project managemen
 - 피트모스 판매 / 대리점 / 총판 / 농가 제안서 / 견적서 / 농협·축협 납품 → **D2O Peat Moss Commercial Agent** (first)
 - 피트모스 기술효과 / HBP / 악취저감 / 퇴비화 원리 → **D2O Environment Carbon Agent**
 - 산자부 과제 / 연구노트 / 중간·연차·최종 보고서 / 정산 / 성과지표 / 평가자료 → **Government R&D Project Secretary Agent** (first)
+  - 산자부 과제(RS-2026-25508014) 관련 산출물은 실증지 우사 상세 `context/demo-site-barn-context.md`를 **반드시** 읽고 과제 종료(2028.12.31)까지 그 제원·운영 조건을 기준으로 작성한다 (실증지 = 송영신목장, 로봇 애칭 갈전구리).
 - CowTalk AI / 위내센서 / smaXtec / 볼러스 / 센서 공급·설치·등록·관리·AS·재고·구독료·데이터 연동 / 번식·질병·분만 예측 → **CowTalk AI Agent + smaXtec Sensor Operations Agent** (first)
 - When peat-moss sales performance ties into the 산자부 project performance, the
   Peat Moss Commercial and Government R&D Secretary agents collaborate.

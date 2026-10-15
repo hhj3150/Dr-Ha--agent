@@ -96,3 +96,31 @@ Eco-BIT / CowTalk agents reference this when relevant.
 
 > 우리(D2O) 역할 요약: **현장 실증 + 사업화 영업·교육·확산**. 양산/판가 주체는 GMW·충남대이며, D2O는 수요·실증·시장 확산 담당.
 
+
+## Demonstration site (실증지) — persistent reference
+The 1st demonstration site is Song Young Shin Farm's barn. Its full specification
+(dimensions, pillar grid, resting-area definition, bedding rules, daily tilling and
+monitoring items, robot layout) is the **authoritative record in
+`context/demo-site-barn-context.md`** and must be used for every deliverable of this
+project until project end (2028-12-31). Floor plan files: `deliverables/floorplan/`.
+
+## Reporting cadence (adopted 2026-09-21 — 하실장 proposal, founder to confirm)
+| 주기 | 문서 | 목적 · 근거 | 초안 | 확인 | 보관 |
+|---|---|---|---|---|---|
+| 매일 | 베딩 관리 일일 점검표 (9항목) | 실증 기초 데이터 · 로봇 요구사양 근거 | 현장 (회장님/직원) | — | `deliverables/motie-reports/daily/` (사진·엑셀) |
+| 매주 월요일 | 주간 실증 일지 = 연구노트 항목 (1p) | 국가연구개발사업 연구노트 증빙 (날짜·서명) | 하실장 | 회장님 서명 | `deliverables/motie-reports/weekly/` |
+| 매월 말일 | 월간 진도보고서 (계획 대비 실적 · 연구비 집행 · 이슈) | 주관기관 공유 · 정산 대비 | 하실장 | 회장님 | `deliverables/motie-reports/monthly/` |
+| 분기 말 | 분기 실증·테스트 리포트 (통계 · 요구사양 갱신 · 사진) | 주관기관·충남대 협의 자료 · 성과지표 추적 | 하실장 | 회장님 | `deliverables/motie-reports/quarterly/` |
+| 연 1회 (12월) | 연차보고서 D2O 파트 + 정산 체크리스트 | 산자부/KIAT 제출 | 하실장 | 회장님·GMW | `deliverables/motie-reports/annual/` |
+| 수시 | 실증 회차별 시험 보고서 (2년차~) · 회의록 · 간담회/평가 자료 | 시제품 실증 증빙 | 하실장 | 회장님 | `deliverables/motie-reports/events/` |
+Templates: `templates/motie-daily-bedding-checklist.md`, `templates/motie-weekly-research-log-template.md`,
+`templates/monthly-progress-report-template.md`, `templates/motie-quarterly-demo-report-template.md`,
+`templates/annual-report-template.md`. Index of all records: `deliverables/motie-reports/README.md`.
+
+## Records index (as of 2026-09-21)
+- 실증지 상세 (영구): `context/demo-site-barn-context.md`
+- 손도면 2장 · 평면도 v3 (SVG/PNG/DXF) · 현장 사진 3장: `deliverables/floorplan/`
+- 중간보고서 전문: `deliverables/motie-rs-2026-25508014-interim-report-d2o-demo-site.md`
+- 중간점검 제출자료 2p (PDF/DOCX): `deliverables/motie-rs-2026-25508014-중간점검-제출자료-D2O.*`
+- 9.30 수행기관 간담회 발표자료 D2O 파트 3장: `deliverables/motie-rs-2026-25508014-간담회-발표자료-D2O파트.pdf`
+- KIAT 안내 (2026-09-21, 한소영): 발표자료 PDF, 9.21 자정까지 hsy@kiat.or.kr, 주관기관 발표 5분 + 공동기관 Q&A 5분, 간담회 9.30(수)

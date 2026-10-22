@@ -4,6 +4,14 @@ Authoritative record of our MOTIE (산자부) 3-year participating-company R&D p
 The Government R&D Secretary Agent and CEO Strategy / D2O Environment Carbon /
 Eco-BIT / CowTalk agents reference this when relevant.
 
+> ## ★ D2O 역할 (founder 확정, 2026-10-22) — 모든 산자부 산출물의 전제
+> **㈜D2O = 갈전구리(자율주행 교반장치) 실증 테스트 + 영업·홍보 담당.**
+> - 실증 테스트: 실증지(송영신목장 HBP 우사) 제공·운영, 수동 교반 기준선 확보, 수요자 관점 요구사항(R1~R13) 제시, 장치 실증·판정.
+> - 영업·홍보: HBP + 갈전구리 시스템 소개(정책기관·지자체·해외 ODA 방문단), 농가 교육·컨설팅, 사업화 확산.
+> - **하지 않는 것:** 기계·장비·센서·자율주행 기술 개발과 사양 결정(충남대·GMW 소관).
+> - 기술 기준: CBP 국제 기준 위에 하현제 HBP를 응용 → `context/hbp-cbp-standard-context.md`. 실증지 제원 → `context/demo-site-barn-context.md`.
+> - 작업 기록 색인: 이 파일 하단 "Records index" 및 "Decisions" 절. 새 산출물은 반드시 여기에 추가.
+
 ## Identification
 - **사업명:** 10대 메가프로젝트 기술산업화
 - **연구개발과제번호:** RS-2026-25508014
@@ -133,3 +141,11 @@ Templates: `templates/motie-daily-bedding-checklist.md`, `templates/motie-weekly
 - 근거 규정: 국가연구개발사업 연구개발비 사용기준 — 회의비 식비는 외부 인원 참석 회의만 인정, 참여연구자만의 회의 식비 계상 불가. 2026년 개정(사전결재 폐지·외부참석자 범위 완화 보도)은 원문 미확인 → 사전결재는 계속 작성.
 - 산출물: `deliverables/2026_산자부_마스터연구노트_No2_1일2회교반실증_D2O.{docx,pdf}`, `deliverables/2026_산자부_교반일지_데이터_D2O.xlsx`, `deliverables/2026_산자부_외부전문가자문회의_운영계획_D2O.{docx,pdf}`, 연구비 집행계획 엑셀 갱신.
 - **역할 경계 (founder, 2026-10-22):** 기계·장비·센서·자율주행 기술(차체·작업기·동력·위치인식·제어)은 D2O 연구분야가 아니다 — 충남대·GMW가 만든다. D2O는 **실증지**로서 ① 자율주행 교반장치 **요구사항(실증지·수요자 관점, 무엇을 해내야 하는가)** ② 실증지 확인 방법 ③ 수동 교반 기준선 비교·판정만 담당한다. D2O 문서에 센서 방식·구동부·엔진 사양 등 구현 방식을 쓰지 않는다. 요구사항 R1~R13은 마스터 연구노트 No.2 4장 참조.
+
+## Records index (추가, 2026-10-22)
+- 연구비 집행계획(현장점검 10/30 대응) xlsx: `deliverables/2026_산자부_연구비집행계획_D2O_1차년도.xlsx` (10/22 연구활동비 세목 재구성)
+- 연구노트 No.1 (docx/pdf): `deliverables/2026_산자부_연구노트_D2O_1차년도.*`
+- 마스터 연구노트 No.2 — 1일 2회 교반 실증, 요구사항 R1~R13, HBP 운영 기준: `deliverables/2026_산자부_마스터연구노트_No2_1일2회교반실증_D2O.*`
+- 교반일지 데이터 xlsx: `deliverables/2026_산자부_교반일지_데이터_D2O.xlsx`
+- 외부 전문가 자문회의 운영계획(회의비·식비 원칙): `deliverables/2026_산자부_외부전문가자문회의_운영계획_D2O.*`
+- HBP/CBP 기준: `context/hbp-cbp-standard-context.md` · 원자료 `context/reference/D2O_humus_HBP_DVM-Ha_20241220.pdf`

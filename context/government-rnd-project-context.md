@@ -10,6 +10,7 @@ Eco-BIT / CowTalk agents reference this when relevant.
 > - 영업·홍보: HBP + 갈전구리 시스템 소개(정책기관·지자체·해외 ODA 방문단), 농가 교육·컨설팅, 사업화 확산.
 > - **하지 않는 것:** 기계·장비·센서·자율주행 기술 개발과 사양 결정(충남대·GMW 소관).
 > - 기술 기준: CBP 국제 기준 위에 하현제 HBP를 응용 → `context/hbp-cbp-standard-context.md`. 실증지 제원 → `context/demo-site-barn-context.md`.
+> - **문서 작성 주체 규칙 (founder, 2026-10-23):** 제출·기록용 모든 문서(연구노트, 일지, 회의록, 보고서, 집행계획 등)는 **㈜디투오가 작성·기록한 문서**로 쓴다. 작성자 표기 = ㈜디투오 연구책임자 하현제 / 참여연구원. 문서 본문에 하실장·AI·작성 도구·검색 과정·저장소 경로(context/…, .md)·"결정안/권장/~로 잡은 값" 같은 조언 어투를 쓰지 않는다. 파일 메타데이터 작성자 = "농업회사법인 주식회사 디투오", 수정자 = "하현제". 문헌은 "참고문헌"으로만 표기.
 > - 작업 기록 색인: 이 파일 하단 "Records index" 및 "Decisions" 절. 새 산출물은 반드시 여기에 추가.
 
 ## Identification
@@ -116,7 +117,7 @@ project until project end (2028-12-31). Floor plan files: `deliverables/floorpla
 | 주기 | 문서 | 목적 · 근거 | 초안 | 확인 | 보관 |
 |---|---|---|---|---|---|
 | 매일 | 베딩 관리 일일 점검표 (9항목) | 실증 기초 데이터 · 로봇 요구사양 근거 | 현장 (회장님/직원) | — | `deliverables/motie-reports/daily/` (사진·엑셀) |
-| 매주 월요일 | 주간 실증 일지 = 연구노트 항목 (1p) | 국가연구개발사업 연구노트 증빙 (날짜·서명) | 하실장 | 회장님 서명 | `deliverables/motie-reports/weekly/` |
+| 매주 월요일 | 주간 실증 일지 = 연구노트 항목 (1p) | 국가연구개발사업 연구노트 증빙 (날짜·서명) | 참여연구원(과장) | 회장님 서명 | `deliverables/motie-reports/weekly/` |
 | 매월 말일 | 월간 진도보고서 (계획 대비 실적 · 연구비 집행 · 이슈) | 주관기관 공유 · 정산 대비 | 하실장 | 회장님 | `deliverables/motie-reports/monthly/` |
 | 분기 말 | 분기 실증·테스트 리포트 (통계 · 요구사양 갱신 · 사진) | 주관기관·충남대 협의 자료 · 성과지표 추적 | 하실장 | 회장님 | `deliverables/motie-reports/quarterly/` |
 | 연 1회 (12월) | 연차보고서 D2O 파트 + 정산 체크리스트 | 산자부/KIAT 제출 | 하실장 | 회장님·GMW | `deliverables/motie-reports/annual/` |

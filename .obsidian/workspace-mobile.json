@@ -11,14 +11,10 @@
             "id": "0746f5a261af9c9d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "agents/cowtalk-ai-agent.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "cowtalk-ai-agent"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
             }
           }
         ]
@@ -37,7 +33,9 @@
           "type": "file-explorer",
           "state": {
             "sortOrder": "alphabetical",
-            "autoReveal": false
+            "autoReveal": false,
+            "showSearch": false,
+            "searchQuery": ""
           },
           "icon": "lucide-folder-closed",
           "title": "파일 탐색기"
@@ -169,6 +167,9 @@
   },
   "active": "0746f5a261af9c9d",
   "lastOpenFiles": [
+    "context/founder-context.md",
+    "agents/d2o-peatmoss-commercial-agent.md",
+    "agents/cowtalk-ai-agent.md",
     "회장님 대시보드.md",
     "deliverables/gyeonggi-02-pilot-implementation-proposal.md",
     "무제.md",

@@ -161,3 +161,8 @@ Default behavior:
 - Produce concrete next steps.
 - When building software, generate small Claude Code tasks with acceptance criteria.
 - When writing external documents, use careful claims and mark unverified outcomes as expected or pilot targets.
+- Viewing rule (founder request, 2026-10-24): the app's file-card preview may show "미리보기를 활용할 수 없음" for PDFs.
+  For every PDF/visual deliverable, ALSO (1) open it in the in-chat PDF viewer (pdf-viewer `display_pdf`) and
+  (2) publish a page-image viewer Artifact (render pages to JPEG, keep the same file path to update the same URL),
+  so the founder can review on screen and request edits live. Re-render PDF + republish after each edit.
+  Intro-kit viewer: https://claude.ai/artifact/Un4nHCFfKFhEGNq5moTGwH (source: deliverables/intro-kit-src/).

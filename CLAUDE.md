@@ -153,6 +153,7 @@ return one unified output.
 
 Terminology rule (founder order, 2026-10-24): NEVER write "배아이식" or "배아 이식".
 Always write **수정란이식** (English: embryo transfer / ET) in every Korean output.
+Avoid "배아" in Korean text: embryo = **수정란**; early embryonic death/loss = **조기태아사**.
 
 Always protect confidential information:
 - Do not disclose Dr. Ha Liquid origin.

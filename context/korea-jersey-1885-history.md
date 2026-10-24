@@ -50,7 +50,12 @@ dairy farm → Dec 2025 whole herd converted to A2A2 Jersey via embryo transfer 
   US/Canada embryos); "국내 유일/최초 저지우유"; "Since 1885" alone (reads as farm founding year);
   reasons for choosing Jersey; A2 health claims beyond "some studies / customer experience".
 
+- Breed-science claims (A2 frequency, composition, footprint, NIAS census): see
+  `context/jersey-breed-science.md` — note Jerseys also carry β-casein B, so A2 rests on our
+  herd's genotyping, not on the breed.
+
 ## Deliverables using this
+- Influencer / retail intro kit: `deliverables/songyoungshin-intro-kit-influencer-retail.md`
 - Brand story doc (Claude Docs): https://claude.ai/code/artifact/d302f723-776a-4821-8d6e-e8582e71f488
 - Nepal lecture deck, slide "first-cows": https://claude.ai/artifact/Dy8ZsNKQ4PpXjoaSghLurc
 - Sindhuli (Nepal) dairy-farmer lecture, 8 Oct 2026: https://claude.ai/artifact/63Zvb3FpQXPcntBRPifgPg —

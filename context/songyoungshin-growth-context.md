@@ -46,6 +46,9 @@ bottle image is retired.
 Heritage story: Korea's first Western dairy cows were 3 Jerseys from California (1885); Song
 Young Shin Farm returned to that first breed in Dec 2025 — "한국의 첫 젖소, 140년 만의 귀환".
 Facts, evidence levels and claim rules: `context/korea-jersey-1885-history.md`.
+Jersey breed science + NIAS Korean herd census (전국 1,251두, 2026-10 poster) + claim rules:
+`context/jersey-breed-science.md`. Standard intro copy for influencers / department stores /
+pop-ups: `deliverables/songyoungshin-intro-kit-influencer-retail.md` (use as the master text).
 
 Soil to Soul — Healthy Soil → Healthy Grass → Healthy Cow → Healthy Milk → Healthy
 Human. Premium, natural, animal-welfare, low-carbon, circular agriculture. Connects

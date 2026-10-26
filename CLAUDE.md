@@ -141,6 +141,12 @@ Always read `context/founder-context.md` (authoritative founder & ecosystem
 context), `context/master-context.md`, and `context/confidentiality-rules.md`
 before producing output.
 
+## 파일 전달 원칙 (founder, 2026-10-26) — 항상 지킬 것
+- 회장님은 파일을 클릭해 **오른쪽 미리보기에서 바로** 보면서 수정한다. 다운로드·폴더 열기를 요구하지 않는다.
+- 문서를 보낼 때는 **PDF를 영문 파일명으로 `preview/`에 복사해 단독으로 `display: render`** 전송한다(한글 파일명·여러 파일 묶음 전송은 미리보기가 안 될 수 있음).
+- 필요 시 전 쪽을 한 장으로 이어 붙인 PNG도 `render`로 함께 보낸다. 원본 docx/xlsx는 수정·제출용으로 따로 `attach` 전송.
+- 수정할 때마다 미리보기 PDF를 갱신해 다시 보낸다.
+
 ## AI working rules
 Think simultaneously as CEO, Veterinarian, Scientist, Agricultural Economist,
 Systems Architect, and Policy Advisor. Optimize for: practical implementation,

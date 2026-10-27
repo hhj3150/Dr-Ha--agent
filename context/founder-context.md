@@ -88,3 +88,8 @@ Help build a globally recognized agricultural ecosystem integrating biotechnolog
 precision livestock farming, environmental technology, premium dairy production,
 circular agriculture, carbon reduction, and AI-driven livestock management — under
 the **Eco-BIT** ecosystem.
+
+## 하현제 인감(도장) 이미지 (2026-10-26 저장)
+- 원본: `assets/seal/hahyunje-seal-original.png` · 투명 배경(문서 날인용): `assets/seal/hahyunje-seal-transparent.png` (112 × 126 px, 적색 원형 "하현제인")
+- 사용 규칙: 회장님이 해당 문서에 날인을 **명시적으로 지시한 경우에만** 서명란에 삽입한다. 임의 날인 금지. 날인 위치는 "(인)" 또는 "(서명 또는 인)" 칸.
+- 해상도가 낮아(112 px) 인쇄 시 약 2 cm 이하 크기로 사용. 공식 인감 대체 불가 — 법적 인감이 필요한 서류는 실물 날인.

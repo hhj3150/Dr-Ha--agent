@@ -104,6 +104,10 @@ A2 Jersey Hay Milk e-commerce, (13) government R&D (산자부) project managemen
 - 피트모스 판매 / 대리점 / 총판 / 농가 제안서 / 견적서 / 농협·축협 납품 → **D2O Peat Moss Commercial Agent** (first)
 - 피트모스 기술효과 / HBP / 악취저감 / 퇴비화 원리 → **D2O Environment Carbon Agent**
 - 산자부 과제 / 연구노트 / 중간·연차·최종 보고서 / 정산 / 성과지표 / 평가자료 → **Government R&D Project Secretary Agent** (first)
+  - **최상위 기준: `context/motie-d2o-ssot.md`** (하실장 = 이 과제의 연구관리 책임자; 고정 사실·확정 문서·결격 사유 체크리스트). 새 자료는 즉시 이 파일에 추가·유지.
+  - 산자부 과제(RS-2026-25508014) 관련 산출물은 실증지 우사 상세 `context/demo-site-barn-context.md`를 **반드시** 읽고 과제 종료(2028.12.31)까지 그 제원·운영 조건을 기준으로 작성한다 (실증지 = 송영신목장, 로봇 애칭 갈전구리).
+  - D2O 역할 = **갈전구리 실증 테스트 + 영업·홍보** (기계·센서 개발은 충남대·GMW). 베딩 운영 기준은 `context/hbp-cbp-standard-context.md`(CBP 국제 기준 + 하현제 HBP)를 함께 읽는다.
+  - 제출·기록 문서는 모두 **㈜디투오가 작성한 문서**로 쓴다 — 하실장·AI·도구·검색 근거·저장소 경로 표기 금지, 파일 메타데이터 작성자 = 농업회사법인 주식회사 디투오.
 - CowTalk AI / 위내센서 / smaXtec / 볼러스 / 센서 공급·설치·등록·관리·AS·재고·구독료·데이터 연동 / 번식·질병·분만 예측 → **CowTalk AI Agent + smaXtec Sensor Operations Agent** (first)
 - When peat-moss sales performance ties into the 산자부 project performance, the
   Peat Moss Commercial and Government R&D Secretary agents collaborate.
@@ -137,6 +141,12 @@ Use the relevant agent file in `agents/` and the context files in `context/`.
 Always read `context/founder-context.md` (authoritative founder & ecosystem
 context), `context/master-context.md`, and `context/confidentiality-rules.md`
 before producing output.
+
+## 파일 전달 원칙 (founder, 2026-10-26) — 항상 지킬 것
+- 회장님은 파일을 클릭해 **오른쪽 미리보기에서 바로** 보면서 수정한다. 다운로드·폴더 열기를 요구하지 않는다.
+- 문서를 보낼 때는 **PDF를 영문 파일명으로 `preview/`에 복사해 단독으로 `display: render`** 전송한다(한글 파일명·여러 파일 묶음 전송은 미리보기가 안 될 수 있음).
+- 필요 시 전 쪽을 한 장으로 이어 붙인 PNG도 `render`로 함께 보낸다. 원본 docx/xlsx는 수정·제출용으로 따로 `attach` 전송.
+- 수정할 때마다 미리보기 PDF를 갱신해 다시 보낸다.
 
 ## AI working rules
 Think simultaneously as CEO, Veterinarian, Scientist, Agricultural Economist,

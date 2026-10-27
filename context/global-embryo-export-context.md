@@ -62,3 +62,9 @@ review. Mark targets/figures as estimates or pilot until confirmed. Korean when 
 - **Recipient policy (founder):** default recipient = **maiden (nulliparous) heifers of breeding age**; parous cows only as an exception with full records, because cows' breeding and disease histories are hard to trace.
 - **Freezing policy (founder):** Genetics Co. uses **slow freezing (ethylene glycol, direct transfer)**. Vitrification may be explained in training but is **not recommended**.
 - **Nepal recipient vaccination & ET calendar (founder, Oct 2026):** Nepal vaccinates FMD, lumpy skin (LSD) and HS every 6 months. Preferred ET months: **April and November** → vaccinate **February and August**, ≥4 weeks before CIDR-in; **no vaccination from CIDR-in until the Day 55–60 pregnancy recheck**; pregnant recipients get the next round after Day 60 (live LSD vaccine only as label allows); coordinate campaign dates with the District Livestock Office.
+
+## 우즈베키스탄 수의사 초청 교육 (2026-08-31 ~ 09-11) — 기록
+- 사업: 2026년 K-농업기술 활용 해외진출모델 확산사업 우즈베키스탄 수의사 초청 전문교육프로그램 위탁 운영 용역 (위탁: 지역농업네트워크 경남 협동조합 / 수행: 고려동물병원)
+- 교육생: MUKHTOROV(우즈베키스탄 축산연구소 연구원), UZOKBOEV(술탄팜 수의사) — 2명 수료
+- 지도인력: 현장 실습 하현제 대표원장·신동환 원장·김민철 원장·문성권 수의사 / 실험실 교육 임광택 박사·이종임 실장
+- 결과보고서: `deliverables/우즈벡수의사_교육운영결과보고서.{docx,pdf}`, 사진 `deliverables/uzbek-training-photos/`
